@@ -1,11 +1,11 @@
 // Desafio 10
 function techList(techNames, names) {
-  let list= [];
+  let list = [];
   techNames.sort();
-  if(techNames.length === 0) {
+  if (techNames.length === 0) {
     return 'Vazio!';
   }
-  for(let key in techNames) {
+  for (let key in techNames) {
     techNames[key] = {
       tech: techNames[key],
       name: names
@@ -109,16 +109,52 @@ function triangleCheck(lineA, lineB, lineC) {
   let a = lineB - lineC;
   let b = lineA - lineC;
   let c = lineA - lineB
-  if(lineA < lineB + lineC && lineA > Math.abs (a)|| lineB < lineA + lineC && lineB > Math.abs (b) || lineC < lineA + lineB && lineC > Math.abs (c)) {
+  if (lineA < lineB + lineC && lineA > Math.abs (a)|| lineB < lineA + lineC && lineB > Math.abs (b) || lineC < lineA + lineB && lineC > Math.abs (c)) {
     return true;
-  } else {
+  } 
+  else {
     return false;
   }
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let cont = 0;
+  for(let index = 0; index < string.length; index += 1){
+    if(string[index] == 4){
+      cont += 4;
+    }
+    if(string[index] == 8){
+      cont += 8;
+    }
+    if(string[index] == 2){
+      cont += 2;
+    }
+    if(string[index] == 1){
+      cont += 1;
+    }
+    if(string[index] == 3){
+      cont += 3;
+    }
+    if(string[index] == 5){
+      cont += 5;
+    }
+    if(string[index] == 6){
+      cont += 6;
+    }
+    if(string[index] == 7){
+      cont += 7;
+    }
+    if(string[index] == 9){
+      cont += 9;
+    }
+  }
+  if(cont == 1){
+    return cont + " copo de água";
+  }
+ if(cont > 1){
+ return cont + " copos de água";
+}
 }
 
 module.exports = {
