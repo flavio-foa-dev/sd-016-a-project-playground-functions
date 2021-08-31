@@ -72,15 +72,19 @@ function fizzBuzz(array) {
     }  else {
       rece[index] = "bug!";
     }
-  } return rece
+  } return rece;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(array) {
+  let isso = ['a', 'e', 'i', 'o', 'u'];
+  let por = ['1', '2', '3', '4', '5']
+  return array.replace(array, por)
 }
-function decode() {
-  // seu código aqui
+function decode(array) {
+  let isso = ['1', '2', '3', '4', '5'];
+  let por = ['a', 'e', 'i', 'o', 'u'];
+  return array.replace(isso, por)
 }
 
 module.exports = {
