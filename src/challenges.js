@@ -51,9 +51,9 @@ function highestCount(arrayNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let away1 = cat1 - mouse
   let away2 = cat2 - mouse
-  if (Math.abs(away1) > Math.abs(away2)) {
+  if (Math.abs(away1) < Math.abs(away2)) {
     return 'cat1';
-  } else if (Math.abs(away1) < Math.abs(away2)){
+  } else if (Math.abs(away1) > Math.abs(away2)){
     return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
