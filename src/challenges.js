@@ -42,21 +42,55 @@ function splitSentence(str) {
   
   return array
 }
-console.log(splitSentence("vamos trybe"))
+
+
+
+
+
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  
+  return array[array.length-1]+", "+array[0]
+
+  
 }
 
+
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
+  return wins*3+ties
   // seu código aqui
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array_maior_numero) {
   // seu código aqui
+  let armazena_repeticoes=0; 
+  aux=array_maior_numero.slice();
+  for(cont=0;cont<array_maior_numero.length-1;cont+=1){
+    if(array_maior_numero[cont]>array_maior_numero[cont+1]){
+      array_maior_numero[cont+1]=array_maior_numero[cont];
+    }
+  }
+ 
+
+  
+
+  for(cont2=0;cont2<array_maior_numero.length;cont2+=1){
+       
+    if(array_maior_numero[cont]==aux[cont2]){
+      armazena_repeticoes+=1;
+      
+      
+    }
+  }
+  return armazena_repeticoes;
 }
+
+
+
+
 
 // Desafio 7
 function catAndMouse() {
