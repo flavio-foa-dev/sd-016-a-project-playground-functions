@@ -79,16 +79,75 @@ function negativeToPositive(mouse, cat) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numberArray) {
+  let newArray = [];
+
+  for (let number of numberArray) {
+    if (number % 3 === 0 && number % 5 !== 0) {
+      newArray.push('fizz');
+    } else if (number % 3 !== 0 && number % 5 === 0) {
+      newArray.push('buzz');
+    } else if (number % 3 === 0 && number % 5 === 0) {
+      newArray.push('fizzBuzz');
+    } else {
+      newArray.push('bug!');
+    }
+  }
+
+  return newArray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let arrayStringCharacters = [];
+  let newString = "";
+  for (let character of string) {
+    if (character === "a") {
+      arrayStringCharacters.push("1");
+    } else if (character === "e") {
+      arrayStringCharacters.push("2");
+    } else if (character === "i") {
+      arrayStringCharacters.push("3");
+    } else if (character === "o") {
+      arrayStringCharacters.push("4");
+    } else if (character === "u") {
+      arrayStringCharacters.push("5");
+    } else {
+      arrayStringCharacters.push(character);
+    }
+  }
+
+  for (let element of arrayStringCharacters) {
+    newString += element;
+  }
+
+  return newString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let arrayStringCharacters = [];
+  let newString = "";
+  for (let character of string) {
+    if (character === "1") {
+      arrayStringCharacters.push("a");
+    } else if (character === "2") {
+      arrayStringCharacters.push("e");
+    } else if (character === "3") {
+      arrayStringCharacters.push("i");
+    } else if (character === "4") {
+      arrayStringCharacters.push("o");
+    } else if (character === "5") {
+      arrayStringCharacters.push("u");
+    } else {
+      arrayStringCharacters.push(character);
+    }
+  }
+
+  for (let element of arrayStringCharacters) {
+    newString += element;
+  }
+
+  return newString;
 }
 
 module.exports = {
