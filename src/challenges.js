@@ -2,23 +2,23 @@
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
-  } 
+  }
   else {
-      return false;
+    return false;
   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
   if (base === 10 && height === 50) {
-      return 250;
-  } 
+    return 250;
+  }
   else if (base === 5 && height === 2) {
-      return 5;
-  } 
+    return 5;
+  }
   else if (base === 51 && height === 1) {
-      return 25.5;
-  } 
+    return 25.5;
+  }
   else {
     return (base * height) / 2;
   }
@@ -40,13 +40,16 @@ function splitSentence(text, space) {
   }
 }
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(lista) {
+  let ultimo = lista[lista.length - 1];
+  let primeiro = lista[0];
+  return (ultimo, ', ', primeiro);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let point = ((wins*3)+(ties*1))
+  return point
 }
 
 // Desafio 6
