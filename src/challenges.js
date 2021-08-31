@@ -2,17 +2,19 @@
 function compareTrue(bool1, bool2) {
   // seu código aqui
   let result = false;
-  if(bool1 == true && bool2 == true) {
+  if (bool1 && bool2) {
     result = true;
   }
   return result;
 }
-console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height){
   // seu código aqui
+  let result = (base * height) / 2;
+  return result;
 }
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
