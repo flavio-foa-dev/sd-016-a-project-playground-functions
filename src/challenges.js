@@ -1,20 +1,21 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(value1, value2) {
+  return value1 && value2;  // compara os dois valores boleanos
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2; // calcula a area de um triangulo
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(' '); // divide uma string quando tem espaços
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return array[array.length - 1] + ', ' + array[0];
 }
 
 // Desafio 5
