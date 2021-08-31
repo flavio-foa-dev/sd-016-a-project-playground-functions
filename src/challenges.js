@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   // seu código aqui
-  if (value1 == true && value2 == true) {
+  if (value1 === true && value2 === true) {
     return true;
   } else {
     return false;
@@ -55,7 +55,7 @@ function highestCount(array) {
 }
   for (let repCount = 0 ; repCount < array.length ; repCount++) {
 
-    if (array[0] == array[repCount]) {
+    if (array[0] === array[repCount]) {
       count++;
     }
   }
@@ -66,10 +66,10 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (cat1 - mouse > cat2 - mouse) {
+  if (cat1 - mouse < cat2 - mouse) {
     return "cat1";
 
-  } else if (cat2 - mouse > cat1 - mouse) {
+  } else if (cat2 - mouse < cat1 - mouse) {
     return "cat2";
 
   } else {
@@ -81,16 +81,19 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
-  if (cat1 - mouse > cat2 - mouse) {
-    return "cat1";
-
-  } else if (cat2 - mouse > cat1 - mouse) {
-    return "cat2";
-
-  } else {
-    return "os gatos trombam e o rato foge";
-
+  let arrayResposta = [];
+  for (let count = 0 ; count < array.length ; count++) {
+    if (array[count]%3 == 0 && array[count]%5 != 0) {
+      arrayResposta.push('fizz');
+    } else if (array[count]%5 == 0 && array[count]%3 != 0) {
+      arrayResposta.push('buzz');
+    } else if (array[count]%3 == 0 && array[count]%5 == 0) {
+      arrayResposta.push('fizzBuzz');
+    } else {
+      arrayResposta.push('bug');
+    }
   }
+  return arrayResposta;
 }
 
 // Desafio 9
