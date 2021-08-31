@@ -24,9 +24,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayList) {
+  let number = Math.max.apply(null, arrayList);
+  let cont = 0;
+  let i = 0;
+  for (i = 0; i < arrayList.length; i += 1) {
+    if (number === arrayList[i]) {
+      cont += 1;
+    } else {
+      cont += 0;
+    }
+  } return cont;
 }
+
+// Referencia da linha 28 - Math.max.apply retirada do - https://stackoverflow.com/questions/1669190/find-the-min-max-element-of-an-array-in-javascript
 
 // Desafio 7
 function catAndMouse() {
