@@ -70,11 +70,11 @@ function fizzBuzz(array) {  // retorna uma palavra para um determinado caso dent
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 == 0 && array[i] % 5 == 0) {
       returnArray.push('fizzBuzz');
-    }else if(array[i] % 3 == 0){
+    } else if (array[i] % 3 == 0) {
       returnArray.push('fizz');
-    }else if(array[i] % 5 == 0){
+    } else if (array[i] % 5 == 0) {
       returnArray.push('buzz');
-    }else{
+    } else {
       returnArray.push('bug!');
     }
   }
@@ -82,11 +82,51 @@ function fizzBuzz(array) {  // retorna uma palavra para um determinado caso dent
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {   //codifica
+  array = string.split('');
+  arrayCoded = [];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] == 'a') {
+      arrayCoded.push('1');
+    } else if (array[i] == 'e') {
+      arrayCoded.push('2');
+    } else if (array[i] == 'i') {
+      arrayCoded.push('3');
+    } else if (array[i] == 'o') {
+      arrayCoded.push('4');
+    } else if (array[i] == 'u') {
+      arrayCoded.push('5');
+    } else {
+      arrayCoded.push(array[i]);
+    }
+  }
+
+  arrayCoded = arrayCoded.join('');
+
+  return arrayCoded;
 }
-function decode() {
-  // seu código aqui
+function decode(string) { //decodifica
+  array = string.split('');
+  arrayCoded = [];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] == '1') {
+      arrayCoded.push('a');
+    } else if (array[i] == '2') {
+      arrayCoded.push('e');
+    } else if (array[i] == '3') {
+      arrayCoded.push('i');
+    } else if (array[i] == '4') {
+      arrayCoded.push('o');
+    } else if (array[i] == '5') {
+      arrayCoded.push('u');
+    } else {
+      arrayCoded.push(array[i]);
+    }
+  }
+
+  arrayCoded = arrayCoded.join('');
+
+  return arrayCoded;
 }
 
 module.exports = {
