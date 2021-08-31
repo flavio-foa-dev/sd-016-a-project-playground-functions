@@ -1,6 +1,21 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayTech, name) {
+  let arrayObject = [];
+  if (arrayTech.length === 0) {
+    arrayObject = 'Vazio!';
+  } else {
+    arrayTech.sort();
+    for (let value of arrayTech) {
+      let objAux = {
+        tech: value,
+        // eslint-disable-next-line object-shorthand
+        name: name,
+      };
+      arrayObject.push(objAux);
+    }
+  }
+
+  return arrayObject;
 }
 
 // Desafio 11
