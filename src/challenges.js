@@ -14,8 +14,9 @@ return area;
 }
 
 // Desafio 3
-function splitSentence() {
-
+function splitSentence(str) {
+  let array = str.split(" ");
+  return array;
 }
 
 // Desafio 4
@@ -31,8 +32,21 @@ function footballPoints() {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  // função recebe uma arrey de números
+  // retorne quantas vezes o MAIOR deles se repete
+  // percorrer o array
+  // contar o maior número em um laço de repetição
+  // definir uma let para armazenar o maior número contar qtas vezes ele aparece
+
+  let maiorNumero = numeros[0];
+  let soma = 1;
+
+  for(let index = 1; index < numeros.length; index += 1){
+
+  }
+
+
 }
 
 // Desafio 7
