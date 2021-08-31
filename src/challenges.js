@@ -30,18 +30,27 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
-  for (let index = 0; index < array.length; i++)
+function highestCount(numeros) {
+  x = 0
+  for (let index = 0; index <= numeros.length; index++)
+    // Math.max não funciona com arrays, usar apply!!!!
+    // Utilizar Null caso não haja um valor global!!!!
+    if (numeros[index] == Math.max.apply(null, numeros)) {
+      x += 1
+  }
+  return (x)
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  switch(x) {
+    
+  }
 }
 
 // Desafio 9
