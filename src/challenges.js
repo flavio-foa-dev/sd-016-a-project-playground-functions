@@ -26,16 +26,14 @@ function concatName(arrayString) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let a = wins * 3;
-  let b = ties;
-  let points = a + b;
+  let points = (wins * 3) + (ties * 1);
   return points;
 }
 
 // Desafio 6
 function highestCount(arrayNumbers) {
   let greaterNumber = arrayNumbers[0];
-  let count = 0;
+  let countNumber = 0;
   for (let index in arrayNumbers) {
     if (greaterNumber < arrayNumbers[index]) {
       greaterNumber = arrayNumbers[index];
@@ -43,20 +41,22 @@ function highestCount(arrayNumbers) {
   }
   for (let secondIndex in arrayNumbers) {      
     if (greaterNumber === arrayNumbers[secondIndex]) {
-      count += 1;
+      countNumber += 1;
     }   
   }     
-  return count;
-  }  
+  return countNumber;
+} 
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(mouse - cat1)  > Math.abs(mouse - cat2)) {
-    console.log('cat1');
-  } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)){
-    console.log('cat2');
+  let away1 = cat1 - mouse
+  let away2 = cat2 - mouse
+  if (Math.abs(away1) > Math.abs(away2)) {
+    return 'cat1';
+  } else if (Math.abs(away1) < Math.abs(away2)){
+    return 'cat2';
   } else {
-    console.log("os gatos trombam e o rato foge");
+    return 'os gatos trombam e o rato foge';
   }
 }
 
