@@ -33,41 +33,53 @@ function highestCount(numeros) {
   let cont = Math.max(...numeros);
   let quant = 0;
   for (let numero in numeros) {
-    if(numeros[numero] === cont){
-      quant ++;
+    if (numeros[numero] === cont) {
+      quant++;
     }
 
-    }
-    return quant;
   }
+  return quant;
+}
 
-  // Desafio 7
-  function catAndMouse() {
-    // seu código aqui
-  }
+// Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
+  let posicaoC1 = Math.abs(cat1 - mouse);
+  let posicaoC2 = Math.abs(cat2 - mouse);
+  let resposta;
 
-  // Desafio 8
-  function fizzBuzz() {
-    // seu código aqui
-  }
-
-  // Desafio 9
-  function encode() {
-    // seu código aqui
-  }
-  function decode() {
-    // seu código aqui
-  }
-
-  module.exports = {
-    calcArea,
-    catAndMouse,
-    compareTrue,
-    concatName,
-    decode,
-    encode,
-    fizzBuzz,
-    footballPoints,
-    highestCount,
-    splitSentence,
+  if (posicaoC1 < posicaoC2) {
+    resposta = "cat1"
+  } else if (posicaoC2 < posicaoC1) {
+    resposta = "cat2"
+  } else if (posicaoC1 === posicaoC2) {
+    resposta = "os gatos trombam e o rato foge"
   };
+
+  return (resposta);
+}
+
+// Desafio 8
+function fizzBuzz() {
+  // seu código aqui
+}
+
+// Desafio 9
+function encode() {
+  // seu código aqui
+}
+function decode() {
+  // seu código aqui
+}
+
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
+};
