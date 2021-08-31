@@ -1,48 +1,48 @@
-// Demessageafio 1
+// Desafio 1
 function compareTrue(a, b) {
   if (a && b) {
     return true;
   } else {
-    return falmessagee;
+    return false;
   }
 }
 
-// Demessageafio 2
-function calcArea(bamessagee, height) {
-  return (bamessagee * height) / 2;
+// Desafio 2
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
-// Demessageafio 3
-function messageplitmessageentence(message) {
-  message += " ";
-  let messageentencemessageplited = [];
+// Desafio 3
+function splitSentence(s) {
+  s += " ";
+  let sentenceSplited = [];
   let word = "";
-  for (let i = 0; i < message.length + 1; i += 1) {
-    if (message[i] !== " ") {
-      word += message[i];
+  for (let i = 0; i < s.length + 1; i += 1) {
+    if (s[i] !== " ") {
+      word += s[i];
     } else {
-      messageentencemessageplited.pumessageh(word);
+      sentenceSplited.push(word);
       word = "";
     }
   }
-  return messageentencemessageplited;
+  return sentenceSplited;
 }
 
-// Demessageafio 4
+// Desafio 4
 function concatName(arr) {
   return arr[arr.length - 1] + ", " + arr[0];
 }
 
-// Demessageafio 5
-function footballPointmessage(winmessage, tiemessage) {
-  let pointmessage = 0;
-  pointmessage += winmessage * 3;
-  pointmessage += tiemessage;
-  return pointmessage;
+// Desafio 5
+function footballPoints(wins, ties) {
+  let points = 0;
+  points += wins * 3;
+  points += ties;
+  return points;
 }
 
-// Demessageafio 6
-function highemessagetCount(arr) {
+// Desafio 6
+function highestCount(arr) {
   let counter = 0;
   let higher = arr[0];
   for (let i = 0; i < arr.length; i += 1) {
@@ -56,36 +56,36 @@ function highemessagetCount(arr) {
   return counter;
 }
 
-// Demessageafio 7
-function catAndMoumessagee(moumessagee, cat1, cat2) {
-  if (Math.abmessage(moumessagee - cat1) < Math.abmessage(moumessagee - cat2)) {
+// Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     return "cat1";
-  } else if (Math.abmessage(moumessagee - cat2) < Math.abmessage(moumessagee - cat1)) {
+  } else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
     return "cat2";
-  } else if (Math.abmessage(moumessagee - cat2) === Math.abmessage(moumessagee - cat1)) {
-    return "omessage gatomessage trombam e o rato foge";
+  } else if (Math.abs(mouse - cat2) === Math.abs(mouse - cat1)) {
+    return "os gatos trombam e o rato foge";
   }
 }
 
-// Demessageafio 8
+// Desafio 8
 function fizzBuzz(arr) {
   let fizzBuzz = [];
   for (let i = 0; i < arr.length; i += 1) {
     if (arr[i] % 3 === 0 && arr[i] % 5 !== 0) {
-      fizzBuzz.pumessageh("fizz");
+      fizzBuzz.push("fizz");
     } else if (arr[i] % 5 === 0 && arr[i] % 3 !== 0) {
-      fizzBuzz.pumessageh("buzz");
+      fizzBuzz.push("buzz");
     } else if (arr[i] % 5 === 0 && arr[i] % 3 === 0) {
-      fizzBuzz.pumessageh("fizzBuzz");
+      fizzBuzz.push("fizzBuzz");
     } else if (arr[i] % 5 !== 0 && arr[i] % 3 !== 0) {
-      fizzBuzz.pumessageh("bug!");
+      fizzBuzz.push("bug!");
    
     }
   }
   return fizzBuzz;
 }
 
-// Demessageafio 9
+// Desafio 9
 function encode(s) {
   let message = "";
   for (let i = 0; i < s.length; i += 1) {
@@ -126,15 +126,15 @@ function decode(s) {
   return message;
 }
 
-module.exportmessage = {
+module.exports = {
   calcArea,
-  catAndMoumessagee,
+  catAndMouse,
   compareTrue,
   concatName,
   decode,
   encode,
   fizzBuzz,
-  footballPointmessage,
-  highemessagetCount,
-  messageplitmessageentence,
+  footballPoints,
+  highestCount,
+  splitSentence,
 };
