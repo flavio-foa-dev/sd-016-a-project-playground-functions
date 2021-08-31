@@ -90,69 +90,73 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode(phrase) {
-  let newPhrase = "";
-  for (let index = 0; index < phrase.length; index += 1) {
-    if (phrase[index] === 'a')
+function encode(frase) 
+{
+  // seu código aqui
+  let newFrase = "";
+  for (let index = 0; index < frase.length; index += 1)
+  {
+    if (frase[index] == 'a')
     {
-      newPhrase = newPhrase + 1;
+      newFrase = newFrase + 1;
     }
-    else if (phrase[index] === 'e')
+    else if (frase[index] == 'e')
     {
-      newPhrase = newPhrase + 2;
+      newFrase = newFrase + 2;
     }
-    else if (phrase[index] === 'i')
+    else if (frase[index] == 'i')
     {
-      newPhrase = newPhrase + 3;
+      newFrase = newFrase + 3;
     }
-    else if (phrase[index] === 'o')
+    else if (frase[index] == 'o')
     {
-      newPhrase = newPhrase + 4;
+      newFrase = newFrase + 4;
     }
-    else if (phrase[index] === 'u')
+    else if (frase[index] == 'u')
     {
-      newPhrase = newPhrase + 5;
-    }
-    else
-    {
-      newPhrase = newPhrase + phrase[index];
-    }
-  }
-  return newPhrase;
-}
-
-
-function decode(phrase) {
-  let newPhrase = "";
-  for (let index = 0; index < phrase.length; index += 1) {
-    if (phrase[index] === 1)
-    {
-      newPhrase = newPhrase + 'a';
-    }
-    else if (phrase[index] === 2)
-    {
-      newPhrase = newPhrase + 'e';
-    }
-    else if (phrase[index] === 3)
-    {
-      newPhrase = newPhrase + 'i';
-    }
-    else if (phrase[index] === 4)
-    {
-      newPhrase = newPhrase + 'o';
-    }
-    else if (phrase[index] === 5)
-    {
-      newPhrase = newPhrase + 'u';
+      newFrase = newFrase + 5;
     }
     else
     {
-      newPhrase = newPhrase + newPhrase[index];
+      newFrase = newFrase + frase[index];
     }
   }
-  return newPhrase;
+  return newFrase;
 }
 
+function decode(string) 
+{
+  // seu código aqui
+  let newString = "";
+  for (let index = 0; index < string.length; index += 1)
+  {
+    if (string[index] == 1)
+    {
+      newString = newString + 'a';
+    }
+    else if (string[index] == 2)
+    {
+      newString = newString + 'e';
+    }
+    else if (string[index] == 3)
+    {
+      newString = newString + 'i';
+    }
+    else if (string[index] == 4)
+    {
+      newString = newString + 'o';
+    }
+    else if (string[index] == 5)
+    {
+      newString = newString + 'u';
+    }
+    else
+    {
+      newString = newString + string[index];
+    }
+  }
+  return newString;
+}
 module.exports = {
   calcArea,
   catAndMouse,
