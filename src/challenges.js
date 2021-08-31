@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(num1, num2) {
-  if (num1 && num2 % 2 === 0) {
+  if (num1 === true && num2 === true) {
     return true
   } else {
     return false
@@ -8,18 +8,18 @@ function compareTrue(num1, num2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(String) {
+  return String.split(' ')
 }
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  
 }
 
 // Desafio 5
