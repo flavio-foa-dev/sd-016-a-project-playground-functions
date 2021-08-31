@@ -105,11 +105,32 @@ function fizzBuzz( arrayNumbers ) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode( string ) {
+  let encodedString = string;
+
+  for( let count = 0; count < string.length; count += 1){
+    encodedString = encodedString.replace('a','1');
+    encodedString = encodedString.replace('e','2');
+    encodedString = encodedString.replace('i','3');
+    encodedString = encodedString.replace('o','4');
+    encodedString = encodedString.replace('u','5');
+  }
+
+  return encodedString;
 }
-function decode() {
-  // seu código aqui
+
+function decode( encodedString ) {
+  let decodedString = encodedString;
+
+  for( let count = 0; count < encodedString.length; count += 1){
+    decodedString = decodedString.replace('1','a');
+    decodedString = decodedString.replace('2','e');
+    decodedString = decodedString.replace('3','i');
+    decodedString = decodedString.replace('4','o');
+    decodedString = decodedString.replace('5','u');
+  }
+
+  return decodedString;
 }
 
 module.exports = {
