@@ -15,7 +15,7 @@ function calcArea(base, height) {
 
 // Desafio 3
  function splitSentence(string) {
-
+  return string.split(" ");
 } 
 
 // Desafio 4
@@ -48,7 +48,6 @@ function highestCount(array) {
   }
   return repeticoesMaior;
 }
-/* console.log(highestCount([-2, -2, -1])) */
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
