@@ -8,22 +8,31 @@ return (value1 && value2)
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea( base, height) {
+  let area = (base*height) / 2;
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence( str ) {
+  let splittedSentense = str.split(' ');
+  return splittedSentense;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName( strArray ) {
+  let lastStr = strArray[strArray.length-1];
+  let firstStr = strArray[0];
+
+  let strResult = lastStr.concat( ', ' + firstStr );
+  
+  //console.log(strResult);
+
+  return strResult;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints( wins, ties ) {
   // seu código aqui
 }
 
