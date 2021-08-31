@@ -1,6 +1,13 @@
 // Desafio 1
 function compareTrue() {
-  // seu código aqui
+ let a = 1;
+ leb b = 1;
+
+  if(a == b && b == a){
+    console.log(true);
+  }else{
+    console.log(false);
+  }
 }
 
 // Desafio 2
