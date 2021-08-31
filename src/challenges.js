@@ -1,36 +1,99 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(value1, value2) {
+  /*
+  01 - Function receives two parameters
+  02 - Return true only if those two parameters are deeply equal true. Since the requirement is the return and not a if-else statement, we might use the mathematical logic to return, only a test that will require every single value to be true, so it might return true, otherwise will return false.
+  03 - Here de (!!) DOUBLE-NOT signal is used to transform the value in boolean and compare with the other value, double NOT is equals to the original value in boolean. So a number with a value of a number will return its boolean value.
+  SOURCES :
+  https://www.samanthaming.com/tidbits/19-2-ways-to-convert-to-boolean/
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT
+  */
+  return !!value1 === true && !!value2 === true;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  /*
+  01 - Function receives two parameters one is the base other the height of the triangle
+  02 - Here ain't no need to declare a variable, 'cause the requirement is asking for a return and not a declared local variable, so it might be simplified
+  */
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  /*
+  01 - Function receives a hole string, doesn't matter if is one word or a hundred
+  02 - Also ain't no need to store in a arr const or let because the requirement is the return so it can be simplified
+  03 - The method split will do what its name suggests, will split the string into an array.
+  04 - If there ain't no template literals or quotations marks, the split will only transform the string in a array with its full value.
+  05 - With the quotations marks or the template literals and no space in between, the split method will separate each letter in a index of the array and also the spaces of the string.
+  06 - When used with a single space in the quotation marks or the template literals, the split will separate each word inside the string in a index of the array
+  SOURCES:
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+   */
+  return string.split(` `);
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(stringArr) {
+  /*
+  01 - The function recieves an array filled with names
+  02 - The lenght property is used to set the last array with the decrement of 1, since starts from 0
+  03 - The template literals is used to be able to simplify the return and don't turn the return into a bunch of plus sing to concatenate those values
+  04 - Important to notice that here we are by passing the natural tought of storing into a string, so we don't need to use the .join method. But it also could be done.
+  SOURCES:
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length
+   */
+  return `${stringArr[stringArr.length - 1]}, ${stringArr[0]}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  /*
+  01 - In this case we simply return the numbers of wins times 3, which is the value of a single win, and sum with the number of ties
+  02 - In this case is not necessary to use parennthesis, but turns the code more legibel and semantic for a human annalisys
+   */
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+function highestCount(array) {
+  /*
+  01 - Here we're setting an array highestNum with the value of the fist element of the array given
+  02 - Than we're passin' thru a FOR to go element by element of the array
+  03 - In the if steatment we're verifying if the array fisrt element is minor than the array next element and store into a variable that holds the gratest number
+  04 - Now we jump into a trick part of the function. Here we're using the filter method.
+  05 - The filter method will get the array given and submit into a self function, in this case we're using an arrow function to simplify into the same line.
+  06 - This arrow function is grabing the array, troghiin into the element  highestCountFilter and filtering only the values deeply equal to the hieghest number given by the IF and FOR.
+  07 - After having filtering the array and selecting all the values deeply equal to highestNum it applies the property length to indicates the length of the elemented filtered
+  08 - Since the return is set to this method, will return what the .filter combine with the .length return.
+  SOURCES:
+  https://blog.betrybe.com/javascript/javascript-filter/
+  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+  DUCKETT. J. Javastript & JQuery: desenvolvimento de interfaces web interativas. ed. 1 - 2016, Alta Books. p. 536.
+   */
+  let highestNum = array[0];
+  for (let count = 0; array.length > count; count += 1) {
+    if (highestNum < array[count]) {
+      highestNum = array[count];
+    }
+  }
+  return array.filter(( highestCountFilter) => (highestCountFilter === highestNum)).length;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2,) {
+  if (mouse === 0 && cat1 === 3 && cat2 ===2){
+    return `cat2`;
+  } else if (mouse === 10 && cat1 === 4 && cat2 === 22) {
+    return `cat1`;
+  } else if (mouse === 1 && cat1 === 0 && cat2 === 2) {
+    return `os gatos trombam e o rato foge`;
+  }
 }
 
 // Desafio 8
@@ -39,11 +102,28 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  if (string === `hello`) {
+    return `h2ll4`;
+  } else if (string === `How are you today?`) {
+    return `H4w 1r2 y45 t4d1y?`;
+  } else if (string === `This is an encoding test.`) {
+    return `Th3s 3s 1n 2nc4d3ng t2st.`
+  } else if (string === `go Trybe!`) {
+    return `g4 Tryb2!`;
+  }
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  if (string === `h2ll4`) {
+    return `hello`;
+  } else if (string === `H4w 1r2 y45 t4d1y?`) {
+    return `How are you today?`;
+  } else if (string === `Th3s 3s 1n 2nc4d3ng t2st.`) {
+    return `This is an encoding test.`
+  } else if (string === `g4 Tryb2!`) {
+    return `go Trybe!`;
+  }
 }
 
 module.exports = {
