@@ -1,9 +1,9 @@
 // Desafio 1
 
-function compareTrue(bolean1, bolean2) {
-  if (bolean1 && bolean2) {
+function compareTrue(bolean1, bolean2){
+  if(bolean1 && bolean2){
     return true;
-  } else {
+  }else{
     return false;
   }
   
@@ -63,4 +63,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
