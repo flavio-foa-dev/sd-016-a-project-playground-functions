@@ -83,16 +83,58 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
+// Para cada número do Array que seja divisível apenas por 3, apresente uma string "fizz";
+// Para cada número do Array que seja divisível apenas por 5, apresente uma string "buzz";
+// Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
+// Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
+function fizzBuzz(arrOfNumbers) {
+  let result = [];
+
+  for (let index = 0; index < arrOfNumbers.length; index++) {
+    let currentNumber = arrOfNumbers[index];
+
+    if (currentNumber % 3 !== 0 && currentNumber % 5 !== 0) {
+      result.push("bug!")
+    } else if (currentNumber % 3 === 0 && currentNumber % 5 === 0) {
+      result.push("fizzBuzz")
+    } else if (currentNumber % 3 === 0) {
+      result.push("fizz")
+    } else if (currentNumber % 5 === 0) {
+      result.push("buzz")
+    }
+  }
+  return result;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro,
+// deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+// a -> 1
+// e -> 2
+// i -> 3
+// o -> 4
+// u -> 5
+function encode(stringToEncode) {
+  let A = stringToEncode.replace(/a/g, 1);
+  let E = A.replace(/e/g, 2);
+  let I = E.replace(/i/g, 3);
+  let O = I.replace(/o/g, 4);
+  let encoded= O.replace(/u/g, 5)
+  return encoded;
 }
-function decode() {
-  // seu código aqui
+
+// A segunda função deverá se chamar decode e faz o contrário de encode -
+// ou seja, recebe uma string contendo números no lugar de letras minúsculas
+// e retornará uma string com vogais minúsculas no lugar dos números
+// (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
+function decode(stringToDecode) {
+  let s1 = stringToDecode.replace(/1/g, "a");
+  let s2 = s1.replace(/2/g, "e");
+  let s3 = s2.replace(/3/g, "i");
+  let s4 = s3.replace(/4/g, "o");
+  let decoded = s4.replace(/5/g, "u");
+  return decoded;
 }
 
 module.exports = {
