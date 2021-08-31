@@ -6,7 +6,7 @@ function compareTrue(a, b) {
     console.log(false);
   }
 }
-console.log(compareTrue(1, 1));
+compareTrue(1, 1);
 // Desafio 2
 let base = 0;
 let height = 0;
@@ -29,7 +29,7 @@ function splitSentence(word) {
 console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  
 }
 
 // Desafio 5
