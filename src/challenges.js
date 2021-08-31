@@ -25,8 +25,11 @@ function splitSentence(str) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arr) {
+  let first = arr[0];
+  let last = [...arr].pop();
+  let result = last + ", " + first;
+  return result; 
 }
 
 // Desafio 5
