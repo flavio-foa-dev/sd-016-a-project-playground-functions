@@ -9,8 +9,13 @@ function compareTrue(valor1, valor2) {
   return false;
 }
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  // reeber um valor chamado base e outro valor chamado height
+  // receber o calculo da area do triangulo
+  // área do triângulo = (base*altura)/2
+  let areaTriangulo;
+  areaTriangulo = (base * height) / 2;
+  return areaTriangulo;
 }
 
 // Desafio 3
