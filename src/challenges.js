@@ -23,14 +23,14 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(frase) {
   let primeiraPalavra = frase[0];
-  let ultimaPalavra = frase.[frase.length - 1];
+  let ultimaPalavra = frase. [frase.length - 1];
   let resultado = ultimaPalavra + ', ' + primeiraPalavra;
   return resultado;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = (wins * 3) + (ties * 1);
+  let points = (wins * 3) + (ties);
   return points;
 }
 
@@ -90,54 +90,70 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode(phrase1) {
-  let newPhrase1 = '';
-  for(let index = 0; index < phrase1.length; index += 1) {
-    if(phrase1[index] === 'a') {
-      newPhrase1 = newPhrase1 + 1;
+function encode(phrase) 
+{
+  let newPhrase = "";
+  for (let index = 0; index < phrase.length; index += 1)
+  {
+    if (phrase[index] === 'a')
+    {
+      newPhrase = newPhrase + 1;
     }
-    else if (phrase1[index] === 'e') {
-      newPhrase1 = newPhrase1 + 2;
+    else if (phrase[index] === 'e')
+    {
+      newPhrase = newPhrase + 2;
     }
-    else if (phrase1[index] === 'i') {
-      newPhrase1 = newPhrase1 + 3;
+    else if (phrase[index] === 'i')
+    {
+      newPhrase = newPhrase + 3;
     }
-    else if (phrase1[index] === 'o') {
-      newPhrase1 = newPhrase1 + 4;
+    else if (phrase[index] === 'o')
+    {
+      newPhrase = newPhrase + 4;
     }
-    else if (phrase1[index] === 'u') {
-      newPhrase1 = newPhrase1 + 5;
+    else if (phrase[index] === 'u')
+    {
+      newPhrase = newPhrase + 5;
     }
-    else {
-      newPhrase1 = newPhrase1 + phrase1[index];
+    else
+    {
+      newPhrase = newPhrase + phrase[index];
     }
   }
-  return newPhrase1;
+  return newPhrase;
 }
 
-function decode(phrase1) {
-  let newPhrase1 = '';
-  for(let index = 0; index < phrase1.length; index += 1) {
-    if(phrase1[index] === 1) {
-      newPhrase1 = newPhrase1 + 'a';
+function decode(phrase) 
+{
+  let newPhrase = "";
+  for (let index = 0; index < phrase.length; index += 1)
+  {
+    if (phrase[index] === 1)
+    {
+      newPhrase = newPhrase + 'a';
     }
-    else if (phrase1[index] === 2) {
-      newPhrase1 = newPhrase1 + 'e';
+    else if (phrase[index] === 2)
+    {
+      newPhrase = newPhrase + 'e';
     }
-    else if (phrase1[index] === 3) {
-      newPhrase1 = newPhrase1 + 'i';
+    else if (phrase[index] === 3)
+    {
+      newPhrase = newPhrase + 'i';
     }
-    else if (phrase1[index] === 4) {
-      newPhrase1 = newpHrase1 + 'o';
+    else if (phrase[index] === 4)
+    {
+      newPhrase = newPhrase + 'o';
     }
-    else if (phrase1[index] === 5) {
-      newPhrase1 = newPHrase1 + 'u';
+    else if (phrase[index] === 5)
+    {
+      newPhrase = newPhrase + 'u';
     }
-    else {
-      newPhrase1 = newPhrase1 + phrase1[index];
+    else
+    {
+      newPhrase = newPhrase + newPhrase[index];
     }
   }
-  return newPhrase1;
+  return newPhrase;
 }
 
 module.exports = {
