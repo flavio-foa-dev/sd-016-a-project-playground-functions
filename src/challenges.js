@@ -62,15 +62,31 @@ function fizzBuzz(array) {
   }
   return array
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let letras = ["a", "e", "i", "o", "u"];
+  for(let strIndex = 0; strIndex < str.length; strIndex +=1){
+    for(let letrasIndex = 0; letrasIndex < letras.length; letrasIndex += 1){
+      str = str.replace(letras[letrasIndex],  letrasIndex + 1)
+    }
+  }
+  return str
 }
-function decode() {
-  // seu código aqui
+
+
+
+function decode(str) {
+  let letras = ["a", "e", "i", "o", "u"];
+  for(let strIndex = 0; strIndex < str.length; strIndex +=1){
+    for(let letrasIndex = 0; letrasIndex < letras.length; letrasIndex += 1){
+      str = str.replace(letrasIndex + 1,letras[letrasIndex])
+    }
+  }
+  return str
 }
+
 
 module.exports = {
   calcArea,
