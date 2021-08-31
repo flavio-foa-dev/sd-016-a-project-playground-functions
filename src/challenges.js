@@ -17,7 +17,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(value) {
   let result = [];
-  let space= "";
+  let space = "";
   
 
   for (index = 0; index < value.length; index += 1) {
@@ -35,8 +35,10 @@ function splitSentence(value) {
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(value) {
+
+  result = value[value.length -1] + ", " + value[0];
+  return result;
 }
 
 // Desafio 5
