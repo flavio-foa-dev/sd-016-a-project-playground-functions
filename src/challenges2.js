@@ -35,37 +35,10 @@ function generatePhoneNumber(telefoneNumber) {
       if(telefoneNumber[index] < 0 | telefoneNumber[index] > 9){
         return "não é possível gerar um número de telefone com esses valores";
       }
-        if(cont4 >= 3){
-    return "não é possível gerar um número de telefone com esses valores";
+      if(cont4 >= 3){
+        return "não é possível gerar um número de telefone com esses valores";
+      }
   }
-  if(cont8 >= 3){
-    return "não é possível gerar um número de telefone com esses valores";
-  }
-  if(cont2 >= 3){
-    return "não é possível gerar um número de telefone com esses valores";
-  }
-  if(cont1 >= 3){
-    return "não é possível gerar um número de telefone com esses valores";
-  }
-  if(cont0 >= 3){
-    return "não é possível gerar um número de telefone com esses valores";
-  }
-  if(cont3 >= 3){
-    return "não é possível gerar um número de telefone com esses valores";
-  }
-  if(cont5 >= 3){
-    return "não é possível gerar um número de telefone com esses valores";
-  }
-  if(cont6 >= 3){
-    return "não é possível gerar um número de telefone com esses valores";
-  }
-  if(cont7 >= 3){
-    return "não é possível gerar um número de telefone com esses valores";
-  }
-  if(cont9 >= 3){
-    return "não é possível gerar um número de telefone com esses valores";
-  }
-    }
     for(let index = 0; index < telefoneNumber.length; index += 1){
     if(telefoneNumber[index] === 0){
       cont4 +=1;
@@ -98,7 +71,33 @@ function generatePhoneNumber(telefoneNumber) {
       cont9 += 1;
     }
   }
-
+  if(cont8 >= 3){
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+  if(cont2 >= 3){
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+  if(cont1 >= 3){
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+  if(cont0 >= 3){
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+  if(cont3 >= 3){
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+  if(cont5 >= 3){
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+  if(cont6 >= 3){
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+  if(cont7 >= 3){
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+  if(cont9 >= 3){
+    return "não é possível gerar um número de telefone com esses valores";
+  }
 
   return "(" + telefoneNumber[0] + telefoneNumber[1] + ") " + telefoneNumber[2] + telefoneNumber[3] + telefoneNumber[4] + telefoneNumber[5] + telefoneNumber[6] + "-"  + telefoneNumber[7] + telefoneNumber[8] + telefoneNumber[9] + telefoneNumber[10];
 }
