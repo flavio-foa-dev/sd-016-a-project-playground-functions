@@ -9,7 +9,7 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea() {
-  // seu código aqui
+  for();
 }
 
 // Desafio 3
