@@ -98,6 +98,9 @@ function catAndMouse(mouse, cat1, cat2,) {
 
 // Desafio 8
 function fizzBuzz(arr) {
+  /*
+
+   */
   const arrFizz = []
   for (let index = 0; index < arr.length; index += 1) {
     if (arr[index] % 3 === 0 && arr[index] % 5 !== 0){
@@ -115,27 +118,41 @@ function fizzBuzz(arr) {
 
 // Desafio 9
 function encode(string) {
-  if (string === `hello`) {
-    return `h2ll4`;
-  } if (string === `How are you today?`) {
-    return `H4w 1r2 y45 t4d1y?`;
-  } if (string === `This is an encoding test.`) {
-    return `Th3s 3s 1n 2nc4d3ng t2st.`;
-  } if (string === `go Trybe!`) {
-    return `g4 Tryb2!`;
+
+  const arr = string.split(``);
+  for (let index = 0; index <= string.length; index += 1) {
+    if (arr[index] === `e`) {
+      arr.splice(index, 1, `2`);
+    } if (arr[index] === `o`) {
+      arr.splice(index, 1, `4`);
+    } if (arr[index] === `a`) {
+      arr.splice(index, 1, `1`);
+    } if (arr[index] === `u`) {
+      arr.splice(index, 1, `5`);
+    } if (arr[index] === `i`) {
+      arr.splice(index, 1, `3`);
+    }
   }
+  return arr.join(``);
 }
 
 function decode(string) {
-  if (string === `h2ll4`) {
-    return `hello`;
-  } if (string === `H4w 1r2 y45 t4d1y?`) {
-    return `How are you today?`;
-  } if (string === `Th3s 3s 1n 2nc4d3ng t2st.`) {
-    return `This is an encoding test.`;
-  } if (string === `g4 Tryb2!`) {
-    return `go Trybe!`;
+
+  const arr = string.split(``);
+  for (let index = 0; index <= string.length; index += 1) {
+    if (arr[index] === `2`) {
+      arr.splice(index, 1, `e`);
+    } if (arr[index] === `4`) {
+      arr.splice(index, 1, `o`);
+    } if (arr[index] === `1`) {
+      arr.splice(index, 1, `a`);
+    } if (arr[index] === `5`) {
+      arr.splice(index, 1, `u`);
+    } if (arr[index] === `3`) {
+      arr.splice(index, 1, `i`);
+    }
   }
+  return arr.join(``);
 }
 
 module.exports = {
