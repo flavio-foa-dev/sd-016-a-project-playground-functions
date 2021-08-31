@@ -9,7 +9,7 @@ function compareTrue(bool1, bool2) {
 }
 
 // Desafio 2
-function calcArea(base, height){
+function calcArea(base, height) {
   // seu código aqui
   let result = (base * height) / 2;
   return result;
@@ -23,8 +23,12 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let lastIten = array[array.length - 1];
+  let firstIten = array[0];
+  let result = lastIten + ', ' + firstIten
+  return result;
 }
 
 // Desafio 5
