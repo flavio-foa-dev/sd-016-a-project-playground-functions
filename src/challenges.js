@@ -1,22 +1,22 @@
 // Desafio 1
-function compareTrue(param1,param2) {
+function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
-    return true
-  }else{
-    return false
+    return true;
+  } else {
+    return false;
   }
 }
 
 // Desafio 2
-function calcArea(base,altura) {
-  let area = (base * altura) / 2
-  return area 
+function calcArea(base, altura) {
+  let area = (base * altura) / 2;
+  return area;
 }
 
 // Desafio 3
 function splitSentence(string) {
- let split = string.split(' ')
-  return console.log(split)   
+ let split = string.split(' ');
+  return console.log(split);
 }
 
 // Desafio 4
@@ -28,31 +28,39 @@ function concatName(param3) {
 // Desafio 5
 function footballPoints(wins,ties) {
   let pontos = 0
-  if (wins && ties > 0 ) {
-   pontos = (wins * 3) + ties
-  return pontos
-  }else if (wins && ties === 0){
-    return pontos
-  }
+    if (wins && ties > 0 ) {
+      pontos = (wins * 3) + ties
+      return pontos;
+    }else if (wins && ties === 0){
+      return pontos;
+    }
 }
 
 // Desafio 6
 function highestCount(array) {
-  let maiornumero = 0
-  let repeticoes = 0
-  for (index = 0, index <= array.length, index +=1;) {
+  maiornumero = 0
+  repeticoes = 0
+  for (index = 0, index <= array.length, index +=1){
     if ( array[index] > maiornumero ) {
       maiornumero = array[index]
       repeticoes + 1
-    }else if (array[index] = maiornumero ){
+    } else if (array[index] = maiornumero ){
       repeticoes += 1
-    } return maiornumero , repeticoes
+    } return maiornumero , repeticoes;
   }
-}
+
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  let distancia1 = cat1 - mouse
+  let distancia2 = cat2 - mouse
+  if (distancia1 > distancia2){
+    return cat1;
+  } else if (distancia2 > distancia1){
+    return cat2;
+  }else if (distancia1 === distancia2){
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
