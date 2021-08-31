@@ -13,7 +13,6 @@ let height = 0;
 
 function calcArea(base, height) {
   let area = 0;
-  let resultado = 0;
   return area = (base * height) /2;
 }
 
@@ -21,12 +20,10 @@ console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(word) {
-  if(word === 'go Trybe'){
-    let wordS = ["['go', 'Trybe']"];
-  }
-  return wordS;
+  let array = word.split(" ");
+  return array;
 }
-console.log(splitSentence('go Trybe'));
+
 // Desafio 4
 function concatName() {
   
