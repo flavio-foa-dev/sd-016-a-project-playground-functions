@@ -1,5 +1,3 @@
-/* eslint-disable complexity */
-/* eslint-disable guard-for-in */
 // Desafio 1
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
@@ -26,27 +24,19 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = ' pontos';
-  return 3 * wins + ties + pontos;
+  return 3 * wins + ties;
 }
 
 // Desafio 6
 function highestCount(numeros) {
   let contagem = 0;
-  let maiorContagem = 0;
-  for (let index1 = 0; index1 < numeros.length; index1 += 1) {
-    for (let index2 in numeros) {
-      if (numeros[index1] === numeros[index2]) {
-        contagem += 1;
-      }
-    }
-    if (contagem > maiorContagem) {
-      maiorContagem = contagem;
-    }
-    contagem = 0;
-  }
 
-  return maiorContagem;
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (Math.max(...numeros) === numeros[index]) {
+      contagem += 1;
+    }
+  }
+  return contagem;
 }
 
 // Desafio 7
@@ -101,6 +91,7 @@ function encode(frase) {
     }
   }
   return frase;
+}
 
 function decode(frase) {
   for (let index = 0; index < frase.length; index += 1) {
