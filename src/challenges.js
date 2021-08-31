@@ -15,6 +15,7 @@ function calcArea(base, height) {
   // retorna o cálculo da sua área
   // fórmula da área de um triângulo (base * altura) / 2
   areaTriangle = (base * height) / 2;
+
   return areaTriangle
 }
 
@@ -26,6 +27,7 @@ function splitSentence(stringSplit) {
   // console.log(stringSplit)
   let space = ' ';
   let arrayString = stringSplit.split(space);
+
   return arrayString
 }
 
@@ -38,12 +40,17 @@ function concatName(stringArray) {
   lastIndex = stringArray.length-1;
   let stringConcat = stringArray[lastIndex]+stringArray[0];
  // console.log(stringConcat)
+
   return stringConcat
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  // função recebe o número de vitórias(chamar `wins`) e o número de empates( chamar `ties`)
+  //  retorna a quantidade de pontos que o time marcou em um campeonato.
+
+  spotsTime = (wins*3) + ties;
+  return spotsTime
 }
 
 // Desafio 6
