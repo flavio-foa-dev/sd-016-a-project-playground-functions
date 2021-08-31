@@ -34,8 +34,24 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
+  //Achar numero maior
+  //criar array vezesRepetidas
+  //Percorrer a array pra saber se o valor se repete, se repetir, guardar na array: vezesRepetidas
+  let maiorNum = numbers[0];
+  let vezesRepete = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] >= maiorNum) {
+      maiorNum = numbers[index];
+    } 
+  } 
+  for (let index1 = 0; index1 < numbers.length; index1 += 1) {
+    if( numbers[index1] === maiorNum) {
+      vezesRepete +=1;
+      }
+  }
+  return vezesRepete;
 }
 
 // Desafio 7
