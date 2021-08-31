@@ -3,7 +3,7 @@ function compareTrue() {
  let a = true;
  let b = true;
 
-  if(a == b && b == a){
+  if(a == true && b == true){
     console.log(true);
   }else{
     console.log(false);
