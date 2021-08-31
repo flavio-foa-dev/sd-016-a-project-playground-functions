@@ -7,7 +7,7 @@ function compareTrue(a, b) {
   }
 }
 // Se A e B forem verdadeiros, retorna verdadeiro.
-// Se A ou B não forem verdadeiros, retorna falso.
+// Se A ou B forem falsos, retorna falso.
 
 // Desafio 2
 function calcArea(base, height) {
@@ -20,13 +20,15 @@ function splitSentence(frase) {
   return frase.split(' ');
 }
 // A função splitSentence recebe um valor, sendo este a frase que queremos dividir e transformar em array, para isso usamos o metodo split, que em JavaScript
-// nos possibilita dividir strings.
-
-console.log(splitSentence('go Trybe'));
+// nos possibilita dividir strings e transformar em array.
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(listaDeNomes) {
+  let firstName = listaDeNomes[0]; // índice do primeiro elemento do array.
+  let lastName = listaDeNomes[listaDeNomes.length-1]; // pega o tamanho do array e subtrai um para pegar índice do último item. REFERENCIA: https://medium.com/@rodrigoum/3-maneiras-de-pegar-o-primeiro-e-%C3%BAltimo-elemento-de-um-array-com-javascript-56e92e6bf3f4
+  let concatenacao = [lastName + ", " + firstName]; // juntando o primeiro e o ultimo.
+  concatenacao = concatenacao.toString(""); // retorna como uma string.
+  return concatenacao; 
 }
 
 // Desafio 5
