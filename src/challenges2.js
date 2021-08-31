@@ -1,4 +1,4 @@
-// Desafio 10
+// Desafio 10 Alteração pra commit inicial
 function techList() {
   // seu código aqui
 }
