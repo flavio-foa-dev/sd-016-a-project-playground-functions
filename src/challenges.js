@@ -161,14 +161,53 @@ function highestCount(arrayNumber) {
   }
   return cont;  
 }
-console.log(highestCount([9,1,2,3,9,5,7]));
+//console.log(highestCount([9,1,2,3,9,5,7]));
 //console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+/*
+7 - Crie uma função de Caça ao Rato
+Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão 
+caçando um mesmo rato chamado mouse. Imagine que os animais estão em uma reta, cada um 
+em uma posição representada por um número.
 
+Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição de mouse, cat1 e cat2, 
+nessa ordem, calcule as distâncias entre o rato e cada um dos gatos, em seguida, retorne qual 
+dos felinos irá alcançar o rato primeiro (aquele que estiver mais perto do rato).
+
+Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, 
+sua função deverá retornar "cat2".
+
+Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam 
+e o rato foge".
+
+O que será verificado:
+
+Retorne a string 'cat2' caso a função catAndMouse receba os parâmetros onde gato cat2 esteja a 2 
+unidades de distância do rato e cat1 esteja a 3 unidades de distância do rato
+
+Retorne a string 'cat1' caso a função catAndMouse receba os parâmetros onde gato cat1 esteja a 6 
+unidades de distância do rato e cat2 esteja a 12 unidades de distância do rato
+
+Retorne a string 'os gatos trombam e o rato foge' caso a função catAndMouse receba os parâmetros 
+onde os gatos estejam na mesma distância do rato
+*/
+function catAndMouse(mouse, cat1, cat2) {
+  // seu código aqui
+
+   
+    let distancia1 = Math.abs(cat1 - mouse);
+    let distancia2 = Math.abs(cat2 - mouse);
+    if (distancia1 > distancia2) {
+      return 'cat2';
+    }
+    if (distancia1 < distancia2) {
+      return 'cat1';
+    }
+    return 'os gatos trombam e o rato foge';  
+}
+let frase = catAndMouse(2,3);
+console.log(frase);
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
