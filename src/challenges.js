@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(firstValue, secondValue) {
   if (firstValue === true && secondValue === true) {
-    return true
-  } else {
-    return false
+    return true;
   }
+  return false;
 }
 
 // Desafio 2
@@ -15,13 +14,13 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let resultArray = string.split(" ");
+  let resultArray = string.split(' ');
   return resultArray;
 }
 
 // Desafio 4
 function concatName(stringsArray) {
-  let lastItem = stringsArray[stringsArray.length -1];
+  let lastItem = stringsArray[stringsArray.length - 1];
   let firstItem = stringsArray[0];
   return lastItem + ", " + firstItem; 
 }
@@ -56,15 +55,30 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   } else if ((mouse - cat1) > (mouse - cat2)) {
     return 'cat1';
-  } else if ((mouse - cat2) > (mouse - cat1)) {
-    return 'cat2';
   } 
+  return 'cat2';
 }
-console.log(catAndMouse(1, 0, 2));
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrNumber) {
+  let div3 = 'fizz';
+  let div5 = 'buzz';
+  let div3and5 = 'fizzBuzz';
+  let notDiv3and5 = 'bug!';
+  for (let index in arrNumber) {
+    if (arrNumber[index] % 3 != 0 && arrNumber[index] % 5 != 0) {
+    arrNumber[index] = notDiv3and5;
+    } else if (arrNumber[index] % 3 === 0 && arrNumber[index] % 5 === 0) {
+      arrNumber[index] = div3and5;
+    } else if (arrNumber[index] % 3 === 0) {
+      arrNumber[index] = div3;
+    } else if (arrNumber[index] % 5 === 0) {
+      arrNumber[index] = div5;
+    }
+  }
+  return arrNumber;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
