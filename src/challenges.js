@@ -7,17 +7,17 @@ function compareTrue(booleanA, booleanB) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return ((base * height)/2);
+  return ((base * height) / 2);
 }
 
 // Desafio 3
 function splitSentence(sentence) {
-  return sentence.split(" ");
+  return sentence.split(' ');
 }
 
 // Desafio 4
 function concatName(names) {
-  return (names[names.length-1] + ', ' + names[0]);
+  return (names[names.length - 1] + ', ' + names[0]);
 }
 
 // Desafio 5
@@ -26,8 +26,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let count = 0;
+  let maior = numeros[0];
+
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (maior < numeros[i]) {
+      maior = numeros[i];
+    } 
+  }
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (maior === numeros[i]){
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
