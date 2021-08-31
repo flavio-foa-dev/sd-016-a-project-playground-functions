@@ -7,12 +7,15 @@ function compareTrue(a,b,resultado) {
   } 
   return resultado
 }
-console.log(compareTrue(true,true))
+/* console.log(compareTrue(true,true)) */
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,heigth,result) {
+   result = (base*heigth)/2;
+   return result
 }
+console.log(calcArea(5,2));  
+
 
 // Desafio 3
 function splitSentence() {
