@@ -19,19 +19,15 @@ function splitSentence(words) {
 // Desafio 4
 function concatName(array) {
   let resultado = (array[array.length - 1]);
-  resultado = resultado + ", " + (array[0]);
+  resultado = resultado + ', ' + (array[0]);
   return resultado;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontosDeVitoria = wins * 3;
-  let pontosDeEmpate = ties * 1;
-  if (pontosDeVitoria && pontosDeEmpate !== 0) {
-    return pontosDeVitoria + pontosDeEmpate;
-  } else {
-    return 0;
-  }
+  let victoryPoints = wins * 3;
+  let tiePoints = ties * 1;
+  return victoryPoints + tiePoints;
 }
 
 // Desafio 6
