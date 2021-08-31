@@ -27,11 +27,11 @@ function concatName(arrayString) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = (wins * 3) + ties;
-  return points;
+  console.log(points);
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumbers) {
   let greaterNumber = arrayNumbers[0];
   let count = 0;
   for (let index in arrayNumbers) {
