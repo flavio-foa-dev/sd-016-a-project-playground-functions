@@ -22,8 +22,8 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName(array) {
-  let concat = array[array.length - 1] + ', ' + array[0];
+function concatName(arr) {
+  let concat = arr[arr.length - 1] + ', ' + arr[0];
   return (concat);
 }
 
@@ -34,16 +34,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
-  let n = array[0];
+function highestCount(arr) {
+  let n = arr[0];
   let count = 0
-  for (let index = 0; index < array.length; index += 1) {
-    if (n < array[index]) {
-      n = array[index];
+  for (let index = 0; index < arr.length; index += 1) {
+    if (n < arr[index]) {
+      n = arr[index];
     }
   }
-  for (let index2 = 0; index2 < array.length; index2 += 1) {
-    if (n === array[index2]) {
+  for (let index2 = 0; index2 < arr.length; index2 += 1) {
+    if (n === arr[index2]) {
       count += 1;
     } 
   }
@@ -64,14 +64,14 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
+function fizzBuzz(arr) {
   let frase = []
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 != 0) {
+  for (let index = 0; index < arr.length; index += 1) {
+    if (arr[index] % 3 === 0 && arr[index] % 5 != 0) {
       frase[index] = "fizz";
-    } else if (array[index] % 3 != 0 && array[index] % 5 === 0) {
+    } else if (arr[index] % 3 != 0 && arr[index] % 5 === 0) {
       frase[index] = "buzz";
-    } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+    } else if (arr[index] % 3 === 0 && arr[index] % 5 === 0) {
       frase[index ]= "fizzBuzz";
     } else {
       frase[index] = "bug!";
@@ -81,11 +81,44 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let arr = [];
+  for (let index = 0; index < str.length; index += 1) {
+    if (str[index] == 'a') {
+      arr[index] = 1;
+    } else if (str[index] == 'e') {
+      arr[index] = 2;
+    } else if (str[index] == 'i') {
+      arr[index] = 3;
+    } else if (str[index] == 'o') {
+      arr[index] = 4;
+    } else if (str[index] == 'u') {
+      arr[index] = 5;
+    } else {
+      arr[index] = str[index]
+    }
+  }
+  return(arr.join(''));
 }
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  let arr = [];
+  for (let index = 0; index < str.length; index += 1) {
+    if (str[index] == '1') {
+      arr[index] = 'a';
+    } else if (str[index] == '2') {
+      arr[index] = 'e';
+    } else if (str[index] == '3') {
+      arr[index] = 'i';
+    } else if (str[index] == '4') {
+      arr[index] = 'o';
+    } else if (str[index] == '5') {
+      arr[index] = 'u';
+    } else {
+      arr[index] = str[index]
+    }
+  }
+  return(arr.join(''));
 }
 
 module.exports = {
