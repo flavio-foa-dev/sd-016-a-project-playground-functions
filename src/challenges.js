@@ -1,17 +1,12 @@
 // Desafio 1
-function compareTrue() {
- let a = 1;
- let b = 1;
- 
+function compareTrue(a, b) {
   if(a == b && b == a){
     console.log(true);
   }else{
     console.log(false);
   }
 }
-
-
-
+console.log(compareTrue(1, 1));
 // Desafio 2
 let base = 0;
 let height = 0;
