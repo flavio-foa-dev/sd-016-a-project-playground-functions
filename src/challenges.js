@@ -4,12 +4,15 @@ function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
   } 
+  //retorna false se nao for true
     return false;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  let area;
+  area = (base * heigth) / 2;
+  return area;
 }
 
 // Desafio 3
