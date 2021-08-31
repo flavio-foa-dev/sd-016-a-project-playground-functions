@@ -9,7 +9,7 @@ function compareTrue(param1,param2) {
 
 // Desafio 2
 function calcArea(base,altura) {
-  area = (base * altura) / 2
+  let area = (base * altura) / 2
   return area 
 }
 
@@ -29,7 +29,7 @@ function concatName(param3) {
 function footballPoints(wins,ties) {
   let pontos = 0
   if (wins && ties > 0 ) {
-   let pontos = (wins * 3) + ties
+   pontos = (wins * 3) + ties
   return pontos
   }else if (wins && ties === 0){
     return pontos
@@ -38,7 +38,16 @@ function footballPoints(wins,ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let 
+  let maiornumero = 0
+  let repeticoes = 0
+  for (index = 0, index <= array.length, index +=1;) {
+    if ( array[index] > maiornumero ) {
+      maiornumero = array[index]
+      repeticoes + 1
+    }else if (array[index] = maiornumero ){
+      repeticoes += 1
+    } return maiornumero , repeticoes
+  }
 }
 
 // Desafio 7
