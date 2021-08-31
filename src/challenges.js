@@ -88,12 +88,16 @@ function highestCount(array) {
   for (let index = 0; index <= array.length; index +=1){
   // for para selecionar array[index]
   //  9,1,2,3,9,5,7
-  if (array[index] === numeroMax){
-    
-    let resultado = contador + 1
+  if (array[index] <= numeroMax){
+    numeroMax = array[index];
+        let resultado = contador + 1
   } 
 }
-  return resultado
+for (let i = 0; index <= array.legnth -1; index +=1){
+  if (numeroMax === array[index]){
+    contador = contador + 1;
+  }
+  return contador;
 }
 
 let array4 = [9,1,2,3,9,5,7];
