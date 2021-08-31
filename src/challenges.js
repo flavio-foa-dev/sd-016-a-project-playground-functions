@@ -9,17 +9,18 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, height) {
-return (base * height) / 2
+  return (base * height) / 2
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  return str.split(" ");
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) {
+  ordemNomes = nomes[nomes.length -1] + ', ' + nomes[0];
+  return ordemNomes
 }
 
 // Desafio 5
