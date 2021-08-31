@@ -23,23 +23,7 @@ function generatePhoneNumber(array) {
   let phoneNumber = [];
   let count = 0;
 
-  for(let i = 0; i < array.length; i += 1){
-    for(let j = 0; j < array.length; i += 1){
-      if(array[i] == array[j]){
-        count += 1;
-      }
-    }
-    if (count >= 3){
-      return "não é possível gerar um número de telefone com esses valores";
-    }
-    count = 0;
-  }
-
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] < 0 || array[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
-    }
-  }
+  
 
   if (array.length != 11) {
     return 'Array com tamanho incorreto.';
@@ -62,6 +46,24 @@ function generatePhoneNumber(array) {
     }
 
   }
+
+  for(let i = 0; i < array.length; i += 1){
+    for(let j = 0; j < array.length; j += 1){
+      if(array[i] == array[j]){
+        count += 1;
+      }
+    }
+    if(count >= 3){
+      return "não é possível gerar um número de telefone com esses valores";
+    }else{
+      count = 0;
+    }
+
+    if (array[i] < 0 || array[i] > 9) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
 
   return phoneNumber.join('');
 }
