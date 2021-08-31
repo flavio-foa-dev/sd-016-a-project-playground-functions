@@ -1,33 +1,30 @@
 // Desafio 1
 function compareTrue(firstBool, secondBool) {
-  // 1 - Crie uma função usando o operador &&
-
-  // JavaScript possui um operador lógico &&, o qual recebe dois valores e retorna true se ambos os valores são verdadeiros, e retorna false se algum dos valores não o for.
-  
-  // Considerando isso, implemente na função compareTrue, um código que ao receber dois parâmetros booleanos deve:
-  
-  // Retornar true se ambos os valores forem verdadeiros;
-  // Retornar false se um ou ambos os parâmetros forem falsos.
   if (firstBool && secondBool) {
-    return true
+    return true;
   };
 
-  return false
-};
+  return false;
+}
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = string.split(" ");
+  return array;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayOfStrings) {
+  let firstElement = arrayOfStrings[0];
+  let lastElement = arrayOfStrings[arrayOfStrings.length - 1];
+  let newString = lastElement + ', ' + firstElement;
+
+  return newString;
 }
 
 // Desafio 5
