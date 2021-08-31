@@ -21,23 +21,47 @@ function splitSentence(strings){
 
 // Desafio 4
 function concatName(strings) {
-  value = strings[strings.length - 1] + ',' + strings[0];
+let value = strings[strings.length - 1] + ', ' + strings[0];
   return value
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+let won = ((wins * 3) + ties)
+  return won
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+let higher = numbers
+
+for(let i=0; i < numbers.length; i += 1){
+  if(numbers[i] > higher)
+  higher = numbers[i]
+}
+value = 0
+for(let a=0; a < numbers.length; a += 1){
+  if(higher === numbers[a]){
+    value = value + 1
+    return value
+  }
+  
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+let distance1 = cat1 - mouse
+let distance2 = cat2 - mouse
+
+if(distance1 < distance2){
+  return cat1
+}
+else if(distance2 < distance1){
+  return cat2
+} 
+else {
+  return "os gatos trombam e o rato foge"
+}
 }
 
 // Desafio 8
