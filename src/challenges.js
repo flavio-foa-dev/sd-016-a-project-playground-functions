@@ -26,7 +26,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(someArray) {
 
-  function highestNumber(array) { // descobre o maior numero
+  function highestNumber(array) { // descobre o maior numero(criei dentro da função pois não sabia se podia criar fora em função do corretor automatico)
     let max = array[0];
     for (let i = 0; i < array.length; i += 1) {
       if (array[i] >= max) {
@@ -39,8 +39,8 @@ function highestCount(someArray) {
   let max = highestNumber(someArray);
 
   let count = 0;
-  
-  for (let i = 0; i < someArray.length; i += 1) {
+
+  for (let i = 0; i < someArray.length; i += 1) { // conta quantas vezes o maior numero aparece
     if (someArray[i] == max) {
       count += 1;
     }
@@ -51,8 +51,17 @@ function highestCount(someArray) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Distance = Math.abs(cat1 - mouse);
+  let cat2Distance = Math.abs(cat2 - mouse);
+
+  if(cat1Distance == cat2Distance){
+    return 'os gatos trombam e o rato foge';
+  }else if(cat1Distance < cat2Distance){
+    return 'cat1';
+  }else{
+    return 'cat2';
+  }
 }
 
 // Desafio 8
