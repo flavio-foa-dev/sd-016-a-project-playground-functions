@@ -48,15 +48,17 @@ function catAndMouse(mouse ,cat1, cat2) {
   // seu código aqui
   let d1 = cat1;
   let d2 = cat2;
+  let m = mouse;
 
-  if (d1 > mouse && d1 < d2){
+  if (d1 > m && d1 < d2){
     return "cat1"
-  } else if( d2 > mouse && d2 < d1){
+  } else if( d2 > m && d2 < d1){
      return "cat2"
-  } else if(d1 > mouse && d1 === d2){
+  } else if(d1 > m && d1 === d2){
     return 'os gatos trombam e o rato foge'
   }
   }
+
 
 // Desafio 8
 function fizzBuzz(numbers) {
