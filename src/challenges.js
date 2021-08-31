@@ -13,16 +13,8 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  // Vou refazer
-  if (string === 'go Trybe') {
-    return ['go', 'Trybe'];
-  }
-  if (string === 'vamo que vamo') {
-    return ['vamo', 'que', 'vamo'];
-  }
-  if (string === 'foguete') {
-    return ['foguete'];
-  }
+  let result = string.split(' ');
+  return result;
 }
 
 // Desafio 4
@@ -36,7 +28,7 @@ function concatName(value) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let totalPoints = (wins * 3) + ties;
+  let totalPoints = wins * 3 + ties;
   return totalPoints;
 }
 
@@ -60,7 +52,6 @@ function highestCount(value) {
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
 }
 
 // Desafio 8
