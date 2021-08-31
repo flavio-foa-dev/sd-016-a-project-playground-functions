@@ -33,13 +33,41 @@ function concatName( strArray ) {
 
 // Desafio 5
 function footballPoints( wins, ties ) {
-  // seu código aqui
+  let result = ( wins*3 ) + (ties);
+
+  return result;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount( arrayNumbers ) {
+  // localiza o numero maior
+  let maxValue = arrayNumbers[0];
+  let indexMaxValue = 0;
+  let index = 0;
+  let countEqual = 0;
+
+  for( index = 0; index< arrayNumbers.length; index += 1){
+    if( maxValue < arrayNumbers[index]){
+      maxValue = arrayNumbers[index];
+      indexMaxValue = index;
+    }
+  }
+  console.log( indexMaxValue, maxValue );
+  // Nesse ponto ja sabe-se onde está o numero maior
+  // então, basta contar quantos tem iguais.
+
+  for( let pos = 0; pos < arrayNumbers.length; pos += 1){
+    if ( maxValue === arrayNumbers[pos] ){
+      countEqual += 1;
+    }
+  }
+  
+  return countEqual;
+
 }
+let testArray = [9, 9, 2, 3, 9, 5, 7];
+console.log ( highestCount(testArray) );
+
 
 // Desafio 7
 function catAndMouse() {
