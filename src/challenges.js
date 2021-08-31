@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 == true && value2 == true){
+  if (value1 === true && value2 === true){
     return true;
   } else {
     return false;
@@ -9,24 +9,26 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height)/2
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(phase) {
-  return phase.split(" ");
+  return phase.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
-  let lastItem = array[array.length-1] + ", ";
+  let lastItem = array[array.length - 1] + ', ';
   let firstItem = array[0];
-  return lastItem.concat(firstItem)
+  return lastItem.concat(firstItem);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winsPoints = wins * 3;
+  let tiesPoints = ties;
+  return winsPoints + tiesPoints;
 }
 
 // Desafio 6
