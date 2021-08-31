@@ -34,24 +34,32 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   let higherNumber = numbers[0];
-  let nuberAppears = 0
-  for (let hN = 1; hN < numbers.length; hN += 1){
-    if(numbers[hN] > higherNumber){
+  let nuberAppears = 0;
+  for (let hN = 1; hN < numbers.length; hN += 1) {
+    if (numbers[hN] > higherNumber) {
       higherNumber = numbers[hN];
-      console.log(higherNumber)
     }
   }
-  for (let nA = 0; nA < numbers.length; nA += 1){
-    if(numbers[nA] === higherNumber){
-      nuberAppears += 1
+  for (let nA = 0; nA < numbers.length; nA += 1) {
+    if (numbers[nA] === higherNumber) {
+      nuberAppears += 1;
     }
   }
-    return nuberAppears
+  return nuberAppears;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  // Math.abs descobri no: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs;
+  let cat1Pos = Math.abs(mouse - cat1);
+  let cat2Pos = Math.abs(mouse - cat2);
+  if (cat2Pos < cat1Pos) {
+    return 'cat2';
+  } else if (cat1Pos < cat2Pos) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
