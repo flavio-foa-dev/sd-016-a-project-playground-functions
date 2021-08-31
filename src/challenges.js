@@ -20,31 +20,35 @@ function concatName(arr) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return ((wins * 3) + ties);
+  return wins * 3 + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  
+function highestCount(arr) {
+  let highest = 0;
+  let times = 0;
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i] > highest) {
+      highest = arr[i];
+    }
+  }
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i] === highest) {
+      times += 1;
+    }
+  }
+  return times;
 }
 
 // Desafio 7
-function catAndMouse() {
-  
-}
+function catAndMouse() {}
 
 // Desafio 8
-function fizzBuzz() {
-  
-}
+function fizzBuzz() {}
 
 // Desafio 9
-function encode() {
-  
-}
-function decode() {
-  
-}
+function encode() {}
+function decode() {}
 
 module.exports = {
   calcArea,
