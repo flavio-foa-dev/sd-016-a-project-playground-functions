@@ -1,9 +1,32 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+/**
+ * 1 - Crie uma função usando o operador &&
+JavaScript possui um operador lógico &&, o qual recebe dois valores e retorna true se ambos os valores são
+ verdadeiros, e retorna false se algum dos valores não o for.
 
-  console.log("teste")
+Considerando isso, implemente na função compareTrue, 
+um código que ao receber dois parâmetros booleanos deve:
+
+Retornar true se ambos os valores forem verdadeiros;
+Retornar false se um ou ambos os parâmetros forem falsos.
+Faça a função somente utilizando o operador &&.
+
+O que será verificado:
+
+Retorne false quando se chamar a função compareTrue com um parâmetro de valor false e outro de valor true
+
+Retorne false quando se chamar a função compareTrue com dois parâmetros de valor false
+
+Retorne true quando se chamar a função compareTrue com dois parâmetros de valor true
+ */
+function compareTrue(a, b) {
+  if(a === true && b === true){
+    return true;
+  }else {
+    return false;
+  }
 }
+
 
 // Desafio 2
 function calcArea() {
