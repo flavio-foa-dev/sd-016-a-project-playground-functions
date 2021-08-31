@@ -1,6 +1,19 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let object = [];
+  let ordena = tech.sort();
+  if (name.length === 0 || ordena.length === 0) {
+    return 'Vazio!';
+  }
+  // eslint-disable-next-line guard-for-in
+  for (const key in ordena) {
+    object[key] = {
+      tech: ordena[key],
+      name,
+    };
+  }
+
+  return object;
 }
 
 // Desafio 11
