@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a == true && b == true) {
+  if (a === true && b === true) {
     return true;
   } else {
     return false;
@@ -32,10 +32,9 @@ function concatName(array) {
   return lastName +", " +  firstName
 }
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
-
 // Desafio 6
 function highestCount() {
   // seu código aqui
