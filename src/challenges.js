@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable sonarjs/no-one-iteration-loop */
 // Desafio 1
 function compareTrue(valor1, valor2) {
@@ -78,12 +79,46 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// eslint-disable-next-line complexity
+function encode(frase) {
+  let transform = [];
+  for (const key in frase) {
+    if (frase[key] === 'i') {
+      transform.push('3');
+    } else if (frase[key] === 'e') {
+      transform.push('2');
+    } else if (frase[key] === 'a') {
+      transform.push('1');
+    } else if (frase[key] === 'o') {
+      transform.push('4');
+    } else if (frase[key] === 'u') {
+      transform.push('5');
+    } else {
+      transform.push(frase[key]);
+    }
+  }
+  return `${transform.join('')}`;
 }
 
-function decode() {
-  // seu código aqui
+// eslint-disable-next-line complexity
+function decode(frase) {
+  let transform = [];
+  for (const key in frase) {
+    if (frase[key] === '3') {
+      transform.push('i');
+    } else if (frase[key] === '2') {
+      transform.push('e');
+    } else if (frase[key] === '1') {
+      transform.push('a');
+    } else if (frase[key] === '4') {
+      transform.push('o');
+    } else if (frase[key] === '5') {
+      transform.push('u');
+    } else {
+      transform.push(frase[key]);
+    }
+  }
+  return `${transform.join('')}`;
 }
 
 module.exports = {
