@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  //Recebe dois valores e compara se verdadeiro
+  // Recebe dois valores e compara se verdadeiro
   if (param1 === true && param2 === true) {
     return true;
-  } 
-  //retorna false se nao for true
-    return false;
+  }
+  // Retorna false se nao for true
+  return false;
 }
 
 // Desafio 2
@@ -16,8 +16,11 @@ function calcArea(base, heigth) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let array;
+  array = frase.split(" ");
+  
+  return array;
 }
 
 // Desafio 4
