@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if(a === true && b === true){
+  if (a === true && b === true) {
     return true;
   } else {
     return false;
@@ -8,7 +8,7 @@ function compareTrue(a, b) {
 }
 
 // Desafio 2
-function calcArea(base, heigth){
+function calcArea(base, heigth) {
   let area = (base * heigth) / 2;
   return area;
 }
@@ -21,8 +21,7 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arr) {
-  arr = arr.reverse();
-  let conc = arr[0] +', '+arr[arr.length -1];
+  let conc = `${arr[arr.length - 1]}, ${arr[0]}`;
   return conc;
 }
 
@@ -36,18 +35,14 @@ function footballPoints(wins, ties) {
 function highestCount(arr) {
   let maiorNumero = arr[0];
   let maxRepeat = 0;
-  for (let index = 1; index < arr.length; index += 1){
-    if(maiorNumero < arr[index]){
+  for (let index = 1; index < arr.length; index += 1) {
+    if (maiorNumero < arr[index]) {
       maiorNumero = arr[index];
-    } else {
-      maiorNumero = maiorNumero
-    }      
+    }
   }
-  for (let index = 0; index < arr.length; index += 1){
-    if(maiorNumero === arr[index]){
+  for (let index = 0; index < arr.length; index += 1) {
+    if (maiorNumero === arr[index]) {
       maxRepeat += 1;
-    } else{
-      maxRepeat = maxRepeat;
     }
   }
   return maxRepeat;
@@ -59,24 +54,24 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist2 = cat2 - mouse;
   let comp1 = Math.abs(dist1);
   let comp2 = Math.abs(dist2);
-  if (comp1 < comp2){
+  if (comp1 < comp2) {
     return 'cat1';
-  } else if (comp2 < comp1){
+  } else if (comp2 < comp1) {
     return 'cat2';
   } else {
-    return'os gatos trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
 function fizzBuzz(arr) {
   let arrFB = [];
-  for (let index = 0; index < arr.length; index += 1){
-    if (arr[index]% 3 === 0 && arr[index] % 5 !== 0 ){
+  for (let index = 0; index < arr.length; index += 1) {
+    if (arr[index] % 3 === 0 && arr[index] % 5 !== 0) {
       arrFB.push('fizz');
-    } else if (arr[index]% 3 !== 0 && arr[index] % 5 === 0 ){
+    } else if (arr[index] % 3 !== 0 && arr[index] % 5 === 0) {
       arrFB.push('buzz');
-    } else if (arr[index]% 3 === 0 && arr[index] % 5 === 0 ){
+    } else if (arr[index] % 3 === 0 && arr[index] % 5 === 0) {
       arrFB.push('fizzBuzz');
     } else {
       arrFB.push('bug!');
