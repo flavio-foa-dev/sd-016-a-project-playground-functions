@@ -25,11 +25,9 @@ function concatName(words) {
   return last + ", " + first;
 }
 
-console.log(concatName(['igor','july','jade']))
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  return (wins * 3) + ties
 }
 
 // Desafio 6
