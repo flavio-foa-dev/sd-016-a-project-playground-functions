@@ -78,13 +78,21 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  var regex = /\d+/g;
-  var matches = string.match(regex);  // creates array from matches -> https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
-  let numberMatches = [];
 
+  string = string.split('');
+
+  //cria uma array com todos os numeros encontrados -> numeros estarão no tipo string
   let sum = 0;
 
-  for(let i = 0; i < matches.length; i += 1){
+  let matches = [];
+
+  for(let i = 0; i < string.length; i += 1){
+      if(string[i] == '1' || string[i] == '2' || string[i] == '3' || string[i] == '4' || string[i] == '5' || string[i] == '6' || string[i] == '7' || string[i] == '8' || string[i] == '9'){
+          matches.push(string[i]);
+      }
+  }
+
+  for (let i = 0; i < matches.length; i += 1) {
       sum += parseInt(matches[i]);  // passa de string para number -> https://www.alura.com.br/artigos/convertendo-string-para-numero-em-javascript?gclid=Cj0KCQjwpreJBhDvARIsAF1_BU2BKYU6f6ReQl7b1z1TH6HDzqJ7xsHremu8uaTEcvL1hkzuWM9gOjYaAh1DEALw_wcB
   }
 
