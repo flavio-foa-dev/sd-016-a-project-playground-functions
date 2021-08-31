@@ -3,13 +3,14 @@ function compareTrue(n1, n2) {
   if (n1 === true && n2 === true) {
     return true
   } else {
-    return false
+    return
   }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let areaTriang = (base * height) / 2
+  return areaTriang
 }
 
 // Desafio 3
