@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(param1, param2) {
   // retorna true apenas se os dois parametros satisfizerem a condicao
-  if(param1 && param2){
+  if (param1 && param2) {
     return true;
   } else {
-    return false;
+  return false;
   }
 }
 
