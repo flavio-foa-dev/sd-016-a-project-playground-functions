@@ -5,12 +5,12 @@ function compareTrue(a, b) {
   } else {
     return false;
   }
-
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth){
+  let area = (base * heigth) / 2;
+  return area;
 }
 
 // Desafio 3
