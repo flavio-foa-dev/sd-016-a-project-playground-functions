@@ -22,10 +22,10 @@ function calcArea(base, height) {
 function splitSentence(string) {
   // função irá receber uma string
   // função retornará um array de strings, separados por cada espaço
-  //definir a variavel que irá separar
-  //retornar a variável
+  // definir a variavel que irá separar
+  // retornar a variável
   let splitStr;
-  splitStr = string.split(" ");
+  splitStr = string.split(' ');
   return splitStr;
 }
 
