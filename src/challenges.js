@@ -62,9 +62,23 @@ console.log(concatName(array3));
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  let vitoria = wins;
+  let empate = ties;
+  let pontuacao = (vitoria * 3) + (empate * 1);
+  return pontuacao
 }
+
+wins = 14;
+ties = 8;
+console.log(footballPoints(14,8))
+wins = 1;
+ties = 2;
+console.log(footballPoints(1,2));
+wins = 0;
+ties = 0;
+console.log(footballPoints(0,0))
+
 
 // Desafio 6
 function highestCount() {
