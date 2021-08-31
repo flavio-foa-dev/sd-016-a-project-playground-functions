@@ -20,7 +20,8 @@ function splitSentence(text) {
 function concatName(array) {
   const firstWord = array[0];
   const lastWord = array.pop();
-  const exitValue = lastWord + ', ' + firstWord;
+  const wordWrap = ', ';
+  const exitValue = lastWord + wordWrap + firstWord;
   return exitValue;
 }
 
@@ -37,14 +38,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
+function takeBiggestNumberFromArray(array) {
   let biggestNumber = array[0];
-  let biggestNumberAppear = 0;
   for (let i = 1; i < array.length; i += 1) {
     if (array[i] > biggestNumber) {
       biggestNumber = array[i];
     }
   }
+  return biggestNumber;
+}
+
+function highestCount(array) {
+  const biggestNumber = takeBiggestNumberFromArray(array);
+  let biggestNumberAppear = 0;
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] === biggestNumber) {
       biggestNumberAppear += 1;
@@ -54,8 +60,17 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  /* Source: https://stackoverflow.com/questions/4652104/convert-a-negative-number-to-a-positive-one-in-javascript */
+  const cat1Distance = Math.abs(cat1 - mouse);
+  const cat2Distance = Math.abs(cat2 - mouse);
+  if (cat1Distance === cat2Distance) {
+    return 'os gatos trombam e o rato foge';
+  }
+  if (cat1Distance > cat2Distance) {
+    return 'cat2';
+  }
+  return 'cat1';
 }
 
 // Desafio 8
