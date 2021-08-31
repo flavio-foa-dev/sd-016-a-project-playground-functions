@@ -25,9 +25,15 @@ console.log(calcArea(5,2));
 console.log(calcArea(51,1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  // criar um array vazio para receber as letras
+  let resultado = [];
+  // tentativa de separar usando split e dando push disso no array;
+  let separado = string.split(' ');
+  return resultado.push(separado);
 }
+var palavra ='go Trybe'
+console.log(splitSentence(palavra))
 
 // Desafio 4
 function concatName() {
