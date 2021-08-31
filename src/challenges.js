@@ -23,8 +23,12 @@ return array ;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+ let firstName = names[0];
+ let lastName = names[names.length -1];
+ let newNames = lastName + ", " + firstName;
+ return newNames ;
+ 
 }
 
 // Desafio 5
