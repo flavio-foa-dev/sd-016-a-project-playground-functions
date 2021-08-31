@@ -36,19 +36,9 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  // quantidade de pontos que um time marcou
-  let points = 0;
-  
-  if (wins === 1) {
-    points += 3;
-  } else if (ties === 1) {
-    points += 1;
-  } else {
-    points += 0;
-  }
-  return points  
-}
-
+  let points = wins*3 + ties
+  return points;
+}   
 // Desafio 6
 function highestCount() {
   // seu código aqui
