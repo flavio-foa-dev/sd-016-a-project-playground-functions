@@ -1,10 +1,10 @@
 // Desafio 1
 
-function compareTrue(bolean1, bolean2){
-  if(bolean1 && bolean2){
-    return true;
-  }else{
-    return false;
+function compareTrue( x , y) {
+if( x === true &&  y === true) {
+  return true;
+  } else {
+  return false;
   }
   
 
@@ -62,5 +62,5 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence,
+  splitSentence
 }
