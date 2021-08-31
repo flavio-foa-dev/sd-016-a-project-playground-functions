@@ -63,14 +63,24 @@ else if (distCat1Mouse +1 === distCat2Mouse -1){
   return "os gatos trombam e o rato foge"
 }
 }
-
-console.log(catAndMouse(1, 0, 2))
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let array = [];
+  for (let index in numbers){
+    if (numbers[index]%3 === 0 && numbers[index]%5 === 0){
+      array.push('fizzBuzz')
+    }else if (numbers[index]%5 === 0){
+      array.push('buzz')
+    }
+    else if (numbers[index]%3 === 0){
+      array.push('fizz')
+    }
+    else{
+      array.push('bug!')
+    }
+  }
+  return array
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
