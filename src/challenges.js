@@ -1,3 +1,5 @@
+/* eslint-disable complexity */
+/* eslint-disable guard-for-in */
 // Desafio 1
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
@@ -63,8 +65,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let resultado = [];
+  for (let index in numeros) {
+    if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
+      resultado.push('fizzBuzz');
+    } else if (numeros[index] % 3 === 0) {
+      resultado.push('fizz');
+    } else if (numeros[index] % 5 === 0) {
+      resultado.push('buzz');
+    } else {
+      resultado.push('bug!');
+    }
+  }
+
+  return resultado;
 }
 
 // Desafio 9
