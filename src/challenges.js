@@ -39,14 +39,26 @@ function footballPoints(wins, ties) {
   return finalPoints;
 }
 
-wins = 0;
-ties = 0;
-console.log(footballPoints(wins, ties));
-
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  let maior = -100;
+  for (let cont = 0; cont < arr.length; cont += 1){
+    if (arr[cont] > maior) {
+      maior = arr[cont]; 
+    }
+  }
+  
+  let contMaior = 0;
+
+  for (let cont = 0; cont < arr.length; cont += 1) {
+    if (arr[cont] === maior){
+      contMaior += 1;
+    }
+  }
+
+  return contMaior;
 }
+
 
 // Desafio 7
 function catAndMouse() {
