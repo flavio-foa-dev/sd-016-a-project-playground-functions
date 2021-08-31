@@ -1,6 +1,11 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aq
+function compareTrue(conditionOne, conditionTwo) {
+  if (conditionOne === true && conditionTwo === true) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 // Desafio 2
