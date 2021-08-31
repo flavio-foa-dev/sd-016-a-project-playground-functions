@@ -90,11 +90,9 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode(phrase) 
-{
+function encode(phrase) {
   let newPhrase = "";
-  for (let index = 0; index < phrase.length; index += 1)
-  {
+  for (let index = 0; index < phrase.length; index += 1) {
     if (phrase[index] === 'a')
     {
       newPhrase = newPhrase + 1;
@@ -123,11 +121,10 @@ function encode(phrase)
   return newPhrase;
 }
 
-function decode(phrase) 
-{
+
+function decode(phrase) {
   let newPhrase = "";
-  for (let index = 0; index < phrase.length; index += 1)
-  {
+  for (let index = 0; index < phrase.length; index += 1) {
     if (phrase[index] === 1)
     {
       newPhrase = newPhrase + 'a';
