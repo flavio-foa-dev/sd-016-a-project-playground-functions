@@ -2,7 +2,7 @@
 function compareTrue() {
  let a = true;
  let b = true;
-
+ 
   if(a == true && b == true){
     console.log(true);
   }else{
@@ -10,10 +10,17 @@ function compareTrue() {
   }
 }
 
+
+
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+let base = 0;
+let height = 0;
+function calcArea(base, height) {
+  let area = 0;
+  return area = base * base * height * height;
 }
+
+console.log(calcArea(10, 15));
 
 // Desafio 3
 function splitSentence() {
