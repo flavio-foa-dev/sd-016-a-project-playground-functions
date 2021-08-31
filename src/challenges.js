@@ -65,18 +65,43 @@ function highestCount( arrayNumbers ) {
   return countEqual;
 
 }
-let testArray = [9, 9, 2, 3, 9, 5, 7];
-console.log ( highestCount(testArray) );
-
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse( mouse, cat1, cat2) {
+  let distCat1 = Math.abs( mouse - cat1 );
+  let distCat2 = Math.abs( mouse - cat2 );
+
+  if( distCat1 < distCat2){
+    return "cat1";
+  }else if ( distCat2 < distCat1 ) {
+    return "cat2";
+  }else return "os gatos trombam e o rato foge";
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz( arrayNumbers ) {
+  let arrayResult = [];
+
+  for ( let index = 0; index < arrayNumbers.length; index += 1 ) {
+    let div3 = (arrayNumbers[index] % 3);
+    let div5 = (arrayNumbers[index] % 5);
+    
+    if ( div3 === 0 && div5 === 0){
+      arrayResult.push("fizzBuzz");
+    }
+    else if ( div3 === 0 &&  div5 != 0 ) {
+      arrayResult.push("fizz");
+    }
+    else if ( div3 != 0 &&  div5 === 0 ) {
+      arrayResult.push("buzz");
+    }
+    else{
+      arrayResult.push("bug!");
+    }
+
+  }
+
+  return arrayResult;
 }
 
 // Desafio 9
