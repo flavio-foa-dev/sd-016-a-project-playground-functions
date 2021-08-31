@@ -45,14 +45,28 @@ function footballPoints(wins, ties) {
   // Cada vitória vale 3 pontos e cada empate vale 1 ponto.
 
   let winsPoints = wins * 3;
-  let tiesPoints = ties * 1;
-  let endGame = winsPoints + tiesPoints;
+  let endGame = winsPoints + ties;
   return endGame
 }
 
 // Desafio 6
+function highestCount(numbers) {
+  // Temos um array de números (numbers)
+  // RETONARÁ a quantidade de VEZES que o MAIOR número do array irá se repetir.
 
-  // seu código aqui
+  let highestNumber = numbers[0]
+  let sum = 1
+  
+  for (let index = 1; index < numbers.length; index += 1) {
+    if (numbers[index] > highestNumber) {
+        highestNumber = numbers[index]
+        sum = 1
+    } else if (numbers[index] === highestNumber) {
+      sum += 1
+    }
+  }
+return sum
+
 }
 
 // Desafio 7
