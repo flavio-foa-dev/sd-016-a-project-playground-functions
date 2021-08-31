@@ -14,11 +14,12 @@ function calcArea(base, height){
   let result = (base * height) / 2;
   return result;
 }
-console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  let array = string.split(' ');
+  return array;
 }
 
 // Desafio 4
