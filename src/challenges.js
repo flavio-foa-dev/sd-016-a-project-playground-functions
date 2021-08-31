@@ -51,7 +51,7 @@ function catAndMouse(mouse, cat1, cat2) {
     resposta = "cat1"
   } else if (posicaoC2 < posicaoC1) {
     resposta = "cat2"
-  } else if (posicaoC1 === posicaoC2) {
+  } else {
     resposta = "os gatos trombam e o rato foge"
   };
 
@@ -59,8 +59,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let x = [];
+  for (let numero in numeros) {
+    if (numeros[numero] % 3 == 0 && numeros[numero] % 5 == 0) {
+      x.push("fizzBuzz")
+    } else if (numeros[numero] % 3 == 0) {
+      x.push("fizz")
+    } else if (numeros[numero] % 5 == 0) {
+      x.push("buzz")
+    } else {
+      x.push("bug!")
+    }
+  }
+  return (x);
 }
 
 // Desafio 9
