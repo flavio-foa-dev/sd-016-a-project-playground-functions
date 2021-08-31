@@ -30,9 +30,11 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
-  
+  let size = array.length - 1;
+  return (array[size] + ', ' + array[0]);
+
 }
 
 // Desafio 5
