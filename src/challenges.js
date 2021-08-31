@@ -17,8 +17,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   let separaFrase = 0;
-  for (let i = 0; i > frase.length; i++)
-  
+  for (let i = 0; i > frase.length; i++) 
 }
 
 // Desafio 4
@@ -33,14 +32,34 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let maior = 0;
+  let contMaior = 1;
+  for (let i = 0; i > numbers.length; i++) {
+    if (maior > numbers[i]) {
+      maior = numbers[i];
+      contMaior += 1;
+    }
+  }
+  return contMaior;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceMouseCat1 = [mouse - cat1];
+  let distanceMouseCat2 = [mouse - cat2];
+  if (distanceMouseCat1 < distanceMouseCat2) {
+    return 'cat1';
+  }
+  else if (distanceMouseCat2 < distanceMouseCat1) {
+    return 'cat2';
+  }
+  else {
+    return 'os gatos se trombam e o gato foge';
+  }
 }
+
 
 // Desafio 8
 function fizzBuzz() {
