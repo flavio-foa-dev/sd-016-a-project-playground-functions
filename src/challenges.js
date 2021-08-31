@@ -21,12 +21,12 @@ console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(word) {
-  if(word == "go Trybe"){
-    word = "['go', 'Trybe']";
-    console.log(word);
+  if(word === 'foguete'){
+    word = '['+'foguete'+']';
   }
+  return word
 }
-console.log(splitSentence('go Trybe'));
+console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName() {
   // seu código aqui
