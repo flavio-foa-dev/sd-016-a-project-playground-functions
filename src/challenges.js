@@ -35,9 +35,8 @@ function highestCount(numeros) {
   let contagem = 0;
   let maiorContagem = 0;
   for (let index1 = 0; index1 < numeros.length; index1 += 1) {
-    let numero1 = numeros[index1];
     for (let index2 in numeros) {
-      if (numero1 === numeros[index2]) {
+      if (numeros[index1] === numeros[index2]) {
         contagem += 1;
       }
     }
@@ -83,11 +82,45 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(frase) {
+  for (let index = 0; index < frase.length; index += 1) {
+    if (frase[index] === 'a') {
+      frase = frase.replace('a', '1');
+    }
+    if (frase[index] === 'e') {
+      frase = frase.replace('e', '2');
+    }
+    if (frase[index] === 'i') {
+      frase = frase.replace('i', '3');
+    }
+    if (frase[index] === 'o') {
+      frase = frase.replace('o', '4');
+    }
+    if (frase[index] === 'u') {
+      frase = frase.replace('u', '5');
+    }
+  }
+  return frase;
+
+function decode(frase) {
+  for (let index = 0; index < frase.length; index += 1) {
+    if (frase[index] === '1') {
+      frase = frase.replace('1', 'a');
+    }
+    if (frase[index] === '2') {
+      frase = frase.replace('2', 'e');
+    }
+    if (frase[index] === '3') {
+      frase = frase.replace('3', 'i');
+    }
+    if (frase[index] === '4') {
+      frase = frase.replace('4', 'o');
+    }
+    if (frase[index] === '5') {
+      frase = frase.replace('5', 'u');
+    }
+  }
+  return frase;
 }
 
 module.exports = {
