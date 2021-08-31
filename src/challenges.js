@@ -54,9 +54,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -69,8 +68,8 @@ function fizzBuzz(array) {
       rece[index] = 'fizz';
     } else if (array[index] % 5 === 0) {
       rece[index] = 'buzz';
-    }  else {
-      rece[index] = "bug!";
+    } else {
+      rece[index] = 'bug!';
     }
   } return rece;
 }
@@ -79,12 +78,12 @@ function fizzBuzz(array) {
 function encode(array) {
   let isso = ['a', 'e', 'i', 'o', 'u'];
   let por = ['1', '2', '3', '4', '5']
-  return array.replace(array, por)
+  return array.replace(array, por, isso);
 }
 function decode(array) {
   let isso = ['1', '2', '3', '4', '5'];
   let por = ['a', 'e', 'i', 'o', 'u'];
-  return array.replace(isso, por)
+  return array.replace(isso, por, isso);
 }
 
 module.exports = {
