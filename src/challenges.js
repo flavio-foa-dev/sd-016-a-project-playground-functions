@@ -3,7 +3,7 @@ function compareTrue(n1, n2) {
   if (n1 === true && n2 === true) {
     return true
   } else {
-    return
+    return false
   }
 }
 
@@ -14,13 +14,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  console.log(string.split(" "));
+  return string.split(" ");
 }
 
 // Desafio 4
 function concatName(arrayString) {
-  let b = arrayString.join();
-  console.log(b);
+  return arrayString.join();
 }
 
 // Desafio 5
