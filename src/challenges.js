@@ -85,24 +85,24 @@ console.log(catAndMouse(2,8,3))
 // Desafio 8
 function fizzBuzz(array) {
   const fizzBuzz = [];
-          /* crieia funçao com o parametro "array", criei uma constante 
-          chamada fizzBuzz com valor de um array vazio "[]" */
+     /* crieia funçao com o parametro "array", criei uma constante 
+      chamada fizzBuzz com valor de um array vazio "[]" */
   for (let index of array) {
-            /* inicio do laco de repetição começando 
-           com o indice valendo o primeiro valor do array */
+        /* inicio do laco de repetição começando 
+        com o indice valendo o primeiro valor do array */
     if (index % 5 === 0 && index % 3 === 0){
       fizzBuzz.push('fizzBuzz');/* se o resto '%' da divisao
-          do index ="2" por 5 for === igual a 0, '&&' 'e' o resto da do index = 2 por 3 for 
-          igual === 0; o fizzbuzz.push ira inserir a string  'fizzbuzz' dentro do array fizzBuzz[]*/
+        do index ="2" por 5 for === igual a 0, '&&' 'e' o resto da do index = 2 por 3 for 
+         igual === 0; o fizzbuzz.push ira inserir a string  'fizzbuzz' dentro do array fizzBuzz[]*/
     } else if (index % 3 === 0){
       fizzBuzz.push('fizz');/* senao se o resto da % divisao do index =2 por 3 === 0; 
-                              o fizzBuzz.push ira inserir a string "fizz" no array "fizzBuzz[]" */
+      o fizzBuzz.push ira inserir a string "fizz" no array "fizzBuzz[]" */
     } else if (index % 5 === 0){
       fizzBuzz.push('buzz');/* senao se o resto % da divisao do index =2 por 5 === 0; 
-                               o fizzBuzz.push ira inserir a string "buzz" no array "fizzBuzz[]" */
+       o fizzBuzz.push ira inserir a string "buzz" no array "fizzBuzz[]" */
     } else {
       fizzBuzz.push('bug!');/* se nao for nenhumas das altenativas acima significa
-                             que o numero nao é divisivel po 3 ou 5 e entao o fizzBuzz.push ira inserir "bug" no array "fizzBuzz" */
+      que o numero nao é divisivel po 3 ou 5 e entao o fizzBuzz.push ira inserir "bug" no array "fizzBuzz" */
     }
   }
   return fizzBuzz;/* no final retornar o que aconteceu para dentro do array fizzBuzz */
@@ -110,12 +110,68 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));/* aqui esta o parametro que é um array */
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+function encode(string) {
+  let result = '';
+
+  for (let letter of string) {
+    switch (letter) {
+    case 'a':
+      result += 1;
+      break;
+    case 'e':
+      result += 2;
+      break;
+    case 'i':
+      result += 3;
+      break;
+    case 'o':
+      result += 4;
+      break;
+    case 'u':
+      result += 5;
+      break;
+    default:
+      result += letter;
+      break;
+    }
+  }
+
+  return result;
 }
-function decode() {
-  // seu código aqui
-}
+
+    function decode(string) {
+        let result = '';
+    
+        for (let letter of string) {
+          switch (letter) {
+          case '1':
+            result += 'a';
+            break;
+          case '2':
+            result += 'e';
+            break;
+          case '3':
+            result += 'i';
+            break;
+          case '4':
+            result += 'o';
+            break;
+          case '5':
+            result += 'u';
+            break;
+          default:
+            result += letter;
+            break;
+          }
+        } 
+        return result;
+      }
+    
+    
+        
+      
+
 
 module.exports = {
   calcArea,
