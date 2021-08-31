@@ -14,14 +14,14 @@ function calcArea(base,heigth,result) {
    result = (base*heigth)/2;
    return result
 }
-/* console.log(calcArea(5,2));   */
+console.log(calcArea(5,2));  
 
 
 // Desafio 3
 function splitSentence(str) {
  return str.split(' ');
 }
-/* console.log(splitSentence("go trybe")); */
+console.log(splitSentence("go trybe"));
 
 // Desafio 4
 function concatName(frase) {
@@ -33,7 +33,7 @@ function concatName(frase) {
    result = nome1 + ', ' + frase[0];
   return result;
 }
-/*   console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])) */
+  console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 // Desafio 5
 function footballPoints(wins,ties) {
    wins = wins * 3;
@@ -44,12 +44,12 @@ function footballPoints(wins,ties) {
 console.log(footballPoints(14,8));
 
 // Desafio 6
-function highestCount(numeros) {
+/* function highestCount(numeros) {
 for (index = 0; index <= numeros; index += 1){
 let maiornumero = 
 }
 }
-/* console.log(highestCount([9, 1, 2, 3, 9, 5, 7])); */
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7])); */
 
 // Desafio 7
 function catAndMouse() {
