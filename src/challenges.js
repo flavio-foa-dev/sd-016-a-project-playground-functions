@@ -71,7 +71,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
-console.log(catAndMouse(1,0,2));
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
@@ -91,11 +90,54 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase1) {
+  let newPhrase1 = '';
+  for(let index = 0; index < phrase1.length; index += 1) {
+    if(phrase1[index] === 'a') {
+      newPhrase1 = newPhrase1 + 1;
+    }
+    else if (phrase1[index] === 'e') {
+      newPhrase1 = newPhrase1 + 2;
+    }
+    else if (phrase1[index] === 'i') {
+      newPhrase1 = newPhrase1 + 3;
+    }
+    else if (phrase1[index] === 'o') {
+      newPhrase1 = newPhrase1 + 4;
+    }
+    else if (phrase1[index] === 'u') {
+      newPhrase1 = newPhrase1 + 5;
+    }
+    else {
+      newPhrase1 = newPhrase1 + phrase1[index];
+    }
+  }
+  return newPhrase1;
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase1) {
+  let newPhrase1 = '';
+  for(let index = 0; index < phrase1.length; index += 1) {
+    if(phrase1[index] === 1) {
+      newPhrase1 = newPhrase1 + 'a';
+    }
+    else if (phrase1[index] === 2) {
+      newPhrase1 = newPhrase1 + 'e';
+    }
+    else if (phrase1[index] === 3) {
+      newPhrase1 = newPhrase1 + 'i';
+    }
+    else if (phrase1[index] === 4) {
+      newPhrase1 = newpHrase1 + 'o';
+    }
+    else if (phrase1[index] === 5) {
+      newPhrase1 = newPHrase1 + 'u';
+    }
+    else {
+      newPhrase1 = newPhrase1 + phrase1[index];
+    }
+  }
+  return newPhrase1;
 }
 
 module.exports = {
