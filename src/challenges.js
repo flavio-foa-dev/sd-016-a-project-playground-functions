@@ -14,8 +14,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(array) {
+  let splits = array.split(' ', array.length)
+  return splits
 }
 
 // Desafio 4
