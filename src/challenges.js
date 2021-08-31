@@ -36,17 +36,22 @@ function concatName(names) {
   let lastName = names[names.length-1];
   let firstName = names[0];
   return newNames = lastName + ", " + firstName
-  
-  console.log(lastName);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  // Criar uma função que receba o número de vitórias (wins) e empates (ties).
+  // Irá RETORNAR o número de pontos que o time fez no campeonato.
+  // Cada vitória vale 3 pontos e cada empate vale 1 ponto.
+
+  let winsPoints = wins * 3;
+  let tiesPoints = ties * 1;
+  let endGame = winsPoints + tiesPoints;
+  return endGame
 }
 
 // Desafio 6
-function highestCount() {
+
   // seu código aqui
 }
 
