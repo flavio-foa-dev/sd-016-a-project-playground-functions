@@ -15,7 +15,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  return concatName('lastIndexOf','findIndexOf');
 }
 
 // Desafio 5
