@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue() {
  let a = true;
- leb b = true;
+ let b = true;
 
   if(a == b && b == a){
     console.log(true);
