@@ -16,7 +16,7 @@ function techList(techNames, names) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numeroDeTelefone) {
+function generatePhoneNumber(telefoneNumber) {
   let cont0 = 0;
   let cont1 = 0;
   let cont2 = 0;
@@ -28,11 +28,11 @@ function generatePhoneNumber(numeroDeTelefone) {
   let cont8 = 0;
   let cont9 = 0;
 
-  if(numeroDeTelefone.length !== 11){
+  if(telefoneNumber.length !== 11){
     return "Array com tamanho incorreto."
   }
-  for(let index = 0; index < numeroDeTelefone.length; index += 1){
-      if(numeroDeTelefone[index] < 0 | numeroDeTelefone[index] > 9){
+  for(let index = 0; index < telefoneNumber.length; index += 1){
+      if(telefoneNumber[index] < 0 | telefoneNumber[index] > 9){
         return "não é possível gerar um número de telefone com esses valores";
       }
         if(cont4 >= 3){
@@ -66,47 +66,54 @@ function generatePhoneNumber(numeroDeTelefone) {
     return "não é possível gerar um número de telefone com esses valores";
   }
     }
-    for(let index = 0; index < numeroDeTelefone.length; index += 1){
-    if(numeroDeTelefone[index] === 0){
+    for(let index = 0; index < telefoneNumber.length; index += 1){
+    if(telefoneNumber[index] === 0){
       cont4 +=1;
     }
-    if(numeroDeTelefone[index] === 1){
+    if(telefoneNumber[index] === 1){
       cont8 += 1;
     }
-    if(numeroDeTelefone[index] === 2){
+    if(telefoneNumber[index] === 2){
       cont2 += 1;
     }
-    if(numeroDeTelefone[index] === 3){
+    if(telefoneNumber[index] === 3){
       cont1 += 1;
     }
-    if(numeroDeTelefone[index] === 4){
+    if(telefoneNumber[index] === 4){
       cont0 += 1;
     }
-    if(numeroDeTelefone[index] === 5){
+    if(telefoneNumber[index] === 5){
       cont3 += 1;
     }
-    if(numeroDeTelefone[index] === 6){
+    if(telefoneNumber[index] === 6){
       cont5 += 1;
     }
-    if(numeroDeTelefone[index] === 7){
+    if(telefoneNumber[index] === 7){
       cont6 += 1;
     }
-    if(numeroDeTelefone[index] === 8){
+    if(telefoneNumber[index] === 8){
       cont7 += 1;
     }
-    if(numeroDeTelefone[index] === 9){
+    if(telefoneNumber[index] === 9){
       cont9 += 1;
     }
   }
 
 
-  return "(" + numeroDeTelefone[0] + numeroDeTelefone[1] + ") " + numeroDeTelefone[2] + numeroDeTelefone[3] + numeroDeTelefone[4] + numeroDeTelefone[5] + numeroDeTelefone[6] + "-"  + numeroDeTelefone[7] + numeroDeTelefone[8] + numeroDeTelefone[9] + numeroDeTelefone[10];
+  return "(" + telefoneNumber[0] + telefoneNumber[1] + ") " + telefoneNumber[2] + telefoneNumber[3] + telefoneNumber[4] + telefoneNumber[5] + telefoneNumber[6] + "-"  + telefoneNumber[7] + telefoneNumber[8] + telefoneNumber[9] + telefoneNumber[10];
 }
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let a = lineB - lineC;
+  let b = lineA - lineC;
+  let c = lineA - lineB
+  if(lineA < lineB + lineC && lineA > Math.abs (a)|| lineB < lineA + lineC && lineB > Math.abs (b) || lineC < lineA + lineB && lineC > Math.abs (c)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
