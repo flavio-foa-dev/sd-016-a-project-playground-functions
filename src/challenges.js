@@ -9,13 +9,12 @@ function compareTrue(n1, n2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let areaTriang = (base * height) / 2
-  return areaTriang
+  return  (base * height / 2);
 }
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  
 }
 
 // Desafio 4
