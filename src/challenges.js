@@ -82,12 +82,35 @@ O que será verificado:
 function splitSentence(string) { 
     return string.split(' ');
 }
-console.log(splitSentence("go trybe"));
+//console.log(splitSentence("go trybe"));
+
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+/*
+4 - Crie uma função que use concatenação de strings
+
+Escreva uma função com o nome concatName que, ao receber uma array de strings, 
+retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do
+tamanho da array.
+
+Isso quer dizer que, caso o parâmetro passado para concatName seja a 
+Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
+
+O que será verificado:
+
+    Retorne 'Paolillo, Lucas' quando o parâmetro passado na funcão concatName 
+    seja ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+    Retorne 'ré, foguete' quando o parâmetro passado na funcão concatName 
+    seja ['foguete', 'não', 'tem', 'ré']
+    Retorne 'captain, captain' quando o parâmetro passado na funcão concatName 
+    seja ['captain', 'my', 'captain']
+
+*/
+function concatName(array) {
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 // Desafio 5
 function footballPoints() {
   // seu código aqui
