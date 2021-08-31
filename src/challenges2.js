@@ -3,14 +3,14 @@ function techList(arrayTecs, name) {
   let newArray = [];
 
   if (arrayTecs.length === 5) {
-    for (let index = 0; index < arrayTecs.length; index +=1) {
+    for (let index = 0; index < arrayTecs.length; index += 1) {
       let learn = {
         tech: arrayTecs[index],
         name: name
       };
-      newArray.push(learn)
+      newArray.push(learn);
     }
-    
+
     /**
      * Consultas para resolver essa parte:
      * Documentação do método localeCompare: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
@@ -30,20 +30,18 @@ function generatePhoneNumber(arrayNumbers) {
   let secondHalf = '';
   let repeticoes = 0;
 
-  if (arrayNumbers.length != 11) {
+  if (arrayNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
   for (let numbers of arrayNumbers) {
     if (numbers < 0 || numbers > 9) {
-      console.log('<0 ou >9')
       return 'não é possível gerar um número de telefone com esses valores';
     } else {
       for (let numbers2 of arrayNumbers) {
         if (numbers === numbers2) {
           repeticoes += 1;
           if (repeticoes >= 3) {
-            console.log('x3')
             return 'não é possível gerar um número de telefone com esses valores';
           }
         }
@@ -62,16 +60,14 @@ function generatePhoneNumber(arrayNumbers) {
     }
   }
 
-  return '('+ ddd + ') ' + firstHalf + '-' + secondHalf; 
+  return '(' + ddd + ') ' + firstHalf + '-' + secondHalf; 
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
 
-  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
-    if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA)) {
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA)) {
       return true;
-    }
   }
 
   return false;
