@@ -96,8 +96,8 @@ function highestCount(array) {
   return resultado
 }
 
-let array1 = [9,1,2,3,9,5,7];
-console.log(highestCount(array1))
+let array4 = [9,1,2,3,9,5,7];
+console.log(highestCount(array4))
 
 // Desafio 7
 function catAndMouse() {
@@ -109,21 +109,23 @@ function fizzBuzz(array) {
     for (let i=0; i <= array.length; array+=1){
     // variavel array para receber as respostas
     let resposta = []
-    if ( array[i] % 3 === 0 && array[i] % 5 === 0) {
-    resposta.push('fizzBuzz');
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      let resposta1 = 'fizzBuzz';
     } else if (array[i] % 3 === 0){
+      let resposta2 = 'fizz';
     resposta.push('fizz');
     } else if (array[i] % 5=== 0){
-    resposta.push('buzz')
+      let resposta3 = 'buzz'
     } else {
-     resposta.push('bug!') 
+      let resposta4 = 'bug!' 
     }
   }
-  return resposta
+  let respostafinal = [resposta1 + resposta2 + resposta3 + resposta4]
+  return respostafinal
 }
 
-let array1 = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(array1));
+let array5 = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(array5));
 
 // Desafio 9
 function encode() {
