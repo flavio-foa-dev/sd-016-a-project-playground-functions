@@ -3,9 +3,9 @@ function compareTrue(number1,number2) {
   // Compara dois valores se ambos são true;
   // Retorna com true se caso ambos sejam true e false para qualquer valor # true
   if (number1 === true && number2 === true){
-      return true;
+    return true;
   }else{
-      return false;
+    return false;
   }
 }
 
@@ -19,8 +19,19 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+  function splitSentence(stringSplit) {
+    // função recebe uma string 
+    // retorna uma array de strings separadas por cada espaço na string original.
+    // let stringSplit ="go trybe foguete"
+      console.log(stringSplit)
+      let space = ' ';
+      let arrayString = stringSplit.split(space);
+      return arrayString 
+      /* for (let key in arrayString) {
+        console.log(key + ' '+arrayString[key]);
+      } */
+    }
+
 }
 
 // Desafio 4
