@@ -66,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {     // verifica qual gato ira pegar o 
 
 // Desafio 8
 function fizzBuzz(array) {  // retorna uma palavra para um determinado caso dentro de uma array
-  returnArray = [];
+  let returnArray = [];
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 == 0 && array[i] % 5 == 0) {
       returnArray.push('fizzBuzz');
