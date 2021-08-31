@@ -1,11 +1,12 @@
 // Desafio 1
 
 function compareTrue( x , y) {
-if( x === true &&  y === true) {
+  if( x === true && y === true) {
   return true;
   } else {
   return false;
   }
+}
   
 
 
@@ -62,5 +63,5 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence
-}
+  splitSentence,
+};
