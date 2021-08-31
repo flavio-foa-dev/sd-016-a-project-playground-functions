@@ -13,7 +13,7 @@ compareTrue(true,true);
 
 // Desafio 2
 function calcArea(base,height) {
-  return base*height/2;
+  return (base*height)/2;
 
 }
 calcArea(10,50);
