@@ -14,13 +14,14 @@ function calcArea(base,heigth,result) {
    result = (base*heigth)/2;
    return result
 }
-console.log(calcArea(5,2));  
+/* console.log(calcArea(5,2));   */
 
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+ return str.split(' ');
 }
+console.log(splitSentence("go trybe"));
 
 // Desafio 4
 function concatName() {
