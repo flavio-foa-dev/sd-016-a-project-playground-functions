@@ -77,7 +77,7 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(array) {
   let isso = ['a', 'e', 'i', 'o', 'u'];
-  let por = ['1', '2', '3', '4', '5']
+  let por = ['1', '2', '3', '4', '5'];
   return array.replace(array, por, isso);
 }
 function decode(array) {
