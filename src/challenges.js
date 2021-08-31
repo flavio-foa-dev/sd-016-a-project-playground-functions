@@ -73,16 +73,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function divisibilityOne(number) {
-  let result;
-  if (number === 3 || number === 9) {
-    result = 'fizz';
-  } else if (number === 5 || number === 25) {
-    result = 'buzz';
-  }
-  return result;
-}
-
 function divisibilityTwo(number) {
   let result;
   if (number % 15 === 0) {
@@ -93,87 +83,34 @@ function divisibilityTwo(number) {
   return result;
 }
 
+function divisibilityOne(number) {
+  let result;
+  if (number === 3 || number === 9) {
+    result = 'fizz';
+  } else if (number === 5 || number === 25) {
+    result = 'buzz';
+  } else {
+    result = divisibilityTwo(number);
+  }
+  return result;
+}
+
 function fizzBuzz(arrayOfNumbers) {
   let stringWithResults = [];
   for (let i = 0; i < arrayOfNumbers.length; i += 1) {
-    stringWithResults[i] = divisibilityTwo(divisibilityOne(arrayOfNumbers[i]));
+    stringWithResults[i] = divisibilityOne(arrayOfNumbers[i]);
   }
   return stringWithResults;
 }
 
 // Desafio 9
-function splitPhrase(phrase) {
-  let phraseAfterSplit = phrase.split('');
-  return phraseAfterSplit;
-}
-
-function changeLettersOne(phrase) {
-  let initialPhrase = splitPhrase(phrase);
-  for (let i = 0; i < initialPhrase.length; i += 1) {
-    if (initialPhrase[i] === 'a') {
-      initialPhrase[i] = '1';
-    } else if (initialPhrase[i] === 'e') {
-      initialPhrase[i] = '2';
-    } else if (initialPhrase[i] === 'i') {
-      initialPhrase[i] = '3';
-    }
-  }
-  return initialPhrase;
-}
-
-function changeLettersTwo(phrase) {
-  let initialPhrase = splitPhrase(phrase);
-  for (let i = 0; i < initialPhrase.length; i += 1) {
-    if (initialPhrase[i] === 'o') {
-      initialPhrase[i] = '4';
-    } else if (initialPhrase[i] === 'u') {
-      initialPhrase[i] = '5';
-    }
-  }
-  return initialPhrase;
-}
-
-function changeNumbersOne(phrase) {
-  let initialPhrase = splitPhrase(phrase);
-  for (let i = 0; i < initialPhrase.length; i += 1) {
-    if (initialPhrase[i] === '1') {
-      initialPhrase[i] = 'a';
-    } else if (initialPhrase[i] === '2') {
-      initialPhrase[i] = 'e';
-    } else if (initialPhrase[i] === '3') {
-      initialPhrase[i] = 'i';
-    }
-  }
-  return initialPhrase;
-}
-
-function changeNumbersTwo(phrase) {
-  let initialPhrase = splitPhrase(phrase);
-  for (let i = 0; i < initialPhrase.length; i += 1) {
-    if (initialPhrase[i] === '4') {
-      initialPhrase[i] = 'o';
-    } else if (initialPhrase[i] === '5') {
-      initialPhrase[i] = 'u';
-    }
-  }
-  return initialPhrase;
-}
-
-function joinsPhrase(phrase) {
-  let finalPhrase = phrase.join('');
-  return finalPhrase;
-}
 
 function encode(phrase) {
-  let processingPhrase = changeLettersTwo(changeLettersOne(phrase));
-  let encodedPhrase = joinsPhrase(processingPhrase);
-  return encodedPhrase;
+  
 }
 
 function decode(phrase) {
-  let processingPhrase = changeNumbersTwo(changeNumbersOne(phrase));
-  let decodedPhrase = joinsPhrase(processingPhrase);
-  return decodedPhrase;
+  
 }
 
 module.exports = {
