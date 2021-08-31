@@ -12,8 +12,12 @@ function compareTrue(value1 , value2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base , height) {
+  // Uma função, calcArea, que tenha dois valores: base e height e que retorne o CÁLCULO da área.
+  // Criar uma variável, area, que contenha o cálculo da (base * altura) / 2.
+  // Fórmula da área do triângulo: (base * altura) / 2.
+  let area = (base * height) / 2;
+  return area
 }
 
 // Desafio 3
