@@ -2,19 +2,19 @@
 function compareTrue(a, b) {
   if (a === b && b === a) {
     console.log(true);
-  }else{
+  } else {
     console.log(false);
   }
 }
 compareTrue(1, 1);
 // Desafio 2
-let base = 0;
-let height = 0;
+let baseT = 0;
+let heightT = 0;
 
-function calcArea(base, height) {
+function calcArea(baseT, heightT) {
   let area = 0;
   let resultado = 0;
-  return area = (base * height) /2;
+  return area = (baseT * heightT) /2;
 }
 
 console.log(calcArea(51, 1));
