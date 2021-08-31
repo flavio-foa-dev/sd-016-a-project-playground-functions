@@ -2,8 +2,8 @@
 function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
-  } 
-    return false;
+  }
+  return false;
 }
 
 // Desafio 2
@@ -20,16 +20,18 @@ function splitSentence(array) {
 
 // Desafio 4
 function concatName(array) {
-  let string = '';
-  string = array[array.length - 1] + ', ' + array[0]
+  let string = array[array.length - 1] + ', ' + array[0];
   let splits = string.split();
   let convert = splits.toString();
   return convert;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let vito = wins * 3;
+  let empa = ties * 1;
+  let result = vito + empa;
+  return result;
 }
 
 // Desafio 6
