@@ -21,13 +21,19 @@ function calcArea(base,heigth,result) {
 function splitSentence(str) {
  return str.split(' ');
 }
-console.log(splitSentence("go trybe"));
+/* console.log(splitSentence("go trybe")); */
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(frase) {
+  
+  let nome1 = '';
+  let result= '';
+   
+   nome1 = frase[frase.length-1];
+   result = nome1 + ', ' + frase[0];
+  return result;
 }
-
+  console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 // Desafio 5
 function footballPoints() {
   // seu código aqui
