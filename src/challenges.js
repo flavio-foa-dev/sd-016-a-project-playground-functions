@@ -29,8 +29,15 @@ return newSentence
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  // A função possui um ARRAY de strings.
+  // Ela irá RETORNAR uma nova string com o formato ÚLTIMO ITEM, PRIMEIRO ITEM.
+  
+  let lastName = names[names.length-1];
+  let firstName = names[0];
+  return newNames = lastName + ", " + firstName
+  
+  console.log(lastName);
 }
 
 // Desafio 5
