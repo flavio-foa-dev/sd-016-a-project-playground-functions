@@ -27,8 +27,11 @@ function splitSentence(string) {
   }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  wins = (wins * 3);
+  ties = (ties * 1);
+  let pontos = wins + ties;
+  return pontos;
 }
 
 // Desafio 6
