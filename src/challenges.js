@@ -81,9 +81,22 @@ console.log(footballPoints(0,0))
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  // criar numero comparativo (exercicio course) com base em array[0]
+  let numeroMax = array[0]
+  for (let index = 0; index <= array.length; index +=1){
+  // for para selecionar array[index]
+  //  9,1,2,3,9,5,7
+  if (array[index] === numeroMax){
+    let contador =0;
+    let resultado = contador + 1
+  } 
 }
+  return resultado
+}
+
+let array1 = [9,1,2,3,9,5,7];
+console.log(highestCount(array1))
 
 // Desafio 7
 function catAndMouse() {
