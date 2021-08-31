@@ -53,16 +53,68 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(parm) {
+  let string = [];
+  for (let i in parm) {
+    if (parm[i] % 3 === 0 && parm[i] % 5 === 0) {
+      string.push('fizzBuzz');
+    } else if (parm[i] % 3 === 0) {
+      string.push('fizz');
+    } else if (parm[i] % 5 === 0) {
+      string.push('buzz');
+    } else {
+      string.push('bug!');
+    }
+  }
+  return string;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let phrase2 = phrase.split('');
+  for (let i in phrase2) {
+    switch (phrase2[i]) {
+    case 'a': phrase2[i] = 1;
+      break;
+    case 'e': phrase2[i] = 2;
+      break;
+    case 'i': phrase2[i] = 3;
+      break;
+    case 'o': phrase2[i] = 4;
+      break;
+    case 'u': phrase2[i] = 5;
+      break;
+    default:
+      break;
+    }
+  }
+  return phrase2.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+  let phrase2 = phrase.split('');
+  for (let j in phrase2) {
+    switch (phrase2[j]) {
+    case '1':
+      phrase2[j] = 'a';
+      break;
+    case '2':
+      phrase2[j] = 'e';
+      break;
+    case '3':
+      phrase2[j] = 'i';
+      break;
+    case '4':
+      phrase2[j] = 'o';
+      break;
+    case '5':
+      phrase2[j] = 'u';
+      break;
+    default:
+      break;
+    }
+  }
+  return phrase2.join('');
 }
 
 module.exports = {
