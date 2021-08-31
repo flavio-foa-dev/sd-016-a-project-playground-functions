@@ -15,10 +15,8 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(arrayList) {
-
+  return `${arrayList[arrayList.length - 1]}, ${arrayList[0]}`;
 }
-
-console.log(concatName('rafael', 'toshiharu', 'nakashima'))
 
 // Desafio 5
 function footballPoints() {
