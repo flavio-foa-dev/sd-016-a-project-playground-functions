@@ -40,8 +40,18 @@ function highestCount(arrayList) {
 // Referencia da linha 28 - Math.max.apply retirada do - https://stackoverflow.com/questions/1669190/find-the-min-max-element-of-an-array-in-javascript
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Distance = Math.abs(mouse - cat1);
+  let cat2Distance = Math.abs(mouse - cat2);
+  if (cat1Distance > cat2Distance) {
+    return 'cat2';
+  }
+  if (cat2Distance > cat1Distance) {
+    return 'cat1';
+  }
+  if (cat2Distance === cat1Distance) {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
