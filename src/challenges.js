@@ -28,8 +28,11 @@ function concatName(arrayInvert) {
   
   //variavel que inverte a posição dos elementos do array
   let reverse = arrayInvert.reverse();
+  //variavel que seleciona o primeiro item do array
   let first = arrayInvert[0];
+  //varivel que seleciona o ultimo item do array
   let last = arrayInvert.pop();
+  //variavel que une os dois arrays em uma string
   let join = first + ', '+ last;
   
   return join;
@@ -37,8 +40,11 @@ function concatName(arrayInvert) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins=0, ties=0) {
+  // função que calcula a quantidade de pontos no futebol
+ winPoints = (wins * 3);
+ socrePoints = (winPoints + ties);
+ return socrePoints;
 }
 
 // Desafio 6
