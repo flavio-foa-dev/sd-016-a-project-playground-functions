@@ -47,7 +47,6 @@ function highestCount() {
   }     
   return countNumber;
   }  
-}
 
 // Desafio 7
 function catAndMouse() {
