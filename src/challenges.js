@@ -1,13 +1,31 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(a, b) {
+  if (a && b) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(s) {
+  s += " ";
+  let sentenceSplited = [];
+  let word = "";
+  for (let i = 0; i < s.length + 1; i+= 1) {
+    if (s[i] !== " ") {
+      word += s[i];
+    } else {
+      sentenceSplited.push(word);
+      word = "";
+    }
+  }
+  return sentenceSplited;
 }
 
 // Desafio 4
