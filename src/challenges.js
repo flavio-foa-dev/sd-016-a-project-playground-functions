@@ -9,13 +9,14 @@ function compareTrue (x, y) {
     return false;
   }
 }
-x = true;
-y = true;
-console.log(compareTrue(x,y));
+
+
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
+
 
 // Desafio 3
 function splitSentence() {
