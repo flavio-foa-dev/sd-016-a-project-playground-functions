@@ -26,12 +26,13 @@ function concatName(names) {
   return lastName + ", " + firstName;
 }
 
-console.log(concatName(['captain', 'my', 'captain']));
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {
+  let victory = 3;
+  let tie = 1;
+  let points = (wins*victory) + (ties*tie);
+  return(points);
+   }
 
 // Desafio 6
 function highestCount() {
