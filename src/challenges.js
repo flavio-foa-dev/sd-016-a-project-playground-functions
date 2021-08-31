@@ -14,8 +14,8 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return `${array.pop()}, ${array[0]}`;
 }
 
 // Desafio 5
