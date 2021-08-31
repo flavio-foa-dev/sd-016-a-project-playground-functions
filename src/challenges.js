@@ -83,12 +83,13 @@ console.log(footballPoints(0,0))
 // Desafio 6
 function highestCount(array) {
   // criar numero comparativo (exercicio course) com base em array[0]
+  let contador =0;
   let numeroMax = array[0]
   for (let index = 0; index <= array.length; index +=1){
   // for para selecionar array[index]
   //  9,1,2,3,9,5,7
   if (array[index] === numeroMax){
-    let contador =0;
+    
     let resultado = contador + 1
   } 
 }
@@ -104,8 +105,18 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let resposta = []
+  for (let i in array){
+    if ( array[index]/3 === 0 && array[index]/5 === 0) {
+      return resposta.push('fizzBuzz');
+    } else if (array[index]/3 === 0){
+      return resposta.push('fizz');
+    } else if (array[index]/5=== 0){
+      return resposta.push('buzz')
+    } else 
+    return resposta.push('bug!')
+  }
 }
 
 // Desafio 9
