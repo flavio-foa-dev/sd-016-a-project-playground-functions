@@ -17,8 +17,15 @@ function splitSentence(str) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrStr) {
+  let firstName = arrStr[0];
+  let secondName = '';
+  for (let index = 0; index < arrStr.length; index += 1) {
+    if (index === arrStr.length - 1) {
+      secondName = arrStr[index];
+    }
+  }
+  return `${secondName}, ${firstName}`;
 }
 
 // Desafio 5
