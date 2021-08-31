@@ -15,13 +15,14 @@ function calcArea(base, height) {
 }
 // Quando chamarmos a função, passaremos os valores de base e altura para que ele retorne o valor da área.
 
-
-//
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  return frase.split(' ');
 }
+// A função splitSentence recebe um valor, sendo este a frase que queremos dividir e transformar em array, para isso usamos o metodo split, que em JavaScript
+// nos possibilita dividir strings.
+
+console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName() {
