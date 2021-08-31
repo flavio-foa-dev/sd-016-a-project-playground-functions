@@ -51,10 +51,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 - Utilizar o comando for ;
 - Quebrar grandes problemas em pequenos;
 - Utilizar a lógica de programação na resolução de problemas;
-- Manipular objetos;
-- Utilizar o comando for/in ;
-- Utilizar funções para organizar e estruturar o seu código;
-
+- Manipular objetos;caso
 # Entregáveis
 
 Para entregar o seu projeto você deverá criar um _Pull Request_ neste repositório.
@@ -64,9 +61,7 @@ Este Pull Request deverá conter os arquivos `challenges.js` e `challenges2.js` 
 Todas as funções já estão declaradas nos arquivos `challenges.js` e `challenges2.js`. Você pode criar outras funções para auxiliarem as já existentes. Contudo **Não altere o nome das funções que já existem**.
 
 **Os parâmetros das funções já existentes podem e devem ser alterados.**
-
-## ⚠️ É importante que seus arquivos não tenham o nome alterado! ⚠️
-
+caso
 Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://course.betrybe.com/intro/git/) sempre que precisar!
 
 ---
@@ -91,9 +86,7 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
     * `cd sd-016-a-project-playground-functions`
 
 2. Instale as dependências e inicialize o projeto
-  * Instale as dependências:
-    * npm install
-
+  * Instale as depencaso
 3. Crie uma branch a partir da branch `master`
   * Verifique que você está na branch `master`
     * Exemplo: `git branch`
