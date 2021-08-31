@@ -14,11 +14,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(string) {
-  
-}
+ function splitSentence(string) {
 
-
+} 
 
 // Desafio 4
   function concatName(array) {
@@ -35,13 +33,25 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maior = 0;
+  let repeticoesMaior = 0;
+
+  for (let index in array) {
+    
+    if (array[index] > maior) {
+      maior = array[index];
+      repeticoesMaior = 1;
+    } else if (array[index] === maior) {
+      repeticoesMaior += 1;
+    }
+  }
+  return repeticoesMaior;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  
 }
 
 // Desafio 8
@@ -67,5 +77,5 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence,
+  splitSentence
 };
