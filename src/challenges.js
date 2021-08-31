@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(value1, value2) {
   let result = null;
@@ -64,18 +65,56 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  let result = [];
+  for (let number of arrayNumbers) {
+    if (number % 3 === 0) {
+      if (number % 5 === 0) {
+        result.push('fizzBuzz');
+      } else {
+        result.push('fizz');
+      }
+    } else if (number % 5 === 0) {
+      result.push('buzz');
+    } else {
+      result.push('bug!');
+    }
+  }
+  return result;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
 
+let cryptography = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5,
+};
+
+function encode(string) {
+  let result = string.split('');
+  for (let index = 0; index < result.length; index += 1) {
+    for (let value in cryptography) {
+      if (value === result[index]) {
+        result[index] = cryptography[value];
+      }
+    }
+  }
+  return result.join('');
+}
+function decode(string) {
+  let result = string.split('');
+  for (let index = 0; index < result.length; index += 1) {
+    for (let value in cryptography) {
+      if (cryptography[value].toString() === result[index]) {
+        result[index] = value;
+      }
+    }
+  }
+  return result.join('');
+}
 module.exports = {
   calcArea,
   catAndMouse,
