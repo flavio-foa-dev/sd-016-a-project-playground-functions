@@ -32,9 +32,11 @@ function concatName(listaDeNomes) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let calculoPontuacao = (wins * 3) + (ties * 1);
+  return calculoPontuacao;
 }
+
 
 // Desafio 6
 function highestCount() {
