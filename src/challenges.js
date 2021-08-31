@@ -41,8 +41,13 @@ function highestCount(arrayEx6) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distancia1 = Math.abs(mouse - cat1);
+  let distancia2 = Math.abs(mouse - cat2);
+  if (distancia1 === distancia2) {
+    return 'os gatos trombam e o rato foge';
+  }
+  return cat1 > cat2 ? 'cat2' : 'cat1'; // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators
 }
 
 // Desafio 8
@@ -51,9 +56,11 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
+function encode(stringEx9A) {
   // seu código aqui
 }
+
+console.log(encode('hi there!'));
 function decode() {
   // seu código aqui
 }
