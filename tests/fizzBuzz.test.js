@@ -8,7 +8,7 @@ describe('8 - Crie uma função FizzBuzz', () => {
   it('Retorne as strings [\'bug!\', \'fizz\'] quando é passado os parâmetros [7, 9] para função fizzBuzz', () => {
     expect(fizzBuzz([7, 9])).toEqual(['bug!', 'fizz']);
   });
-  
+
   it('Retorne as strings [\'fizz\', \'buzz\'] quando é passado os parâmetros [9, 25] para função fizzBuzz', () => {
     expect(fizzBuzz([9, 25])).toEqual(['fizz', 'buzz']);
   });
