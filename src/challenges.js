@@ -23,8 +23,17 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayInvert) {
+  // Função que inverte a ordem dos elementos de um array
+  
+  //variavel que inverte a posição dos elementos do array
+  let reverse = arrayInvert.reverse();
+  let first = arrayInvert[0];
+  let last = arrayInvert.pop();
+  let join = first + ', '+ last;
+  
+  return join;
+
 }
 
 // Desafio 5
