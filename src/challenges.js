@@ -27,14 +27,18 @@ function splitSentence(stringSplit) {
   let space = ' ';
   let arrayString = stringSplit.split(space);
   return arrayString
-  /* for (let key in arrayString) {
-    console.log(key + ' '+arrayString[key]);
-  } */
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(stringArray) {
+  // função receber uma array de strings
+  // retorna uma string com o formato `'ÚLTIMO ITEM, PRIMEIRO ITEM'`
+  // independente do tamanho da array
+  //let stringArray = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+  lastIndex = stringArray.length-1;
+  let stringConcat = stringArray[lastIndex]+stringArray[0];
+ // console.log(stringConcat)
+  return stringConcat
 }
 
 // Desafio 5
