@@ -51,12 +51,24 @@ function highestCount(arr) {
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+      let array = [];
+    for (let index = 0; index < arr.length; index += 1){
+        if (arr[index] % 3 === 0 && arr[index] % 5 === 0){
+            array.push('fizzBuzz');
+        }else if (arr[index] % 5 === 0){
+            array.push('buzz');
+        }else if (arr[index] % 3 === 0){
+            array.push('fizz');
+        }else{
+            array.push('bug!')
+        }
+    }
+    return array
 }
 
 // Desafio 9
