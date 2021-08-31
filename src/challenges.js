@@ -19,18 +19,32 @@ function calcArea(base, heigth) {
 function splitSentence(frase) {
   let array;
   array = frase.split(" ");
-  
   return array;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(array) {
+  let first;
+  let last;
+  let firstLast;
 
+  first = array[0];
+  last = array[array.length - 1];
+  firstLast = last.concat(", " + first);
+
+  return firstLast;
+}
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winers;
+  let tiers;
+  let result;
+
+  winers = wins * 3;
+  tiers = ties * 1; 
+  result = winers + tiers;
+
+  return result;
 }
 
 // Desafio 6
