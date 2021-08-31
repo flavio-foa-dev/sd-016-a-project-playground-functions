@@ -25,7 +25,8 @@ function splitSentence(word) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(words) {
+  let firstWord = words[0];
   
 }
 
