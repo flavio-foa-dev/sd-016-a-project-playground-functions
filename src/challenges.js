@@ -4,14 +4,25 @@ function compareTrue(a,b) {
 // && = ambos necessariamente são true
       return true
 // true e false, false e true, false e false -> outras possibilidades para ser false
-    } return false
+    } 
+    return false
 }
-console.log(compareTrue(c,d));
+const c = true;
+const d = false;
+const e = true;
+const f = false;
+console.log(compareTrue(d,c));
+console.log(compareTrue(c,f));
+console.log(compareTrue(c,e));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height)/2;
+  return area;  
 }
+console.log(calcArea(10,50));
+console.log(calcArea(5,2));
+console.log(calcArea(51,1));
 
 // Desafio 3
 function splitSentence() {
