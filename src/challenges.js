@@ -70,8 +70,41 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {}
-function decode() {}
+function encode(str) {
+  let newString = str.split('');
+  for (let i = 0; i < newString.length; i++) {
+    if (newString[i] === 'a') {
+      newString[i] = '1';
+    } else if (newString[i] === 'e') {
+      newString[i] = '2';
+    } else if (newString[i] === 'i') {
+      newString[i] = '3';
+    } else if (newString[i] === 'o') {
+      newString[i] = '4';
+    } else if (newString[i] === 'u') {
+      newString[i] = '5';
+    }
+  }
+  return newString.join('');
+}
+
+function decode(str) {
+  let newString = str.split('');
+  for (let i = 0; i < newString.length; i++) {
+    if (newString[i] === '1') {
+      newString[i] = 'a';
+    } else if (newString[i] === '2') {
+      newString[i] = 'e';
+    } else if (newString[i] === '3') {
+      newString[i] = 'i';
+    } else if (newString[i] === '4') {
+      newString[i] = 'o';
+    } else if (newString[i] === '5') {
+      newString[i] = 'u';
+    }
+  }
+  return newString.join('');
+}
 
 module.exports = {
   calcArea,
