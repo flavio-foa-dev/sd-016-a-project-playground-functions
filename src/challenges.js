@@ -41,9 +41,24 @@ var palavra3 = 'foguete'
 console.log(splitSentence(palavra3));
 
 // Desafio 4
-function concatName() {
-
+function concatName(array) {
+// aplicar o for para percorrer os elementos do array
+  for (let i = 0; i <= array.length; i+=1){
+// criar variavel que recebe último e primeiro item === array.lenght -1 e array[0];
+    let primeiraVar = array[0];
+    let ultimaVar = array[array.length-1]
+    let resultado = ultimaVar + "," + primeiraVar
+    return resultado
+// 
+  }
 }
+let array1 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+console.log(concatName(array1))
+let array2 = ['foguete', 'não', 'tem', 'ré'];
+console.log(concatName(array2));
+let array3 = ['captain', 'my', 'captain'];
+console.log(concatName(array3));
+
 
 // Desafio 5
 function footballPoints() {
