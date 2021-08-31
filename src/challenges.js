@@ -93,10 +93,29 @@ function highestCount(array_maior_numero) {
 
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
-}
+  let mouse_transform_positivo_cat1=mouse-cat1;
+  let mouse_transform_positivo_cat2=mouse-cat2;
 
+  if(mouse_transform_positivo_cat1<0){
+    mouse_transform_positivo_cat1*=-1
+  }
+  if(mouse_transform_positivo_cat2<0){
+    mouse_transform_positivo_cat2*=-1
+  }
+
+
+  if(mouse_transform_positivo_cat1<mouse_transform_positivo_cat2){
+    return "cat1"
+  }
+  else if(mouse_transform_positivo_cat1>mouse_transform_positivo_cat2){
+    return "cat2"
+  }
+  else{
+    return "os gatos trombam e o rato foge"
+  }
+}
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
@@ -121,4 +140,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
