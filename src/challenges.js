@@ -13,12 +13,14 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(split) {
   let pharase = split.split(' ') 
-  return pharase
+  return pharase;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let last = array.pop()
+  let first = array[0]
+  return `${last}, ${first}`
 }
 
 // Desafio 5
