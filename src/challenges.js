@@ -22,8 +22,8 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName(str) {
-  let concat = str[str.length - 1] + ', ' + str[0];
+function concatName(array) {
+  let concat = array[array.length - 1] + ', ' + array[0];
   return (concat);
 }
 
@@ -34,16 +34,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(str) {
-  let n = str[0];
+function highestCount(array) {
+  let n = array[0];
   let count = 0
-  for (let index = 0; index < str.length; index += 1) {
-    if (n < str[index]) {
-      n = str[index];
+  for (let index = 0; index < array.length; index += 1) {
+    if (n < array[index]) {
+      n = array[index];
     }
   }
-  for (let index2 = 0; index2 < str.length; index2 += 1) {
-    if (n === str[index2]) {
+  for (let index2 = 0; index2 < array.length; index2 += 1) {
+    if (n === array[index2]) {
       count += 1;
     } 
   }
@@ -64,8 +64,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let frase = []
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 != 0) {
+      frase[index] = "fizz";
+    } else if (array[index] % 3 != 0 && array[index] % 5 === 0) {
+      frase[index] = "buzz";
+    } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      frase[index ]= "fizzBuzz";
+    } else {
+      frase[index] = "bug!";
+    }
+  }
+  return (frase);
 }
 
 // Desafio 9
