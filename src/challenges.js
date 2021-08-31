@@ -1,32 +1,54 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(value1, value2) {
+  let result = null;
+  if (value1 === true && value2 === true) {
+    result = true;
+  } else {
+    result = false;
+  }
+  return result;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  return frase.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  let lastName = arrayString[arrayString.length - 1];
+  let firstName = arrayString[0];
+  return `${lastName}, ${firstName}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  wins *= 3;
+  return wins + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumbers) {
+  let maxNumber = arrayNumbers[0];
+  let maxNumberCount = 1;
+  for (let index = 1; index < arrayNumbers.length; index += 1) {
+    if (maxNumber < arrayNumbers[index]) {
+      maxNumber = arrayNumbers[index];
+      maxNumberCount = 1;
+    } else if (maxNumber === arrayNumbers[index]) {
+      maxNumberCount += 1;
+    }
+  }
+  return maxNumberCount;
 }
+
+console.log(highestCount([1, 9, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
