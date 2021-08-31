@@ -34,12 +34,22 @@ function footballPoints(wins, ties) {
   let points = pointWins + pointTies;
   return points
 }
-console.log(footballPoints(3, 2))
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let countRepeat = 0;
+  let indiceMaior = -1;
+    for (let indice in array) {
+      if (indiceMaior < array[indice]) {
+        indiceMaior = array[indice];
+      }
+  }
+  for (let index2 in array){
+    if (indiceMaior === array[index2]){
+      countRepeat += 1
+    }
+  }
+  return countRepeat
 }
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
