@@ -6,9 +6,10 @@ if((b1 && b2) === true) {
 return false
  }
 }
+
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) /2
 }
 
 // Desafio 3
