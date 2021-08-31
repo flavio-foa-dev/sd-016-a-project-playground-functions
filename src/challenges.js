@@ -262,11 +262,66 @@ function ehVogal(char, str) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+/*
+9 - Crie uma função que Codifique e Decodifique
+Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como 
+parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o 
+formato a seguir:
+
+a -> 1
+e -> 2
+i -> 3
+o -> 4
+u -> 5
+
+Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!".
+
+A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe 
+uma string contendo números no lugar de letras minúsculas e retornará uma string com 
+vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja 
+"h3 th2r2!", o retorno deverá ser "hi there!").
+
+O que será verificado:
+Retorne uma string codificada quando a função encode for utilizada
+Retorne uma string decodificada quando a função decode for utilizada
+*/
+function encode(string) {
+  let vogal = 'aeiou';
+  let novaString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    let vogalLetra = ehVogal(string[index], vogal);
+    if (vogalLetra) {
+      novaString += vogalLetra;
+    } else {
+      novaString += string[index];
+    }
+  }
+  return novaString;
 }
-function decode() {
-  // seu código aqui
+
+function number(char, str) {
+  for (let index = 0; index < str.length; index += 1) {
+    if (char === str[index]) {
+      return str[index - 1];
+    }
+  }
+  return false;
+}
+
+
+function decode(string) {
+  let vogal = 'a1e2i3o4u5';
+  let novaString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    let vogalLetra = ehNumber(string[index], vogal);
+    if (vogalLetra) {
+      novaString += vogalLetra;
+    } else {
+      novaString += string[index];
+    }
+  }
+  return newStr;
+
 }
 
 module.exports = {
