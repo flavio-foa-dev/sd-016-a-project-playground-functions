@@ -8,13 +8,13 @@ function compareTrue(a, b) {
 }
 compareTrue(1, 1);
 // Desafio 2
-let baseT = 0;
-let heightT = 0;
+let base = 0;
+let height = 0;
 
-function calcArea(baseT, heightT) {
+function calcArea(base, height) {
   let area = 0;
   let resultado = 0;
-  return area = (baseT * heightT) /2;
+  return area = (base * height) /2;
 }
 
 console.log(calcArea(51, 1));
