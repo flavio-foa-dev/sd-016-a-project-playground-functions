@@ -83,8 +83,8 @@ function fizzBuzz(array) {  // retorna uma palavra para um determinado caso dent
 
 // Desafio 9
 function encode(string) {   //codifica
-  array = string.split('');
-  arrayCoded = [];
+  let array = string.split('');
+  let arrayCoded = [];
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] == 'a') {
       arrayCoded.push('1');
@@ -106,8 +106,8 @@ function encode(string) {   //codifica
   return arrayCoded;
 }
 function decode(string) { //decodifica
-  array = string.split('');
-  arrayCoded = [];
+  let array = string.split('');
+  let arrayCoded = [];
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] == '1') {
       arrayCoded.push('a');
