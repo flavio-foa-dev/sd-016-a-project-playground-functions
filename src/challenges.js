@@ -21,8 +21,11 @@ function calcArea(base , height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  // Cria uma função que DIVIDA a frase (string) contida dentro da variável sentence.
+  // Ela irá RETORNAR como um ARRAY de strings.
+let newSentence = sentence.split(" ");
+return newSentence
 }
 
 // Desafio 4
