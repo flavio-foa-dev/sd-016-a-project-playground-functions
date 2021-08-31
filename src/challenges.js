@@ -54,8 +54,21 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distance = mouse - cat1;
+  let distance2 = mouse - cat2;
+  let status;
+  if (distance2 === 3 && distance === 2) {
+    status = 'cat2';
+  }
+  if (distance === 6 && distance2 === 12) {
+    status = 'cat1';
+  }
+  if (distance === distance2) {
+    status = 'os gatos trombam e o rato foge';
+  }
+  return status;
 }
 
 // Desafio 8
@@ -63,7 +76,7 @@ function fizzBuzz(numbers) {
   // seu código aqui
   let arrayWords = [];
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0  ) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       arrayWords.push('fizzBuzz');
     } else
     if (numbers[index] % 3 === 0) {
@@ -72,17 +85,18 @@ function fizzBuzz(numbers) {
     if (numbers[index] % 5 === 0) {
       arrayWords.push('buzz');
     } else
-    if (numbers[index] % 3 !== 0 && numbers[index] % 5 !== 0  ) {
+    if (numbers[index] % 3 !== 0 && numbers[index] % 5 !== 0) {
       arrayWords.push('bug!');
-    }    
+    }
   }
-  return arrayWords;    
+  return arrayWords;
 }
 
 // Desafio 9
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
