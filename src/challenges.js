@@ -18,14 +18,21 @@ function splitSentence(text) {
 
 // Desafio 4
 function concatName(array) {
-  firstWord = array[0];
-  lastWord = array.pop();
-  return lastWord + ", " + firstWord;
+  const firstWord = array[0];
+  const lastWord = array.pop();
+  return lastWord + ', ' + firstWord;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = 0;
+  for (let i = 0; i < wins; i += 1){
+    points += 3;
+  };
+  for (let i = 0; i < ties; i += 1){
+    points += 1;
+  };
+  return points;
 }
 
 // Desafio 6
