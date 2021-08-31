@@ -44,16 +44,16 @@ function highestCount(numbers) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
-function catAndMouse(cat1, cat2) {
+function catAndMouse(mouse ,cat1, cat2) {
   // seu código aqui
   let d1 = cat1;
   let d2 = cat2;
 
-  if (d1 < d2 ){
+  if (d1 > mouse && d1 < d2){
     return "cat1"
-  } else if( d1 > d2){
+  } else if( d2 > mouse && d2 < d1){
      return "cat2"
-  } else if( d1 === d2){
+  } else if(d1 > mouse && d1 === d2){
     return 'os gatos trombam e o rato foge'
   }
   }
