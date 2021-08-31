@@ -83,11 +83,11 @@ function fizzBuzz(array) {
   // seu código aqui
   let arrayResposta = [];
   for (let count = 0 ; count < array.length ; count++) {
-    if (array[count]%3 == 0 && array[count]%5 != 0) {
+    if (array[count]%3 === 0 && array[count]%5 != 0) {
       arrayResposta.push('fizz');
-    } else if (array[count]%5 == 0 && array[count]%3 != 0) {
+    } else if (array[count]%5 === 0 && array[count]%3 != 0) {
       arrayResposta.push('buzz');
-    } else if (array[count]%3 == 0 && array[count]%5 == 0) {
+    } else if (array[count]%3 === 0 && array[count]%5 === 0) {
       arrayResposta.push('fizzBuzz');
     } else {
       arrayResposta.push('bug');
