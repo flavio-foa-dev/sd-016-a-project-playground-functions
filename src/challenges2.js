@@ -77,8 +77,23 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  var regex = /\d+/g;
+  var matches = string.match(regex);  // creates array from matches -> https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+  let numberMatches = [];
+
+  let sum = 0;
+
+  for(let i = 0; i < matches.length; i += 1){
+      sum += parseInt(matches[i]);  // passa de string para number -> https://www.alura.com.br/artigos/convertendo-string-para-numero-em-javascript?gclid=Cj0KCQjwpreJBhDvARIsAF1_BU2BKYU6f6ReQl7b1z1TH6HDzqJ7xsHremu8uaTEcvL1hkzuWM9gOjYaAh1DEALw_wcB
+  }
+
+  if (sum == 1) {
+      return sum + ' copo de água'
+  } else {
+      return sum + ' copos de água'
+  }
+
 }
 
 module.exports = {
