@@ -21,7 +21,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(param3) {
-  let concatenacao =  param3[-1] + "," + param3[0]
+  let concatenacao =  param3[0]
   return concatenacao
 }
 
@@ -92,7 +92,7 @@ function encode(codificacao) {
       codificação[index] = 4;
     } else if (codificacao[index] === "u"){
       codificacao[index] = 5;
-    }
+    }return console.log(codificacao)
 }
 function decode(decodificacao) {
   for (index = 0; index > decodificacao.length; index +=1){
@@ -106,7 +106,7 @@ function decode(decodificacao) {
       decodificação[index] = "o";
     } else if (decodificacao[index] === "5"){
       decodificacao[index] = "u";
-    }
+    }return console.log(decodificacao)
 }
 
 module.exports = {
