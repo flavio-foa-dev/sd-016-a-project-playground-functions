@@ -6,11 +6,17 @@ function compareTrue(a, b) {
     return false;
   }
 }
+// Se A e B forem verdadeiros, retorna verdadeiro.
+// Se A ou B não forem verdadeiros, retorna falso.
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
+// Quando chamarmos a função, passaremos os valores de base e altura para que ele retorne o valor da área.
+
+
+//
 
 // Desafio 3
 function splitSentence() {
