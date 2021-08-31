@@ -30,8 +30,15 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+  // função recebe um array de string
+  // retornar do array o último item e o primeiro, nesta ordem
+  // definir uma variavel que pecorre o ultimo e o primeiro item da lista
+  let firstString = arrayStrings[0];
+  let lastString = [...arrayStrings].pop();
+  // let concatenado = lastString + ', ' + firstString;
+  let concatenado = `${lastString}, ${firstString}`;
+  return concatenado;
 }
 
 // Desafio 5
