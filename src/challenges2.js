@@ -1,6 +1,27 @@
 // Desafio 10
+function createObject (tecnologia, nome) {
+  const obj = {};
+
+  obj.tech = tecnologia;
+  obj.name = nome;
+
+  return obj;
+}
+
 function techList(array, nome) {
   // seu código aqui
+  let techInfo = [{}];
+  array.sort();
+
+  if(array.length === 0){
+    return 'Vazio!'
+  }
+
+  for (let x = 0; x < array.length; x += 1) {
+    techInfo[x] = createObject(array[x], nome)
+  }
+
+  return techInfo;
 }
 
 // Desafio 11
