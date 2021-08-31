@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if(a == b && b == a){
+  if (a === b && b === a){
     console.log(true);
   }else{
     console.log(false);
