@@ -106,18 +106,24 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let resposta = []
-  for (let i in array){
-    if ( array[index]/3 === 0 && array[index]/5 === 0) {
-      return resposta.push('fizzBuzz');
-    } else if (array[index]/3 === 0){
-      return resposta.push('fizz');
-    } else if (array[index]/5=== 0){
-      return resposta.push('buzz')
-    } else 
-    return resposta.push('bug!')
+    for (let i=0; i <= array.length; array+=1){
+    // variavel array para receber as respostas
+    let resposta = []
+    if ( array[i] % 3 === 0 && array[i] % 5 === 0) {
+    resposta.push('fizzBuzz');
+    } else if (array[i] % 3 === 0){
+    resposta.push('fizz');
+    } else if (array[i] % 5=== 0){
+    resposta.push('buzz')
+    } else {
+     resposta.push('bug!') 
+    }
   }
+  return resposta
 }
+
+let array1 = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(array1));
 
 // Desafio 9
 function encode() {
