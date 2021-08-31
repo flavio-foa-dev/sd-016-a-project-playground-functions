@@ -19,9 +19,11 @@ function splitSentence(stringEx3) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayEx5) { // https://eslint.org/docs/rules/prefer-template
+  return `${arrayEx5[arrayEx5.length - 1]}, ${arrayEx5[0]}`; // https://www.guj.com.br/t/gostaria-de-saber-como-posso-pegar-o-ultimo-elemento-de-um-array-em-c/344923
 }
+
+console.log(concatName(['Lucas', 'Iguin', 'Seilá']));
 
 // Desafio 5
 function footballPoints() {
