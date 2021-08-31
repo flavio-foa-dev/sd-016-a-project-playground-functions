@@ -41,15 +41,26 @@ function footballPoints(wins, ties) {
   let result;
 
   winers = wins * 3;
-  tiers = ties * 1; 
+  tiers = ties * 1;
   result = winers + tiers;
 
   return result;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let maxnumber = numbers[0];
+  let hits = 1;
+
+  for (let i = 1; i < numbers.length; i += 1) {
+    if (numbers[i] > maxnumber) {
+      maxnumber = numbers[i];
+      hits = 1;
+    } else if (numbers[i] === maxnumber) {
+      hits += 1;
+    }
+  }
+  return hits;
 }
 
 // Desafio 7
