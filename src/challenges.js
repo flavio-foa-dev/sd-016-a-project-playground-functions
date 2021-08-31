@@ -83,7 +83,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayFB) {
   let fizzBuzzResult = [];
 
-  for (indexFB = 0; indexFB < arrayFB.length ; indexFB += 1) {
+  for (let indexFB = 0; indexFB < arrayFB.length ; indexFB += 1) {
       if ((arrayFB[indexFB] % 3) === 0 && (arrayFB[indexFB] % 5) === 0) {
       fizzBuzzResult.push("fizzBuzz");
     } else if ((arrayFB[indexFB] % 3) === 0) {
@@ -99,11 +99,48 @@ return (fizzBuzzResult);
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(arrayEncode) {
+  let splitArrayEncode = arrayEncode.split('');
+
+  for ( index = 0; index < splitArrayEncode.length; index += 1) {
+    if (splitArrayEncode[index] === "a") {
+      splitArrayEncode[index] = "1";
+    } else if (splitArrayEncode[index] === "e") {
+      splitArrayEncode[index] = "2";
+    } else if (splitArrayEncode[index] === "i") {
+      splitArrayEncode[index] = "3";
+    } else if (splitArrayEncode[index] === "o") {
+      splitArrayEncode[index] = "4";
+    } else if (splitArrayEncode[index] === "u") {
+      splitArrayEncode[index] = "5";
+    }
+  }
+  
+  let joinArrayEncode = splitArrayEncode.join('')
+
+  return joinArrayEncode;
 }
-function decode() {
-  // seu código aqui
+
+function decode(arrayDecode) {
+  let splitArrayDecode = arrayDecode.split('');
+
+  for ( index = 0; index < splitArrayDecode.length; index += 1) {
+    if (splitArrayDecode[index] === "1") {
+      splitArrayDecode[index] = "a";
+    } else if (splitArrayDecode[index] === "2") {
+      splitArrayDecode[index] = "e";
+    } else if (splitArrayDecode[index] === "3") {
+      splitArrayDecode[index] = "i";
+    } else if (splitArrayDecode[index] === "4") {
+      splitArrayDecode[index] = "o";
+    } else if (splitArrayDecode[index] === "5") {
+      splitArrayDecode[index] = "u";
+    }
+  }
+  
+  let joinArrayDecode = splitArrayDecode.join('')
+
+  return joinArrayDecode;
 }
 
 module.exports = {
