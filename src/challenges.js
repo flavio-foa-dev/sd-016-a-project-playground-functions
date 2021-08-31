@@ -18,10 +18,10 @@ function splitSentence(String) {
 }
 
 // Desafio 4
-function concatName() {
-  
+function concatName(arrays) {
+  nomes = arrays[arrays.length -1] + ', ' + arrays[0]
+  return nomes
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
