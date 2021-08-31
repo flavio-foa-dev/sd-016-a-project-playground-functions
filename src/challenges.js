@@ -21,12 +21,16 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringsArray) {
-  return stringsArray[stringsArray.length -1] + ", " + stringsArray[0]; 
+  let lastItem = stringsArray[stringsArray.length -1];
+  let firstItem = stringsArray[0];
+  return lastItem + ", " + firstItem; 
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let tiePoints = ties;
+  let winPoints = wins * 3;
+  return winPoints + tiePoints;
 }
 
 // Desafio 6
