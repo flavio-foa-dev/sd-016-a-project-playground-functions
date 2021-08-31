@@ -22,15 +22,18 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arr) {
+  // retorna o ultimo e primeiro elemento do array concatenados
   let newArr = [arr[0], arr[arr.length-1]];
   return newArr[newArr.length-1]+", "+newArr[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  // opera sobre o numero de vitorias e empates e retorna o total somado
+  let vitorias = wins*3;
+  let empates = ties*1;
+  return vitorias+empates;
 }
-
 // Desafio 6
 function highestCount() {
   // seu código aqui
