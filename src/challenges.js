@@ -24,15 +24,35 @@ function concatName(nomes) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  wins = wins * 3;
+  ties = ties * 1;
+  return wins + ties
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(numeros) {
+let result = 0;
+let contador = 0;
 
+for (index = 0; index <= numeros.length; index += 1) {
+    if (result < numeros[index]) {
+        result = numeros[index];
+     
+    } 
+    if (numeros[index] < 0) {
+      result = numeros[index];
+    }
+}    
+
+
+for (indexP = 0; indexP < numeros.length; indexP += 1) {
+    if (result === numeros[indexP]) {
+        contador += 1;
+    }
+}
+ return contador
+} 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
