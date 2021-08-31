@@ -20,24 +20,37 @@ function splitSentence(text) {
 function concatName(array) {
   const firstWord = array[0];
   const lastWord = array.pop();
-  return lastWord + ', ' + firstWord;
+  const exitValue = lastWord + ', ' + firstWord;
+  return exitValue;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = 0;
-  for (let i = 0; i < wins; i += 1){
+  for (let i = 0; i < wins; i += 1) {
     points += 3;
-  };
-  for (let i = 0; i < ties; i += 1){
+  }
+  for (let i = 0; i < ties; i += 1) {
     points += 1;
-  };
+  }
   return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let biggestNumber = array[0];
+  let biggestNumberAppear = 0;
+  for (let i = 1; i < array.length; i += 1) {
+    if (array[i] > biggestNumber) {
+      biggestNumber = array[i];
+    }
+  }
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === biggestNumber) {
+      biggestNumberAppear += 1;
+    }
+  }
+  return biggestNumberAppear;
 }
 
 // Desafio 7
