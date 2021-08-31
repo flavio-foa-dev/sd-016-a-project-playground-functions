@@ -8,8 +8,11 @@ function compareTrue(value1, value2) {
 }
 
 // Desafio 2
-function calcArea() {
-  for();
+function calcArea(base,height) {
+ let area = 0; 
+ area = (base*height)/2;
+ console.log(area);
+  return area;
 }
 
 // Desafio 3
