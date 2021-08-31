@@ -8,7 +8,7 @@ function techList(techs, name) {
     for (let i = 0; i < techs.length; i += 1) {
       arrayOfTechs.push({
         tech: sortedTechs[i],
-        name: name,
+        name,
       });
     }
   }

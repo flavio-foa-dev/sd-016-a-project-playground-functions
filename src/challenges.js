@@ -105,12 +105,66 @@ function fizzBuzz(arrayOfNumbers) {
 
 // Desafio 9
 
+function convertToNumbersSecondary(phrase) {
+  for (let i = 0; i < phrase.length; i += 1) {
+    if (phrase[i] === 'o') {
+      phrase[i] = '4';
+    } else if (phrase[i] === 'u') {
+      phrase[i] = '5';
+    }
+  }
+  return phrase;
+}
+
+function convertToNumbersPrimary(phrase) {
+  let initialPhrase = phrase.split('');
+  for (let i = 0; i < initialPhrase.length; i += 1) {
+    if (initialPhrase[i] === 'a') {
+      initialPhrase[i] = '1';
+    } else if (initialPhrase[i] === 'e') {
+      initialPhrase[i] = '2';
+    } else if (initialPhrase[i] === 'i') {
+      initialPhrase[i] = '3';
+    }
+  }
+  let finalPhrase = convertToNumbersSecondary(initialPhrase);
+  return finalPhrase.join('');
+}
+
+function convertToLettersSecondary(phrase) {
+  for (let i = 0; i < phrase.length; i += 1) {
+    if (phrase[i] === '4') {
+      phrase[i] = 'o';
+    } else if (phrase[i] === '5') {
+      phrase[i] = 'u';
+    }
+  }
+  return phrase;
+}
+
+function convertToLettersPrimary(phrase) {
+  let initialPhrase = phrase.split('');
+  for (let i = 0; i < initialPhrase.length; i += 1) {
+    if (initialPhrase[i] === '1') {
+      initialPhrase[i] = 'a';
+    } else if (initialPhrase[i] === '2') {
+      initialPhrase[i] = 'e';
+    } else if (initialPhrase[i] === '3') {
+      initialPhrase[i] = 'i';
+    }
+  }
+  let finalPhrase = convertToLettersSecondary(initialPhrase);
+  return finalPhrase.join('');
+}
+
 function encode(phrase) {
-  
+  let encodedPhrase = convertToNumbersPrimary(phrase);
+  return encodedPhrase;
 }
 
 function decode(phrase) {
-  
+  let decodedPhrase = convertToLettersPrimary(phrase);
+  return decodedPhrase;
 }
 
 module.exports = {
