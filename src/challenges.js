@@ -28,13 +28,25 @@ function concatName(arrayOfStrings) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numberArray) {
+  let highestNumber = numberArray[0];
+  let highestNumberRepetitions = 0;
+
+  for (let number of numberArray) {
+    if (highestNumber < number) {
+      highestNumber = number;
+      highestNumberRepetitions = 1;
+    } else if (highestNumber === number) {
+      highestNumberRepetitions += 1;
+    }
+  }
+
+  return highestNumberRepetitions;
 }
 
 // Desafio 7
