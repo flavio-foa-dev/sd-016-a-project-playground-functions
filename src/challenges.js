@@ -23,10 +23,10 @@ function concatName(concatName) {
   let i = concatName.length;
  return (concatName[i-1] + (", ") + concatName[0]);
 }
-console.log(concatName(1, 2, 3, 4))
+
 // Desafio 5
-function footballPoints() {
- 
+function footballPoints(wins, ties) {
+ return (wins*3 + ties);
 }
 
 // Desafio 6
