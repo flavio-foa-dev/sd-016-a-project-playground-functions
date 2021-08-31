@@ -1,5 +1,11 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(value1, value2) {
+  if (value1 && value2) {
+    return true;
+  }
+  if (value1 === false || value2 === false) {
+    return false;
+  }
 }
 
 // Desafio 2
