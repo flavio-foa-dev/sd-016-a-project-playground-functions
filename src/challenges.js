@@ -21,13 +21,12 @@ function splitSentence(words) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array2) {
   // seu código aqui
   let first = array2[0];
   let last = array2[array2.length - 1];
   return (last + ', ' + first);
 }
-
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -37,8 +36,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumbers) {
   // seu código aqui
+  let greaterNumber = arrayNumbers[0];
+  let countNumber = 0;
+  for (let index in arrayNumbers) {
+    if (greaterNumber < arrayNumbers[index]) {
+      greaterNumber = arrayNumbers[index];
+    }
+  }
+  for (let secondIndex in arrayNumbers) {      
+    if (greaterNumber === arrayNumbers[secondIndex]) {
+      countNumber += 1;
+    }   
+  }     
+  return countNumber;
 }
 
 // Desafio 7
