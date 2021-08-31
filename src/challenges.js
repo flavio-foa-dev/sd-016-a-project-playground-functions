@@ -207,11 +207,58 @@ function catAndMouse(mouse, cat1, cat2) {
     }
     return 'os gatos trombam e o rato foge';  
 }
-let frase = catAndMouse(2,3);
-console.log(frase);
+//let frase = catAndMouse(2,3);
+//console.log(frase);
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+/*
+8 - Crie uma função FizzBuzz
+Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
+
+Para cada número do Array que seja divisível apenas por 3, apresente uma string "fizz";
+Para cada número do Array que seja divisível apenas por 5, apresente uma string "buzz";
+Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
+Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
+Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
+
+O que será verificado:
+
+Retorne as strings ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] quando é passado os parâmetros [2, 15, 7, 9, 45] para a função fizzBuzz
+
+Retorne as strings ['bug!', 'fizz'] quando é passado os parâmetros [7, 9] para a função fizzBuzz
+
+Retorne as strings ['fizz', 'buzz'] quando é passado os parâmetros [9, 25] para a função fizzBuzz
+*/
+
+
+function checkDivisor(num) {
+  let frase = '';
+  if (num % 3 === 0 && num % 5 === 0) {
+    frase = 'fizzBuzz';
+  } else if (num % 3 === 0) {
+    frase = 'fizz';
+  } else if (num % 5 === 0) {
+    frase = 'buzz';
+  } else {
+    frase = 'bug!';
+  }
+  return frase;
+}
+
+function fizzBuzz(arrNumber) {
+  for (let index = 0; index < arrNumber.length; index += 1) {
+    arrNumber[index] = checkDivisor(arrNumber[index]);
+  }
+  return arrNumber;
+}
+
+function ehVogal(char, str) {
+  for (let index = 0; index < str.length; index += 1) {
+    if (char === str[index]) {
+      return index + 1;
+    }
+  }
+  return false;
 }
 
 // Desafio 9
