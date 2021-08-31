@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue() {
- let a = true;
- let b = true;
+ let a = 1;
+ let b = 1;
  
-  if(a == true && b == true){
+  if(a == b && b == a){
     console.log(true);
   }else{
     console.log(false);
