@@ -76,8 +76,19 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  // calcular a distância dos gatos em comparação ao rato
+  // informar qual está mais próximo ao rato
+  // informar, caso ambos os estejam na mesma posição, se batem
+  let distancia1 = Math.abs(mouse - cat1);
+  let distancia2 = Math.abs(mouse - cat2);
+  if (distancia1 < distancia2) {
+    return 'cat1';
+  } if (distancia1 > distancia2) {
+    return 'cat2';
+  } if (distancia1 === distancia2) {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
