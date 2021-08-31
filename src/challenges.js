@@ -18,14 +18,14 @@ function splitSentence(sentence) {
   return sentence.split(' ');
 }
 
-
-console.log(splitSentence('vamo que vamo'));
-
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(words) {
+  let last = words[(words.length -1)]
+  let first = words[0];
+  return last + ", " + first;
 }
+
+console.log(concatName(['igor','july','jade']))
 
 // Desafio 5
 function footballPoints() {
