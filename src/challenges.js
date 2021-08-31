@@ -7,11 +7,9 @@ function compareTrue(number1, number2) {
   }
 }
 
-console.log(compareTrue(true, true))
-
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return base * height / 2
 }
 
 // Desafio 3
