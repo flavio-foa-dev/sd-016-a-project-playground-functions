@@ -39,27 +39,38 @@ function highestCount(arr) {
   // verifica qual o maior número
   let cont = 0;
   let maior = arr[0];
-  for (let i = 1; i < arr.length; i+=1) {
+  for (let i = 1; i < arr.length; i += 1) {
     if (arr[i] > maior) {
       maior = arr[i];
     }
   }
-  for(let j = 0; j < arr.length; j+=1) {
-    if(arr[j]===maior){
-      cont +=1;
+  for (let j = 0; j < arr.length; j += 1) {
+    if (arr[j] === maior) {
+      cont += 1;
     }
   }
   return cont;
 }
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse() {}
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  let newArr = [];
+  for (index in arr) {
+    if (arr[index] % 5 == 0 && arr[index] % 3 == 0) {
+      newArr.push('fizzBuzz');
+    } else if (arr[index] % 3 == 0) {
+       newArr.push('fizz');
+    } else if (arr[index] % 5 == 0) {
+       newArr.push('buzz');
+    } else if (arr[index] % 5 !== 0 || arr[index] % 3 !== 0) {
+       newArr.push('bug!');
+    }
+  }
+  return newArr;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
