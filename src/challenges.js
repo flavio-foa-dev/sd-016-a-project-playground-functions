@@ -42,8 +42,17 @@ function concatName(arrayStrings) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  // função que recebe o número de vitórias, chamado wins
+  // função que recebe o número de empates, chamado ties
+  // retornar a quantidade de pontos do time
+  // criar variavel com as pontuações de vitória e empate.
+  // criar variavel com a pontuação
+  let win = 3;
+  let tie = 1;
+  let pontuacao;
+  pontuacao = (win * wins) + (tie * ties);
+  return pontuacao;
 }
 
 // Desafio 6
