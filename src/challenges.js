@@ -13,8 +13,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(stringEx3) {
+  let arrayEx3 = stringEx3.split(' '); // https://www.horadecodar.com.br/2020/11/11/como-transformar-string-em-array-de-caracteres-com-javascript/
+  return arrayEx3;
 }
 
 // Desafio 4
