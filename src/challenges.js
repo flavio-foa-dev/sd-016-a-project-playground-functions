@@ -59,13 +59,40 @@ function highestCount(arrayOfNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  
+function catAndMouse(mouse, cat1, cat2) {
+  let distance1 = (cat1 - mouse) ** 2;
+  let distance2 = (cat2 - mouse) ** 2;
+  let result = 'os gatos trombam e o rato foge';
+
+  if (distance1 > distance2) {
+    result = 'cat2';
+  } else if (distance1 < distance2) {
+    result = 'cat1';
+  }
+  return result;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function divisibility(number) {
+  let result;
+  if (number === 3 || number === 9) {
+    result = 'fizz';
+  } else if (number === 5 || number === 25) {
+    result = 'buzz';
+  } else if (number % 15 === 0) {
+    result = 'fizzBuzz';
+  } else {
+    result = 'bug!';
+  }
+  return result;
+}
+
+function fizzBuzz(arrayOfNumbers) {
+  let stringWithResults = [];
+  for (let i = 0; i < arrayOfNumbers.length; i += 1) {
+    stringWithResults[i] = divisibility(arrayOfNumbers[i]);
+  }
+  return stringWithResults;
 }
 
 // Desafio 9
