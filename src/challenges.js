@@ -1,11 +1,12 @@
 // Desafio 1
 function compareTrue(conditionOne, conditionTwo) {
+  let result;
   if (conditionOne === true && conditionTwo === true) {
-    return true;
+    result = true;
+  } else {
+    result = false;
   }
-  else {
-    return false;
-  }
+  return result;
 }
 
 // Desafio 2
@@ -16,15 +17,15 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  let splitPhrase = phrase.split(" ");
+  let splitPhrase = phrase.split(' ');
   return splitPhrase;
 }
 
 // Desafio 4
 function concatName(listOfItens) {
   let concatenatedList;
-  let end = listOfItens.length
-  concatenatedList = listOfItens[end - 1] + ", " + listOfItens[0];
+  let end = listOfItens.length;
+  concatenatedList = listOfItens[end - 1] + ', ' + listOfItens[0];
   return concatenatedList;
 }
 
@@ -35,13 +36,31 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function findHighestNumber(arrayOfNumbers) {
+  let counter = arrayOfNumbers[0];
+
+  for (let i = 0; i < arrayOfNumbers.length; i += 1) {
+    if (arrayOfNumbers[i] > counter) {
+      counter = arrayOfNumbers[i];
+    }
+  }
+  return counter;
+}
+
+function highestCount(arrayOfNumbers) {
+  let highestNumber = findHighestNumber(arrayOfNumbers);
+  let counter = 0;
+  for (let i = 0; i < arrayOfNumbers.length; i += 1) {
+    if (arrayOfNumbers[i] === highestNumber) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  
 }
 
 // Desafio 8
