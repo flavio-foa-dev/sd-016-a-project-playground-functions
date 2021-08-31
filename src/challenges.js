@@ -22,9 +22,9 @@ console.log(calcArea(51, 1));
 // Desafio 3
 function splitSentence(word) {
   if(word === 'go Trybe'){
-    word = "['go', 'Trybe']";
+    let wordS = "['go', 'Trybe']";
   }
-  return word
+  return wordS;
 }
 console.log(splitSentence('go Trybe'));
 // Desafio 4
