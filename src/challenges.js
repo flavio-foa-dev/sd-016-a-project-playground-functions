@@ -18,9 +18,19 @@ function splitSentence(sentence) {
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let result1, result2;
+  if(names.length === 2) {
+    result1 = names[1];
+    result2 = names[0];
+  } else {
+    result2 = names.shift();
+    result1 = names.pop();
+  }
+  return result1 + ', '+ result2;
 }
+
+
 
 // Desafio 5
 function footballPoints() {
