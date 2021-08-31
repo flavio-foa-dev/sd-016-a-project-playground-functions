@@ -14,8 +14,8 @@ function splitSentence(str) {
 }
 
 // Desafio 4
-function concatName() {
-  
+function concatName(arr) {
+  return `${arr[arr.length - 1]}, ${arr[0]}`;
 }
 
 // Desafio 5
