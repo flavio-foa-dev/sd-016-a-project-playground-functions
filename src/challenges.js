@@ -27,7 +27,7 @@ function splitSentence(word) {
 console.log(splitSentence("vamo que vamo"));
 // Desafio 4
 function concatName(words) {
-  let lastItem = words[3];
+  let lastItem = words[words.lenght-1];
   let firstItem = words[0];
   return lastItem + " " + firstItem;
 }
