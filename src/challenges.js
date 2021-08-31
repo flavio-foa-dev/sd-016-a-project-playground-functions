@@ -22,7 +22,7 @@ console.log(calcArea(51, 1));
 // Desafio 3
 function splitSentence(word) {
   if(word === 'foguete'){
-    word = '['+'foguete'+']';
+    word = "['foguete']";
   }
   return word
 }
