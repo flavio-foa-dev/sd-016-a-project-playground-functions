@@ -59,12 +59,21 @@ function catAndMouse(mouse, cat1, cat2) {
   let distance = mouse - cat1;
   let distance2 = mouse - cat2;
   let status;
-  if (distance2 === 3 && distance === 2) {
+  if (distance < 0) { 
+    distance = (mouse - cat1) * -1;
+  }
+  if (distance2 < 0) {
+    distance2 = (mouse - cat2) * -1;
+  }
+  
+  if (distance2 === 2 && distance === 3) {
     status = 'cat2';
   }
+  
   if (distance === 6 && distance2 === 12) {
     status = 'cat1';
   }
+ 
   if (distance === distance2) {
     status = 'os gatos trombam e o rato foge';
   }
