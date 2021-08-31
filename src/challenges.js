@@ -149,20 +149,21 @@ Retorne 1 quando o parâmetro passado na função highestCount seja [0, 4, 4, 4,
 Retorne 3 quando o parâmetro passado na função highestCount seja [0, 0, 0]
 */
 function highestCount(arrayNumber) {
-  let cont = 0;
-  let numeroAtual = arrayNumber[0];
-  for (let index = 0; index < arrayNumber.length; index += 1) {
-    if (numeroAtual < arrayNumber[index]) {
-      cont = 1;
-      numeroAtual = arrNumber[index];
-    } else if (numeroAtual === arrayNumber[index]) {
+  let cont = 1;
+  let hightNumber = arrayNumber[0];
+  for (let index = 1; index < arrayNumber.length; index += 1) {
+    if (hightNumber < arrayNumber[index]) {
+      hightNumber = arrayNumber[index];
+      cont = 1;      
+    } else if (hightNumber === arrayNumber[index]) {
         cont += 1;
       }
   }
   return cont;  
 }
-//console.log(highestCount([9,1,2,3,9,5,7]));
-//console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+//let num = highestCount([9,1,2,3,9,5,7]);
+//let num = highestCount([0,4,4,4,9,2,1]);
+//console.log(num);
 
 // Desafio 7
 /*
