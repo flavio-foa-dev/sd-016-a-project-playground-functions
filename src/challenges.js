@@ -56,7 +56,6 @@ function catAndMouse(mouse, cat1, cat2) {
     distCat2 = cat2 - mouse;
   } else distCat2 = mouse - cat2;
 
-
   if (distCat1 === distCat2) {
     return "os gatos trombam e o rato foge";
   } else if (distCat1 < distCat2) {
@@ -65,8 +64,31 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(divisiveis) {
+  let divTres = false; 
+  let divCinco = false;
+  let resultados = [];
+
+  for (let i = 0; i < divisiveis.length; i += 1) {
+    if (divisiveis[i] % 3 === 0){
+      divTres = true;
+    }
+    if (divisiveis[i] % 5 === 0 ){
+      divCinco = true;       
+    }
+    if (divCinco === false && divTres === false) {
+      resultados.push('bug!');
+    } else if (divTres === true && divCinco === true){
+      resultados.push('fizzBuzz');
+    } else if (divTres === true && divCinco === false){
+      resultados.push('fizz');
+    } else resultados.push('buzz');
+
+    divTres = false;
+    divCinco = false;
+
+  }
+  return resultados;
 }
 
 // Desafio 9
