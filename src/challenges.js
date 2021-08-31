@@ -21,7 +21,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(param3) {
-  let concatenacao =  param3[-1] + param3[0]
+  let concatenacao =  param3[-1] + "," + param3[0]
   return concatenacao
 }
 
@@ -38,8 +38,8 @@ function footballPoints(wins,ties) {
 
 // Desafio 6
 function highestCount(array) {
-  maiornumero = 0
-  repeticoes = 0
+  let maiornumero = 0
+  let repeticoes = 0
   for (index = 0; index <= array.length;index +=1){
     if ( array[index] > maiornumero ) {
       maiornumero = array[index]
@@ -80,11 +80,33 @@ function fizzBuzz(numeros) {
   }
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codificacao) {
+  for (index = 0; index > codificacao.length; index +=1){
+    if (codificacao[index] ==="a" ){
+      codificacao[index] = 1;
+    } else if ( codificacao[index] === "e" ){
+      codificacao[index] = 2;
+    } else if ( codificacao[index] === "i" ){
+      codificacao[index] = 3;
+    } else if ( codificacao[index] === "o"){
+      codificação[index] = 4;
+    } else if (codificacao[index] === "u"){
+      codificacao[index] = 5;
+    }
 }
-function decode() {
-  // seu código aqui
+function decode(decodificacao) {
+  for (index = 0; index > decodificacao.length; index +=1){
+    if (decodificacao[index] ==="1" ){
+      codificacao[index] = "a";
+    } else if ( decodificacao[index] === "2" ){
+      decodificacao[index] = "e";
+    } else if ( decodificacao[index] === "3" ){
+      decodificacao[index] = "i";
+    } else if ( decodificacao[index] === "4"){
+      decodificação[index] = "o";
+    } else if (decodificacao[index] === "5"){
+      decodificacao[index] = "u";
+    }
 }
 
 module.exports = {
