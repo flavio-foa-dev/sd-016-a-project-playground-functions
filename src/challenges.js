@@ -15,13 +15,16 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(frase) {
-  let retorno = frase.split(/[\s,]+/);
+  let retorno = frase.split(/[\s,]+/); // https://blog.betrybe.com/javascript/javascript-split/ varrerá a string em busca de caractere de espaço.
   return retorno;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arr) {
+  let primeiro = arr.shift();
+  let ultimo = arr.pop();
+
+  return (ultimo + ", " + primeiro);
 }
 
 // Desafio 5
