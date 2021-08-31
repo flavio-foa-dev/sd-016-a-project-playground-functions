@@ -21,8 +21,14 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arrayFrase) {
   // seu código aqui
+  let arrayUltimate = [];
+  let maior = 0;
+  arrayUltimate.push(arrayFrase[arrayFrase.length-1]);
+  arrayUltimate.push(arrayFrase[0]);
+  let stringJoin = arrayUltimate.join(", ");
+  return stringJoin;
 }
 
 // Desafio 5
