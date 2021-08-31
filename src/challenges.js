@@ -25,8 +25,14 @@ function splitSentence(stringSplit) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+//Escreva uma função com o nome concatName que, ao receber uma array de strings, 
+//retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
+//Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], 
+//a função deverá retornar Paolillo, Lucas.
+function concatName(name1) {
+  let namesConcat = name1[name1.length - 1] + ", " + name1[0];
+  return namesConcat;
+ 
 }
 
 // Desafio 5
