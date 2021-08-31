@@ -10,24 +10,27 @@ function compareTrue(a, b) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  return   (base * height) / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(str) {
   // seu código aqui
-  return str.split(' ')
+  return str.split(' ');
 }
 
 // Desafio 4
 function concatName(str) {
   // seu código aqui
-  return str[str.length -1] + ', ' +  str[0]
+  return str[str.length -1] + ', ' + str[0]
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  wins = wins * 3;
+  ties = ties * 1;
+  return wins + ties;
 }
 
 // Desafio 6
