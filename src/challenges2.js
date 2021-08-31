@@ -12,7 +12,7 @@ function techList(arrayTecs, name) {
     }
     
     /**
-     * Consultas para resolver essa parte
+     * Consultas para resolver essa parte:
      * Documentação do método localeCompare: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
      * Resposta do usuário Blue-eyed Buzzard no fórum: https://www.codegrepper.com/code-examples/javascript/sort+array+of+objects+alphabetically+javascript
      */
@@ -76,10 +76,29 @@ function triangleCheck(lineA, lineB, lineC) {
 
   return false;
 }
-triangleCheck(16,9,2);
+
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebida) {
+  /**
+   * Consultas para resolver essa parte:
+   * Explicação sobre Regex: https://www.youtube.com/watch?v=909NfO1St0A
+   * Documentação de Regex: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
+   * Converter string em integer: https://www.geeksforgeeks.org/convert-a-string-to-an-integer-in-javascript/
+   */
+  
+  let doseSum = 0;
+  const regex = /[1-9]/g;
+  let doses = bebida.match(regex);
+
+  for (let value of doses) {
+    doseSum += parseInt(value);
+  }
+
+  if (doseSum > 1) {
+    return doseSum + ' copos de água';
+  } else if (doseSum === 1) {
+    return doseSum + ' copo de água';
+  }
 }
 
 module.exports = {
