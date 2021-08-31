@@ -15,19 +15,21 @@ function calcArea(base,altura) {
 
 // Desafio 3
 function splitSentence(string) {
-  split = string.split(' ')
+ let split = string.split(' ')
   return console.log(split)   
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(param3) {
+  let concatenacao =  param3[-1] + param3[0]
+  return concatenacao
 }
 
 // Desafio 5
 function footballPoints(wins,ties) {
+  let pontos = 0
   if (wins && ties > 0 ) {
-    pontos = (wins * 3) + ties
+   let pontos = (wins * 3) + ties
   return pontos
   }else if (wins && ties === 0){
     return pontos
@@ -35,8 +37,8 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let 
 }
 
 // Desafio 7
