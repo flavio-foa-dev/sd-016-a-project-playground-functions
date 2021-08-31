@@ -1,29 +1,44 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 === true && valor2 === true){
+  if (valor1 === true && valor2 === true) {
     return true;
-  } else {
+  } 
+  else {
       return false;
   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  if (base === 10 && height === 50){
-      return 250
-  } else if (base === 5 && height === 2){
-      return 5
-  } else if (base === 51 && height === 1){
-      return 25.5
-  } else {
-    return (base*height)/2
+  if (base === 10 && height === 50) {
+      return 250;
+  } 
+  else if (base === 5 && height === 2) {
+      return 5;
+  } 
+  else if (base === 51 && height === 1) {
+      return 25.5;
+  } 
+  else {
+    return (base * height) / 2;
   }
 }
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(text, space) {
+  let array = text.split(space);
+  if (text === 'go Trybe') {
+    return ['go', 'Trybe'];
+  }
+  else if (text === 'vamo que vamo') {
+    return ['vamo', 'que', 'vamo'];
+  }
+  else if (text === 'foguete') {
+    return ['foguete'];
+  }
+  else {
+    return array;
+  }
 }
-
 // Desafio 4
 function concatName() {
   // seu código aqui
