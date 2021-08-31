@@ -1,3 +1,5 @@
+const { RuleTester } = require("eslint");
+
 // Desafio 1
 function compareTrue(boo1, boo2) {
   if (boo1 === true && boo2 === true) {
@@ -10,12 +12,13 @@ function compareTrue(boo1, boo2) {
 // Desafio 2
 function calcArea(base, height) {
   area = base * height / 2;
-  return (area)
+  return (area);
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  split = frase.split(' ');
+  return (split);
 }
 
 // Desafio 4
