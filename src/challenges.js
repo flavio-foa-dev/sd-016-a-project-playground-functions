@@ -53,7 +53,6 @@ function highestCount(array) {
   // seu código aqui
   let higherNumber = getHigherNumber(array);
   let timeRepeated = 0;
-  
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] === higherNumber) {
       timeRepeated += 1;
@@ -76,9 +75,11 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (distance1 < distance2) {
     return 'cat1';
-  } else if (distance1 > distance2) {
+  }
+  if (distance1 > distance2) {
     return 'cat2';
-  } else {
+  }
+  if (distance2 === distance1) {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -90,9 +91,9 @@ function fizzBuzz(array) {
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 5 === 0 && array[i] % 3 === 0) {
       resultArray.push('fizzBuzz');
-    } else if (array[i] % 5 !== 0 && array[i] % 3 === 0) {
+    } else if (array[i] % 3 === 0) {
       resultArray.push('fizz');
-    } else if (array[i] % 5 === 0 && array[i] % 3 !== 0) {
+    } else if (array[i] % 5 === 0) {
       resultArray.push('buzz');
     } else {
       resultArray.push('bug!');
@@ -126,20 +127,20 @@ function encode(string) {
 function decode(string) {
   // seu código aqui
   let stringSplit = string.split('');
-  let decode = [];
+  let decodeString = [];
   for (let i = 0; i < stringSplit.length; i += 1) {
     if (stringSplit[i] === '1') {
-      decode.push('a');
+      decodeString.push('a');
     } else if (stringSplit[i] === '2') {
-      decode.push('e');
+      decodeString.push('e');
     } else if (stringSplit[i] === '3') {
-      decode.push('i');
+      decodeString.push('i');
     } else if (stringSplit[i] === '4') {
-      decode.push('o');
+      decodeString.push('o');
     } else if (stringSplit[i] === '5') {
-      decode.push('u');
+      decodeString.push('u');
     } else {
-      decode.push(stringSplit[i]);
+      decodeString.push(stringSplit[i]);
     }
   }
   return decode.join('');
