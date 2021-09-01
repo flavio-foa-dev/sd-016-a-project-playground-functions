@@ -97,8 +97,13 @@ function catAndMouse(rato, gato1, gato2) {
 	let resultado = [''];
 		// animais em linha -> pensar num eixo X e distancia de pontos -- movimento (subtração) poderá ser negativa a depender do rato
 	let distanciaRatoGato1 = (rato - gato1);
-	let distanciaRatoGato2 = (rato - gato2) * -1;
-	if (distanciaRatoGato1 > distanciaRatoGato2) {
+	let distanciaRatoGato2 = (rato - gato2);
+    if (distanciaRatoGato1 < 0){
+        distanciaRatoGato1 = distanciaRatoGato1 * -1;
+    } else if (distanciaRatoGato2 < 0);{
+        distanciaRatoGato2 = distanciaRatoGato2 * -1
+    }
+    if (distanciaRatoGato1 > distanciaRatoGato2) {
 		resultado = 'cat2'
 	} else if ( distanciaRatoGato2 > distanciaRatoGato1) {
 		resultado = 'cat1';
