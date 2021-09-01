@@ -16,8 +16,72 @@ function techList(techs, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function checkLength(arrayOfNumbers) {
+  let result = true;
+  if (arrayOfNumbers.length !== 11) {
+    result = false;
+  }
+  return result;
+}
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
+function checkRepetition(arrayOfNumbers) {
+  let result = true;
+  let base = 0;
+  let counter = 0;
+  for (let i = 0; i < arrayOfNumbers.length; i += 1) {
+    base = arrayOfNumbers[i];
+    for (let j = 0; j < arrayOfNumbers.length; j += 1) {
+      if (arrayOfNumbers[j] === base) {
+        counter += 1;
+      }
+    }
+    if (counter >= 3) {
+      result = false;
+    }
+    counter = 0;
+  }
+  return result;
+}
+
+function generatesDdd(arrayOfNumbers) {
+  let ddd = [];
+  for (let i = 0; i < 2; i += 1) {
+    ddd[i] = arrayOfNumbers[i];
+  }
+  let finalNumber = `(${ddd.join('')})`;
+  return finalNumber;
+}
+
+function generatesFirstPart(arrayOfNumbers) {
+  let firstPart = [];
+  for (let i = 2; i < 7; i += 1) {
+    firstPart[i - 2] = arrayOfNumbers[i];
+  }
+  let finalNumber = firstPart.join('');
+  return finalNumber;
+}
+
+function generatesSecondPart(arrayOfNumbers) {
+  let secondPart = [];
+  for (let i = 7; i < 11; i += 1) {
+    secondPart[i - 7] = arrayOfNumbers[i];
+  }
+  let finalNumber = secondPart.join('');
+  return finalNumber;
+}
+
+function generatePhoneNumber(arrayOfNumbers) {
+  let result;
+  if (checkLength(arrayOfNumbers) === false) {
+    result = 'Array com tamanho incorreto';
+  }
+  if (checkRepetition(arrayOfNumbers) === false) {
+    result = 'não é possível gerar um número de telefone com esses valores';
+  }
+  // eslint-disable-next-line max-len
+  result = `${generatesDdd(arrayOfNumbers)} ${generatesFirstPart(arrayOfNumbers)}-${generatesSecondPart(arrayOfNumbers)}`;
+  return result;
 }
 
 // Desafio 12
