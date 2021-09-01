@@ -38,15 +38,24 @@ function generatePhoneNumber(numeros) {
   numeros.unshift('(');
   numeros.splice(3, 0, ') ');
   numeros.splice(9, 0, '-');
-  let numerostring = numeros.join('');
-  return numerostring;
+  return numeros.join('');
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) { 
+  if (lineA + lineB < lineC || lineA + lineC < lineB || lineB + lineC < lineA) {
+    return false;
+  }
+  if (Math.abs(lineA - lineB) > lineC || Math.abs(lineA - lineC) > lineB) {
+    return false;
+  }
+  if (Math.abs(lineB - lineC) > lineA) {
+    return false;
+  } 
+  return true;
 }
 
+console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
