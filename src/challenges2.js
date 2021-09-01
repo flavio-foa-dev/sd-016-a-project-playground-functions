@@ -15,7 +15,6 @@ function techList(techs, name) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  let ind = 0;
   let count = 0;
   if (numbers.length === 11) {
     for (let index = 0; index < 11; index += 1) {
@@ -72,9 +71,9 @@ function hydrate(string) {
     }
   }
   if (boolean > 1) {
-    return boolean + ' copos de água';
+    return (boolean + ' copos de água');
   }
-  return boolean + ' copo de água';
+  return (boolean + ' copo de água');
 }
 
 module.exports = {
