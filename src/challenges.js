@@ -6,13 +6,11 @@ function compareTrue(a, b) {
     return false;
   }
 }
-
 // Desafio 2
 function calcArea(base, height) {
   let triangleArea = (base * height) / 2;
   return triangleArea
 }
-
 // Desafio 3
 function splitSentence(phrase) {
   let transformInToArray = phrase.split(" ");
@@ -37,22 +35,15 @@ function footballPoints(wins, ties) {
 }
 // Desafio 6
 function highestCount(numbersArray) {
-  let numberCount = 1;
-  numbersArray.sort()
-  console.log(numbersArray)
-  for (index = 1; index < numbersArray.length; index += 1) {
-    if (Math.abs(numbersArray[index]) === Math.abs(numbersArray[index - 1])) {
-      numberCount += 1;
-    } if (numbersArray[index] > numbersArray[index - 1]) {
-      numberCount = 1;
+  let maxNumber = Math.max.apply(null, numbersArray)
+  let maxNumberCount = 0;
+  for (index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] === maxNumber) {
+      maxNumberCount += 1;
     }
   }
-  return numberCount;
+  return maxNumberCount;
 }
-console.log(highestCount([-2, -1, -2]))
-console.log(highestCount([0, 0, 0]))
-console.log(highestCount([1, 9, 2, 3, 9, 5, 7]))
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let cat1position = Math.abs(cat1 - mouse)
