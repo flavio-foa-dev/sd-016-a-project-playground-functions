@@ -33,18 +33,20 @@ function footballPoints(wins, ties) {
   return resultado
 }
 
-// Desafio 6  : erro
+// Desafio 6 :
 function highestCount(array) {
+  let result = 0;
   for (let index = 0; index < array.length; index += 1) {
-    let maxNumber = array[0];
-    if (array[index] > maxNumber) {
+    let maxNumber = 0;
+    if (maxNumber < array[index]) {
       maxNumber = array[index];
-      let resultado = maxNumber === array[index]
-      return resultado
+      maxNumber === array[index]
+      result += 1
     }
   }
+  return result;
 }
-
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
 // Desafio 7
 function catAndMouse(mause, cat1, cat2) {
   let distance1 = cat1 - mause;
