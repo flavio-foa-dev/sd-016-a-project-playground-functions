@@ -2,34 +2,33 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let calc = ((base * height) / 2)
-  return calc
+  let calc = ((base * height) / 2);
+  return calc;
 }
 
 // Desafio 3
 function splitSentence(word) {
-  let string = word.split(' ')
-  return string
+  let string = word.split(' ');
+  return string;
 }
 
 // Desafio 4
 function concatName(array) {
   let result = [];
   result = array[array.length - 1] + ', ' + array[0];
-  return result
+  return result;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = ((wins * 3) + ties);
-  return points
+  return points;
 }
 
 // Desafio 6
@@ -42,11 +41,11 @@ function highestCount(numbers) {
     } else if (num === (numbers[index])) {
       count += 1;
     } else {
-      num = numbers[index]
+      num = numbers[index];
       count = 1;
     }
   }
-  return count
+  return count;
 }
 
 // Desafio 7
@@ -54,30 +53,30 @@ function catAndMouse(mouse, cat1, cat2) {
   let result1 = (mouse - cat1);
   let result2 = (mouse - cat2);
   if (Math.abs(result1) > Math.abs(result2)) {
-    return "cat2"
+    return "cat2";
   } else if (Math.abs(result1) < Math.abs(result2)) {
-    return "cat1"
+    return "cat1";
   }
   else {
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
 }
 
 // Desafio 8
 function fizzBuzz(array) {
-  let newArray = []
+  let newArray = [];
   for (index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       newArray.push('fizzBuzz');
     } else if (array[index] % 3 === 0) {
-      newArray.push("fizz")
+      newArray.push("fizz");
     } else if (array[index] % 5 === 0) {
-      newArray.push("buzz")
+      newArray.push("buzz");
     } else {
-      newArray.push("bug!")
+      newArray.push("bug!");
     }
   }
-  return newArray
+  return newArray;
 }
 
 // Desafio 9
@@ -99,10 +98,10 @@ function encode(convert) {
     }
   }
   separado = separado.join('');
-  return separado
+  return separado;
 }
 function decode(convert) {
-  let separado = convert.split('')
+  let separado = convert.split('');
   for (index = 0; index < separado.length; index += 1) {
     if (separado[index] === "1" || separado[index] === "2" || separado[index] === "3" || separado[index] === "4" || separado[index] === "5") {
       if (separado[index] === "1") {
@@ -119,7 +118,7 @@ function decode(convert) {
     }
   }
   separado = separado.join('');
-  return separado
+  return separado;
 }
 
 module.exports = {
