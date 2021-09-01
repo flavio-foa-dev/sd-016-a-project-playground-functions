@@ -75,8 +75,6 @@ function hydrate(string) {
   return soma + copos;
 }
 
-console.log(hydrate('1 cerveja, 5 cachacas'));
-
 module.exports = {
   generatePhoneNumber,
   techList,
