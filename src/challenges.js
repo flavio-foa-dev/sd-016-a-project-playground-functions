@@ -79,11 +79,8 @@ function fizzBuzz(array) {
 function encode(convert) {
   let separado = convert.split('')
   for (let index = 0; index < separado.length; index += 1) {
-    if (separado[index] === 'a'
-      || separado[index] === 'e'
-      || separado[index] === 'i'
-      || separado[index] === 'o'
-      || separado[index] === 'u') {
+    if (separado[index] === 'a' || separado[index] === 'e' || separado[index] === 'i'
+      || separado[index] === 'o' || separado[index] === 'u') {
       if (separado[index] === 'a') {
         separado.splice(index, 1, '1');
       } else if (separado[index] === 'e') {
@@ -103,11 +100,8 @@ function encode(convert) {
 function decode(convert) {
   let separado = convert.split('');
   for (let index = 0; index < separado.length; index += 1) {
-    if (separado[index] === '1'
-      || separado[index] === '2'
-      || separado[index] === '3'
-      || separado[index] === '4'
-      || separado[index] === '5') {
+    if (separado[index] === '1' || separado[index] === '2' || separado[index] === '3'
+      || separado[index] === '4' || separado[index] === '5') {
       if (separado[index] === '1') {
         separado.splice(index, 1, 'a');
       } else if (separado[index] === '2') {
