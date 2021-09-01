@@ -14,36 +14,69 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-/* let  array = [] */
-array = string.split(' ')
-return array
+  let array = []
+  array = string.split(' ')
+  return array
 }
 
 // Desafio 4'
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let resultado = []
+  resultado = array[array.length - 1] + ', ' + array[0];
+  return resultado
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pointWins = wins * 3;
+  let resultado = pointWins + ties;
+  return resultado
 }
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// Desafio 6  : erro
+function highestCount(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    let maxNumber = array[0];
+    if (array[index] > maxNumber) {
+      maxNumber = array[index];
+      let resultado = maxNumber === array[index]
+      return resultado
+    }
+  }
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mause, cat1, cat2) {
+  let distance1 = cat1 - mause;
+  let distance2 = cat2 - mause;
+  if (distance1 < distance2) {
+    return 'cat1'
+  } else if (distance1 > distance2) {
+    return 'cat2'
+  } else {
+    return "os gatos trombam e o rato foge."
+  }
+}
+console.log(catAndMouse(1,4,5))
+// Desafio 8  erro.
+function fizzBuzz(number) {
+  let valory = []
+  for (let index = 0; index < number.length; index += 1) {
+    if  (number[index] % 3 === 0 && number[index] % 5 === 0){
+      valory.push("fizz");
+    } else if (number[index] % 5 === 0) {
+      valory.push("buzz");
+    }  else if(number[index] % 3 === 0){
+      valory.push("fizzBuzz");
+    } else {
+      valory.push("bug !");
+    }
+    return valory
+  } 
 }
 
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
 
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9
 function encode() {
   // seu código aqui
