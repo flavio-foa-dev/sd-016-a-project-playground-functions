@@ -30,11 +30,11 @@ let palavra = 'go Trybe';
 let palavra2 = 'vamo que vamo';
 let palavra3 = 'foguete';
 
-function splitSentence(string) {
+function splitSentence(palavras) {
   // criar um array vazio para receber as letras
   // let resultado = [];
   // tentativa de separar usando split (como no exercicio -- ok) e dando push (fail) disso no array;
-  let separado = string.split(' ');
+  let separado = palavras.split(' ');
   // com [string] fica um array dentro de array
   return separado;
 }
@@ -138,9 +138,10 @@ let array7 = [9, 25];
 console.log(fizzBuzz(array7));
 
 // Desafio 9
-let separacao = string.split(' ');
+
+function encode(arrayDePalavras) {
+let separacao = arrayDePalavras.split(' ');
 let arrayVazio = [" "]
-function encode(string) {
 	for (let i= 0; i >= separacao.length; i +=1 ){
 		if ( separacao[i] === 'a'){
 			arrayVazio.push('1');	
