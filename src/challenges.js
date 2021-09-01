@@ -14,7 +14,7 @@ function calcArea(base, height) {
   // função recebe valor base(base) e altura(height) de um triângulo
   // retorna o cálculo da sua área
   // fórmula da área de um triângulo (base * altura) / 2
-  areaTriangle = (base * height) / 2;
+  let areaTriangle = (base * height) / 2;
   return areaTriangle
 }
 
@@ -39,8 +39,8 @@ function concatName(stringArray) {
 // Desafio 5
 function footballPoints(wins,ties) {
   // função recebe o número de vitórias(chamar `wins`) e o número de empates( chamar `ties`)
-  //  retorna a quantidade de pontos que o time marcou em um campeonato.
-  spotsTime = (wins * 3) + ties;
+  // retorna a quantidade de pontos que o time marcou em um campeonato.
+  let spotsTime = (wins * 3) + ties;
   return spotsTime
 }
 
@@ -55,15 +55,15 @@ function highestCount(numbersArray) {
     let number1 = numbersArray[index];
     let number2 = numbersArray[index+1];
     if ((number1 > number2) && (number1 > higherAtual)){
-      higherAtual = number1;
+      let higherAtual = number1;
     }
     if ((number2 > number1) && (number2 > higherAtual)){
-      higherAtual = number2;
+      let higherAtual = number2;
     }
   }  
   for (let Higherindex=0; Higherindex <numbersArray.length; Higherindex+=1){
     if (numbersArray[Higherindex] === higherAtual) {
-      sumhigherNumber = sumhigherNumber + 1
+      let sumhigherNumber = sumhigherNumber + 1
     }
   }  
    return sumhigherNumber
