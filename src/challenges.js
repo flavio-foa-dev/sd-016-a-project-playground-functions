@@ -3,9 +3,9 @@ function compareTrue(param1, param2) {
   // retorna true apenas se os dois parametros satisfizerem a condicao
   if (param1 && param2) {
     return true;
-  } 
-    return false;
   }
+  return false;
+}
 compareTrue(true, false);
 
 // Desafio 2
@@ -52,13 +52,13 @@ function highestCount(arr) {
   return cont;
 }
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
-  let distanceCatOne = Math.abs(mouse-cat1);
-  let distanceCatTwo = Math.abs(mouse-cat2);
-  if(distanceCatOne === distanceCatTwo) {
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCatOne = Math.abs(mouse - cat1);
+  let distanceCatTwo = Math.abs(mouse - cat2);
+  if (distanceCatOne === distanceCatTwo) {
     return 'os gatos trombam e o rato foge';
   }
-  if(distanceCatOne<distanceCatTwo) {
+  if (distanceCatOne < distanceCatTwo) {
     return 'cat1';
   }
   return 'cat2';
