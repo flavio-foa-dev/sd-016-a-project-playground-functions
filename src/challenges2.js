@@ -63,8 +63,8 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(phrase) {
-  let numberOfDrinks = phrase.match(/\d+/g).reduce((acum, cur) => acum + parseInt(cur), 0);
-  let glass = numberOfDrinks > 1 ? "copos" : "copo";
+  let numberOfDrinks = phrase.match(/\d+/g).reduce((acum, cur) => acum + parseInt(cur, 10), 0);
+  let glass = numberOfDrinks > 1 ? 'copos' : 'copo';
   return `${numberOfDrinks} ${glass} de água`;
 }
 
