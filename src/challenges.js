@@ -35,7 +35,7 @@ function highestCount(numeros) {
 let result = 0;
 let contador = 0;
 
-for (index = 0; index <= numeros.length; index += 1) {
+for (let index = 0; index <= numeros.length; index += 1) {
     if (result < numeros[index]) {
         result = numeros[index];
      
@@ -54,12 +54,27 @@ for (indexP = 0; indexP < numeros.length; indexP += 1) {
 
 // Desafio 7
 function catAndMouse() {
-  
+  // seu código aqui  
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(str) {
+  let strA = [];
+  for (let index = 0; index < str.length; index += 1){
+    if (str[index] % 3 === 0) {  
+      if (str[index] % 5 === 0) {
+        strA.push("fizzBuzz");
+      } else {
+        strA.push("fizz");
+      }
+      } else if (str[index] % 5 === 0) {
+      strA.push("buzz");
+      
+    } else {
+      strA.push("bug!"); 
+    }  
+  }
+  return strA
 }
 
 // Desafio 9
