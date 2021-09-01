@@ -15,7 +15,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(frase) {
-  let retorno = frase.split(/[\s,]+/); // https://blog.betrybe.com/javascript/javascript-split/ varrerá a string em busca de caractere de espaço.
+  let retorno = frase.split(" "); // https://blog.betrybe.com/javascript/javascript-split/ varrerá a string em busca de caractere de espaço. - Fernando Mós Turma 16 tribo A
   return retorno;
 }
 
@@ -92,11 +92,42 @@ function fizzBuzz(matriz) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(str) {
+  let letras = str.split("");
+  for (let key in letras){
+    if (letras[key] === "a"){
+      letras[key] = 1;
+    } else if (letras[key] === "e"){
+      letras[key] = 2;
+    } else if (letras[key] === "i"){
+      letras[key] = 3;
+    } else if (letras[key] === "o"){
+      letras[key] = 4;
+    } else if (letras[key] === "u"){
+      letras[key] = 5;
+    }
+  }
+
+  return letras.join('');
+};
+
+function decode(inverso) {
+  let newInverso = inverso.split("");
+  for (let key in newInverso){
+    if (newInverso[key] === "1"){
+      newInverso[key] = "a";
+    } else if (newInverso[key] === "2"){
+      newInverso[key] = "e";
+    } else if (newInverso[key] === "3"){
+      newInverso[key] = "i";
+    } else if (newInverso[key] === "4"){
+      newInverso[key] = "o";
+    } else if (newInverso[key] === "5"){
+      newInverso[key] = "u";
+    }
+  }
+
+  return newInverso.join('');
 }
 
 module.exports = {
