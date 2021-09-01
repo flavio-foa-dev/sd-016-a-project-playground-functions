@@ -42,15 +42,16 @@ function highestCount(numbers) {
        maior = numbers[i];
        cont = 1;
     }
-    else if (numbers[i] === maior)
+    else if (numbers[i] === maior){
        cont += 1;
+      }
    }
    return cont;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(pMouse, pCat1, pCat2) {
+  
 }
 
 // Desafio 8
