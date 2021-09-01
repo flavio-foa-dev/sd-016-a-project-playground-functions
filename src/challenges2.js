@@ -54,10 +54,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let waterDrinkString = drinks.match(/\d+/g);
+  let waterDrinkArray = [];
+  let WaterDrink = 0;
+  for (let index = 0; index < waterDrinkString.length; index += 1) {
+    waterDrinkArray.push(parseInt(waterDrinkString[index], 10));
+  }
+  for (let index = 0; index < waterDrinkArray.length; index += 1) {
+    WaterDrink += waterDrinkArray[index];
+  }
+  if (WaterDrink > 1) {
+    return `${WaterDrink} copos de água`;
+  } return `${WaterDrink} copo de água`;
 }
-
 module.exports = {
   generatePhoneNumber,
   techList,
