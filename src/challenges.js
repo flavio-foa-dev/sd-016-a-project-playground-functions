@@ -320,7 +320,7 @@ function decode(string) {
       novaString += string[index];
     }
   }
-  return newStr;
+  return novaString;
 
 }
 
