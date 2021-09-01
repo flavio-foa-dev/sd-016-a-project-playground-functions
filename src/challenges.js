@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(a, b) {
   if (a === true && b === true) {
-		// && = ambos necessariamente são true
-    return true;
-		// true e false, false e true, false e false -> outras possibilidades para ser false
+// && = ambos necessariamente são true
+  return true;
+// true e false, false e true, false e false -> outras possibilidades para ser false
 	} 
   return false;
 }
@@ -45,15 +45,12 @@ console.log(splitSentence(palavra3));
 
 // Desafio 4
 function concatName(array) {
-// aplicar o for para percorrer os elementos do array
-	for (let i = 0; i <= array.length; i += 1) {
-		// criar variavel que recebe último e primeiro item === array.lenght -1 e array[0];
-    let primeiraVar = array[0];
-    let ultimaVar = array[array.length - 1];
-    let resultado = ultimaVar + ", " + primeiraVar;
-    return resultado
-		// 
-  }
+	// último e primeiro item => array.lenght -1 e array[0];  
+	// aplicar o for para percorrer os elementos do array
+ for (let i = 0; i <= array.length; i += 1) {
+		 let resultado = array[array.length - 1] + "," + array[0];  
+		 return resultado;
+ } 
 }
 
 let array1 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
@@ -63,7 +60,6 @@ console.log(concatName(array2));
 let array3 = ['captain', 'my', 'captain'];
 console.log(concatName(array3));
 
-
 // Desafio 5
 function footballPoints(wins, ties) {
   let vitoria = wins;
@@ -72,20 +68,14 @@ function footballPoints(wins, ties) {
   return pontuacao;
 }
 
-wins = 14;
-ties = 8;
 console.log(footballPoints(14,8));
-wins = 1;
-ties = 2;
 console.log(footballPoints(1,2));
-wins = 0;
-ties = 0;
 console.log(footballPoints(0,0));
 
 // Desafio 6
 function highestCount(array) {
   let numeroMax = array[0];   
-  for (let index = 0; index <= array.length; index +=1) {
+  for (let index = 0; index <= array.length; index += 1) {
     if (array[index] > numeroMax) {
     	numeroMax = array[index];
   } 
@@ -107,35 +97,34 @@ function catAndMouse(rato, gato1, gato2) {
 		// animais em linha -> pensar num eixo X e distancia de pontos -- movimento (subtração) poderá ser negativa a depender do rato
 	let distanciaRatoGato1 = (rato - gato1) * -1;
 	let distanciaRatoGato2 = (rato - gato2) * -1;
-	if (distanciaRatoGato1 > distanciaRatoGato2){
+	if (distanciaRatoGato1 > distanciaRatoGato2) {
 		resultado = 'cat2'
-	} else if ( distanciaRatoGato2 > distanciaRatoGato1){
+	} else if ( distanciaRatoGato2 > distanciaRatoGato1) {
 		resultado = 'cat1';
 	} else {
-	resultado = 'os gatos trombam e o rato foge'
+	resultado = 'os gatos trombam e o rato foge';
 	}
-	return resultado
+	return resultado;
 }
 
 console.log(catAndMouse(1, 3, 2));
 console.log(catAndMouse(1, 6, 12));
 console.log(catAndMouse(1, 2, 2));
 
-
 // Desafio 8
 
 function fizzBuzz(numeros) {
 		// variavel array fora da function para receber as respostas
-let resposta = []
+let resposta = [];
 	for (let i=0; i < numeros.length; i+=1){
 		if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
 		resposta.push('fizzBuzz');
 	} else if (numeros[i] % 3 === 0){
 		resposta.push('fizz');
-	} else if (numeros[i] % 5=== 0){
-		resposta.push('buzz')
+	} else if (numeros[i] % 5 === 0){
+		resposta.push('buzz');
 	} else {
-		resposta.push('bug!')
+		resposta.push('bug!');
 	}
 }
 return resposta;
@@ -170,8 +159,6 @@ function encode(string) {
 }
 let teste = 'oi'
 console.log(encode(teste))
-
-
 
 function decode() {
   
