@@ -82,13 +82,44 @@ function fizzBuzz(numbersArray) {
   return namesArray;
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(message) {
+  let encodedArray = [];
+  for (let key of message) {
+    if (key === "a") {
+      encodedArray.push("1");
+    } else if (key === "e") {
+      encodedArray.push("2")
+    } else if (key === "i") {
+      encodedArray.push("3")
+    } else if (key === "o") {
+      encodedArray.push("4")
+    } else if (key === "u") {
+      encodedArray.push("5")
+    } else {
+      encodedArray.push(key)
+    }
+  }
+  return encodedArray.join("")
 }
-function decode() {
-  // seu código aqui
+function decode(message) {
+  let decodedArray = [];
+  for (let key of message) {
+    if (key === "1") {
+      decodedArray.push("a");
+    } else if (key === "2") {
+      decodedArray.push("e")
+    } else if (key === "3") {
+      decodedArray.push("i")
+    } else if (key === "4") {
+      decodedArray.push("o")
+    } else if (key === "5") {
+      decodedArray.push("u")
+    } else {
+      decodedArray.push(key)
+    }
+  }
+  return decodedArray.join("")
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
