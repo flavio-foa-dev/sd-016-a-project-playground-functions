@@ -79,17 +79,17 @@ function fizzBuzz(array) {
 function encode(convert) {
   let separado = convert.split('')
   for (let index = 0; index < separado.length; index += 1) {
-      if (separado[index] === 'a') {
-        separado.splice(index, 1, '1');
-      } else if (separado[index] === 'e') {
-        separado.splice(index, 1, '2');
-      } else if (separado[index] === 'i') {
-        separado.splice(index, 1, '3');
-      } else if (separado[index] === 'o') {
-        separado.splice(index, 1, '4');
-      } else if (separado[index] === 'u') {
-        separado.splice(index, 1, '5');
-      }
+    if (separado[index] === 'a') {
+      separado.splice(index, 1, '1');
+    } else if (separado[index] === 'e') {
+      separado.splice(index, 1, '2');
+    } else if (separado[index] === 'i') {
+      separado.splice(index, 1, '3');
+    } else if (separado[index] === 'o') {
+      separado.splice(index, 1, '4');
+    } else if (separado[index] === 'u') {
+      separado.splice(index, 1, '5');
+    }
   }
   separado = separado.join('');
   return separado;
@@ -97,17 +97,17 @@ function encode(convert) {
 function decode(convert) {
   let separado = convert.split('');
   for (let index = 0; index < separado.length; index += 1) {
-      if (separado[index] === '1') {
-        separado.splice(index, 1, 'a');
-      } else if (separado[index] === '2') {
-        separado.splice(index, 1, 'e');
-      } else if (separado[index] === '3') {
-        separado.splice(index, 1, 'i');
-      } else if (separado[index] === '4') {
-        separado.splice(index, 1, 'o');
-      } else if (separado[index] === '5') {
-        separado.splice(index, 1, 'u');
-      }
+    if (separado[index] === '1') {
+      separado.splice(index, 1, 'a');
+    } else if (separado[index] === '2') {
+      separado.splice(index, 1, 'e');
+    } else if (separado[index] === '3') {
+      separado.splice(index, 1, 'i');
+    } else if (separado[index] === '4') {
+      separado.splice(index, 1, 'o');
+    } else if (separado[index] === '5') {
+      separado.splice(index, 1, 'u');
+    }
   }
   separado = separado.join('');
   return separado;
