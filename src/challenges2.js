@@ -4,7 +4,7 @@ function techList(techs, name) {
     techs.sort();
     let info = [];
 
-    for (index = 0; index < techs.length; index += 1) {
+    for (let index = 0; index < techs.length; index += 1) {
       info[index] = {};
       info[index].tech = techs[index];
       info[index].name = name;
@@ -20,7 +20,7 @@ function generatePhoneNumber(numbers) {
   let ind = 0;
   let count = 0;
   if (numbers.length === 11) {
-    for (index = 0; index < 11; index += 1) {
+    for (let index = 0; index < 11; index += 1) {
       if (count < 3) {
         count = 0;
       } else if (count > 2) {
@@ -29,7 +29,7 @@ function generatePhoneNumber(numbers) {
       }
       if (numbers[index] > 9 || numbers[index] < 0) {
         return "não é possível gerar um número de telefone com esses valores";
-      } for (mindex = 0; mindex < 11; mindex += 1) {
+      } for (let mindex = 0; mindex < 11; mindex += 1) {
         if (numbers[index] === numbers[mindex]) {
           count += 1;
         }
@@ -50,7 +50,7 @@ function generatePhoneNumber(numbers) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let result = true;
-  for (index = 0; index < 3; index += 1) {
+  for (let index = 0; index < 3; index += 1) {
     if (lineA < Math.abs(lineB - lineC) || lineA > Math.abs(lineB + lineC)) {
       result = false;
     }
@@ -68,8 +68,8 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   let number = string.match(/\d/g);
   let boolean = 0;
-  for (index = 0; index < number.length; index += 1) {
-    for (mindex = 0; mindex < 10; mindex += 1) {
+  for (let index = 0; index < number.length; index += 1) {
+    for (let mindex = 0; mindex < 10; mindex += 1) {
       if (number[index] == mindex) {
         boolean += mindex;
       }

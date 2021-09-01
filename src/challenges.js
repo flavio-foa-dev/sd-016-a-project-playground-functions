@@ -41,7 +41,7 @@ function highestCount(numbers) {
       count = 1;
     } else if (num === (numbers[index])) {
       count += 1;
-    } 
+    }
   }
   return count;
 }
@@ -83,15 +83,15 @@ function encode(convert) {
   for (let index = 0; index < separado.length; index += 1) {
     if (separado[index] === "a" || separado[index] === "e" || separado[index] === "i" || separado[index] === "o" || separado[index] === "u") {
       if (separado[index] === "a") {
-      separado.splice(index, 1, "1");
+        separado.splice(index, 1, "1");
       } else if (separado[index] === "e") {
-      separado.splice(index, 1, "2");
+        separado.splice(index, 1, "2");
       } else if (separado[index] === "i") {
-      separado.splice(index, 1, "3");
+        separado.splice(index, 1, "3");
       } else if (separado[index] === "o") {
-      separado.splice(index, 1, "4");
+        separado.splice(index, 1, "4");
       } else if (separado[index] === "u") {
-      separado.splice(index, 1, "5");
+        separado.splice(index, 1, "5");
       }
     }
   }
@@ -103,15 +103,15 @@ function decode(convert) {
   for (let index = 0; index < separado.length; index += 1) {
     if (separado[index] === "1" || separado[index] === "2" || separado[index] === "3" || separado[index] === "4" || separado[index] === "5") {
       if (separado[index] === "1") {
-      separado.splice(index, 1, "a");
+        separado.splice(index, 1, "a");
       } else if (separado[index] === "2") {
-      separado.splice(index, 1, "e");
+        separado.splice(index, 1, "e");
       } else if (separado[index] === "3") {
-      separado.splice(index, 1, "i");
+        separado.splice(index, 1, "i");
       } else if (separado[index] === "4") {
-      separado.splice(index, 1, "o");
+        separado.splice(index, 1, "o");
       } else if (separado[index] === "5") {
-      separado.splice(index, 1, "u");
+        separado.splice(index, 1, "u");
       }
     }
   }
