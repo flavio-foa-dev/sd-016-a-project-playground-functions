@@ -66,10 +66,21 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   }
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbersArray) {
+  let namesArray = [];
+  for (index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 !== 0) {
+      namesArray.push("fizz");
+    } else if (numbersArray[index] % 5 === 0 && numbersArray[index] % 3 !== 0) {
+      namesArray.push("buzz");
+    } else if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 === 0) {
+      namesArray.push("fizzBuzz");
+    } else {
+      namesArray.push("bug!");
+    }
+  }
+  return namesArray;
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
