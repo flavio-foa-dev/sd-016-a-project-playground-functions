@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(techs, name) {
-  if (techs.length != 0) {
+  if (techs.length !== 0) {
     techs.sort();
     let info = [];
 
@@ -10,9 +10,8 @@ function techList(techs, name) {
       info[index].name = name;
     }
     return info;
-  } else {
-    return 'Vazio!';
   }
+  return 'Vazio!';
 }
 
 // Desafio 11
@@ -77,9 +76,8 @@ function hydrate(string) {
   }
   if (boolean > 1) {
     return boolean + ' copos de água';
-  } else {
-    return boolean + ' copo de água';
   }
+  return boolean + ' copo de água';
 
 }
 
