@@ -156,12 +156,16 @@ function checkNumberPhone(phoneNumber) {
 }
 
 
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+   
+    if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+      return true;
+    }
+    return false; 
 }
-
+//let resp =triangleCheck(20,20,20)
+//console.log(resp );
 // Desafio 13
 function hydrate() {
   // seu código aqui
