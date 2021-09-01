@@ -17,13 +17,38 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  let repeticao = 0;
+  let numeroTelefone = '';
+  if (numbers.length < 11 || numbers.length > 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (const key in numbers) {
+    if (numbers[key] < 0 || numbers[key] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    for (const key2 in numbers) {
+      if (numbers[key] === numbers[key2]) {
+        repeticao += 1;
+        if (repeticao >= 3) {
+          return 'não é possível gerar um número de telefone com esses valores';
+        }
+      }
+    }
+    repeticao = 0;
+  }
+  return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let medida
+  if (lineA + lineB > lineC && Math.abs(lineA - lineB < lineC) && lineA + lineC > lineB && Math.abs(lineA - lineC < lineB && lineC + lineB > lineA && Math.abs(lineC - lineB < lineA))) {
+      medida = true;
+  } else {
+      medida = false;
+  }
+  return medida;
 }
 
 // Desafio 13

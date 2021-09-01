@@ -60,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// eslint-disable-next-line complexity
+
 function fizzBuzz(numbers) {
   let array = [];
   for (let index = 0; index < numbers.length; index += 1) {
