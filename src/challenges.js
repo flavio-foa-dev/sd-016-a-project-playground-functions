@@ -19,16 +19,18 @@ function splitSentence() {
 
 // Desafio 4
 function concatName(array) {
-let string = " "
+let string = " ";
 for (let i = array.length - 1; i >= 0; i -= 1) {
  string = array[array.length-1] + ", " + array[0];
 }
-return string 
+return string;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  wins = wins * 3;
+  ties = ties * 1;
+  return wins + ties;
 }
 
 // Desafio 6
