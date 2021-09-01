@@ -12,14 +12,20 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
+// Desafio 3
+function splitSentence(share) {
+  return share.split(" ");
+}
+
 // Desafio 4
 function concatName(namesfor) {
   return namesfor[namesfor.length - 1] + ", " + namesfor[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalPontos = (wins * 3) + ties;
+  return totalPontos;
 }
 
 // Desafio 6
