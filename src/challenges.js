@@ -19,6 +19,9 @@ function calcArea(base, height) {
 console.log(calcArea(51, 1));
 
 // Desafio 3
+// ** source: https://www.youtube.com/watch?v=O2OZir_ba1I
+// ** source: https://blog.betrybe.com/javascript/javascript-split/
+/* Utilizado as explicações acima, para entender que o split realiza a separação por meio de uma base de um separador */
 function splitSentence(word) {
   let array = word.split(" ");
   return array;
