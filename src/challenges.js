@@ -57,32 +57,63 @@ function catAndMouse(mause, cat1, cat2) {
     return "os gatos trombam e o rato foge."
   }
 }
-console.log(catAndMouse(1,4,5))
-// Desafio 8  erro.
-function fizzBuzz(number) {
-  let valory = []
-  for (let index = 0; index < number.length; index += 1) {
-    if  (number[index] % 3 === 0 && number[index] % 5 === 0){
-      valory.push("fizz");
-    } else if (number[index] % 5 === 0) {
-      valory.push("buzz");
-    }  else if(number[index] % 3 === 0){
-      valory.push("fizzBuzz");
+
+// Desafio 8
+function fizzBuzz(valory) {
+  let result = [];
+  for (let counter = 0; counter < valory.length; counter += 1) {
+    if (valory[counter] % 3 === 0 && valory[counter] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (valory[counter] % 5 === 0) {
+      result.push('buzz');
+    } else if (valory[counter] % 3 === 0) {
+      result.push('fizz');
     } else {
-      valory.push("bug !");
+      result.push('bug !')
     }
-    return valory
-  } 
+  }
+  return result
 }
 
-
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let nameNumber = ' ';
+  for (i = 0; i < string.length; i += 1) {
+    if (string[i] === 'a') {
+      nameNumber += 1;
+    } else if (string[i] === 'e') {
+      nameNumber += 2;
+    } else if (string[i] === 'i') {
+      nameNumber += 3;
+    } else if (string[i] === 'o') {
+      nameNumber += 4;
+    } else if (string[i] === 'u') {
+      nameNumber += 5;
+    } else {
+      nameNumber += string[i];
+    }
+  }
+  return nameNumber
 }
-function decode() {
-  // seu código aqui
+
+function decode(nameNumber) {
+  let dename = ' ';
+  for (i = 0; i < nameNumber.length; i += 1) {
+    if (nameNumber[i] === '1') {
+      dename += 'a';
+    } else if (nameNumber[i] === '2') {
+      dename += 'e';
+    } else if (nameNumber[i] === '3') {
+      dename += 'i';
+    } else if (nameNumber[i] === '4') {
+      dename += 'o';
+    } else if (nameNumber[i] === '5') {
+      dename += 'u';
+    } else {
+      dename += nameNumber[i];
+    }
+  }
+  return dename
 }
 
 module.exports = {
