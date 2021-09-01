@@ -59,8 +59,21 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  
+  let soma = 0;
+  for (let index = 0; index < string.length; index += 1) {
+    for (let numeros = 0; numeros <= 9; numeros += 1) {
+      if (string[index] == numeros) {
+        soma += Number(string[index]);
+      }
+    }
+  }
+  if (soma === 1) {
+    return soma + ' copo de água';
+  }
+  return soma + ' copos de água';
 }
+
+console.log(hydrate('1 cerveja, 5 cachacas'));
 
 module.exports = {
   generatePhoneNumber,
