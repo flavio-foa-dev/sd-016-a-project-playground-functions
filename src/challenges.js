@@ -29,7 +29,6 @@ function footballPoints(wins, ties) {
 function highestCount(numeros) {
   let count = 0;
   let maior = numeros[0];
-
   for (let i = 0; i < numeros.length; i += 1) {
     if (maior < numeros[i]) {
       maior = numeros[i];
@@ -65,39 +64,80 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(divisiveis) {
-  let divTres = false; 
+  let divTres = false;
   let divCinco = false;
   let resultados = [];
-
   for (let i = 0; i < divisiveis.length; i += 1) {
-    if (divisiveis[i] % 3 === 0){
+    if (divisiveis[i] % 3 === 0)
       divTres = true;
-    }
-    if (divisiveis[i] % 5 === 0 ){
+    if (divisiveis[i] % 5 === 0)
       divCinco = true;       
-    }
     if (divCinco === false && divTres === false) {
       resultados.push('bug!');
-    } else if (divTres === true && divCinco === true){
+    } else if (divTres === true && divCinco === true) {
       resultados.push('fizzBuzz');
-    } else if (divTres === true && divCinco === false){
+    } else if (divTres === true && divCinco === false) {
       resultados.push('fizz');
     } else resultados.push('buzz');
-
     divTres = false;
     divCinco = false;
-
   }
   return resultados;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {  
+  let trataStr = str.split('');
+
+  for (let i = 0; i < trataStr.length; i += 1) {
+    if (trataStr[i] === 'a'){
+      trataStr[i] = '1';
+    } else if (trataStr[i] === 'e'){
+      trataStr[i] = '2';
+    } else if (trataStr[i] === 'i'){
+      trataStr[i] = '3';
+    } else if (trataStr[i] === 'o'){
+      trataStr[i] = '4';
+    } else if (trataStr[i] === 'u'){
+      trataStr[i] = '5';
+    }
+  }
+  str = trataStr.join('');
+  return (str);
 }
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  let trataStr = str.split('');
+
+  for (let i = 0; i < trataStr.length; i += 1) {
+    if (trataStr[i] === '1'){
+      trataStr[i] = 'a';
+    } else if (trataStr[i] === '2'){
+      trataStr[i] = 'e';
+    } else if (trataStr[i] === '3'){
+      trataStr[i] = 'i';
+    } else if (trataStr[i] === '4'){
+      trataStr[i] = 'o';
+    } else if (trataStr[i] === '5'){
+      trataStr[i] = 'u';
+    }
+  }
+  str = trataStr.join('');
+  return (str);
+  
 }
+
+  // let trataStr = str.split('');
+  // for (let i = 0; i < trataStr.length; i += 1){
+  //   if 
+  // }
+  // novaString = '';
+  // novaString = str.replace('a', '1');
+  // novaString = str.replace('e', '2');
+  // novaString = str.replace('i', '3');
+  // novaString = str.replace('o', '4');
+  // novaString = str.replace('u', '5');
+//console.log('Paulo'.replace( 'a', '1'));
 
 module.exports = {
   calcArea,
