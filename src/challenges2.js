@@ -42,18 +42,25 @@ function generatePhoneNumber(numbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let medida
+  let medida;
   if (lineA + lineB > lineC && Math.abs(lineA - lineB < lineC) && lineA + lineC > lineB && Math.abs(lineA - lineC < lineB && lineC + lineB > lineA && Math.abs(lineC - lineB < lineA))) {
-      medida = true;
+    medida = true;
   } else {
-      medida = false;
+    medida = false;
   }
   return medida;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(quantidade) {
+  let numero = quantidade.match(/\d/g);
+  let somaCopos = 0;
+  for (let index = 0; index < numero.length; index += 1) {
+    somaCopos += parseInt(numero[index]);
+  } if (somaCopos == 1) {
+    return `${somaCopos} copo de água`;
+  }
+  return `${somaCopos} copos de água`;
 }
 
 module.exports = {
