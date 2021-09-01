@@ -82,11 +82,62 @@ function fizzBuzz(numbers) {
   return array
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let a ='a';
+  let e ='e';
+  let i ='i';
+  let o ='o';
+  let u ='u';
+
+  for (let index in string){
+    if (string[index] === a){
+      string = string.replace(string[index], '1')
+    }
+    else if (string[index] === e){
+      string = string.replace(string[index], '2')
+    }
+    else if (string[index] === i){
+      string = string.replace(string[index], '3')
+    }
+    else if (string[index] === o){
+      string = string.replace(string[index], '4')
+    }
+    else if (string[index] === u){
+      string = string.replace(string[index], '5')
+    }
+
+  }
+  let newString = string;
+  return newString
 }
-function decode() {
-  // seu código aqui
+
+function decode(newString) {
+  let um ='1';
+  let dois ='2';
+  let tres ='3';
+  let quatro ='4';
+  let cinco ='5';
+    
+  for (let index in newString){
+    if (newString[index] === um){
+      newString = newString.replace(newString[index], 'a')
+    }
+    else if (newString[index] === dois){
+      newString = newString.replace(newString[index], 'e')
+    }
+    else if (newString[index] === tres){
+      newString = newString.replace(newString[index], 'i')
+    }
+    else if (newString[index] === quatro){
+      newString = newString.replace(newString[index], 'o')
+    }
+    else if (newString[index] === cinco){
+      newString = newString.replace(newString[index], 'u')
+    }
+  
+  }
+  let stringDecoded = newString;
+  return stringDecoded
 }
 
 module.exports = {
