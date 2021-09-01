@@ -118,11 +118,53 @@ function fizzBuzz(number){
 }
 
 //Desafio 9
-function encode() {
-  //seu código aqui
+/*Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+
+a -> 1
+e -> 2
+i -> 3
+o -> 4
+u -> 5
+
+Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!".
+
+A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e
+retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!")
+código feito com apoio do Brunão que me explicou toda a estrutura do código*/
+function encode(frase) {
+  let codigo = frase.split("");
+  for(let index = 0; index < frase.length; index += 1){
+    if(frase[index] === 'a'){
+      codigo.splice(index, 1, '1');
+    }if(frase[index] === 'e'){
+      codigo.splice(index, 1, '2');
+    }if(frase[index] === 'i'){
+      codigo.splice(index, 1, '3');
+    }if(frase[index] === 'o'){
+      codigo.splice(index, 1, '4');
+    }if(frase[index] === 'u'){
+      codigo.splice(index, 1, '5');
+    }
+  }
+  return codigo.join("");
 }
-function decode() {
-  //seu código aqui
+
+function decode(frases) {
+  let code = frases.split("");
+  for(let index = 0; index < frases.length; index += 1){
+    if(frases[index] === '1'){
+      code.splice(index, 1, 'a');
+    }if(frases[index] === '2'){
+      code.splice(index, 1, 'e');
+    }if(frases[index] === '3'){
+      code.splice(index, 1, 'i');
+    }if(frases[index] === '4'){
+      code.splice(index, 1, 'o');
+    }if(frases[index] === '5'){
+      code.splice(index, 1, 'u');
+    }
+  }
+  return code.join("");
 }
 
 module.exports = {
