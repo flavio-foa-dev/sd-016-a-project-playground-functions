@@ -15,7 +15,6 @@ function calcArea(base, height) {
   // retorna o cálculo da sua área
   // fórmula da área de um triângulo (base * altura) / 2
   areaTriangle = (base * height) / 2;
-
   return areaTriangle
 }
 
@@ -23,11 +22,8 @@ function calcArea(base, height) {
 function splitSentence(stringSplit) {
   // função recebe uma string 
   // retorna uma array de strings separadas por cada espaço na string original.
-  // let stringSplit ="go trybe foguete"
-  // console.log(stringSplit)
   let space = ' ';
   let arrayString = stringSplit.split(space);
-
   return arrayString
 }
 
@@ -36,9 +32,9 @@ function concatName(stringArray) {
   // função receber uma array de strings
   // retorna uma string com o formato `'ÚLTIMO ITEM, PRIMEIRO ITEM'`
   // independente do tamanho da array
-  //let stringArray = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+  
   lastIndex = stringArray.length-1;
-  let stringConcat = stringArray[lastIndex]+stringArray[0];
+  let stringConcat = stringArray[lastIndex]+" "+stringArray[0];
  // console.log(stringConcat)
 
   return stringConcat
@@ -54,9 +50,30 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(numbersArray) {
+  // função recebe uma array de números
+  // retorna a quantidade de vezes que o maior deles se repete.
+  // let numbersArray = [0, 0, 0, 1, 1, 1, 1]; //[9, 1, 2, 3, 9, 5, 7] ; //[0, 4, 4, 4, 9, 2, 1]
+   let higherAtual  = 0;
+   let sumhigherNumber = 0;
+   for (let index=0; index <numbersArray.length; index+=1){
+     let number1 = numbersArray[index];
+     let number2 = numbersArray[index+1];
+     if ((number1 > number2) && (number1 > higherAtual)){
+       higherAtual = number1;
+     }
+     if ((number2 > number1) && (number2 > higherAtual)){
+       higherAtual = number2;
+     }
+   }  
+   for (let Higherindex=0; Higherindex <numbersArray.length; Higherindex+=1){
+     if (numbersArray[Higherindex] === higherAtual) {
+        sumhigherNumber = sumhigherNumber + 1
+     }
+   }  
+   //console.log("sum " +sumhigherNumber);
+   return sumhigherNumber
+ }
 
 // Desafio 7
 function catAndMouse() {
