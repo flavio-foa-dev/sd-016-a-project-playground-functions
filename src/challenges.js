@@ -114,11 +114,55 @@ return newNumbers
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(arr) {
+  // Ao receber uma STRING como parâmetro deverá trocar todas as vogais minúsculas por números.
+  // De acordo com o formato à seguir:
+  // a - 1
+  // e - 2
+  // i - 3
+  // o - 4
+  // u - 5
+
+  const newArr = arr.split('');
+  for (let index = 0; index < arr.length; index += 1) {
+    if (newArr[index] === 'a') {
+      newArr.splice(index, 1, '1')
+    } else if (newArr[index] === 'e') {
+      newArr.splice(index, 1, '2')
+    } else if (newArr[index] === 'i') {
+      newArr.splice(index, 1, '3')
+    } else if (newArr[index] === 'o') {
+      newArr.splice(index, 1, '4')
+    } else if (newArr[index] === 'u') {
+      newArr.splice(index, 1, '5')
+    }
+  }
+  return newArr.join('')
+} 
+function decode(arr) {
+  // Ao receber uma STRING como parâmetro deverá trocar todos números por vogais minúsculas.
+  // De acordo com o formato à seguir:
+  // 1 - a
+  // 2 - e
+  // 3 - i
+  // 4 - o
+  // 5 - u
+
+  const newArr = arr.split('');
+  for (let index = 0; index < arr.length; index += 1) {
+    if (newArr[index] === '1') {
+      newArr.splice(index, 1, 'a')
+    } else if (newArr[index] === '2') {
+      newArr.splice(index, 1, 'e')
+    } else if (newArr[index] === '3') {
+      newArr.splice(index, 1, 'i')
+    } else if (newArr[index] === '4') {
+      newArr.splice(index, 1, 'o')
+    } else if (newArr[index] === '5') {
+      newArr.splice(index, 1, 'u')
+    }
+  }
+  return newArr.join('')
 }
 
 module.exports = {
