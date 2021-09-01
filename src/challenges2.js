@@ -9,9 +9,9 @@ function techList(techs, name) {
       info[index].tech = techs[index];
       info[index].name = name;
     }
-    return info
+    return info;
   } else {
-    return "Vazio!"
+    return "Vazio!";
   }
 }
 
@@ -25,7 +25,7 @@ function generatePhoneNumber(numbers) {
         count = 0;
       } else if (count > 2) {
         return "não é possível gerar um número de telefone com esses valores";
-        break
+        break;
       }
       if (numbers[index] > 9 || numbers[index] < 0) {
         return "não é possível gerar um número de telefone com esses valores";
@@ -40,28 +40,28 @@ function generatePhoneNumber(numbers) {
     return "Array com tamanho incorreto.";
   }
   numbers.unshift('(');
-  numbers.splice(3, 0, ")")
-  numbers.splice(4, 0, " ")
-  numbers.splice(10, 0, "-")
+  numbers.splice(3, 0, ")");
+  numbers.splice(4, 0, " ");
+  numbers.splice(10, 0, "-");
 
-  return numbers.join('')
+  return numbers.join('');
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let result = true
+  let result = true;
   for (index = 0; index < 3; index += 1) {
     if (lineA < Math.abs(lineB - lineC) || lineA > Math.abs(lineB + lineC)) {
-      result = false
+      result = false;
     }
     if (lineB < Math.abs(lineA - lineC) || lineB > Math.abs(lineA + lineC)) {
-      result = false
+      result = false;
     }
     if (lineC < Math.abs(lineB - lineA) || lineC > Math.abs(lineB + lineA)) {
-      result = false
+      result = false;
     }
   }
-  return result
+  return result;
 }
 
 // Desafio 13
@@ -71,14 +71,14 @@ function hydrate(string) {
   for (index = 0; index < number.length; index += 1) {
     for (mindex = 0; mindex < 10; mindex += 1) {
       if (number[index] == mindex) {
-        boolean += mindex
+        boolean += mindex;
       }
     }
   }
   if (boolean > 1) {
-    return boolean + " copos de água"
+    return boolean + " copos de água";
   } else {
-    return boolean + " copo de água"
+    return boolean + " copo de água";
   }
 
 }
