@@ -127,18 +127,6 @@ function decode(str) {
   
 }
 
-  // let trataStr = str.split('');
-  // for (let i = 0; i < trataStr.length; i += 1){
-  //   if 
-  // }
-  // novaString = '';
-  // novaString = str.replace('a', '1');
-  // novaString = str.replace('e', '2');
-  // novaString = str.replace('i', '3');
-  // novaString = str.replace('o', '4');
-  // novaString = str.replace('u', '5');
-//console.log('Paulo'.replace( 'a', '1'));
-
 module.exports = {
   calcArea,
   catAndMouse,
