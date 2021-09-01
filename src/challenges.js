@@ -24,8 +24,8 @@ function splitSentence(oneString) {
 // Desafio 4
 function concatName(nameList) {
   let firstName = nameList[0];
-  let lastName = nameList[nameList.length-1];
-  return (lastName + ", " + firstName);
+  let lastName = nameList[nameList.length - 1];
+  return ( lastName  + ', ' + firstName);
 }
 
 // Desafio 5
