@@ -102,11 +102,49 @@ resultado[i] = "fizzBuzz";
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
-function encode() {
- 
+function encode(string) {
+  let resultado = "";
+  for (let i = 0; i < string.length; i+=1){
+    if (string[i] === "a"){
+      resultado += "1";
+    }
+    else if (string[i] === "e"){
+     resultado += "2";
+   }
+   else if (string[i] === "i"){
+     resultado += "3";
+   }
+   else if (string[i] === "o"){
+     resultado += "4";
+   }
+   else if (string[i] === "u"){
+     resultado += "5";
+   }
+   else resultado += string[i];
+  }
+  return resultado;
 }
-function decode() {
- 
+function decode(string) {
+  let resultado = "";
+ for (let i = 0; i < string.length; i+=1){
+   if (string[i] === "1"){
+     resultado += "a";
+   }
+   else if (string[i] === "2"){
+    resultado += "e";
+  }
+  else if (string[i] === "3"){
+    resultado += "i";
+  }
+  else if (string[i] === "4"){
+    resultado += "o";
+  }
+  else if (string[i] === "5"){
+    resultado += "u";
+  }
+  else resultado += string[i];
+ }
+ return resultado;
 }
 
 module.exports = {
