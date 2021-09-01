@@ -17,6 +17,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
+  // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
   let phraseAfter = phrase.split(' ');
   return phraseAfter;
 }
@@ -25,6 +26,7 @@ function splitSentence(phrase) {
 function concatName(listOfItens) {
   let concatenatedList;
   let end = listOfItens.length;
+  // Refecence: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
   concatenatedList = `${listOfItens[end - 1]}, ${listOfItens[0]}`;
   return concatenatedList;
 }
@@ -154,6 +156,7 @@ function convertToLettersPrimary(phrase) {
     }
   }
   let finalPhrase = convertToLettersSecondary(initialPhrase);
+  // Reference https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
   return finalPhrase.join('');
 }
 

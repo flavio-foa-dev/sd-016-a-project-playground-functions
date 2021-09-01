@@ -8,6 +8,7 @@ function techList(techs, name) {
     for (let i = 0; i < techs.length; i += 1) {
       arrayOfTechs.push({
         tech: sortedTechs[i],
+        // Reference: https://alligator.io/js/object-property-shorthand-es6/
         name,
       });
     }
@@ -98,6 +99,7 @@ function generatePhoneNumber(numbers) {
 // Desafio 12
 function checkCondition1(lineA, lineB, lineC) {
   let condition1 = false;
+  // Reference https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     condition1 = true;
   }
@@ -134,8 +136,35 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function calcSum(total, number) {
+  return total + number;
+}
+
+function amountOfDrinks(phrase) {
+  // Reference https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+  // Refecence: https://stackoverflow.com/questions/30607419/return-only-numbers-from-string/30607466
+  let drinks = phrase.replace(/\D/g, '');
+  let numbers = drinks.split('');
+  for (let i = 0; i < numbers.length; i += 1) {
+    // Reference https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+    numbers[i] = Number.parseInt(numbers[i], 10);
+  }
+  // Reference https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+  let sum = numbers.reduce(calcSum);
+  return sum;
+}
+
+function cupOfWater(drinks) {
+  // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator.
+  let water = drinks > 1 ? 'copos de água' : 'copo de água';
+  return water;
+}
+
+function hydrate(phrase) {
+  let drinks = amountOfDrinks(phrase);
+  let hydration = cupOfWater(drinks);
+  let result = `${drinks} ${hydration}`;
+  return result;
 }
 
 module.exports = {
