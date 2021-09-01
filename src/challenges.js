@@ -64,16 +64,13 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (distance2 < 0) {
     distance2 = (mouse - cat2) * -1;
-  }
-  
+  }  
   if (distance2 === 2 && distance === 3) {
     status = 'cat2';
-  }
-  
+  }  
   if (distance === 6 && distance2 === 12) {
     status = 'cat1';
-  }
- 
+  } 
   if (distance === distance2) {
     status = 'os gatos trombam e o rato foge';
   }
@@ -89,7 +86,7 @@ function fizzBuzz(numbers) {
       arrayWords.push('fizzBuzz');
     } else
     if (numbers[index] % 3 === 0) {
-      arrayWords.push('fizz');
+      arrayWords.push('fizz');  
     } else
     if (numbers[index] % 5 === 0) {
       arrayWords.push('buzz');
@@ -102,12 +99,50 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
+function encode(phrase) {
   // seu código aqui
+  let arrayPhrase = phrase.split('');
+  for (let index in phrase) {
+    if (phrase[index] === 'a'){
+      arrayPhrase[index] = 1;
+    } else
+    if (phrase[index] === 'e'){
+      arrayPhrase[index] = 2;
+    } else
+    if (phrase[index] === 'i'){
+      arrayPhrase[index] = 3;
+    } else
+    if (phrase[index] === 'o'){
+      arrayPhrase[index] = 4;
+    } else
+    if (phrase[index] === 'u'){
+      arrayPhrase[index] = 5;
+    }
+  }
+  return arrayPhrase.join('');
 }
 
-function decode() {
+function decode(phraseNumbers) {
   // seu código aqui
+  let arrayPhraseNumbers = phraseNumbers.split('');
+  for (let index in phraseNumbers) {
+    if (phraseNumbers[index] == 1){
+      arrayPhraseNumbers[index] = 'a';
+    } else
+    if (phraseNumbers[index] == 2){
+      arrayPhraseNumbers[index] = 'e';
+    } else
+    if (phraseNumbers[index] == 3){
+      arrayPhraseNumbers[index] = 'i';
+    } else
+    if (phraseNumbers[index] == 4){
+      arrayPhraseNumbers[index] = 'o';
+    } else
+    if (phraseNumbers[index] == 5){
+      arrayPhraseNumbers[index] = 'u';
+    }
+  }
+  return arrayPhraseNumbers.join('');
 }
 
 module.exports = {
