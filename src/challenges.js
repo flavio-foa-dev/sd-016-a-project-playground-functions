@@ -40,14 +40,13 @@ function highestCount(numArr) {
     else counter[numArr[i]] = 1;
   }
   for (const key in counter) {
-    if (key > maxNum) {
+    if (parseInt(key, 10) > maxNum) {
       maxNum = key;
       numRepetition = counter[key];
     }
   }
   return numRepetition;
 }
-highestCount([-2, -2, -1]);
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
