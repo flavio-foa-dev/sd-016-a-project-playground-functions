@@ -10,7 +10,7 @@ compareTrue(true, false);
 
 // Desafio 2
 function calcArea(base, height) {
-  //retorna a area do triangulo
+  // retorna a area do triangulo
   return (base * height) / 2;
 }
 
