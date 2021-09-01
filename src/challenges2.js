@@ -82,22 +82,24 @@ function difLados(a,b){
 
 // Desafio 13
 function hydrate(str) {
+  //seta expressao regular
   let regex = /\d+/g;
   let string = str;
   let matches = string.match(regex);
   let soma = 0;
   let result = 0;
+  //itera sobre os digitos encontrados na string
   for(let index in matches){
     result = parseInt(matches[index]);
     soma += result;
   }
+  //condicional para retornar singular ou plural
   if(soma===1){
   return soma+" "+"copo de água";
 } else {
   return soma+" "+"copos de água";
 }
 }
-hydrate("1 cerveja");
 
 module.exports = {
   generatePhoneNumber,
