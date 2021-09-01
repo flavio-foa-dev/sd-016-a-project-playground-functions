@@ -48,9 +48,21 @@ return numbers.join('')
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+function triangleCheck(lineA, lineB, lineC) {
+  let result = true
+      for (index = 0; index < 3; index += 1) {
+          if (lineA < Math.abs(lineB - lineC) || lineA > Math.abs(lineB + lineC)) {
+              result = false
+          }
+          if (lineB < Math.abs(lineA - lineC) || lineB > Math.abs(lineA + lineC)) {
+              result = false
+          }
+          if (lineC < Math.abs(lineB - lineA) || lineC > Math.abs(lineB + lineA)) {
+              result = false
+          }
+      }
+  return result
+  }
 
 // Desafio 13
 function hydrate() {
