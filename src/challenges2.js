@@ -3,7 +3,6 @@ function techList(techs, name) {
   if (techs.length !== 0) {
     techs.sort();
     let info = [];
-
     for (let index = 0; index < techs.length; index += 1) {
       info[index] = {};
       info[index].tech = techs[index];
@@ -32,7 +31,6 @@ function generatePhoneNumber(numbers) {
         if (numbers[index] === numbers[mindex]) {
           count += 1;
         }
-
       }
     }
   } else if (numbers.length < 11 || numbers.length > 11) {
@@ -42,7 +40,6 @@ function generatePhoneNumber(numbers) {
   numbers.splice(3, 0, ')');
   numbers.splice(4, 0, ' ');
   numbers.splice(10, 0, '-');
-
   return numbers.join('');
 }
 
@@ -78,7 +75,6 @@ function hydrate(string) {
     return boolean + ' copos de água';
   }
   return boolean + ' copo de água';
-
 }
 
 module.exports = {
