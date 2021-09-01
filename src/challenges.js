@@ -56,26 +56,56 @@ function catAndMouse() {}
 
 // Desafio 8
 function fizzBuzz(arr) {
+  //declara um novo array
   let newArr = [];
+  //iteracao sobre o array
   for (index in arr) {
+    //se divisivel por 5 e 3 retorna "fizzBuzz"
     if (arr[index] % 5 == 0 && arr[index] % 3 == 0) {
       newArr.push('fizzBuzz');
+      //se divisivel por 3 retorna "fizz"
     } else if (arr[index] % 3 == 0) {
        newArr.push('fizz');
+       //se divisivel por 5 retorna "buzz"
     } else if (arr[index] % 5 == 0) {
        newArr.push('buzz');
+       //se nao divisivel por 5 ou 3 retorna "bug!"
     } else if (arr[index] % 5 !== 0 || arr[index] % 3 !== 0) {
        newArr.push('bug!');
     }
   }
+  //retorna o novoArray
   return newArr;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 
 // Desafio 9
-function encode() {
+function encode(str) {
   // seu código aqui
+  let result = str.split(""); 
+  let final = [];
+  for(let i in result){
+    if(result[i]==="a"){
+      result[i] = 1;
+    }
+    if(result[i]==="e"){
+      result[i] = 2;
+    }
+    if(result[i]==="i"){
+      result[i] = 3;
+    }
+    if(result[i]==="o"){
+      result[i] = 4;
+    }
+    if(result[i]==="u"){
+      result[i] = 5;
+    }
+    final = result.join('');
+  }
+  return final;
 }
+encode("hello");
+
 function decode() {
   // seu código aqui
 }
