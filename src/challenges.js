@@ -117,9 +117,29 @@ function catAndMouse(mouse,cat1,cat2) {
   }
 }
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  array_add=[]
+  for(cont=0;cont<array.length;cont+=1){
+    if(array[cont]%3==0 && array[cont]%5!=0){
+      array_add.push("fizz");  
+    }
+
+    else if(array[cont]%3!=0 && array[cont]%5==0){  
+      array_add.push("buzz")
+    }
+    else if(array[cont]%3==0 && array[cont]%5==0){
+      array_add.push("fizzBuzz")
+    }
+
+    else if(array[cont]%3!=0 && array[cont]%5!=0){
+      array_add.push("bug!")
+    }
+    
+  }
+  return array_add
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode() {
