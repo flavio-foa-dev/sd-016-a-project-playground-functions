@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(a, b) {
   if (a === true && b === true) {
-	// && = ambos necessariamente são true
+// && = ambos necessariamente são true
     return true;
-	// true e false, false e true, false e false -> outras possibilidades para ser false
-  } 
+// true e false, false e true, false e false -> outras possibilidades para ser false
+} 
   return false;
 }
 const c = true;
@@ -103,45 +103,50 @@ console.log(highestCount(array4));
 
 // Desafio 7
 function catAndMouse(rato, gato1, gato2) {
-  let resultado = [" "];
-  // animais em linha -> pensar num eixo X e distancia de pontos
-	let distanciaRatoGato1 = rato - gato1;
-	let distanciaRatoGato2 = rato - gato2;
-	if (distanciaRatoGato1 > distanciaRatoGato2){
-		resultado = resultado.push('cat2')
-	} else if ( distanciaRatoGato2 > distanciaRatoGato1){
-    resultado = resultado.push('cat1');
-  } else {
-    resultado = resultado.push('os gatos trombam e o rato foge')
-  }
-	return resultado
+	let resultado = [" "];
+	// animais em linha -> pensar num eixo X e distancia de pontos -- movimento (subtração) poderá ser negativa a depender do rato
+		let distanciaRatoGato1 = (rato - gato1) * -1;
+		let distanciaRatoGato2 = (rato - gato2) * -1;
+		if (distanciaRatoGato1 > distanciaRatoGato2){
+				resultado = 'cat2'
+		} else if ( distanciaRatoGato2 > distanciaRatoGato1){
+		resultado = 'cat1';
+	} else {
+		resultado = 'os gatos trombam e o rato foge'
+	}
+		return resultado
 }
 
-console.log(catAndMouse(14,5,111))
+console.log(catAndMouse(1,4,3));
+console.log(catAndMouse(1,7,13));
+console.log(catAndMouse(1,0,0));
 
 
 // Desafio 8
-function fizzBuzz(array) {
-  for (let i=0; i <= array.length; array+=1){
-    // variavel array para receber as respostas
-    let resposta = []
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      let resposta1 = 'fizzBuzz';
-    } else if (array[i] % 3 === 0){
-      let resposta2 = 'fizz';
-    resposta.push('fizz');
-    } else if (array[i] % 5=== 0){
-      let resposta3 = 'buzz'
-    } else {
-      let resposta4 = 'bug!' 
-    }
-  }
-  let respostafinal = [resposta1 + resposta2 + resposta3 + resposta4]
-  return respostafinal
+
+function fizzBuzz(numeros) {
+	// variavel array fora da function para receber as respostas
+	let resposta = []
+	for (let i=0; i < numeros.length; i+=1){
+			if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
+			resposta.push('fizzBuzz');
+		} else if (numeros[i] % 3 === 0){
+			resposta.push('fizz');
+		} else if (numeros[i] % 5=== 0){
+			resposta.push('buzz')
+		} else {
+			resposta.push('bug!')
+		}
+	}
+	return resposta
 }
 
 let array5 = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(array5));
+let array6 = [7, 9];
+console.log(fizzBuzz(array6));
+let array7 = [9, 25];
+console.log(fizzBuzz(array7));
 
 // Desafio 9
 function encode(string) {
