@@ -60,6 +60,8 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   let soma = 0;
+  let copo = ' copo de água';
+  let copos = ' copos de água';
   for (let index = 0; index < string.length; index += 1) {
     for (let numeros = 0; numeros <= 9; numeros += 1) {
       if (string[index] == numeros) {
@@ -68,9 +70,9 @@ function hydrate(string) {
     }
   }
   if (soma === 1) {
-    return soma + ' copo de água';
+    return soma + copo;
   }
-  return soma + ' copos de água';
+  return soma + copos;
 }
 
 console.log(hydrate('1 cerveja, 5 cachacas'));
