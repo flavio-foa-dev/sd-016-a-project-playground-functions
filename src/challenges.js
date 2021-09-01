@@ -2,11 +2,12 @@
 function compareTrue(param1, param2) {
   // retorna true apenas se os dois parametros satisfizerem a condicao
   if (param1 && param2) {
-    return true;
+    return true
   } else {
     return false;
   }
 }
+compareTrue(true,false)
 
 // Desafio 2
 function calcArea(base, height) {
