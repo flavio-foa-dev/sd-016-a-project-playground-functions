@@ -31,10 +31,10 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   array.sort()
-  let max = Math.max(array)
+  let max = Math.max(...array)
   return max
 }
-
+console.log (highestCount([9, 1, 2, 3, 9, 5, 7]))
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Dist = Math.abs(cat1 - mouse);
