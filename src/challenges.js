@@ -1,43 +1,46 @@
 // Desafio 1
-function compareTrue(a,b) {
-    if (a === true && b === true){
-// && = ambos necessariamente são true
-      return true
-// true e false, false e true, false e false -> outras possibilidades para ser false
-    } 
-    return false
+function compareTrue(a, b) {
+  if (a === true && b === true) {
+	// && = ambos necessariamente são true
+    return true;
+	// true e false, false e true, false e false -> outras possibilidades para ser false
+  } 
+  return false;
 }
 const c = true;
 const d = false;
 const e = true;
 const f = false;
-console.log(compareTrue(d,c));
-console.log(compareTrue(c,f));
-console.log(compareTrue(c,e));
+console.log(compareTrue(d, c));
+console.log(compareTrue(c, f));
+console.log(compareTrue(c, e));
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height)/2;
-  return area;  
+  let area = (base * height) / 2;
+	return area;  
 }
-console.log(calcArea(10,50));
-console.log(calcArea(5,2));
-console.log(calcArea(51,1));
+console.log(calcArea(10, 50));
+console.log(calcArea(5, 2));
+console.log(calcArea(51, 1));
 
 // Desafio 3
+
+var palavra ='go Trybe'
+var palavra2 = 'vamo que vamo';
+var palavra3 = 'foguete'
+
 function splitSentence(string) {
   // criar um array vazio para receber as letras
   // let resultado = [];
   // tentativa de separar usando split (como no exercicio -- ok) e dando push (fail) disso no array;
-  let separado = string.split(' ')
+  let separado = string.split(' ');
   // com [string] fica um array dentro de array
   return separado;
 }
-var palavra ='go Trybe'
+
 console.log(splitSentence(palavra));
-var palavra2 = 'vamo que vamo';
 console.log(splitSentence(palavra2));
-var palavra3 = 'foguete'
 console.log(splitSentence(palavra3));
 
 // Desafio 4
@@ -79,20 +82,15 @@ wins = 0;
 ties = 0;
 console.log(footballPoints(0,0))
 
-
 // Desafio 6
 function highestCount(array) {
   let numeroMax = array[0]   
-  let contador =0;
-  // criar numero comparativo (exercicio course) com base em array[0]
   for (let index = 0; index <= array.length; index +=1){
-  // for para selecionar array[index]
-  //  9,1,2,3,9,5,7
-  if (array[index] > numeroMax){
+    if (array[index] > numeroMax){
     numeroMax = array[index];
   } 
-}
-for (let i = 0; i <= array.legnth -1; i +=1){
+}  let contador =0;
+  for (let i = 0; i <= array.legnth -1; i +=1){
   if (numeroMax === array[i]){
       contador = contador + 1;
   }
@@ -104,9 +102,23 @@ let array4 = [9,1,2,3,9,5,7];
 console.log(highestCount(array4));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(rato, gato1, gato2) {
+  let resultado = [" "];
+  // animais em linha -> pensar num eixo X e distancia de pontos
+	let distanciaRatoGato1 = rato - gato1;
+	let distanciaRatoGato2 = rato - gato2;
+	if (distanciaRatoGato1 > distanciaRatoGato2){
+		resultado = resultado.push('cat2')
+	} else if ( distanciaRatoGato2 > distanciaRatoGato1){
+    resultado = resultado.push('cat1');
+  } else {
+    resultado = resultado.push('os gatos trombam e o rato foge')
+  }
+	return resultado
 }
+
+console.log(catAndMouse(14,5,111))
+
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -132,11 +144,32 @@ let array5 = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(array5));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+	let separacao = string.split(' ');
+	let arrayVazio = [" "]
+	for (let i= 0; i >= separacao.length; i +=1 ){
+		if ( separacao[i] === 'a'){
+		arrayVazio.push('1');	
+	} else if ( separacao[i] === 'e'){
+		arrayVazio.push('2');
+	} else if ( separacao[i] === 'i'){
+		arrayVazio.push('3');
+	} else if ( separacao[i] === "o"){
+		arrayVazio.push('4');
+	} else if ( separacao[i] === 'u'){
+		arrayVazio.push('5');
+	} else {
+		arrayVazio.push(separacao[i])
+	} return arrayVazio.join(' ')
+	}
 }
+let teste = 'oi'
+console.log(encode(teste))
+
+
+
 function decode() {
-  // seu código aqui
+  
 }
 
 module.exports = {
