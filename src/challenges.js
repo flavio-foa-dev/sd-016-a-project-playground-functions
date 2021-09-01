@@ -31,7 +31,7 @@ function concatName(stringArray) {
   // função receber uma array de strings
   // retorna uma string com o formato `'ÚLTIMO ITEM, PRIMEIRO ITEM'`
   // independente do tamanho da array
-  lastIndex = stringArray.length - 1;
+  let lastIndex = stringArray.length - 1;
   let stringConcat = stringArray[lastIndex] + ' ' + stringArray[0];
   return stringConcat
 }
@@ -66,7 +66,7 @@ function highestCount(numbersArray) {
       sumhigherNumber = sumhigherNumber + 1
     }
   }  
-  return sumhigherNumber
+   return sumhigherNumber
  }
 
 // Desafio 7
