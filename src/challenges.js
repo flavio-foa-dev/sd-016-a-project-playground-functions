@@ -63,7 +63,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
-  for (index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       newArray.push('fizzBuzz');
     } else if (array[index] % 3 === 0) {
@@ -80,18 +80,18 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(convert) {
   let separado = convert.split('')
-  for (index = 0; index < separado.length; index += 1) {
+  for (let index = 0; index < separado.length; index += 1) {
     if (separado[index] === "a" || separado[index] === "e" || separado[index] === "i" || separado[index] === "o" || separado[index] === "u") {
       if (separado[index] === "a") {
-        let removed = separado.splice(index, 1, "1");
+      separado.splice(index, 1, "1");
       } else if (separado[index] === "e") {
-        let removed = separado.splice(index, 1, "2");
+      separado.splice(index, 1, "2");
       } else if (separado[index] === "i") {
-        let removed = separado.splice(index, 1, "3");
+      separado.splice(index, 1, "3");
       } else if (separado[index] === "o") {
-        let removed = separado.splice(index, 1, "4");
+      separado.splice(index, 1, "4");
       } else if (separado[index] === "u") {
-        let removed = separado.splice(index, 1, "5");
+      separado.splice(index, 1, "5");
       }
     }
   }
@@ -100,18 +100,18 @@ function encode(convert) {
 }
 function decode(convert) {
   let separado = convert.split('');
-  for (index = 0; index < separado.length; index += 1) {
+  for (let index = 0; index < separado.length; index += 1) {
     if (separado[index] === "1" || separado[index] === "2" || separado[index] === "3" || separado[index] === "4" || separado[index] === "5") {
       if (separado[index] === "1") {
-        let removed = separado.splice(index, 1, "a");
+      separado.splice(index, 1, "a");
       } else if (separado[index] === "2") {
-        let removed = separado.splice(index, 1, "e");
+      separado.splice(index, 1, "e");
       } else if (separado[index] === "3") {
-        let removed = separado.splice(index, 1, "i");
+      separado.splice(index, 1, "i");
       } else if (separado[index] === "4") {
-        let removed = separado.splice(index, 1, "o");
+      separado.splice(index, 1, "o");
       } else if (separado[index] === "5") {
-        let removed = separado.splice(index, 1, "u");
+      separado.splice(index, 1, "u");
       }
     }
   }
