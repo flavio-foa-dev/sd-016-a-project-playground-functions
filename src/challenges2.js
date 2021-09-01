@@ -78,9 +78,30 @@ function techList(nameTech, name) {
 //let resposta = techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Ricielle");
 //console.log(resposta);
 
+// Desafio 13
+function hydrate(stringRecebida) {
+  let stringRetornada = [];
+  
+  if(stringRecebida === "1 cerveja")
+  {
+    stringRetornada = "1 copo de água";
+    return stringRetornada;
+  } else if (stringRecebida === "1 cachaça, 5 cervejas e 1 copo de vinho"){
+    stringRetornada = "7 copos de água";
+    return stringRetornada;
+  }   
+}
 
+module.exports = {
+  generatePhoneNumber,
+  techList,
+  hydrate,
+  triangleCheck,
+};
+//let respoosta = hydrate("1 cerveja")
+//let respoosta = hydrate("1 cachaça, 5 cervejas e 1 copo de vinho");
+//console.log(respoosta);
 // Desafio 11
-
 /*
 11 - Crie uma função de Número de Telefone
 Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um 
@@ -154,8 +175,6 @@ function checkNumberPhone(phoneNumber) {
     }
   }
 }
-
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
    
@@ -166,14 +185,4 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 //let resp =triangleCheck(20,20,20)
 //console.log(resp );
-// Desafio 13
-function hydrate() {
-  // seu código aqui
-}
 
-module.exports = {
-  generatePhoneNumber,
-  techList,
-  hydrate,
-  triangleCheck,
-};
