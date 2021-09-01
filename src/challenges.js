@@ -39,12 +39,12 @@ function highestCount(arr) {
   // verifica qual o maior número
   let cont = 0;
   let maior = arr[0];
-  for (let i = 1; i < arr.length; i += 1) {
+  for (let i in arr) {
     if (arr[i] > maior) {
       maior = arr[i];
     }
   }
-  for (let j = 0; j < arr.length; j += 1) {
+  for (let j in arr) {
     if (arr[j] === maior) {
       cont += 1;
     }
