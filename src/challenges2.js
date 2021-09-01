@@ -36,6 +36,7 @@ function generatePhoneNumber(arr) {
 
 }
 
+//funcao auxiliar Desafio 11
 function checkRepeat(array) {
   let repeat = Array.from(new Set(array));
   let occour = 0;
@@ -80,9 +81,23 @@ function difLados(a,b){
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let regex = /\d+/g;
+  let string = str;
+  let matches = string.match(regex);
+  let soma = 0;
+  let result = 0;
+  for(let index in matches){
+    result = parseInt(matches[index]);
+    soma += result;
+  }
+  if(soma===1){
+  return soma+" "+"copo de água";
+} else {
+  return soma+" "+"copos de água";
 }
+}
+hydrate("1 cerveja");
 
 module.exports = {
   generatePhoneNumber,
