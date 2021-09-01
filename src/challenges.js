@@ -54,7 +54,7 @@ footballPoints(0, 0);
 // Desafio 6
 function highestCount(array) {
   let count= 0;
-  let max = 0;
+  let max = -9;
   for(let i = 0; i < array.length; i++){
     if(array[i] > max){
       max = array[i]
@@ -68,7 +68,9 @@ function highestCount(array) {
 }
 highestCount([9, 1, 2, 3, 9, 5, 7]);
 highestCount([0, 4, 4, 4, 9, 2, 1]);
+highestCount([-2, -2, -1]);
 highestCount([0, 0, 0]);
+
 
 // Desafio 7
 function catAndMouse() {
