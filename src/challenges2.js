@@ -114,8 +114,48 @@ estejam de acordo com as especificações
 
 */
 function generatePhoneNumber() {
-  // seu código aqui
+  if (checkNumberPhone(arrNumber)) {
+    return checkNumberPhone(arrNumber);
+  }
+  let numberPhone = '(';
+  for (let index = 0; index < arrNumber.length; index += 1) {
+    if (numberPhone.length === 3) {
+      numberPhone += ') ';
+    } else if (numberPhone.length === 10) {
+      numberPhone += '-';
+    }
+    numberPhone += arrNumber[index];
+  }
+  return numberPhone;
 }
+  
+function repeteNumber(num, arrNumber) {
+  let repete = 0;
+  for (let index = 0; index < arrNumber.length; index += 1) {
+    if (num === arrNumber[index]) {
+      repete += 1;
+    }
+    if (repete >= 3) {
+      return true;
+    }
+  }
+  return false;
+}
+function menor0Maior9(num) {
+  return num < 0 || num > 9;
+}
+function checkNumberPhone(phoneNumber) {
+  if (phoneNumber.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index = 0; index < phoneNumber.length; index += 1) {
+    if (menor0Maior9(phoneNumber[index]) || repeteNumber(phoneNumber[index], phoneNumber)) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+}
+
+
 
 // Desafio 12
 function triangleCheck() {
