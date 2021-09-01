@@ -1,5 +1,5 @@
 // Desafio 10
-function createObject (tecnologia, nome) {
+function createObject(tecnologia, nome) {
   const obj = {};
 
   obj.tech = tecnologia;
@@ -13,12 +13,12 @@ function techList(array, nome) {
   let techInfo = [{}];
   array.sort();
 
-  if(array.length === 0){
-    return 'Vazio!'
+  if (array.length === 0) {
+    return 'Vazio!';
   }
 
   for (let x = 0; x < array.length; x += 1) {
-    techInfo[x] = createObject(array[x], nome)
+    techInfo[x] = createObject(array[x], nome);
   }
 
   return techInfo;
@@ -32,7 +32,7 @@ function generatePhoneNumber(number) {
   if ( number.length !== 11 ) {
      return 'Array com tamanho incorreto.';
   }
-  
+
   for (let x = 0; x < number.length; x += 1) {
     counter = 0;
     if (number[x] < 0 || number[x] > 9) {
@@ -75,7 +75,7 @@ function hydrate(string) {
   for (let x = 0; x < string.length; x += 1) {
     if (string[x] >= 1 && string[x] <= 9){
 
-      if(string[x + 1] >= 0 && string[x + 1] <= 9 ){
+      if (string[x + 1] >= 0 && string[x + 1] <= 9 ){
         number = string[x] + string[x + 1];
         x += 1;
         drinksCounter += parseInt(number);
@@ -85,7 +85,7 @@ function hydrate(string) {
     }
   }
   
-  if(drinksCounter > 1){
+  if (drinksCounter > 1){
     waterCups = drinksCounter + ' copos de água';
   } else {
     waterCups = drinksCounter + ' copo de água';
