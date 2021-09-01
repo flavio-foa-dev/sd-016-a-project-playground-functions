@@ -24,7 +24,6 @@ function checkLength(arrayOfNumbers) {
   return result;
 }
 
-// eslint-disable-next-line sonarjs/cognitive-complexity
 function checkRepetition(arrayOfNumbers) {
   let result = true;
   let base = 0;
@@ -44,7 +43,7 @@ function checkRepetition(arrayOfNumbers) {
   return result;
 }
 
-function generatesDdd(arrayOfNumbers) {
+function generatesDd(arrayOfNumbers) {
   let ddd = [];
   for (let i = 0; i < 2; i += 1) {
     ddd[i] = arrayOfNumbers[i];
@@ -71,16 +70,15 @@ function generatesSecondPart(arrayOfNumbers) {
   return finalNumber;
 }
 
-function generatePhoneNumber(arrayOfNumbers) {
+function generatePhoneNumber(numbers) {
   let result;
-  if (checkLength(arrayOfNumbers) === false) {
+  if (checkLength(numbers) === false) {
     result = 'Array com tamanho incorreto';
   }
-  if (checkRepetition(arrayOfNumbers) === false) {
+  if (checkRepetition(numbers) === false) {
     result = 'não é possível gerar um número de telefone com esses valores';
   }
-  // eslint-disable-next-line max-len
-  result = `${generatesDdd(arrayOfNumbers)} ${generatesFirstPart(arrayOfNumbers)}-${generatesSecondPart(arrayOfNumbers)}`;
+  result = `${generatesDd(numbers)} ${generatesFirstPart(numbers)}-${generatesSecondPart(numbers)}`;
   return result;
 }
 
