@@ -48,7 +48,6 @@ function highestCount(numbers) {
    return cont;
 }
 
-console.log(highestCount([0, 0, 0]));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
