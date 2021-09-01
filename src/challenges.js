@@ -90,9 +90,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-
 // Desafio 8
-
 function fizzBuzz(arr) {
   let newArr = [];
   for(let index = 0; index < arr.length; index+=1){
