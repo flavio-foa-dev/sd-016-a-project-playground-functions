@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(value1 , value2) {
+function compareTrue(value1, value2) {
   // Uma função que possui DOIS valores.
   // Se os dois valores forem verdadeiros retona TRUE.
   // Se algum dos dois NÃO for retornar FALSE.
@@ -12,7 +12,7 @@ function compareTrue(value1 , value2) {
 }
 
 // Desafio 2
-function calcArea(base , height) {
+function calcArea(base, height) {
   // Uma função, calcArea, que tenha dois valores: base e height e que retorne o CÁLCULO da área.
   // Criar uma variável, area, que contenha o cálculo da (base * altura) / 2.
   // Fórmula da área do triângulo: (base * altura) / 2.
@@ -24,16 +24,16 @@ function calcArea(base , height) {
 function splitSentence(sentence) {
   // Cria uma função que DIVIDA a frase (string) contida dentro da variável sentence.
   // Ela irá RETORNAR como um ARRAY de strings.
-let newSentence = sentence.split(" ");
-return newSentence
+  let newSentence = sentence.split(" ");
+  return newSentence
 }
 
 // Desafio 4
 function concatName(names) {
   // A função possui um ARRAY de strings.
   // Ela irá RETORNAR uma nova string com o formato ÚLTIMO ITEM, PRIMEIRO ITEM.
-  
-  let lastName = names[names.length-1];
+
+  let lastName = names[names.length - 1];
   let firstName = names[0];
   return newNames = lastName + ", " + firstName
 }
@@ -56,23 +56,38 @@ function highestCount(numbers) {
 
   let highestNumber = numbers[0]
   let sum = 1
-  
+
   for (let index = 1; index < numbers.length; index += 1) {
     if (numbers[index] > highestNumber) {
-        highestNumber = numbers[index]
-        sum = 1
+      highestNumber = numbers[index]
+      sum = 1
     } else if (numbers[index] === highestNumber) {
       sum += 1
     }
   }
-return sum
+  return sum
 
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  // Temos dois gatos e um rato na mesma reta, cada um representado por um número.
+  // Nessa mesma reta o RATO está na frente.
+  // CALCULAR qual a distância dos gatos até o rato e RETORNAR qual irá chegar nele primeiro.
+  // Se os dois chegarem juntos RETORNAR a string "os gatos trombam e o rato foge".
+
+  let distance1 = Math.abs(cat1 - mouse);
+  let distance2 = Math.abs(cat2 - mouse);
+
+    if (distance1 < distance2) {
+      return "cat1"
+  } else if (distance1 > distance2) {
+      return "cat2"
+  } else if (distance1 === distance2) {
+      return "os gatos trombam e o rato foge"
 }
+}
+
 
 // Desafio 8
 function fizzBuzz() {
