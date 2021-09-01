@@ -71,15 +71,15 @@ function generatesSecondPart(arrayOfNumbers) {
 }
 
 function generatePhoneNumber(numbers) {
-  let result;
+  let r;
   if (checkLength(numbers) === false) {
-    result = 'Array com tamanho incorreto';
+    r = 'Array com tamanho incorreto';
+  } else if (checkRepetition(numbers) === false) {
+    r = 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    r = `${generatesDd(numbers)} ${generatesFirstPart(numbers)}-${generatesSecondPart(numbers)}`;
   }
-  if (checkRepetition(numbers) === false) {
-    result = 'não é possível gerar um número de telefone com esses valores';
-  }
-  result = `${generatesDd(numbers)} ${generatesFirstPart(numbers)}-${generatesSecondPart(numbers)}`;
-  return result;
+  return r;
 }
 
 // Desafio 12
