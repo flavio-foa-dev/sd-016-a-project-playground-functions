@@ -166,7 +166,6 @@ function highestCount(arr) {
       counter += 1;
     }
   }
-
   return counter;
 }
 
@@ -220,8 +219,8 @@ function fizzBuzz() {
 // Desafio 9
 /**
  * 9 - Crie uma função que Codifique e Decodifique
-Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
-
+Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, 
+deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
 a -> 1
 e -> 2
 i -> 3
@@ -229,20 +228,55 @@ o -> 4
 u -> 5
 
 Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!".
-
-A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
-
+A segunda função deverá se chamar decode e faz o contrário de encode - 
+ou seja, recebe uma string contendo números no lugar de letras minúsculas 
+e retornará uma string com vogais minúsculas no lugar dos números (então, caso o 
+  parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
 O que será verificado:
-
 Retorne uma string codificada quando a função encode for utilizada
-
 Retorne uma string decodificada quando a função decode for utilizada
  */
-function encode() {
-  // seu código aqui
+
+
+function encode(str) {  
+  let newString = str.split("");
+
+    for(let index = 0; index < newString.length; index++) {
+      if(newString[index] === 'a'){
+        newString[index] = 1;
+      }else if(newString[index] === 'e'){
+        newString[index] = 2;
+      }else if(newString[index] === 'i'){
+        newString[index] = 3;
+      }else if(newString[index] === 'o'){
+        newString[index] = 4;
+      }else if(newString[index] === 'u'){
+        newString[index] = 5;
+      }
+
+    }
+     return newString.join('');
 }
-function decode() {
-  // seu código aqui
+
+
+function decode(newString) {
+  let str = newString.split("");
+
+    for(let index = 0; index < str.length; index++) {
+      if(str[index] === '1'){
+        str[index] = 'a';
+      }else if(str[index] === '2'){
+        str[index] = 'e';
+      }else if(str[index] === '3'){
+        str[index] = 'i';
+      }else if(str[index] === '4'){
+        str[index] = 'o';
+      }else if(str[index] === '5'){
+        str[index] = 'u';
+      }
+
+    }
+     return str.join('');
 }
 
 module.exports = {
