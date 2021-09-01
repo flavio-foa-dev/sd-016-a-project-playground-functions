@@ -5,14 +5,15 @@ function compareTrue(valor1, valor2) {
   } return false;
 }
 // Desafio 2
-function calcArea(base, height) {
-  let area = (base * height) / 2;
+function calcArea(base, altura) {
+  let area = (base * altura) / 2;
   return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(caract) {
+  let arraycaract = caract.split(' ');
+  return arraycaract;
 }
 
 // Desafio 4
