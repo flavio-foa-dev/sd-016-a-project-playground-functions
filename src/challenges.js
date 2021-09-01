@@ -68,28 +68,68 @@ else {
 function fizzBuzz(num) {
 let result = [];
 for (let i = 0; i < num.length; i += 1){
-  if(num[i] % 3 === 0) {
-    result.push("fizz");
+  if(num[i] % 3 === 0 && num[i] % 5 === 0) {
+    result.push("fizzBuzz");
    }
-   else if (num[i] % 5 === 0) {
+   else if(num[i] % 5 === 0) {
     result.push("buzz");
    }
-   else if(num[i] % 3 === 0 && num[i] % 5 === 0){
-    result.push("fizzBuzz")
+   else if(num[i] % 3 === 0){
+    result.push("fizz")
    } else{
      result.push("bug!")
    }
 }
 return result
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(wordCode) {
+  let word = ''
+for(let g = 0; g < wordCode.length; g += 1){
+  if(wordCode[g] === 'a'){
+    word += 1
+  }
+  else if(wordCode[g] === 'e'){
+    word += 2
+  }
+  else if(wordCode[g] === 'i'){
+    word += 3
+  }
+  else if(wordCode[g] === 'o'){
+    word += 4
+  }
+  else if(wordCode[g] === 'u'){
+    word += 5
+  } else { 
+    word += wordCode[g]
+  }
+}return word
 }
-function decode() {
-  // seu código aqui
-}
+
+function decode(numCode) {
+  let num = ''
+  for(let g = 0; g < numCode.length; g += 1){
+    if(numCode[g] === '1'){
+      num += 'a'
+    }
+    else if(numCode[g] === '2'){
+      num += 'e'
+    }
+    else if(numCode[g] === '3'){
+      num += 'i'
+    }
+    else if(numCode[g] === '4'){
+      num += 'o'
+    }
+    else if(numCode[g] === '5'){
+      num += 'u'
+    } else { 
+      num += numCode[g]
+    }
+  }return num
+  }
+console.log(decode("h3 th2r2!"))
 
 module.exports = {
   calcArea,
