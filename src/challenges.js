@@ -63,8 +63,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumber) {
+  let divisible = [];
+  for (let i = 0; i < arrayNumber.length; i += 1) {
+    if (arrayNumber[i] % 3 === 0 && arrayNumber[i] % 5 !== 0) {
+      divisible.push('fizz');
+    } else if(arrayNumber[i] % 5 === 0 && arrayNumber[i] % 3 !== 0) {
+      divisible.push('buzz')
+    } else if (arrayNumber[i] % 3 === 0 && arrayNumber[i] % 5 ===0) {
+      divisible.push('fizzBuzz'); 
+    } else {
+      divisible.push('bug!')
+    }
+  }
+  return divisible
 }
 
 // Desafio 9
