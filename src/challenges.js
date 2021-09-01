@@ -13,23 +13,35 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  result = sentence.split(" ");
+  return result;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  return `${names[names.length - 1]}, ${names[0]}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins*3 + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(value) {
+  highestValue = value[0];
+  counter = 0;
+  for(i = 0; i < value.length; i++){
+    if(highestValue < value[i]){
+      highestValue = value[i];
+      counter = 0;
+    }
+    if(highestValue === value[i]){
+      counter++;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
