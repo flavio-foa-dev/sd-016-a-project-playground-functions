@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
-  return true;
+    return true;
   } else {
     return false;
   }
@@ -22,7 +22,7 @@ function splitSentence(word) {
 // Desafio 4
 function concatName(array) {
   let result = [];
-  result = array[array.length-1] + ', ' + array[0];
+  result = array[array.length - 1] + ', ' + array[0];
   return result
 }
 
@@ -36,15 +36,15 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   count = 1;
   num = numbers[0];
-  for (index = 1; index <= numbers.length-1; index += 1) {
+  for (index = 1; index <= numbers.length - 1; index += 1) {
     if (num > numbers[index]) {
-        num = num;
+      num = num;
     } else if (num === (numbers[index])) {
-        count += 1;
-      } else {
-          num  = numbers[index]
-          count = 1;
-        }
+      count += 1;
+    } else {
+      num = numbers[index]
+      count = 1;
+    }
   }
   return count
 }
@@ -52,15 +52,15 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let result1 = (mouse - cat1);
-  let result2 = (mouse - cat2); 
-      if (Math.abs(result1) > Math.abs(result2)) {
-      return "cat2"
-      } else if (Math.abs(result1) < Math.abs(result2)) {
-          return "cat1"
-      }
-      else {
-          return "os gatos trombam e o rato foge"
-      }
+  let result2 = (mouse - cat2);
+  if (Math.abs(result1) > Math.abs(result2)) {
+    return "cat2"
+  } else if (Math.abs(result1) < Math.abs(result2)) {
+    return "cat1"
+  }
+  else {
+    return "os gatos trombam e o rato foge"
+  }
 }
 
 // Desafio 8
@@ -84,42 +84,42 @@ function fizzBuzz(array) {
 function encode(convert) {
   let separado = convert.split('')
   for (index = 0; index < separado.length; index += 1) {
-    if ( separado[index] === "a" || separado[index] === "e" ||separado[index] === "i" ||separado[index] === "o" || separado[index] === "u" ) {
-      if ( separado[index] === "a") {
+    if (separado[index] === "a" || separado[index] === "e" || separado[index] === "i" || separado[index] === "o" || separado[index] === "u") {
+      if (separado[index] === "a") {
         let removed = separado.splice(index, 1, "1");
-        } else if ( separado[index] === "e") {
+      } else if (separado[index] === "e") {
         let removed = separado.splice(index, 1, "2");
-        } else if ( separado[index] === "i") {
+      } else if (separado[index] === "i") {
         let removed = separado.splice(index, 1, "3");
-        } else if ( separado[index] === "o") {
+      } else if (separado[index] === "o") {
         let removed = separado.splice(index, 1, "4");
-        } else if ( separado[index] === "u") {
+      } else if (separado[index] === "u") {
         let removed = separado.splice(index, 1, "5");
       }
     }
   }
-separado = separado.join('');
-return separado
+  separado = separado.join('');
+  return separado
 }
 function decode(convert) {
   let separado = convert.split('')
   for (index = 0; index < separado.length; index += 1) {
-    if ( separado[index] === "1" || separado[index] === "2" ||separado[index] === "3" ||separado[index] === "4" || separado[index] === "5" ) {
-      if ( separado[index] === "1") {
+    if (separado[index] === "1" || separado[index] === "2" || separado[index] === "3" || separado[index] === "4" || separado[index] === "5") {
+      if (separado[index] === "1") {
         let removed = separado.splice(index, 1, "a");
-        } else if ( separado[index] === "2") {
+      } else if (separado[index] === "2") {
         let removed = separado.splice(index, 1, "e");
-        } else if ( separado[index] === "3") {
+      } else if (separado[index] === "3") {
         let removed = separado.splice(index, 1, "i");
-        } else if ( separado[index] === "4") {
+      } else if (separado[index] === "4") {
         let removed = separado.splice(index, 1, "o");
-        } else if ( separado[index] === "5") {
+      } else if (separado[index] === "5") {
         let removed = separado.splice(index, 1, "u");
       }
     }
   }
-separado = separado.join('');
-return separado
+  separado = separado.join('');
+  return separado
 }
 
 module.exports = {
