@@ -146,31 +146,53 @@ console.log(fizzBuzz(array7));
 
 // Desafio 9
 
-function encode(arrayDePalavras) {
-let separacao = arrayDePalavras.split(' ');
-let arrayVazio = [" "]
-	for (let i= 0; i >= separacao.length; i +=1 ){
+function encode(string) {
+let palavras = string;
+let separacao = palavras.split('');
+	for (let i= 0; i < separacao.length; i +=1 ){
 		if ( separacao[i] === 'a'){
-			arrayVazio.push('1');	
+		separacao[i] = '1';	
 	} else if ( separacao[i] === 'e'){
-		arrayVazio.push('2');
+		separacao[i] = '2';
 	} else if ( separacao[i] === 'i'){
-		arrayVazio.push('3');
+		separacao[i] = '3';
 	} else if ( separacao[i] === "o"){
-		arrayVazio.push('4');
+		separacao[i] = '4';
 	} else if ( separacao[i] === 'u'){
-		arrayVazio.push('5');
+		separacao[i] = '5';
 	} else {
-		arrayVazio.push(separacao[i])
+		separacao[i] = separacao[i]
 	} 
-	}return arrayVazio.join(' ')
+	} let palavraNova = separacao.join('')
+	  return palavraNova
 }
-let teste = 'oi'
-console.log(encode(teste))
 
-function decode() {
-  
+let teste = 'hi there!'
+console.log(encode(teste))
+	
+function decode(string) {
+let entrada = string;
+let separacao = entrada.split('');
+	for (let i = 0; i < separacao.length; i += 1) {
+		if (separacao[i] === '1'){
+			separacao[i] = 'a';
+		} else if (separacao[i] === '2') {
+			separacao[i] = 'e';
+		} else if (separacao[i] === '3') {
+			separacao[i] = 'i';
+		} else if (separacao[i] === '4') {
+			separacao[i] = 'o';
+		} else if (separacao[i] === '5') {
+			separacao[i] = 'u';
+		} else {
+			separacao[i] = separacao[i]
+		}
+	} let palavraOriginal = separacao.join('')
+		return palavraOriginal
 }
+	
+let teste2 = "h3 th2r2!";
+console.log(decode(teste2));
 
 module.exports = {
   calcArea,
