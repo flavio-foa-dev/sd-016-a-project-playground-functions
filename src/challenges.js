@@ -3,32 +3,34 @@ function compareTrue(x, y) {
   return (x && y) === true;
 }
 
-console.log(compareTrue(true, true));
-
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(stringUnknown) {
+  return stringUnknown.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayUnnown) {
+  return `${arrayUnnown[arrayUnnown.length - 1]}, ${arrayUnnown[0]}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = 0;
+  if (wins > 0) points = wins * 3;
+  if (ties > 0) points += ties;
+  return points;
 }
 
 // Desafio 6
 function highestCount() {
   // seu código aqui
 }
+console.log(footballPoints(0, 0));
 
 // Desafio 7
 function catAndMouse() {
