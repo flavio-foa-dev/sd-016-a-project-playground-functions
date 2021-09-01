@@ -73,8 +73,23 @@ function catAndMouse(mouse, cat1, cat2) {
 } // tentar com swit 
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+ // retornar o array 
+let numbers = [];
+
+for (let i = 0; i < array.length; i += 1){
+  if (array[i] % 3 === 0 && array[i] % 5 === 0 ) {
+    numbers[i] = 'fizzBuzz';
+  } else if (array[i] % 3 === 0) {
+    numbers[i] = 'fizz';
+  } else if (array[i] % 5 === 0) {
+    numbers[i] = 'buzz';
+  } else {
+    numbers[i] = 'bug!'
+  }
+}
+  return numbers;
 }
 
 // Desafio 9
