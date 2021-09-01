@@ -44,8 +44,6 @@ for (index = 0; index <= numeros.length; index += 1) {
       result = numeros[index];
     }
 }    
-
-
 for (indexP = 0; indexP < numeros.length; indexP += 1) {
     if (result === numeros[indexP]) {
         contador += 1;
@@ -53,9 +51,10 @@ for (indexP = 0; indexP < numeros.length; indexP += 1) {
 }
  return contador
 } 
+
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  
 }
 
 // Desafio 8
@@ -64,12 +63,43 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let newString = str.split("");
+
+  for (let index in newString) {
+    if (newString[index] === 'a') {
+      newString[index] = '1';
+    } else if (newString[index] === 'e') {
+      newString[index] = '2';
+    } else if (newString[index] === 'i') {
+      newString[index] = '3';
+    } else if (newString[index] === 'o') {
+      newString[index] = '4'; 
+    } else if (newString[index] === 'u') {
+      newString[index] = '5';
+    }
+  } 
+   return newString.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let newString = str.split("");
+
+  for (let index in newString) {
+    if (newString[index] === '1') {
+      newString[index] = 'a';
+    } else if (newString[index] === '2') {
+      newString[index] = 'e';
+    } else if (newString[index] === '3') {
+      newString[index] = 'i';
+    } else if (newString[index] === '4') {
+      newString[index] = 'o'; 
+    } else if (newString[index] === '5') {
+      newString[index] = 'u';
+    }
+  }  
+  return newString.join('');
 }
+  
 
 module.exports = {
   calcArea,
