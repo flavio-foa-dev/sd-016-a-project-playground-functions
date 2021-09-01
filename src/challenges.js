@@ -65,9 +65,32 @@ function highestCount(numbers) {
   }
   return sum;
 }
+
 //Desafio 7
-function catAndMouse() {
-  //seu código aqui
+//Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, 
+//e que ambos estão caçando um mesmo rato chamado mouse. Imagine que os animais estão em uma reta, cada um em uma posição representada por um número.
+//Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição de mouse, cat1 e cat2, 
+//nessa ordem, calcule as distâncias entre o rato e cada um dos gatos, em seguida, retorne qual dos felinos irá alcançar o rato primeiro 
+//(aquele que estiver mais perto do rato).
+//Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, sua função deverá retornar "cat2".
+//Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam e o rato foge".
+function catAndMouse(mouse, cat1, cat2) {
+  let winCat1 = mouse - cat1;
+  let winCat2 = mouse - cat2;
+
+  if(winCat1 < 0){
+    winCat1 = winCat1 * (-1);
+  }else if (winCat2 < 0){
+    winCat2 = winCat2 * (-1);
+  }
+
+  if(winCat1 === winCat2){
+    return "os gatos trombam e o rato foge";
+  }else if (winCat1 < winCat2){
+    return "cat1";
+  }else if (winCat2 < winCat1){
+    return "cat2";
+  } 
 }
 
 //Desafio 8
