@@ -32,11 +32,8 @@ function concatName(stringArray) {
   // função receber uma array de strings
   // retorna uma string com o formato `'ÚLTIMO ITEM, PRIMEIRO ITEM'`
   // independente do tamanho da array
-  
   lastIndex = stringArray.length-1;
   let stringConcat = stringArray[lastIndex]+" "+stringArray[0];
- // console.log(stringConcat)
-
   return stringConcat
 }
 
@@ -44,7 +41,6 @@ function concatName(stringArray) {
 function footballPoints(wins,ties) {
   // função recebe o número de vitórias(chamar `wins`) e o número de empates( chamar `ties`)
   //  retorna a quantidade de pontos que o time marcou em um campeonato.
-
   spotsTime = (wins*3) + ties;
   return spotsTime
 }
@@ -71,7 +67,6 @@ function highestCount(numbersArray) {
         sumhigherNumber = sumhigherNumber + 1
      }
    }  
-   //console.log("sum " +sumhigherNumber);
    return sumhigherNumber
  }
 
