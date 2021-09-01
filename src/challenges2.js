@@ -24,6 +24,16 @@ function checkLength(arrayOfNumbers) {
   return result;
 }
 
+function checkSize(arrayOfNumbers) {
+  let result = true;
+  for (let i = 0; i < arrayOfNumbers.length; i += 1) {
+    if (arrayOfNumbers[i] > 9 || arrayOfNumbers[i] < 0) {
+      result = false;
+    }
+  }
+  return result;
+}
+
 function checkRepetition(arrayOfNumbers) {
   let result = true;
   let base = 0;
@@ -72,9 +82,12 @@ function generatesSecondPart(arrayOfNumbers) {
 
 function generatePhoneNumber(numbers) {
   let r;
-  if (checkLength(numbers) === false) {
-    r = 'Array com tamanho incorreto';
-  } else if (checkRepetition(numbers) === false) {
+  let length = checkLength(numbers);
+  let repetition = checkRepetition(numbers);
+  let size = checkSize(numbers);
+  if (length === false) {
+    r = 'Array com tamanho incorreto.';
+  } else if (repetition === false || size === false) {
     r = 'não é possível gerar um número de telefone com esses valores';
   } else {
     r = `${generatesDd(numbers)} ${generatesFirstPart(numbers)}-${generatesSecondPart(numbers)}`;
