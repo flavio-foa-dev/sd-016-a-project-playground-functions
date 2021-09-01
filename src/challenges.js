@@ -18,7 +18,7 @@ function splitSentence(share) {
 
 // Desafio 4
 function concatName(namesfor) {
-  return namesfor[namesfor.length - 1] + ', ' + namesfor[0];
+  return `${namesfor[namesfor.length - 1]}, ${namesfor[0]}`;
 }
 
 // Desafio 5
