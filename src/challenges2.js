@@ -3,17 +3,19 @@
 /* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 10
 function techList(tecnologias, name) {
-  let lista = {
-    tech: '',
-    name,
-  };
-  for (let index = 0; index < tecnologias.length; index += 1) {
-    lista.tech = tecnologias[index];
+  if (tecnologias.length === 0) {
+    return 'Vazio!';
+  }
+  let lista = [];
+  let tecnologiasOrdenadas = tecnologias.sort();
+  for (let index = 0; index < tecnologiasOrdenadas.length; index += 1) {
+    lista.push({
+      tech: tecnologiasOrdenadas[index],
+      name,
+    });
   }
   return lista;
 }
-
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber(numeros) {
