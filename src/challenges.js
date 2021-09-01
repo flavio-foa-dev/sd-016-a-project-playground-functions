@@ -51,12 +51,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let result1 = (mouse - cat1);
   let result2 = (mouse - cat2);
   if (Math.abs(result1) > Math.abs(result2)) {
-    return "cat2";
+    return 'cat2';
   } else if (Math.abs(result1) < Math.abs(result2)) {
-    return "cat1";
+    return 'cat1';
   }
   else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 
@@ -67,11 +67,11 @@ function fizzBuzz(array) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       newArray.push('fizzBuzz');
     } else if (array[index] % 3 === 0) {
-      newArray.push("fizz");
+      newArray.push('fizz');
     } else if (array[index] % 5 === 0) {
-      newArray.push("buzz");
+      newArray.push('buzz');
     } else {
-      newArray.push("bug!");
+      newArray.push('bug!');
     }
   }
   return newArray;
@@ -81,17 +81,21 @@ function fizzBuzz(array) {
 function encode(convert) {
   let separado = convert.split('')
   for (let index = 0; index < separado.length; index += 1) {
-    if (separado[index] === "a" || separado[index] === "e" || separado[index] === "i" || separado[index] === "o" || separado[index] === "u") {
-      if (separado[index] === "a") {
-        separado.splice(index, 1, "1");
-      } else if (separado[index] === "e") {
-        separado.splice(index, 1, "2");
-      } else if (separado[index] === "i") {
-        separado.splice(index, 1, "3");
-      } else if (separado[index] === "o") {
-        separado.splice(index, 1, "4");
-      } else if (separado[index] === "u") {
-        separado.splice(index, 1, "5");
+    if (separado[index] === 'a' ||
+    separado[index] === 'e' ||
+    separado[index] === 'i' ||
+    separado[index] === 'o' ||
+    separado[index] === 'u') {
+      if (separado[index] === 'a') {
+        separado.splice(index, 1, '1');
+      } else if (separado[index] === 'e') {
+        separado.splice(index, 1, '2');
+      } else if (separado[index] === 'i') {
+        separado.splice(index, 1, '3');
+      } else if (separado[index] === 'o') {
+        separado.splice(index, 1, '4');
+      } else if (separado[index] === 'u') {
+        separado.splice(index, 1, '5');
       }
     }
   }
@@ -101,17 +105,17 @@ function encode(convert) {
 function decode(convert) {
   let separado = convert.split('');
   for (let index = 0; index < separado.length; index += 1) {
-    if (separado[index] === "1" || separado[index] === "2" || separado[index] === "3" || separado[index] === "4" || separado[index] === "5") {
-      if (separado[index] === "1") {
-        separado.splice(index, 1, "a");
-      } else if (separado[index] === "2") {
-        separado.splice(index, 1, "e");
-      } else if (separado[index] === "3") {
-        separado.splice(index, 1, "i");
-      } else if (separado[index] === "4") {
-        separado.splice(index, 1, "o");
-      } else if (separado[index] === "5") {
-        separado.splice(index, 1, "u");
+    if (separado[index] === '1' || separado[index] === '2' || separado[index] === '3' || separado[index] === '4' || separado[index] === '5') {
+      if (separado[index] === '1') {
+        separado.splice(index, 1, 'a');
+      } else if (separado[index] === '2') {
+        separado.splice(index, 1, 'e');
+      } else if (separado[index] === '3') {
+        separado.splice(index, 1, 'i');
+      } else if (separado[index] === '4') {
+        separado.splice(index, 1, 'o');
+      } else if (separado[index] === '5') {
+        separado.splice(index, 1, 'u');
       }
     }
   }

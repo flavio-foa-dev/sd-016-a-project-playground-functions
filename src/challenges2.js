@@ -11,7 +11,7 @@ function techList(techs, name) {
     }
     return info;
   } else {
-    return "Vazio!";
+    return 'Vazio!';
   }
 }
 
@@ -24,11 +24,11 @@ function generatePhoneNumber(numbers) {
       if (count < 3) {
         count = 0;
       } else if (count > 2) {
-        return "não é possível gerar um número de telefone com esses valores";
+        return 'não é possível gerar um número de telefone com esses valores';
         break;
       }
       if (numbers[index] > 9 || numbers[index] < 0) {
-        return "não é possível gerar um número de telefone com esses valores";
+        return 'não é possível gerar um número de telefone com esses valores';
       } for (let mindex = 0; mindex < 11; mindex += 1) {
         if (numbers[index] === numbers[mindex]) {
           count += 1;
@@ -37,12 +37,12 @@ function generatePhoneNumber(numbers) {
       }
     }
   } else if (numbers.length < 11 || numbers.length > 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   }
   numbers.unshift('(');
-  numbers.splice(3, 0, ")");
-  numbers.splice(4, 0, " ");
-  numbers.splice(10, 0, "-");
+  numbers.splice(3, 0, ')');
+  numbers.splice(4, 0, ' ');
+  numbers.splice(10, 0, '-');
 
   return numbers.join('');
 }
@@ -76,9 +76,9 @@ function hydrate(string) {
     }
   }
   if (boolean > 1) {
-    return boolean + " copos de água";
+    return boolean + ' copos de água';
   } else {
-    return boolean + " copo de água";
+    return boolean + ' copo de água';
   }
 
 }
