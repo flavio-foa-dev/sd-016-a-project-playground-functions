@@ -35,14 +35,14 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let maior = 0;
+  let maior = -999;
   let cont = 0;
    for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] > maior){
        maior = numbers[i];
        cont = 1;
     }
-    else if (numbers[i] === maior){
+    else if (numbers[i] == maior){
        cont += 1;
       }
    }
@@ -51,7 +51,7 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(pMouse, pCat1, pCat2) {
-  
+
 }
 
 // Desafio 8
