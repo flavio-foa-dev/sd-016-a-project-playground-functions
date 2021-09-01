@@ -48,8 +48,8 @@ function generatePhoneNumber(numero) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  return Boolean(lineA + lineB > lineC && lineC + lineA > lineB && lineC + lineB > lineA && lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB))
 }
 
 // Desafio 13
@@ -63,3 +63,6 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
+
+
