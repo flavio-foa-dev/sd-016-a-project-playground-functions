@@ -44,11 +44,12 @@ console.log(splitSentence(palavra2));
 console.log(splitSentence(palavra3));
 
 // Desafio 4
+
 function concatName(array) {
 	// último e primeiro item => array.lenght -1 e array[0];  
 	// aplicar o for para percorrer os elementos do array
  for (let i = 0; i <= array.length; i += 1) {
-		 let resultado = array[array.length - 1] + "," + array[0];  
+		 let resultado = array[array.length - 1] + ", " + array[0];  
 		 return resultado;
  } 
 }
@@ -95,21 +96,22 @@ console.log(highestCount(array4));
 function catAndMouse(rato, gato1, gato2) {
 	let resultado = [''];
 		// animais em linha -> pensar num eixo X e distancia de pontos -- movimento (subtração) poderá ser negativa a depender do rato
-	let distanciaRatoGato1 = (rato - gato1) * -1;
+	let distanciaRatoGato1 = (rato - gato1);
 	let distanciaRatoGato2 = (rato - gato2) * -1;
 	if (distanciaRatoGato1 > distanciaRatoGato2) {
 		resultado = 'cat2'
 	} else if ( distanciaRatoGato2 > distanciaRatoGato1) {
 		resultado = 'cat1';
-	} else {
-	resultado = 'os gatos trombam e o rato foge';
+	} else if ( distanciaRatoGato1 === distanciaRatoGato2) {
+	// se rato esta em 1 e gato em 0 é um espaço de distancia, e se o gato2 esta em 2 tb é um espaço de distancia
+		resultado = 'os gatos trombam e o rato foge';
 	}
 	return resultado;
 }
 
 console.log(catAndMouse(1, 3, 2));
 console.log(catAndMouse(1, 6, 12));
-console.log(catAndMouse(1, 2, 2));
+console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 
