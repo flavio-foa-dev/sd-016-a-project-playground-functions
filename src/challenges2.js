@@ -59,15 +59,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  let regex = /\d+/g;
-  let number = string.match(regex);
-  let numbers = number.map(Number).reduce((a, b) => a + b, 0);
-  let copodagua = ' copo de água';
-  let coposdagua = ' copos de água';
-  if (numbers === 1) {
-    return numbers + copodagua;
-  }
-  return numbers + coposdagua;;
+  
 }
 
 module.exports = {
