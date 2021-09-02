@@ -36,7 +36,17 @@ function generatePhoneNumber(arr) {
 function triangleCheck(lineA, lineB, lineC) {}
 
 // Desafio 13
-function hydrate(str) {}
+function hydrate(str) {
+  let numbers = str.match(/[0-9]+/g).flat(); // Essa RegEx pega somente os números de uma string.
+  // Fonte 'https://stackoverflow.com/questions/42532450/extract-number-from-string-javascript'
+  // return numbers;
+  let sum = numbers.reduce((function (prev, curr) { return (+prev + +curr); }));
+  //                                 Operador unário '+' serve pra transformar o operando em número
+  if (sum > 1) {
+    return `${sum} copos de água`;
+  }
+  return `${sum} copo de água`;
+}
 
 module.exports = {
   generatePhoneNumber,
