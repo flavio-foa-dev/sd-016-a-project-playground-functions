@@ -1,14 +1,11 @@
 // Desafio 1
-function compareTrue(comp1, comp2) 
-{
-  if (comp1 === true && comp2 === true)
-    {
-      return true;
-    }
-  else
-    {
-      return false;
-    }  
+function compareTrue(comp1, comp2) {
+  if (comp1 === true && comp2 === true) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 // Desafio 2
@@ -23,7 +20,7 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(string) {
- return string[string.length -1] + ", " + string[0];
+  return string[string.length - 1] + ", " + string[0];
 }
 
 // Desafio 5
@@ -37,30 +34,30 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let maior = -999;
   let cont = 0;
-   for (let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] > maior){
-       maior = numbers[i];
-       cont = 1;
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > maior) {
+      maior = numbers[i];
+      cont = 1;
     }
-    else if (numbers[i] === maior){
-       cont += 1;
-      }
-   }
-   return cont;
+    else if (numbers[i] === maior) {
+      cont += 1;
+    }
+  }
+  return cont;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(mouse - cat1);
-  let distCat2 = Math.abs(mouse - cat2);  
+  let distCat2 = Math.abs(mouse - cat2);
 
-  if (distCat2 > distCat1){
+  if (distCat2 > distCat1) {
     return "cat1";
   }
-  else if (distCat1 > distCat2){
+  else if (distCat1 > distCat2) {
     return "cat2";
   }
-  else if (distCat1 === distCat2){
+  else if (distCat1 === distCat2) {
     return "os gatos trombam e o rato foge";
   }
 }
@@ -69,16 +66,16 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   let fB = [];
   for (let index of numbers) {
-    if (index % 3 === 0 && index % 5 !== 0){
-        fB.push("fizz");
+    if (index % 3 === 0 && index % 5 !== 0) {
+      fB.push("fizz");
     }
-    else if(index % 3 !== 0 && index % 5 === 0){
+    else if (index % 3 !== 0 && index % 5 === 0) {
       fB.push("buzz");
     }
-    else if(index % 3 === 0 && index % 5 === 0 ){
+    else if (index % 3 === 0 && index % 5 === 0) {
       fB.push("fizzBuzz");
     }
-    else{
+    else {
       fB.push("bug!");
     }
   }
@@ -86,11 +83,59 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodeString = "";
+  for(let index in string){
+    switch(string[index]){
+      case "a":
+        encodeString += "1";
+        break;
+      case "e":
+        encodeString += "2";
+        break;
+      case "i":
+        encodeString += "3";
+        break;
+      case "o":
+        encodeString += "4";
+        break; 
+      case "u":
+        encodeString += "5";
+        break;
+      default:
+        encodeString += string[index];
+        break;
+    }
+  }
+
+  return encodeString;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let decodeString = "";
+  for(let index in string){
+    switch(string[index]){
+      case "1":
+        decodeString += "a";
+        break;
+      case "2":
+        decodeString += "e";
+        break;
+      case "3":
+        decodeString += "i";
+        break;
+      case "4":
+        decodeString += "o";
+        break; 
+      case "5":
+        decodeString += "u";
+        break;
+      default:
+        decodeString += string[index];
+        break;
+    }
+  }
+
+  return decodeString;
 }
 
 module.exports = {
