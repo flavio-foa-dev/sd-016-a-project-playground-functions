@@ -1,25 +1,36 @@
 // Desafio 10
-function techList(arr, name) {
-    let mainObject =[];
-    let array = arr.sort();
-    for (var i = 0; i < array.length; i += 1){
-        mainObject.push ({
-            tech : array[i],
-            name: name
-        })
-    }
+function techList(arr, names) {
+  let mainObject = [];
+  let array = arr.sort();
+  for (let i = 0; i < array.length; i += 1) {
+    mainObject.push({
+      tech: array[i],
+      name: names,
+    });
+  }
 
-    if (arr.length <=0){
-      return "Vazio!"
-    }else{
-      return mainObject
-    }
+  if (arr.length <= 0) {
+    return 'Vazio!';
+  }
+  return mainObject;
 }
 
+// Desafio 11   falta a parte de contar se o número repetiu mais de 3 vzs 
+function generatePhoneNumber(arr) {
+  let newString = arr;
+  if (newString.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  newString.splice(0, 0, '(');
+  newString.splice(3, 0, ') ');
+  newString.splice(9, 0, '-');
 
-// Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+  for (let index = 0; index < newString.length; index += 1) {
+    if (newString[index] < 0 || newString[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return newString.join('');
 }
 
 // Desafio 12

@@ -45,7 +45,7 @@ function highestCount(arr) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-    distanceCat1 = mouse - cat1;  
+    distanceCat1 = mouse - cat1;
     distanceCat2 = mouse - cat2;
     console.log(distanceCat1 , distanceCat2);
     if ( distanceCat1 < 0){
@@ -55,12 +55,12 @@ function catAndMouse(mouse, cat1, cat2) {
       distanceCat2 = distanceCat2 * (-1);
     }
     console.log(distanceCat1 , distanceCat2);
-    if ( distanceCat2 === distanceCat1){
-      return 'os gatos trombam e o rato foge'
-    }else if (distanceCat1 < distanceCat2) {
-      return 'cat1'
-    }else if (distanceCat2 < distanceCat1) {
-      return 'cat2' 
+    if ( distanceCat2 === distanceCat1) {
+      return 'os gatos trombam e o rato foge';
+    } else if (distanceCat1 < distanceCat2) {
+      return 'cat1';
+    } else if (distanceCat2 < distanceCat1) {
+    return 'cat2';
     }
 }
 
@@ -74,7 +74,7 @@ function fizzBuzz(arr) {
       array.push('buzz');
     } else if (arr[index] % 3 === 0) {
       array.push('fizz');
-    } else{
+    } else {
       array.push('bug!');
     }
   }
@@ -87,34 +87,34 @@ function encode(string) {
   for (let index = 0; index < string.length; index += 1) {
     if (arr[index] === 'a') {
       arr.splice(index, 1, '1');
-    }if (arr[index] === 'e') {
+    } if (arr[index] === 'e') {
       arr.splice(index, 1, '2');
-    }if (arr[index] === 'i') {
+    } if (arr[index] === 'i') {
       arr.splice(index, 1, '3');
-    }if (arr[index] === 'o'){
+    } if (arr[index] === 'o') {
       arr.splice(index, 1, '4');
-    }if (arr[index] === 'u'){
+    } if (arr[index] === 'u') {
       arr.splice(index, 1, '5');
-    }      
+    }
   }
-  return arr.join('')
+  return arr.join('');
 }
 function decode(string) {
   let arr = string.split('');
   for (let index = 0; index < string.length; index += 1) {
     if (arr[index] === '1') {
       arr.splice(index, 1, 'a');
-    }if (arr[index] === '2') {
+    } if (arr[index] === '2') {
       arr.splice(index, 1, 'e');
-    }if (arr[index] === '3') {
+    } if (arr[index] === '3') {
       arr.splice(index, 1, 'i');
-    }if (arr[index] === '4'){
+    } if (arr[index] === '4'){
       arr.splice(index, 1, 'o');
-    }if (arr[index] === '5'){
+    } if (arr[index] === '5') {
       arr.splice(index, 1, 'u');
-    }      
+    }
   }
-  return arr.join('')
+  return arr.join('');
 }
 
 module.exports = {
