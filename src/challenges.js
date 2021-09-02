@@ -14,8 +14,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // return concatName('lastIndexOf','findIndexOf');
+function concatName(array) {
+  let firstName = array[0];
+  let lastName = array[array.length - 1];
+  return (lastName + ', ' + firstName);
 }
 
 // Desafio 5
