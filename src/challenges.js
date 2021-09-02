@@ -32,21 +32,22 @@ function footballPoints() {
 }
 
 // Desafio 6
-function highestCount(numeros) {
-  // função recebe uma arrey de números
-  // retorne quantas vezes o MAIOR deles se repete
-  // percorrer o array
-  // contar o maior número em um laço de repetição
-  // definir uma let para armazenar o maior número contar qtas vezes ele aparece
+function highestCount(arr) {
 
-  let maiorNumero = numeros[0];
-  let soma = 1;
+  let maior = arr[0];
+  let soma = 0;
 
-  for(let index = 1; index < numeros.length; index += 1){
-
+  for(let index = 0; index < arr.length; index += 1) {
+    if(maior < arr[index]) {
+      maior = arr[index]
+    }
   }
-
-
+  for(let i = 0; i < arr.length; i += 1) {
+    if(maior === arr[i]) {
+      soma += 1
+    }
+  }
+  return soma;
 }
 
 // Desafio 7
