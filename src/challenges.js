@@ -78,8 +78,23 @@ function fizzBuzz(value) {
   return result;
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  for (let i = 0; i < phrase.length; i += 1) {
+    if (phrase[i] = a) {
+      phrase = 1
+    } else if (phrase[i] = e) {
+      phrase = 2
+    } else if (phrase[i] = i) {
+      phrase = 3
+    } else if (phrase[i] = o) {
+      phrase = 4
+    } else if (phrase[i] = u) {
+      phrase = 5
+    } else {
+      
+    }
+    
+  }
 }
 function decode() {
   // seu código aqui
