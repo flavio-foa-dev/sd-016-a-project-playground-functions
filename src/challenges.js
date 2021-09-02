@@ -41,11 +41,11 @@ function splitSentence(text, space) {
 }
 // Desafio 4
 function concatName(lista) {
-  let ultimo = lista[lista.length - 1];
-  let primeiro = lista[0];
-  return (ultimo, ', ', primeiro);
-}
 
+  return (lista[lista.length - 1] +", "+ lista[0]);
+}
+let cudecaio = ['salsicha', 'linguiça', 'banana']
+console.log(concatName(cudecaio))
 // Desafio 5
 function footballPoints(wins, ties) {
   let point = ((wins*3)+(ties*1))
@@ -54,7 +54,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  
 }
 
 // Desafio 7
