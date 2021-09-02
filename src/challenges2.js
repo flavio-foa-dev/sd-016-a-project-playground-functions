@@ -53,8 +53,26 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(palavra) {
+  let contador = palavra.match(/[0-9]+/g);
+  let inteiro = [];
+  let copos = 0;
+
+  for (let index in contador) {
+    inteiro.push(parseInt(contador[index]));
+    copos += inteiro[index];
+
+  }
+
+  if (copos > 1){
+    return (copos + ' copos de água');
+  }else{
+    return (copos + ' copo de água');
+  }
+
+  
+
+
 }
 
 module.exports = {
