@@ -77,11 +77,26 @@ function triangleCheck(lineA,lineB,lineC) {
   }
 }
 
-console.log(triangleCheck(10,14,8))
 // Desafio 13
-function hydrate() {
+function hydrate(bebidas) {
   // seu código aqui
+  let soma=0;
+  todos=bebidas.match(/\d+/g)
+  for(cont0=0;cont0<todos.length;cont0+=1){
+    todos[cont0]=parseInt(todos[cont0])
+  }
+  
+  for(cont=0;cont<todos.length;cont++){
+    
+    soma+=todos[cont]
+  }
+  if(soma==1){
+    return soma+" copo de água";
+  } else{
+      return soma+" copos de água";
+  }
 }
+console.log(hydrate("12 cerveja, 2 chachaça, 1 vinho"))
 
 module.exports = {
   generatePhoneNumber,
