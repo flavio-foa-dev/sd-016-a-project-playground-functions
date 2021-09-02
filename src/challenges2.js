@@ -62,8 +62,20 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let isPossible;
+  let absA = Math.abs(lineB - lineC);
+  let absB = Math.abs(lineA - lineC);
+  let absC = Math.abs(lineA - lineB);
+
+  if (lineA > (lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineA + lineB)) {
+    isPossible = false;
+  } else if (lineA < absA || lineB < absB || lineC < absC) {
+    isPossible = false;
+  } else {
+    isPossible = true;
+  }
+  return isPossible;
 }
 
 // Desafio 13
