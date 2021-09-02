@@ -46,7 +46,7 @@ function checkRepetition(arrayOfNumbers) {
         counter += 1;
       }
     }
-    if (counter >= 3) {
+    if (counter > 2) {
       result = false;
     }
     counter = 0;
