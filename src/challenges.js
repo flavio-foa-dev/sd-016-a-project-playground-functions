@@ -50,23 +50,18 @@ function footballPoints(wins=0, ties=0) {
 // Desafio 6
 function highestCount(numbers) {
   // Função que identifica qual o maior numero e quantas vezes ele se repete
-  let higherNumber = numbers[0]
-  let countNumber = 0;
-  for (let index = 1; index < numbers.lenght; index += 1){
-    if (numbers[index] > higherNumber){
-      higherNumber = numbers[index]
+  let higher = -1000;
+  let counter = 0;
+   for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > higher){
+       higher = numbers[i];
+       counter = 1;
     }
-  }
-  for (let index = 0; index < numbers.lenght; index += 1){
-    for (let index2 = index+1; index2 < numbers.lenght; index2 += 1){
-      if (higherNumber === index2){
-        countNumber +=1
+    else if (numbers[i] === higher){
+       counter += 1;
       }
-    }
-  }
-  return higherNumber
-  return countNumber
-
+   }
+   return counter;
 }
 
 // Desafio 7
@@ -87,8 +82,9 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(number) {
+  // Crie uma função chamada `fizzBuzz`
+
 }
 
 // Desafio 9
