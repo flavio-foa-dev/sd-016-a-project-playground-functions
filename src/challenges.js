@@ -8,7 +8,7 @@ return true;
 }
 console.log(compareTrue(true, true));
 
- /*// Desafio 2
+ // Desafio 2
 function calcArea(base, heigth) {
   return base*heigth/2;
 
@@ -100,7 +100,7 @@ function encode() {
 }
 function decode() {
   // seu código aqui
-} */
+} 
 
 module.exports = {
   calcArea,
