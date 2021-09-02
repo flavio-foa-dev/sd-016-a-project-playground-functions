@@ -17,7 +17,7 @@ function splitSentence(stringSplit) {
 
 // Desafio 4
 function concatName(array) {
-  let string = array[array.length -1] + ', ' + array[0];
+  let string = array[array.length - 1] + ', ' + array[0];
   return string;
 }
 
@@ -45,23 +45,23 @@ function highestCount(arr) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-    distanceCat1 = mouse - cat1;
-    distanceCat2 = mouse - cat2;
-    console.log(distanceCat1 , distanceCat2);
-    if ( distanceCat1 < 0){
-      distanceCat1 = distanceCat1 * (-1);
-    }
-    if (distanceCat2 < 0) {
+  distanceCat1 = mouse - cat1;
+  distanceCat2 = mouse - cat2;
+  console.log(distanceCat1, distanceCat2);
+  if (distanceCat1 < 0) {
+    distanceCat1 = distanceCat1 * (-1);
+  }
+  if (distanceCat2 < 0) {
       distanceCat2 = distanceCat2 * (-1);
-    }
-    console.log(distanceCat1 , distanceCat2);
-    if ( distanceCat2 === distanceCat1) {
-      return 'os gatos trombam e o rato foge';
-    } else if (distanceCat1 < distanceCat2) {
-      return 'cat1';
-    } else if (distanceCat2 < distanceCat1) {
+  }
+  console.log(distanceCat1, distanceCat2);
+  if (distanceCat2 === distanceCat1) {
+    return 'os gatos trombam e o rato foge';
+  } else if (distanceCat1 < distanceCat2) {
+    return 'cat1';
+  } else if (distanceCat2 < distanceCat1) {
     return 'cat2';
-    }
+  }
 }
 
 // Desafio 8
@@ -108,7 +108,7 @@ function decode(string) {
       arr.splice(index, 1, 'e');
     } if (arr[index] === '3') {
       arr.splice(index, 1, 'i');
-    } if (arr[index] === '4'){
+    } if (arr[index] === '4') {
       arr.splice(index, 1, 'o');
     } if (arr[index] === '5') {
       arr.splice(index, 1, 'u');
