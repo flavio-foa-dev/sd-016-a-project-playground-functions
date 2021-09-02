@@ -90,12 +90,13 @@ function fizzBuzz(array) {
     } else if (array[count]%3 === 0 && array[count]%5 === 0) {
       arrayResposta.push('fizzBuzz');
     } else {
-      arrayResposta.push('bug');
+      arrayResposta.push('bug!');
     }
   }
   return arrayResposta;
 }
 
+fizzBuzz([7,9]);
 // Desafio 9
 function encode(texto) {
   // seu código aqui
