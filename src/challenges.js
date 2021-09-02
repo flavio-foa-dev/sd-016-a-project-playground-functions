@@ -102,12 +102,57 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(letterNumber) {
+  let encodeLetters = [];
+  for (let i = 0; i < letterNumber.length; i += 1) {
+    switch (letterNumber[i]) {
+      case 'a':
+        encodeLetters.push(1);
+        break;
+      case 'e':
+        encodeLetters.push(2);
+        break;
+      case 'i':
+        encodeLetters.push(3);
+        break;
+      case 'o':
+        encodeLetters.push(4);
+        break;
+      case 'u':
+        encodeLetters.push(5);
+        break;
+      default:
+        encodeLetters.push(letterNumber[i])
+    }
+  }
+  return encodeLetters.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(letterNumber) {
+  let decodeLetters = [];
+  for (let i = 0; i < letterNumber.length; i += 1) {
+    switch (letterNumber[i]) {
+      case '1':
+        decodeLetters.push('a');
+        break;
+      case '2':
+        decodeLetters.push('e');
+        break;
+      case '3':
+        decodeLetters.push('i');
+        break;
+      case '4':
+        decodeLetters.push('o');
+        break;
+      case '5':
+        decodeLetters.push('u');
+        break;
+      default:
+        decodeLetters.push(letterNumber[i])
+    }
+  }
+  return decodeLetters.join('');
 }
+
 
 module.exports = {
   calcArea,
