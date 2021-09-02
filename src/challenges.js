@@ -48,8 +48,40 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(list) {
   // seu código aqui
+  let addValue = 0;
+  let cont = 0;
+  let add = 0;
+  let maxValue = Math.max.apply(null, list);
+  /*
+  Explicação de como funciona e de onde foi retirado o metodo da var 'addValue' no link abaixo
+  https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array  
+  */ 
+
+  for (let i = 0; i < list.length; i++){
+    cont = cont + 1;
+  }
+ 
+  for (let index = 0; index < list.length; index +=1){
+  
+    if (list[index] === 0){
+      add = add + 1;
+    }
+
+    else if (list[index] === maxValue){  
+      addValue = addValue + 1;
+    }
+
+  }
+
+  if (add === list.length){ 
+    return(add);
+  }
+
+  else {
+    return(addValue);
+  }
 }
 
 // Desafio 7
