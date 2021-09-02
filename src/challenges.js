@@ -48,26 +48,22 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
+// função recebe uma array de números
+// retorna a quantidade de vezes que o maior deles se repete.
+// let numbersArray = [0, 0, 0, 1, 1, 1, 1]; //[9, 1, 2, 3, 9, 5, 7] ; //[0, 4, 4, 4, 9, 2, 1]
 function highestCount(numbersArray) {
-  // função recebe uma array de números
-  // retorna a quantidade de vezes que o maior deles se repete.
-  // let numbersArray = [0, 0, 0, 1, 1, 1, 1]; //[9, 1, 2, 3, 9, 5, 7] ; //[0, 4, 4, 4, 9, 2, 1]
   let higherAtual = 0;
   let sumhigherNumber = 0;
-  /* let number1 = 0; */
-  /* let number2 = 0; */
-
-  for (let index=0; index <numbersArray.length; index+=1){ 
-    let number1 = numbersArray[index];
-    let number2 = numbersArray[index+1];
-    if ((number1 > number2) && (number1 > higherAtual)){
-      let higherAtual = number1;
-    }else if ((number2 > number1) && (number2 > higherAtual)){
-      let higherAtual = number2;
+  for (let index=0; index <numbersArray.length; index+=1){
+    if ((numbersArray[index] > numbersArray[index+1]) && (numbersArray[index] > higherAtual)){
+      let higherAtual = numbersArray[index];
+    }else if ((numbersArray[index+1] > numbersArray[index]) && (numbersArray[index+1] > higherAtual)){
+        let higherAtual = numbersArray[index+1];
     }
   }
+    
   for (let higherIndex=0; higherIndex <numbersArray.length; higherIndex+=1){
-    if (numbersArray[higherIndex] === higherAtual) {
+    if (numbersArray[higherIndex] === higherAtual){
       sumhigherNumber = sumhigherNumber + 1;
     }
   }
