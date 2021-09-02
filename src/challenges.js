@@ -25,7 +25,6 @@ console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
 
 // Desafio 3
-
 let palavra = 'go Trybe';
 let palavra2 = 'vamo que vamo';
 let palavra3 = 'foguete';
@@ -44,7 +43,6 @@ console.log(splitSentence(palavra2));
 console.log(splitSentence(palavra3));
 
 // Desafio 4
-
 function concatName(array) {
 	// último e primeiro item => array.lenght -1 e array[0];  
 	// aplicar o for para percorrer os elementos do array
@@ -74,7 +72,6 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-
 function highestCount(array) {
 let numeroMax = array[0];
 let contador = 0;  
@@ -82,7 +79,7 @@ let contador = 0;
         if (array[index] > numeroMax) {
         numeroMax = array[index];
     } 
-    for (let i = 0; i <= array.length -1; i += 1) {
+}	    for (let i = 0; i <= array.length -1; i += 1) {
         if (numeroMax === array[i]) {
 		contador = contador + 1;
 	}
@@ -98,7 +95,6 @@ let arrayB = [0,0,0];
 console.log(highestCount(arrayB));
 
 // Desafio 7
-
 function catAndMouse(rato, gato1, gato2) {
 let resultado = [''];
 // animais em linha -> pensar num eixo X e distancia de pontos -- movimento (subtração) poderá ser negativa a depender do rato
@@ -125,7 +121,6 @@ console.log(catAndMouse(1, 6, 12));
 console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-
 function fizzBuzz(numeros) {
 	// variavel array fora da function para receber as respostas
 	let resposta = [];
@@ -151,7 +146,6 @@ let array7 = [9, 25];
 console.log(fizzBuzz(array7));
 
 // Desafio 9
-
 function encode(string) {
 let palavras = string;
 let separacao = palavras.split('');
