@@ -48,6 +48,7 @@ function highestCount(numbers) {
   let contador = 0;
   //Abrindo laço de repetição
   for (let index = 0; index < numbers.length; index += 1) {
+    //Quando numbers[index] for maior que a variavél array(Que é a primeira posição de numbers[0], o valor de array é atualizado para o valor de numbers[index])
     if (numbers[index] > array) {
      array = numbers[index];
     } 
@@ -62,8 +63,17 @@ function highestCount(numbers) {
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let resultado = 0;
+  Math.abs(cat1,cat2,mouse);
+  if(Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
+    resultado = 'cat1';
+  }else if (Math.abs(cat1 - mouse )> Math.abs(cat2 - mouse)){
+    resultado = 'cat2';
+  }else if(Math.abs(cat1 - mouse)  === Math.abs(cat2 - mouse) || cat1 === cat2 === mouse){
+    resultado = 'os gatos trombam e o rato foge';
+  }
+  return resultado;
 }
 
 // Desafio 8
