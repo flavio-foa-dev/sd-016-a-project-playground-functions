@@ -15,26 +15,31 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  first = array.shift();
-  last = array.pop();
-  newArr = last + ", " + first;
+  let first = array.shift();
+  let last = array.pop();
+  let newArr = last + ', ' + first;
   return newArr;
 }
 
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  points = (wins * 3) + ties;
+  let points = (wins * 3) + ties;
   return points;
 }
 
 // Desafio 6
 function highestCount(array) {
-  array.sort()
-  let max = Math.max(...array)
-  return max
+  let repeat = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    let max = Math.max(...array);
+    if (max === array[index]) {
+      repeat += 1;
+    }
+  }
+  return repeat;
 }
-console.log (highestCount([9, 1, 2, 3, 9, 5, 7]))
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Dist = Math.abs(cat1 - mouse);
