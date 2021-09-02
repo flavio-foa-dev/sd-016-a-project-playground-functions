@@ -100,17 +100,17 @@ function fizzBuzz(fizzBuzzArray) {
   // divisível por 3 e 5 "fizzBuzz"
   // não divisível por 3 nem por 5 "bug!"
   let resultArray = [];
-  for (let index=0; index<(fizzBuzzArray.length+1); index=+1){
+  for (let index=0; index<fizzBuzzArray.length+1; index=+1) {
     if (fizzBuzzArray[index] % 3 === 0){
       resultArray.push = ("fizz");
     }else if (fizzBuzzArray[index] % 5 === 0){
-      resultArray.push = ("buzz")
+      resultArray.push = ("buzz");
     }else if ((fizzBuzzArray[index] % 5 === 0) && (fizzBuzzArray[index] % 3 === 0)){
-      resultArray.push = ("fizzBuzz")
+      resultArray.push = ("fizzBuzz");
     }else {
-      resultArray.push = ("bug!")
+      resultArray.push = ("bug!");
     }
-  return resultArray
+  return resultArray;
 }
 
 // Desafio 9
