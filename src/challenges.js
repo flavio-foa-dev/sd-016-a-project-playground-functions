@@ -2,8 +2,6 @@
 function compareTrue(number1, number2) {
   // Compara dois valores se ambos são true;
   // Retorna com true se caso ambos sejam true e false para qualquer valor # true
-  let number1 = true;
-  let number2 = false;
   if (number1 === true && number2 === true) {
     return true
   } else {
@@ -55,7 +53,7 @@ function highestCount(numbersArray) {
   // let numbersArray = [0, 0, 0, 1, 1, 1, 1]; //[9, 1, 2, 3, 9, 5, 7] ; //[0, 4, 4, 4, 9, 2, 1]
   let higherAtual  = 0;
   let sumhigherNumber = 0;
-  
+
   for (let index=0; index <numbersArray.length; index+=1){ 
     let number1 = numbersArray[index];
     let number2 = numbersArray[index+1];
@@ -84,12 +82,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let positionCat2 = (mouse - cat2);
   
   if (mouse < cat1) {
-    let positionCat1 = (cat1 - mouse);
+    positionCat1 = (cat1 - mouse);
     //console.log(positionCat1)
   }
 
   if (mouse < cat2) {
-    let positionCat2 = (cat2 - mouse);
+    positionCat2 = (cat2 - mouse);
     //console.log(positionCat2);
   }
 //
@@ -98,7 +96,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }else if (positionCat1 < positionCat2) {
     //console.log('cat1')
-    return 'cat2';
+    return 'cat1';
   }else if (positionCat2 < positionCat1) {
     //console.log('cat2')
     return 'cat2';
