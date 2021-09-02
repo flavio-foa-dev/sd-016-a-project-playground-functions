@@ -1,22 +1,23 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
-return true;
+        return true;
   } else {
     return false;
-}
+    }
 }
 console.log(compareTrue(true, true));
 
- // Desafio 2
+// Desafio 2
 function calcArea(base, heigth) {
-  return base*heigth/2;
+  return base * heigth / 2;
+
 
 
 }
-console.log(calcArea(10, 50))
-console.log(calcArea(5, 2))
-console.log(calcArea(51, 1))
+console.log(calcArea(10, 50));
+console.log(calcArea(5, 2));
+console.log(calcArea(51, 1));
 
 
 // Desafio 3
@@ -29,7 +30,7 @@ function splitSentence(str) {
 // Desafio 4
 function concatName(names) {
 
-  let lastName = names[names.length-1];
+  let lastName = names[names.length - 1];
   let firstName = names[0];
   return newNames = lastName + ", " + firstName
 
