@@ -47,15 +47,23 @@ function highestCount(inteiros) {
   } 
       for (let i = inteiros[0]; i < inteiros.length; i += 1) {
       if (inteiros[i] === maior) {
-      indice.push(maior)
+      indice.push(maior);
   }
       }
-          return indice.length 
+          return indice.length; 
   }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = cat1 - mouse; 
+  let distanciaCat2 = cat2 - mouse;
+  if (Math.abs(distanciaCat1) < Math.abs(distanciaCat2)) {
+    return 'cat1';
+  } else if (Math.abs(distanciaCat2) < Math.abs(distanciaCat1)) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
