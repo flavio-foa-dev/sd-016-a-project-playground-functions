@@ -22,7 +22,7 @@ function calcArea(base, height) {
 function splitSentence(stringSplit) {
   // função recebe uma string
   // retorna uma array de strings separadas por cada espaço na string original.
-  // let space = ' ';
+  let space = ' ';
   let arrayString = stringSplit.split(space);
   return arrayString
 }
@@ -32,9 +32,10 @@ function concatName(stringArray) {
   // função receber uma array de strings
   // retorna uma string com o formato `'ÚLTIMO ITEM, PRIMEIRO ITEM'`
   // independente do tamanho da array
+  let space = ' ';
   let lastIndex = stringArray.length - 1;
-  let stringConcat = stringArray[lastIndex] + ' '+ stringArray[0];
-  return stringConcat
+  let stringConcat = stringArray[lastIndex] +space+ stringArray[0];
+  return stringConcat;
 }
 
 // Desafio 5
@@ -43,7 +44,7 @@ function footballPoints(wins,ties) {
   // e o número de empates( chamar `ties`)
   // retorna a quantidade de pontos que o time marcou em um campeonato.
   let spotsTime = (wins * 3) + ties;
-  return spotsTime
+  return spotsTime;
 }
 
 // Desafio 6
@@ -51,27 +52,26 @@ function highestCount(numbersArray) {
   // função recebe uma array de números
   // retorna a quantidade de vezes que o maior deles se repete.
   // let numbersArray = [0, 0, 0, 1, 1, 1, 1]; //[9, 1, 2, 3, 9, 5, 7] ; //[0, 4, 4, 4, 9, 2, 1]
-  let higherAtual  = 0;
+  let higherAtual = 0;
   let sumhigherNumber = 0;
-  let number1 = 0;
-  let number2 = 0;
+  /* let number1 = 0; */
+  /* let number2 = 0; */
 
   for (let index=0; index <numbersArray.length; index+=1){ 
     let number1 = numbersArray[index];
     let number2 = numbersArray[index+1];
     if ((number1 > number2) && (number1 > higherAtual)){
       let higherAtual = number1;
-    }
-    if ((number2 > number1) && (number2 > higherAtual)){
+    }else if ((number2 > number1) && (number2 > higherAtual)){
       let higherAtual = number2;
     }
   }
   for (let higherIndex=0; higherIndex <numbersArray.length; higherIndex+=1){
     if (numbersArray[higherIndex] === higherAtual) {
-      let sumhigherNumber = sumhigherNumber + 1;
+      sumhigherNumber = sumhigherNumber + 1;
     }
   }
-   return sumhigherNumber
+   return sumhigherNumber;
  }
 
 // Desafio 7
@@ -83,20 +83,16 @@ function catAndMouse(mouse, cat1, cat2) {
   let positionCat2 = (mouse - cat2);
   if (mouse < cat1) {
     positionCat1 = (cat1 - mouse);
-    //console.log(positionCat1)
   }
-  if (mouse < cat2) {
+  if (mouse < cat2){
     positionCat2 = (cat2 - mouse);
-    //console.log(positionCat2);
   }
-  if (positionCat1===positionCat2) {
-    //console.log('os gatos trombam e o rato foge')
+
+  if (positionCat1 === positionCat2){
     return 'os gatos trombam e o rato foge';
-  }else if (positionCat1 < positionCat2) {
-    //console.log('cat1')
+  } else if (positionCat1 < positionCat2){
     return 'cat1';
-  }else if (positionCat2 < positionCat1) {
-    //console.log('cat2')
+  }else if (positionCat2 < positionCat1){
     return 'cat2';
   }
 }
