@@ -84,9 +84,28 @@ function triangleCheck( lineA, lineB, lineC ) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate( sentense ) {
+  let arrayIntNumbers = [];
+  let waterGlasses = 0;
+  let arrayStringNumbers = sentense.match(/\d+/g);
+
+  //console.log( 'arrayStringNumbers' + arrayStringNumbers );
+  //console.log( typeof(arrayStringNumbers));
+
+  for( let index = 0; index < arrayStringNumbers.length ; index += 1 ){
+     waterGlasses += parseInt(arrayStringNumbers[index]);
+  }
+
+  //console.log( 'waterGlasses: ' + waterGlasses);
+
+  if ( waterGlasses === 1){
+    return (waterGlasses + " copo de água");
+  }else if ( waterGlasses > 1 ){
+    return (waterGlasses + " copos de água");
+  }
 }
+
+//hydrate('1 cachaça, 5 cervejas e 1 copo de vinho');
 
 module.exports = {
   generatePhoneNumber,
