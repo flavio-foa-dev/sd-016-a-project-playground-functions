@@ -55,7 +55,9 @@ function generatePhoneNumber(arrayPhone) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let result = false;
+  // eslint-disable-next-line sonarjs/no-collapsible-if
   if (lineA + lineB > lineC && lineB + lineC > lineA && lineC + lineA > lineB) {
+    // eslint-disable-next-line max-len
     if (Math.abs(lineA - lineB) < lineC && Math.abs(lineB - lineC) < lineA && Math.abs(lineC - lineA) < lineB) {
       result = true;
     }
@@ -64,8 +66,25 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  // Para simplificar, consideraremos que qualquer coisa com um número à frente é uma bebida e que a sua string sempre virá com o formato quantidade (em número) + tipo da bebida.
+  // O número na frente de cada bebida está no intervalo entre 1 e 9.
+  let sum = 0;
+  const regExp = /[0-9]/g;
+  let arrayStr = drinks.split(regExp);
+  let arrayNumb = drinks.match(regExp);
+  if (arrayStr[arrayStr.length - 1] === '') {
+    arrayNumb.pop();
+  }
+  for (let value of arrayNumb) {
+    sum += parseInt(value, 10);
+  }
+  if (sum === 1) {
+    sum += ' copo de água';
+  } else {
+    sum += ' copos de água';
+  }
+  return sum;
 }
 
 module.exports = {
