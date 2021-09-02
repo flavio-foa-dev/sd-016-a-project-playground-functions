@@ -19,20 +19,18 @@ function generatePhoneNumber(arrayList) {
   if (Math.min.apply(null, arrayList) < 0 || Math.max.apply(null, arrayList) > 9) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  // for (let i = 0; i < arrayList.length; i += 1) {
-  //   for (let j = 0; j < arrayList.length; j += 1) {
-  //     if (arrayList[j] === arrayList[i]) {
-  //       cont += 1;
-  //     } else {
-  //       cont += 0;
-  //     }
-  //   } return cont;
-  // }
-  return `(${arrayList[0]}${arrayList[1]}) ${arrayList[2]}${arrayList[3]}${arrayList[4]}${arrayList[5]}${arrayList[6]}-${arrayList[7]}${arrayList[8]}${arrayList[9]}${arrayList[10]}`;
+  let cont = 0;
+  for (let i = 0; i < arrayList.length; i += 1) {
+    for (let j = 0; j < arrayList.length; j += 1) {
+      if (arrayList[i] === arrayList[j]) {
+        cont += 1;
+        if (cont >= 3) {
+          return 'não é possível gerar um número de telefone com esses valores';
+        }
+      }
+    } cont = 0;
+  } return `(${arrayList[0]}${arrayList[1]}) ${arrayList[2]}${arrayList[3]}${arrayList[4]}${arrayList[5]}${arrayList[6]}-${arrayList[7]}${arrayList[8]}${arrayList[9]}${arrayList[10]}`;
 }
-
-// arrayList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]
-// console.log(generatePhoneNumber(arrayList))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
