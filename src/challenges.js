@@ -13,11 +13,17 @@ function calcArea(base, height) {
   return area;
 }
 
+//console.log( calcArea( 2, 2) );
+
 // Desafio 3
 function splitSentence(oneString) {
-  let words = oneString.split(" ");
+  let words = oneString.split(" "); 
+  // função .split permite seprarar o array passando qual o parâmetro quer localizar
+  // no caso o espaço vazio (" ");
   return words;
 }
+console.log( splitSentence( "Quero saber o numero de palavras") );
+
 
 // Desafio 4
 function concatName(nameList) {
@@ -33,8 +39,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(myList) {
+  let theBiggest = Math.max.apply(null, myList);
+  
+  // console.log(theBiggest);
+
+
+  for (let index = 0; index < myList.length; index++) {
+    
+    
+  }
   // seu código aqui
+  
+
 }
 
 // Desafio 7
