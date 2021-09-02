@@ -73,15 +73,23 @@ highestCount([0, 0, 0]);
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+let distance1 = Math.abs (mouse - cat1);
+let distance2= Math.abs (mouse - cat2);
+if (distance1 < distance2){
+  return "cat1"
+}else if(distance2 < distance1){
+  return "cat2"
+}else if (distance1 === distance2){
+  return "os gatos trombam e o rato foge"
 }
-
+}
+catAndMouse(1, 3, 2);
+catAndMouse(1, 6, 12);
+catAndMouse(1, 1, 1);
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
-
+function fizzBuzz() 
+ // seu código aqui
 // Desafio 9
 function encode() {
   // seu código aqui
