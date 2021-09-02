@@ -1,7 +1,5 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  // seu código aqui
-  // meu primeiro 
   if (value1 === true && value2 === true ) {
     return true;
   } else {
@@ -25,12 +23,13 @@ function splitSentence(oneString) {
 function concatName(nameList) {
   let firstName = nameList[0];
   let lastName = nameList[nameList.length - 1];
-  return ( lastName  + ', ' + firstName);
+  return (lastName  + ', ' + firstName);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let scoreTotal = (wins * 3) + ties;
+  return scoreTotal;
 }
 
 // Desafio 6
