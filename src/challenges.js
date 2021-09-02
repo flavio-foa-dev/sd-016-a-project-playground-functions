@@ -17,8 +17,11 @@ function splitSentence(caract) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayCaract) {
+  let primArray = arrayCaract[0];
+  let ultArray = arrayCaract[arrayCaract.length - 1];
+  let string = ultArray.concat(', ', primArray);
+  return string;
 }
 
 // Desafio 5
