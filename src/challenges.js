@@ -48,13 +48,42 @@ function footballPoints(wins=0, ties=0) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  // Função que identifica qual o maior numero e quantas vezes ele se repete
+  let higherNumber = numbers[0]
+  let countNumber = 0;
+  for (let index = 1; index < numbers.lenght; index += 1){
+    if (numbers[index] > higherNumber){
+      higherNumber = numbers[index]
+    }
+  }
+  for (let index = 0; index < numbers.lenght; index += 1){
+    for (let index2 = index+1; index2 < numbers.lenght; index2 += 1){
+      if (higherNumber === index2){
+        countNumber +=1
+      }
+    }
+  }
+  return higherNumber
+  return countNumber
+
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  // Função que determina qual gato chega primeiro ao rato
+  let catPosition1 = cat1;
+  let catPosition2 = cat2;
+  let mousePostion = mouse;
+
+  if (catPosition1 + mousePostion === mousePostion && catPosition2 - mousePostion === mousePostion){
+    return 'os gatos trombam e o rato foge';
+  }else if(catPosition2 < catPosition1){
+    return 'cat2';
+  }else {
+    return 'cat1';
+  }
+
 }
 
 // Desafio 8
