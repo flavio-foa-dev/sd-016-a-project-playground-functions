@@ -62,13 +62,22 @@ function generatePhoneNumber(numeros) {
   }
 }
 
-console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]))
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA,lineB,lineC) {
   // seu código aqui
+  var armazena_lineB_menos_lineC=lineB-lineC;
+  if(armazena_lineB_menos_lineC<0){
+    armazena_lineB_menos_lineC*=-1
+  }
+  if(lineA<lineB+lineC && lineA>armazena_lineB_menos_lineC){
+    return true  
+  }else{
+    return false
+  }
 }
 
+console.log(triangleCheck(10,14,8))
 // Desafio 13
 function hydrate() {
   // seu código aqui
