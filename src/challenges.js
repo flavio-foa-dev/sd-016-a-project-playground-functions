@@ -55,7 +55,6 @@ function highestCount(numbersArray) {
   let sumhigherNumber = 0;
   let number1 = 0;
   let number2 = 0;
-  let sumhigherNumber = 0;
 
   for (let index=0; index <numbersArray.length; index+=1){ 
     let number1 = numbersArray[index];
