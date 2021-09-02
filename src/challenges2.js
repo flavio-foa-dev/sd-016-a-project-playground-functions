@@ -68,8 +68,19 @@ function generatePhoneNumber( number ) { //(51)12345-6789
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck( lineA, lineB, lineC ) {
+//   Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
+
+  if (( lineA < (lineB + lineC) ) && (lineA > Math.abs( lineB - lineC ))) {
+    if (( lineB < (lineA + lineC) ) && (lineB > Math.abs( lineA - lineC ))){
+      if (( lineC < (lineA + lineB) ) && (lineC > Math.abs( lineA - lineB ))){
+        return true;
+      }
+    }
+  }else{
+    return false;
+  }
+
 }
 
 // Desafio 13
