@@ -32,7 +32,7 @@ function concatName(stringArray) {
   // função receber uma array de strings
   // retorna uma string com o formato `'ÚLTIMO ITEM, PRIMEIRO ITEM'`
   // independente do tamanho da array
-  let space = ' ';
+  let space = ',';
   let lastIndex = stringArray.length - 1;
   let stringConcat = stringArray[lastIndex] +space+ stringArray[0];
   return stringConcat;
@@ -94,8 +94,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(fizzBuzzArray) {
+  // divisível por 3 "fizz"
+  // divisível por 5 "buzz"
+  // divisível por 3 e 5 "fizzBuzz"
+  // não divisível por 3 nem por 5 "bug!"
+  let resultArray = [];
+  for (let index=0; index<(fizzBuzzArray.length+1); index=+1){
+    if (fizzBuzzArray[index] % 3 === 0){
+      resultArray.push = ("fizz");
+    }else if (fizzBuzzArray[index] % 5 === 0){
+      resultArray.push = ("buzz")
+    }else if ((fizzBuzzArray[index] % 5 === 0) && (fizzBuzzArray[index] % 3 === 0)){
+      resultArray.push = ("fizzBuzz")
+    }else {
+      resultArray.push = ("bug!")
+    }
+  return resultArray
 }
 
 // Desafio 9
