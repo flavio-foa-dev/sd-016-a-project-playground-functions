@@ -19,14 +19,14 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(names) {
   let result1;
-  let result2;
+  let result2 = ', ';
   if (names.length === 2) {
     result1 = [names[0], names[1]];
-    return `${result1[0]},   ${result2[1]}`;
+    return `${result1[0]}, ${result2[1]}`;
   }
   result2 = names.shift();
   result1 = names.pop();
-  return `${result1},   ${result2}`;
+  return `${result1}, ${result2}`;
 }
 
 // Desafio 5
@@ -54,10 +54,17 @@ function highestCount(numbers) {
   return sameNumber;
 }
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distance1 = Math.abs(mouse - cat1);
+  let distance2 = Math.abs(mouse - cat2);
+  if (distance1 < distance2) {
+    return 'cat1';
+  }
+  if (distance1 === distance2) {
+    return 'os gatos trombam e o rato foge';
+  }
+  return 'cat2';
 }
-
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
