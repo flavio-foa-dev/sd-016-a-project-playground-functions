@@ -69,8 +69,30 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(a) {
   // seu código aqui
+  // percorrer array com o for
+  //divisivel apenas por 3, retorne 'fizz'
+  //divisivel apenas por 5, retorne 'buzz'
+  //por 3 e por 5, 'fizzBuzz'
+  //nem por 3 nem por 5, 'bug!'
+  let mensagem = [];
+  for (let index = 0; index < a.length; index += 1) {
+    
+    if (a[index] % 3 === 0 && a[index] % 5 === 0){
+      mensagem.push('fizzBuzz');
+
+    } else if (a[index] % 3 === 0 && a[index] % 5 !== 0) {
+      mensagem.push('fizz');
+
+    } else if (a[index] % 3 !== 0 && a[index] % 5 === 0) {
+      mensagem.push('buzz');
+
+    } else {
+      mensagem.push('bug!');
+    }
+   }
+   return mensagem;
 }
 
 // Desafio 9
