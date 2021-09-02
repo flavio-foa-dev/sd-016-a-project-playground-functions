@@ -82,9 +82,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(number) {
+function fizzBuzz(numbers) {
   // Crie uma função chamada `fizzBuzz`
+  let textReturn = [];
 
+  for (let mod of numbers) {
+    if (mod % 3 === 0 && mod % 5 === 0) {
+      textReturn.push('fizzBuzz');
+    } else if (mod % 3 === 0) {
+      textReturn.push('fizz');
+    } else if (mod % 5 === 0) {
+      textReturn.push('buzz');
+    } else {
+      textReturn.push('bug!');
+    }
+  }
+
+  return textReturn;
 }
 
 // Desafio 9
