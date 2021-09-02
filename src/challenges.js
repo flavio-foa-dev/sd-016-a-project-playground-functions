@@ -33,7 +33,7 @@ function concatName(stringArray) {
   // retorna uma string com o formato `'ÚLTIMO ITEM, PRIMEIRO ITEM'`
   // independente do tamanho da array
   let lastIndex = stringArray.length - 1;
-  let stringConcat = stringArray[lastIndex] + stringArray[0];
+  let stringConcat = stringArray[lastIndex] + ' '+ stringArray[0];
   return stringConcat
 }
 
@@ -53,6 +53,9 @@ function highestCount(numbersArray) {
   // let numbersArray = [0, 0, 0, 1, 1, 1, 1]; //[9, 1, 2, 3, 9, 5, 7] ; //[0, 4, 4, 4, 9, 2, 1]
   let higherAtual  = 0;
   let sumhigherNumber = 0;
+  let number1 = 0;
+  let number2 = 0;
+  let sumhigherNumber = 0;
 
   for (let index=0; index <numbersArray.length; index+=1){ 
     let number1 = numbersArray[index];
@@ -64,7 +67,6 @@ function highestCount(numbersArray) {
       let higherAtual = number2;
     }
   }
-
   for (let higherIndex=0; higherIndex <numbersArray.length; higherIndex+=1){
     if (numbersArray[higherIndex] === higherAtual) {
       let sumhigherNumber = sumhigherNumber + 1;
@@ -80,17 +82,14 @@ function catAndMouse(mouse, cat1, cat2) {
   /* let mouse = 5; */
   let positionCat1 = (mouse - cat1);
   let positionCat2 = (mouse - cat2);
-  
   if (mouse < cat1) {
     positionCat1 = (cat1 - mouse);
     //console.log(positionCat1)
   }
-
   if (mouse < cat2) {
     positionCat2 = (cat2 - mouse);
     //console.log(positionCat2);
   }
-//
   if (positionCat1===positionCat2) {
     //console.log('os gatos trombam e o rato foge')
     return 'os gatos trombam e o rato foge';
