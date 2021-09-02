@@ -74,26 +74,31 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
+
 function highestCount(array) {
 let numeroMax = array[0];
 let contador = 0;  
-  for (let index = 0; index <= array.length; index += 1) {
-		if (array[index] > numeroMax) {
-		numeroMax = array[index];
-  	} 
-}	
-  for (let i = 0; i <= array.legnth -1; i += 1) {
-  	if (numeroMax === array[i]) {
-      contador = contador + 1;
-  	}
-  }
-  return contador;
+    for (let index = 1; index <= array.length; index += 1) {
+        if (array[index] > numeroMax) {
+        numeroMax = array[index];
+    } 
+    for (let i = 0; i <= array.length -1; i += 1) {
+        if (numeroMax === array[i]) {
+		contador = contador + 1;
+	}
 }
-
+    return contador;
+}
+    
 let array4 = [9, 1, 2, 3, 9, 5, 7];
 console.log(highestCount(array4));
+let arrayA = [ 0,4,4,4,9,2,1];
+console.log(highestCount(arrayA));
+let arrayB = [0,0,0];
+console.log(highestCount(arrayB));
 
 // Desafio 7
+
 function catAndMouse(rato, gato1, gato2) {
 let resultado = [''];
 // animais em linha -> pensar num eixo X e distancia de pontos -- movimento (subtração) poderá ser negativa a depender do rato
