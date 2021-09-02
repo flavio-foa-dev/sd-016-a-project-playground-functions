@@ -66,10 +66,15 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (cat1 - mouse < cat2 - mouse) {
+  // Função Math.abs ignora sinal negativo do número armazenado na variável tornando todos os números positivos
+  // desta forma, caso as distancias entre o rato seja de 1 e -1, o código reconhece que a distância é a mesma
+
+  let distanciaCat1 = cat1 - mouse;
+  let distanciaCat2 = cat2 - mouse;
+  if (Math.abs(distanciaCat1) < Math.abs(distanciaCat2)) {
     return "cat1";
 
-  } else if (cat2 - mouse < cat1 - mouse) {
+  } else if (Math.abs(distanciaCat2) < Math.abs(distanciaCat1)) {
     return "cat2";
 
   } else {
