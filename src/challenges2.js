@@ -34,14 +34,7 @@ function generatePhoneNumber(arr) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (
-    (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) ||
-    (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) ||
-    (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB))
-  ) {
-    return true;
-  }
-  return false;
+  return (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC));
 }
 
 // Desafio 13
@@ -52,7 +45,7 @@ function hydrate(str) {
   let sum = numbers.reduce(function (prev, curr) {
     return +prev + +curr;
   });
-  //                                 Operador unário '+' serve pra transformar o operando em número
+  // Operador unário '+' serve pra transformar o operando em número
   if (sum > 1) {
     return `${sum} copos de água`;
   }
