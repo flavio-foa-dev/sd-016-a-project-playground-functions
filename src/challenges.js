@@ -165,6 +165,8 @@ function decode(arr) {
   return newArr.join('')
 }
 
+// O Desafio 9 foi feito com a explicação e ajuda do Brunão da Turma 16 - Tribo A. Ele montou o escopo do código.
+
 module.exports = {
   calcArea,
   catAndMouse,
