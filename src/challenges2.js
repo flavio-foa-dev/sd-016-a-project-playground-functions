@@ -9,8 +9,8 @@ function techList(techs, nome) {
     let Object = {};
     Object['name'] = nome;
     Object['tech'] = techs[i];
-    array.push(Object)
-  } 
+    array.push(Object);
+  }
   return array;
 }
 
