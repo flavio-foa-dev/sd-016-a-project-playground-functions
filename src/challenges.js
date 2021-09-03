@@ -48,8 +48,18 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1distance = mouse - cat1;
+  let cat2distance = mouse - cat2;
+  let winner = ''; 
+  if (Math.abs(cat1distance) < Math.abs(cat2distance)) {
+    winner = "cat1";
+  } else if (Math.abs(cat1distance) > Math.abs(cat2distance)) {
+    winner = "cat2";
+  } else if (Math.abs(cat1distance) === Math.abs(cat2distance)) {
+    winner = "os gatos trombam e o rato foge";
+  }
+  return winner;
 }
 
 // Desafio 8
@@ -77,4 +87,29 @@ module.exports = {
   highestCount,
   splitSentence,
 };
- 
+
+let mouse = 10;
+let cat1 = 3;
+let cat2 = 3;
+
+let cat1distance = cat1 - mouse;
+let cat2distance = cat2 - mouse;
+let winner = ''; 
+console.log
+if (cat1distance < cat2distance) {
+  winner = "cat1";
+} else if (cat1distance > cat2distance) {
+  winner = "cat2";
+} else if (cat1distance === cat2distance) {
+  winner = "os gatos trombam e o rato foge";
+}
+console.log(winner);
+
+let a = 0;
+let b = 3;
+let c = 2;
+
+let x = a - b;
+let y = a - c;
+
+console.log(Math.abs(b))
