@@ -2,7 +2,7 @@
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
-  }else {
+  } else {
     return false;
   }
 }
@@ -32,22 +32,37 @@ function footballPoints(wins = 3, ties = 1) {
 
 // Desafio 6
 function highestCount(numberGreat = [9, 1, 2, 3, 9, 5, 7]) {
-  // seu código aqui
+  let repeat = 0;
+  for (let i = 0; i < numberGreat.length; i += 1) {
+    if (numberGreat[i] === Math.max(numberGreat)) {
+      repeat += 1;
+    }
+  }
+  return repeat;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse = 0, cat1 = 1, cat2 = 2) {
+  if (cat1 < cat2){
+    return cat1;
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array = [2, 15, 7, 9, 45]) {
+  if ((array[0] % 3)==0){
+    return "fizzBuzz";
+  } else {
+    return "bug";
+  }
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(cript = "hi there!") {
+  cript[1] = 3;
+  cript[5] = 2;
+  cript[7] = 2;
+  return cript;
 }
 function decode() {
   // seu código aqui
@@ -65,3 +80,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
