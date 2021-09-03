@@ -41,18 +41,17 @@ function highestCount(arr) {
   }
   return sum;
 }
-// [ 2, 3 , 5 ,2 4]
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  distanceCat1 = mouse - cat1;
-  distanceCat2 = mouse - cat2;
+  distanceCat1 = (mouse - cat1);
+  distanceCat2 = (mouse - cat2);
   console.log(distanceCat1, distanceCat2);
   if (distanceCat1 < 0) {
     distanceCat1 = distanceCat1 * (-1);
   }
   if (distanceCat2 < 0) {
-      distanceCat2 = distanceCat2 * (-1);
+    distanceCat2 = distanceCat2 * (-1);
   }
   console.log(distanceCat1, distanceCat2);
   if (distanceCat2 === distanceCat1) {

@@ -21,10 +21,21 @@ function generatePhoneNumber(arr) {
   if (newString.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  newString.splice(0, 0, '(');
-  newString.splice(3, 0, ') ');
-  newString.splice(9, 0, '-');
-
+  for (let i = 0; i < newString.length; i += 1) {
+    number = newString[i];
+    sum = 0 ;
+    for (let cont = 1; cont < newString.length; cont += 1){
+      if (newString[cont] === number){
+        sum += 1;
+        if (sum >= 3){
+          return 'não é possível gerar um número de telefone com esses valores';
+        }
+      }
+    }
+  }
+newString.splice(0, 0, '(');
+newString.splice(3, 0, ') ');
+newString.splice(9, 0, '-');
   for (let index = 0; index < newString.length; index += 1) {
     if (newString[index] < 0 || newString[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
