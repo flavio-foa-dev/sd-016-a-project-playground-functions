@@ -86,14 +86,14 @@ function fizzBuzz(fizBuzzArray) {
   // divisível por 3 e 5 "fizzBuzz"
   // não divisível por 3 nem por 5 "bug!"
   for (let index = 0; index < fizBuzzArray.length; index +=1) {
-    if (fizBuzzArray[index] % 3 === 0) {
-      fizBuzzArray[index] = ('fizz');
+    if  ((fizBuzzArray[index] % 5 === 0) && (fizBuzzArray[index] % 3 === 0)){
+      fizBuzzArray[index] = 'fizzBuzz';
     } else if (fizBuzzArray[index] % 5 === 0) {
-      fizBuzzArray[index] = ('buzz');
-    } else if (fizBuzzArray[index] % 5 === 0 && fizBuzzArray[index] % 3 === 0) {
-      fizBuzzArray[index] = ('fizzBuzz');
+      fizBuzzArray[index] = 'buzz';
+    } else if (fizBuzzArray[index]  % 3 === 0)  {
+      fizBuzzArray[index] = 'fizz';
     } else {
-      fizBuzzArray[index] = ('bug!');
+      fizBuzzArray[index] = 'bug!';
     }
   }
   return fizBuzzArray;
@@ -101,15 +101,21 @@ function fizzBuzz(fizBuzzArray) {
 // Desafio 9
 function encode(arrayEncode) {
   for (let index = 0; index < arrayEncode.length; index += 1) {
+    let = ['go','trybe']
     if (arrayEncode[index] === 'a') {
       arrayEncode[index] = 1;
+      console.log(arrayEncode[index])
     } else if (arrayEncode[index] === 'e') {
+      console.log(arrayEncode[index])
       arrayEncode[index] = 2;
     } else if (arrayEncode[index] === 'i') {
+      console.log(arrayEncode[index])
       arrayEncode[index] = 3;
     } else if (arrayEncode[index] === 'o') {
+      console.log(arrayEncode[index])
       arrayEncode[index] = 4;
     } else if (arrayEncode[index] === 'u') {
+      console.log(arrayEncode[index])
       arrayEncode[index] = 5;
     }
   }
