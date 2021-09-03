@@ -1,7 +1,9 @@
 // Desafio 1
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
-    return true;
+    console.log(true);
+  } else if (param1 === false && param2 === false) {
+    console.log(false);
   }
 }
 
@@ -13,7 +15,7 @@ function calcArea(base = 10, height = 50) {
 // Desafio 3
 function splitSentence() {
   let stringExemplo = ['foguete', 'não', 'tem', 'ré'];
-  return stringExemplo;
+  console.log(stringExemplo);
 }
 
 // Desafio 4
