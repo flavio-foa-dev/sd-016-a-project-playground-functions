@@ -1,22 +1,23 @@
 // Desafio 1
 function compareTrue(um, dois) {
   let result = false;
-  if (um === true && dois === true){
-    result = true
-    }
+  if (um === true && dois === true) {
+    result = true;
+ }
   return result;
-};
+}
 
 // Desafio 2
 function calcArea(base, altura) {
-  let calculo = base*altura/2;
+  let calculo = base * altura/2;
 
   return calculo;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(text) {
+  let palavras = text.split(" ");
+  return palavras;
 }
 
 // Desafio 4
