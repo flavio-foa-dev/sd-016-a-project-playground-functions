@@ -105,6 +105,8 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(string) {
+
+// Obs: O principal erro do meu código estava sendo retornar a string sem alterações. Quando dei um Debbug, entendi que a função não estava avaliando os caracteres separadamente. Logo, pesquisei com separar os itens e encontrei ambas as tags 'split' e 'join' na biblioteca w3 School.
 let str = string.split('');
 
   for (let char in str) {
@@ -120,6 +122,7 @@ let str = string.split('');
       str[char] = '5';
     }
   }
+    
   string = str.join('');
 
   return string;
@@ -148,9 +151,6 @@ function decode(string) {
   return string;
 }
 
-string = 'hi, there!';
-console.log(encode(string));
-console.log(decode(string));
 
 module.exports = {
   calcArea,
