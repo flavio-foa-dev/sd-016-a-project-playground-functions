@@ -87,8 +87,10 @@ function highestCount(array) {
       highestNumRepeat += 1;
     }
   }
-/*================================== COMMENTED CODE =======================================
-  return array.filter(( highestCountFilter) => (highestCountFilter === highestNum)).length;*/
+/*
+================================== COMMENTED CODE =======================================
+  return array.filter(( highestCountFilter) => (highestCountFilter === highestNum)).length;
+  */
   return highestNumRepeat;
 }
 

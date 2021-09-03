@@ -4,7 +4,7 @@ function techList(arrayTechs, name) {
   const arrayTechObject = [];
   let techs;
 
-  if (arrayTechs == 0) {
+  if (arrayTechs.length === 0) {
     return `Vazio!`;
   } else {
     arrayTechSort = arrayTechs.sort();
