@@ -73,7 +73,7 @@ function fizzBuzz(valory) {
     } else if (valory[i] % 3 === 0) {
       result.push('fizz');
     } else if (valory[i] % 5 !== 0 && valory[i] % 3 !== 0) {
-      return "bug!"
+      result.push('bug !')
     }
   }
   return result
