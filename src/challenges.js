@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(value1, value2) {
   let result = null;
@@ -63,9 +62,31 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result;
 }
-
+function auxFizzBuzz(arrayNumbers) {
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] % 5 === 0) {
+      arrayNumbers[index] = 'buzz';
+    } else if (typeof (arrayNumbers[index]) === 'number') {
+      arrayNumbers[index] = 'bug!';
+    }
+  }
+  return arrayNumbers;
+}
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
+      arrayNumbers[index] = 'fizzBuzz';
+    } else if (arrayNumbers[index] % 3 === 0) {
+      arrayNumbers[index] = 'fizz';
+    }
+  }
+  arrayNumbers = auxFizzBuzz(arrayNumbers);
+  return arrayNumbers;
+}
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+/* function fizzBuzz(arrayNumbers) {
   let result = [];
   for (let number of arrayNumbers) {
     if (number % 3 === 0) {
@@ -81,7 +102,7 @@ function fizzBuzz(arrayNumbers) {
     }
   }
   return result;
-}
+} */
 
 // Desafio 9
 
