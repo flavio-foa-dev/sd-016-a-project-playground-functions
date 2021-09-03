@@ -16,17 +16,16 @@ function calcArea(base, height) {
 function splitSentence(string) {
   let space = ' ';
   let array = string.split(space);
-return array;
+  return array;
 }
-
 
 // Desafio 4
 function concatName(array) {
-let string = " ";
-for (let i = array.length - 1; i >= 0; i -= 1) {
- string = array[array.length-1] + ", " + array[0];
-}
-return string;
+  let string = ' ';
+  for (let i = array.length - 1; i >= 0; i -= 1) {
+    string = array[array.length - 1] + ", " + array[0];
+  }
+  return string;
 }
 
 // Desafio 5
@@ -40,18 +39,18 @@ function footballPoints(wins, ties) {
 function highestCount(inteiros) {
   let maior = inteiros[0];
   let indice = [];
-      for (let i = inteiros[0]; i < inteiros.length; i += 1) {
-          if (inteiros[i] > maior) {
-          maior = inteiros[i];
-      } 
+  for (let i = inteiros[0]; i < inteiros.length; i += 1) {
+    if (inteiros[i] > maior) {
+      maior = inteiros[i];
+    } 
   } 
-      for (let i = inteiros[0]; i < inteiros.length; i += 1) {
-      if (inteiros[i] === maior) {
+  for (let i = inteiros[0]; i < inteiros.length; i += 1) {
+    if (inteiros[i] === maior) {
       indice.push(maior);
+    }
   }
-      }
-          return indice.length; 
-  }
+  return indice.length; 
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -69,7 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let resultFizzBuzz = [];
-  for(let i = 0; i < array.length; i += 1) {
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       resultFizzBuzz.push('fizzBuzz');  
     } else if (array[i] % 5 === 0) {
@@ -79,7 +78,7 @@ function fizzBuzz(array) {
     } else {
       resultFizzBuzz.push('bug!');
     }
-}
+  }
 return resultFizzBuzz;
 }
 // Desafio 9
@@ -87,23 +86,23 @@ function encode(string) {
   let stringEncode = [];
   for (let i = 0; i < string.length; i += 1) {
     switch (string[i]) {
-      case 'a':
-        stringEncode.push(1);
-        break;
-      case 'e':
-        stringEncode.push(2);
-        break;
-      case 'i':
-        stringEncode.push(3);
-        break;
-      case 'o':
-        stringEncode.push(4);
-        break;
-      case 'u':
-        stringEncode.push(5);
-        break;
-      default:
-        stringEncode.push(string[i])
+    case 'a':
+      stringEncode.push(1);
+      break;
+    case 'e':
+      stringEncode.push(2);
+      break;
+    case 'i':
+      stringEncode.push(3);
+      break;
+    case 'o':
+      stringEncode.push(4);
+      break;
+    case 'u':
+      stringEncode.push(5);
+      break;
+    default:
+      stringEncode.push(string[i]);
     }
   }
   return stringEncode.join('');
@@ -112,23 +111,23 @@ function decode(string) {
   let stringDecode = [];
   for (let i = 0; i < string.length; i += 1) {
     switch (string[i]) {
-      case '1':
-        stringDecode.push('a');
-        break;
-      case '2':
-        stringDecode.push('e');
-        break;
-      case '3':
-        stringDecode.push('i');
-        break;
-      case '4':
-        stringDecode.push('o');
-        break;
-      case '5':
-        stringDecode.push('u');
-        break;
-      default:
-        stringDecode.push(string[i])
+    case '1':
+      stringDecode.push('a');
+      break;
+    case '2':
+      stringDecode.push('e');
+      break;
+    case '3':
+      stringDecode.push('i');
+      break;
+    case '4':
+      stringDecode.push('o');
+      break;
+    case '5':
+      stringDecode.push('u');
+      break;
+    default:
+      stringDecode.push(string[i]);
     }
   }
   return stringDecode.join('');
