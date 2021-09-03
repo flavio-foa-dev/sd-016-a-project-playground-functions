@@ -23,7 +23,7 @@ console.log(splitSentence('go trybe'))
 
 // Desafio 4
 function concatName(array) {
-  let concat = "'" + array[array.length-1] + ', ' + array[0]+"'";
+  let concat =  array[array.length-1] + ', ' + array[0];
   return concat;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))

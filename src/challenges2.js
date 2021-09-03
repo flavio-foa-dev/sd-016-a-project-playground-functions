@@ -17,8 +17,10 @@ function techList(techs, name) {
   }
 }
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  for (let index in numbers){
+    
+  }
 }
 
 // Desafio 12
