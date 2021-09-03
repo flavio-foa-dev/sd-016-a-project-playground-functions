@@ -1,25 +1,26 @@
 // Desafio 1
-function compareTrue(num1, num2) {
-  if (num1 > 0 && num2 > 0) {
-    console.log(true);
-  }
-  else {
-    console.log(false);
+function compareTrue() {
+  //seu código aqui
+function compareTrue(value1, value2) {
+  if (value1 === true && value2 === true) {
+    return true;
+  } else {
+    return false;
   } 
 }
-compareTrue();
 
 // Desafio 2
+function calcArea() {
+  //seu código aqui
 function calcArea(base, height) {
-  let area = (base * height)/ 2;
-  console.log(area);
+  let area = (base * height) / 2;
+  return area;
 }
-calcArea();
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(){
+  //seu código aqui
+  }
 
 // Desafio 4
 function concatName() {
