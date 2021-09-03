@@ -23,7 +23,7 @@ function concatName(arr) {
   return result.join(', ');
 }
 // Desafio 5
-const footballPoints = (wins, ties) => ((wins*3) + (ties*1))
+const footballPoints = (wins, ties) => ((wins*3) + (ties*1));
 // Desafio 6
 function highestCount(arr) {
   let maxNumber = 0;
@@ -85,7 +85,6 @@ function fizzBuzz(arr) {
 // Desafio 9
 function encode(str) {
   let newString = str.split('');
-
   for (let index = 0; index < newString.length; index++) {
     if (newString[index] === 'a') {
       newString[index] = 1;

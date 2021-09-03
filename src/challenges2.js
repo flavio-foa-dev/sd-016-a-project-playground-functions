@@ -1,15 +1,21 @@
 // Desafio 10
-function techList(tecnol) {
-let newObj = {};
-  if (tecnol.length === 0) {
-    return 'Vazio!';
-  } else {
-    for ( let index = 0; index < tecnol.length; index++ ) {
-
-    }
+function techList(tecnol, name) {
+  let newObj = [];
+  if(tecnol.length === 0){
+    return "Vazio!"
   }
-}
-
+    tecnol.sort();
+    for(let elem of tecnol) {
+      let outputObj = {
+        tech: elem,
+        name: name
+      }
+      newObj.push(outputObj);
+    }
+    return newObj;
+  }
+  
+ 
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
@@ -23,7 +29,6 @@ function triangleCheck() {
 // Desafio 13
 
 function hydrate(str) {
-  debugger
   let newStr = str.split('');
   let counter = 0;
 
