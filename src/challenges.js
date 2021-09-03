@@ -32,7 +32,7 @@ function concatName(stringArray) {
   // função receber uma array de strings
   // retorna uma string com o formato `'ÚLTIMO ITEM, PRIMEIRO ITEM'`
   // independente do tamanho da array
-  let space = ',';
+  let space = ', ';
   let lastIndex = stringArray.length - 1;
   let stringConcat = stringArray[lastIndex] +space+ stringArray[0];
   return stringConcat;
@@ -47,34 +47,8 @@ function footballPoints(wins,ties) {
   return spotsTime;
 }
 
-// Desafio 6
-// função recebe uma array de números
-// retorna a quantidade de vezes que o maior deles se repete.
-// let numbersArray = [0, 0, 0, 1, 1, 1, 1]; //[9, 1, 2, 3, 9, 5, 7] ; //[0, 4, 4, 4, 9, 2, 1]
-function highestCount(numbersArray) {
-  let higherAtual = 0;
-  let sumhigherNumber = 0;
-  for (let index=0; index <numbersArray.length; index+=1){
-    if ((numbersArray[index] > numbersArray[index+1]) && (numbersArray[index] > higherAtual)){
-      let higherAtual = numbersArray[index];
-    }else if ((numbersArray[index+1] > numbersArray[index]) && (numbersArray[index+1] > higherAtual)){
-        let higherAtual = numbersArray[index+1];
-    }
-  }
-    
-  for (let higherIndex=0; higherIndex <numbersArray.length; higherIndex+=1){
-    if (numbersArray[higherIndex] === higherAtual){
-      sumhigherNumber = sumhigherNumber + 1;
-    }
-  }
-   return sumhigherNumber;
- }
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  /* let cat2 = 2; */
-  /* let cat1 = 3; */
-  /* let mouse = 5; */
   let positionCat1 = (mouse - cat1);
   let positionCat2 = (mouse - cat2);
   if (mouse < cat1) {
@@ -83,7 +57,6 @@ function catAndMouse(mouse, cat1, cat2) {
   if (mouse < cat2){
     positionCat2 = (cat2 - mouse);
   }
-
   if (positionCat1 === positionCat2){
     return 'os gatos trombam e o rato foge';
   } else if (positionCat1 < positionCat2){
@@ -101,14 +74,14 @@ function fizzBuzz(fizzBuzzArray) {
   // não divisível por 3 nem por 5 "bug!"
   let resultArray = [];
   for (let index=0; index<fizzBuzzArray.length+1; index=+1) {
-    if (fizzBuzzArray[index] %3 === 0){
-      // resultArray.push("fizz");
-    }else if (fizzBuzzArray[index] %5 === 0){
-      // resultArray.push("buzz");
-    }else if ((fizzBuzzArray[index] %5 === 0) && (fizzBuzzArray[index] %3 === 0)){
-      // resultArray.push("fizzBuzz");
+    if (fizzBuzzArray[index]%3 === 0){
+      resultArray.push("fizz");
+    }else if (fizzBuzzArray[index]%5 === 0){
+      resultArray.push("buzz");
+    }else if ((fizzBuzzArray[index]%5 === 0) && (fizzBuzzArray[index]%3 === 0)){
+      resultArray.push("fizzBuzz");
     }else {
-      // resultArray.push("bug!");
+      resultArray.push("bug!");
     }
   }
   return resultArray;
