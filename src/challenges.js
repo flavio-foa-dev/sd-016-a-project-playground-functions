@@ -9,7 +9,9 @@ function compareTrue(value1, value2) {
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT
   */
   return !!value1 === true && !!value2 === true;
+
 }
+console.log(compareTrue(``, ""));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -75,14 +77,29 @@ function highestCount(array) {
   https://blog.betrybe.com/javascript/javascript-filter/
   https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
   DUCKETT. J. Javastript & JQuery: desenvolvimento de interfaces web interativas. ed. 1 - 2016, Alta Books. p. 536.
+
+  PS.: This was the first method I've encountered to resolve the problem. After few mentorship I've realized that there was an easier and simpler way to achieve the same result. Honorable mentions to Bê Salgueiro
    */
+  let highestNum = getHighestNumberOfArray(array);
+  let highestNumRepeat = 0;
+  for (let count = 0; count < array.length; count += 1) {
+    if ( array[count] === highestNum) {
+      highestNumRepeat += 1;
+    }
+  }
+/*================================== COMMENTED CODE =======================================
+  return array.filter(( highestCountFilter) => (highestCountFilter === highestNum)).length;*/
+  return highestNumRepeat;
+}
+
+function getHighestNumberOfArray(array) {
   let highestNum = array[0];
   for (let count = 0; array.length > count; count += 1) {
     if (highestNum < array[count]) {
       highestNum = array[count];
     }
   }
-  return array.filter(( highestCountFilter) => (highestCountFilter === highestNum)).length;
+  return highestNum;
 }
 
 // Desafio 7
@@ -99,7 +116,8 @@ function catAndMouse(mouse, cat1, cat2,) {
 // Desafio 8
 function fizzBuzz(arr) {
   /*
-
+  01 - Here we're using a FOR to run thru the entire array
+  02 - Than we use an IF-ELSE statement to compare
    */
   const arrFizz = []
   for (let index = 0; index < arr.length; index += 1) {
@@ -120,7 +138,7 @@ function fizzBuzz(arr) {
 function encode(string) {
 
   const arr = string.split(``);
-  for (let index = 0; index <= string.length; index += 1) {
+  for (let index = 0; index < string.length; index += 1) {
     if (arr[index] === `e`) {
       arr.splice(index, 1, `2`);
     } if (arr[index] === `o`) {
@@ -128,10 +146,10 @@ function encode(string) {
     } if (arr[index] === `a`) {
       arr.splice(index, 1, `1`);
     } if (arr[index] === `u`) {
-      arr.splice(index, 1, `5`);
+     arr.splice(index, 1, `5`);
     } if (arr[index] === `i`) {
-      arr.splice(index, 1, `3`);
-    }
+     arr.splice(index, 1, `3`);
+   }
   }
   return arr.join(``);
 }
@@ -139,7 +157,7 @@ function encode(string) {
 function decode(string) {
 
   const arr = string.split(``);
-  for (let index = 0; index <= string.length; index += 1) {
+  for (let index = 0; index < string.length; index += 1) {
     if (arr[index] === `2`) {
       arr.splice(index, 1, `e`);
     } if (arr[index] === `4`) {
