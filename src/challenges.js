@@ -70,14 +70,14 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrNumber) {
   for (let i = 0; i < arrNumber.length; i += 1) {
-    if (arrNumber[i] % 3 === 0 && arrNumber[i] % 5 ===0) {
-      arrNumber.fill('fizzBuzz', i, i+1);
+    if (arrNumber[i] % 3 === 0 && arrNumber[i] % 5 === 0) {
+      arrNumber.fill('fizzBuzz', i, i + 1);
     } else if (arrNumber[i] % 3 === 0) {
-      arrNumber.fill('fizz', i, i+1);
-    } else if (arrNumber[i] % 5 === 0){
-      arrNumber.fill('buzz', i, i+1);
+      arrNumber.fill('fizz', i, i + 1);
+    } else if (arrNumber[i] % 5 === 0) {
+      arrNumber.fill('buzz', i, i + 1);
     } else {
-      arrNumber.fill('bug!', i, i+1);
+      arrNumber.fill('bug!', i, i + 1);
     }
   }
   return arrNumber;
@@ -93,12 +93,12 @@ function encode(strEnc) {
   return resEnc;
 }
 function decode(strDec) {
-  let resDec = strDec.replace(/1/g, 'a')
+  let resDec = strDec.replace(/1/g, 'a');
   resDec = resDec.replace(/2/g, 'e');
   resDec = resDec.replace(/3/g, 'i');
   resDec = resDec.replace(/4/g, 'o');
   resDec = resDec.replace(/5/g, 'u');
-  return resDec
+  return resDec;
 }
 
 module.exports = {
