@@ -1,21 +1,39 @@
-function maisRepetido(numeros) {
-  let contRepetido = 0;
-  let contNumero = 0;
-  let indexNumeroRepetido = 0;
-  for (let index in numeros) {
-    let verificaNumero = numeros[index];
-    for (let index2 in numeros) {
-      if (verificaNumero === numeros[index2]) {
-        contNumero += 1;
-      }
+function generatePhoneNumber(numbers) {
+  let count = 0;
+  let countRepeat = 0;
+  for (let index in numbers){
+    for (let index3 in numbers){
+    if (numbers[index3] > 9 || numbers[index3] < 0){
+      return "não é possível gerar um número de telefone com esses valores"
+    }else if (numbers.length !== 11){
+      return "Array com tamanho incorreto."
     }
-    if (contNumero > contRepetido) {
-      contRepetido = contNumero;
-      indexNumeroRepetido = index;
     }
-    contNumero = 0;
+      let verific = numbers[index]
+      for(let index2 in numbers){
+          if (verific === numbers[index2]){
+              count +=1
+          }
+  
+  if (count > countRepeat){
+     countRepeat = count
   }
-  return numeros[indexNumeroRepetido];
+}
+  count = 0;
 }
 
-console.log(maisRepetido([1,3,4,1,1]))
+if (countRepeat >= 3){
+  return "não é possível gerar um número de telefone com esses valores"
+}else if (numbers.length !== 11){
+  return "Array com tamanho incorreto." }
+  else{
+  
+    numbers.unshift('(')
+    numbers.splice(3, 0, ')')
+    numbers.splice(4, 0, ' ')
+    numbers.splice(10, 0, '-')
+   return numbers.join('')
+  }
+}
+
+console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,-1]))
