@@ -41,17 +41,15 @@ function highestCount(numberGreat = [9, 1, 2, 3, 9, 5, 7]) {
 
 // Desafio 7
 function catAndMouse(mouse = 0, cat1 = 1, cat2 = 2) {
-  if (cat1 < cat2 && mouse === 0){
+  if (cat1 < cat2 && mouse === 0) {
     return cat1;
   }
 }
 
 // Desafio 8
 function fizzBuzz(array = [2, 15, 7, 9, 45]) {
-  if ((array[0] % 3) === 0){
+  if ((array[0] % 3) === 0) {
     return "fizzBuzz";
-  } else {
-    return "bug";
   }
 }
 
