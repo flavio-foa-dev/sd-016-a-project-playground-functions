@@ -3,9 +3,9 @@ function compareTrue(number1, number2) {
   // Compara dois valores se ambos são true;
   // Retorna com true se caso ambos sejam true e false para qualquer valor # true
   if (number1 === true && number2 === true) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 }
 // Desafio 2
@@ -14,7 +14,7 @@ function calcArea(base, height) {
   // retorna o cálculo da sua área
   // fórmula da área de um triângulo (base * altura) / 2
   let areaTriangle = (base * height) / 2;
-  return areaTriangle
+  return areaTriangle;
 }
 // Desafio 3
 function splitSentence(stringSplit) {
@@ -22,7 +22,7 @@ function splitSentence(stringSplit) {
   // retorna uma array de strings separadas por cada espaço na string original.
   let space = ' ';
   let arrayString = stringSplit.split(space);
-  return arrayString
+  return arrayString;
 }
 // Desafio 4
 function concatName(stringArray) {
@@ -42,10 +42,7 @@ function footballPoints(wins,ties) {
   let spotsTime = (wins * 3) + ties;
   return spotsTime;
 }
-/* // Desafio 6 */
-/* // função recebe uma array de números */
-/* // retorna a quantidade de vezes que o maior deles se repete. */
- //[9, 1, 2, 3, 9, 5, 7] ; //[0, 4, 4, 4, 9, 2, 1] */
+// Desafio 6
 function highestCount(numbersArray) {
   let higherAtual = numbersArray[0];
   let sumHigherNumber = 1;
@@ -84,7 +81,7 @@ function fizzBuzz(fizzBuzzArray) {
   // divisível por 3 e 5 "fizzBuzz"
   // não divisível por 3 nem por 5 "bug!"
   let resultArray = [];
-  for (let index=0; index<fizzBuzzArray.length+1; index=+1) {
+  for (let index=0; index<fizzBuzzArray.length; index=+1) {
     if (fizzBuzzArray[index] %3 === 0){
       resultArray.push('fizz');
     }else if (fizzBuzzArray[index] %5 === 0){
@@ -99,11 +96,40 @@ function fizzBuzz(fizzBuzzArray) {
 }
 
 // Desafio 9
-function encode() {
+function encode(arrayEncode) {
+  for (let index=0; index<arrayEncode.length; index=+1) {
+    if (arrayEncode[index] === 'a'){
+      arrayEncode[index] = 1;
+    }else if(arrayEncode[index] === 'e'){
+      arrayEncode[index] = 2;
+    }else if(arrayEncode[index] === 'i'){
+      arrayEncode[index] = 3;
+    }else if(arrayEncode[index] === 'o'){
+      arrayEncode[index] = 4;
+    }else if(arrayEncode[index] === 'u'){
+      arrayEncode[index] = 5;
+    }
+  }
+    //console.log(arrayEncode);
+    return arrayEncode;
 }
 
-function decode() {
-  // seu código aqui
+function decode(arrayDecode) {
+  for (let index=0; index<arrayDecode.length; index=+1) {
+    if (arrayDecode[index] ===  1){
+      arrayDecode[index] = 'a';
+    }else if(arrayEncode[index] === 2){
+      arrayDecode[index] = 'e';
+    }else if(arrayDecode[index] === 3){
+      arrayDecode[index] = 'i';
+    }else if(arrayDecode[index] === 4){
+      arrayDecode[index] = 'o';
+    }else if(arrayDecode[index] === 5){
+      arrayDecode[index] = 'u';
+    }
+  }
+    //console.log(arrayDecode);
+    return arrayDecode;
 }
 
 module.exports = {
