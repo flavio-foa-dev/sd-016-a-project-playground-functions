@@ -41,6 +41,7 @@ Caso o array venha vazio sua função deve retornar 'Vazio!'
 if (techArray.length = 0){
   console.log('Vazio!')
 } else {
+}
 
   /* for (let index=0; index<techArray.length; index=+1) {
     if (arrayDecode[index] ===  1){

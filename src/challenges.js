@@ -31,11 +31,11 @@ function concatName(stringArray) {
   // independente do tamanho da array
   let space = ', ';
   let lastIndex = stringArray.length - 1;
-  let stringConcat = stringArray[lastIndex] +space+ stringArray[0];
+  let stringConcat = stringArray[lastIndex] + space + stringArray[0];
   return stringConcat;
 }
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   // função recebe o número de vitórias(chamar `wins`)
   // e o número de empates( chamar `ties`)
   // retorna a quantidade de pontos que o time marcou em um campeonato.
@@ -44,35 +44,40 @@ function footballPoints(wins,ties) {
 }
 // Desafio 6
 function highestCount(numbersArray) {
-  /* let higherAtual = numbersArray[0];
-  let sumHigherNumber = 1;
-  for (let index=1; index<numbersArray.length; index+=1){
-    if (numbersArray[index] > higherAtual){
+  let higherAtual = numbersArray[0];
+  let sumHigherNumber = 0;
+  for (let index = 1; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] > higherAtual) {
       higherAtual = numbersArray[index];
-      sumHigherNumber = 1;
-    } else {
-      sumHigherNumber = sumHigherNumber + 1;
     }
   }
-    return sumHigherNumber;
-} */
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] === higherAtual) {
+      sumHigherNumber += 1;
+    }
+  }
+  return sumHigherNumber;
+}
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let positionCat1 = (mouse - cat1);
   let positionCat2 = (mouse - cat2);
-  if (mouse < cat1){
+  let result;
+  if (mouse < cat1) {
     positionCat1 = (cat1 - mouse);
   }
-  if (mouse < cat2){
+  if (mouse < cat2) {
     positionCat2 = (cat2 - mouse);
   }
-  if (positionCat1 === positionCat2){
-    return 'os gatos trombam e o rato foge';
-  } else if (positionCat1 < positionCat2){
-    return 'cat1';
-  } else if (positionCat2 < positionCat1){
-    return 'cat2';
+  if (positionCat1 === positionCat2) {
+    result = 'os gatos trombam e o rato foge'
+  } else if (positionCat1 < positionCat2) {
+    result = 'cat1';
+  } else if (positionCat2 < positionCat1) {
+    result = 'cat2';
   }
+  return result;
 }
 // Desafio 8
 function fizzBuzz(fizzBuzzArray) {
@@ -80,33 +85,31 @@ function fizzBuzz(fizzBuzzArray) {
   // divisível por 5 "buzz"
   // divisível por 3 e 5 "fizzBuzz"
   // não divisível por 3 nem por 5 "bug!"
-  /* let resultArray = [];
-  for (let index=0; index<fizzBuzzArray.length; index=+1) {
-    if (fizzBuzzArray[index] %3 === 0){
-      resultArray.push('fizz');
-    } else if (fizzBuzzArray[index] %5 === 0){
-      resultArray.push('buzz');
-    } else if ((fizzBuzzArray[index] %5 === 0) && (fizzBuzzArray[index] %3 === 0)){
-      resultArray.push('fizzBuzz');
+  for (let index = 0; index < fizzBuzzArray.length; index = +1) {
+    if (fizzBuzzArray[index] % 3 === 0) {
+      fizzBuzzArray[index] = ('fizz');
+    } else if (fizzBuzzArray[index] % 5 === 0) {
+      fizzBuzzArray[index] = ('buzz');
+    } else if ((fizzBuzzArray[index] % 5 === 0) && (fizzBuzzArray[index] % 3 === 0)) {
+      fizzBuzzArray[index] = ('fizzBuzz');
     } else {
-      resultArray.push('bug!');
+      fizzBuzzArray[index] = ('bug!');
     }
   }
-  return resultArray;
-} */
-
+  return fizzBuzzArray;
+}
 // Desafio 9
 function encode(arrayEncode) {
-  for (let index=0; index<arrayEncode.length; index=+1) {
-    if (arrayEncode[index] === 'a'){
+  for (let index = 0; index < arrayEncode.length; index = +1) {
+    if (arrayEncode[index] === 'a') {
       arrayEncode[index] = 1;
-    }else if (arrayEncode[index] === 'e'){
+    } else if (arrayEncode[index] === 'e') {
       arrayEncode[index] = 2;
-    }else if (arrayEncode[index] === 'i'){
+    } else if (arrayEncode[index] === 'i') {
       arrayEncode[index] = 3;
-    }else if (arrayEncode[index] === 'o'){
+    } else if (arrayEncode[index] === 'o') {
       arrayEncode[index] = 4;
-    }else if (arrayEncode[index] === 'u'){
+    } else if (arrayEncode[index] === 'u') {
       arrayEncode[index] = 5;
     }
   }
@@ -114,16 +117,16 @@ function encode(arrayEncode) {
 }
 
 function decode(arrayDecode) {
-  for (let index=0; index<arrayDecode.length; index=+1) {
-    if (arrayDecode[index] ===  1){
+  for (let index = 0; index < arrayDecode.length; index = +1) {
+    if (arrayDecode[index] === 1) {
       arrayDecode[index] = 'a';
-    }else if (arrayEncode[index] === 2){
+    } else if (arrayEncode[index] === 2) {
       arrayDecode[index] = 'e';
-    }else if (arrayDecode[index] === 3){
+    } else if (arrayDecode[index] === 3) {
       arrayDecode[index] = 'i';
-    }else if (arrayDecode[index] === 4){
+    } else if (arrayDecode[index] === 4) {
       arrayDecode[index] = 'o';
-    }else if (arrayDecode[index] === 5){
+    } else if (arrayDecode[index] === 5) {
       arrayDecode[index] = 'u';
     }
   }
