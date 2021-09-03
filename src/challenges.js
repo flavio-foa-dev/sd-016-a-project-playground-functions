@@ -86,7 +86,7 @@ function fizzBuzz(fizBuzzArray) {
   // divisível por 3 e 5 "fizzBuzz"
   // não divisível por 3 nem por 5 "bug!"
   for (let index = 0; index < fizBuzzArray.length; index +=1) {
-    if  ((fizBuzzArray[index] % 5 === 0) && (fizBuzzArray[index] % 3 === 0)){
+    if  (fizBuzzArray[index] % 5 === 0 && fizBuzzArray[index] % 3 === 0){
       fizBuzzArray[index] = 'fizzBuzz';
     } else if (fizBuzzArray[index] % 5 === 0) {
       fizBuzzArray[index] = 'buzz';
@@ -99,9 +99,19 @@ function fizzBuzz(fizBuzzArray) {
   return fizBuzzArray;
 }
 // Desafio 9
-function encode(arrayEncode) {
+/* var str1 = 'A manhã está sobre nós', // o tamanho de str1 é 22
+    str2 = str1.slice(3, 10),
+    str3 = str1.slice(2, -2),
+    str4 = str1.slice(13),
+    str5 = str1.slice(22);
+console.log(str2); // retorna 'anhã es'
+console.log(str3); // retorna 'manhã está sobre n'
+console.log(str4); // retorna 'sobre nós'
+console.log(str5); // retorna <empty string> */
+
+function encode(stringEncode) {
+ /*  let arrayEncode = 'go trybe'
   for (let index = 0; index < arrayEncode.length; index += 1) {
-    let = ['go','trybe']
     if (arrayEncode[index] === 'a') {
       arrayEncode[index] = 1;
       console.log(arrayEncode[index])
@@ -119,10 +129,10 @@ function encode(arrayEncode) {
       arrayEncode[index] = 5;
     }
   }
-  return arrayEncode;
+  return stringEncode;*/
 }
-
-function decode(arrayDecode) {
+function decode() {
+/*function decode(arrayDecode) {
   for (let index = 0; index < arrayDecode.length; index += 1) {
     if (arrayDecode[index] === 1) {
       arrayDecode[index] = 'a';
@@ -137,8 +147,8 @@ function decode(arrayDecode) {
     }
   }
   //console.log(arrayDecode);
-  return arrayDecode;
-}
+  return arrayDecode;*/
+} 
 
 module.exports = {
   calcArea,
