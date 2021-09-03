@@ -65,14 +65,14 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(valory) {
   let result = [];
-  for (let counter = 0; counter < valory.length; counter += 1) {
-    if (valory[counter] % 3 === 0 && valory[counter] % 5 === 0) {
+  for (let i = 0; i < valory.length; i += 1) {
+    if (valory[i] % 3 === 0 && valory[i] % 5 === 0) {
       result.push('fizzBuzz');
-    } else if (valory[counter] % 5 === 0) {
+    } else if (valory[i] % 5 === 0) {
       result.push('buzz');
-    } else if (valory[counter] % 3 === 0) {
+    } else if (valory[i] % 3 === 0) {
       result.push('fizz');
-    } else if (valory[couter] % 5 !== 0 && valory[index] % 3 !== 0) {
+    } else if (valory[i] % 5 !== 0 && valory[i] % 3 !== 0) {
       return "bug!"
     }
   }
