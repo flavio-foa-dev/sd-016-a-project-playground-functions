@@ -73,8 +73,12 @@ function fizzBuzz(numbers) {
 
 function isVowel(letter) {
   const vowels = ['a', 'e', 'i', 'o', 'u'];
-  if (vowels.includes(letter) === true) return true;
-  return false;
+  return vowels.includes(letter);
+}
+
+function isNumber(char) {
+  const numbers = ['1', '2', '3', '4', '5'];
+  return numbers.includes(char);
 }
 
 function changeVowels(letter) {
@@ -89,6 +93,18 @@ function changeVowels(letter) {
   return dictionary[letter];
 }
 
+function changeNumbers(char) {
+  const dictionary = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+
+  return dictionary[char];
+}
+
 function encode(text) {
   for (let i = 0; i < text.length; i += 1) {
     if (isVowel(text.charAt(i)) === true) {
@@ -98,8 +114,14 @@ function encode(text) {
 
   return text;
 }
-function decode() {
-  // seu código aqui
+function decode(text) {
+  for (let i = 0; i < text.length; i += 1) {
+    if (isNumber(text.charAt(i)) === true) {
+      text = text.replace(text.charAt(i), changeNumbers(text.charAt(i)));
+    }
+  }
+
+  return text;
 }
 
 module.exports = {
