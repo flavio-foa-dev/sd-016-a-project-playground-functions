@@ -49,12 +49,15 @@ function catAndMouse(mouse, cat1, cat2) {
   else return 'cat2';
   
 }
-console.log(catAndMouse(1,2,1));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(x) {
+  for(let y of x){
+    if(y % 3 === 0) return 'fizz';
+    else if(y % 5 === 0) return 'buzz';
+  }
 }
+console.log(catAndMouse(1,2,1));
 
 // Desafio 9
 function encode() {
