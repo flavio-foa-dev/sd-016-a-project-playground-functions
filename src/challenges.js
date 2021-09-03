@@ -83,10 +83,10 @@ function fizzBuzz(inputArray) {
     } else if ( iputArray[i] % 5 === 0) {
       returnArray.push('buzz');
     } else {
-      returnArray.push('bug!'); 
-      // o numero 7 nao passa aqui
+      returnArray.push('bug!'); // o numero 7 nao passa aqui
     }
   }
+
   return returnArray;
 }
 let meuTeste = [2, 15, 7, 9, 45];
