@@ -78,19 +78,16 @@ function fizzBuzz(numbers) {
     } else if (numbers[count] % 15 === 0) {
       output.push('fizzBuzz');
     } else {
-      output.push('bug!'); 
+      output.push('bug!');
     }
   }
   return output;
 }
-//console.log(fizzBuzz([2, 15, 7, 9, 45])); // bug, fizzbuzz, bug, fizz, fizzbuzz
 
 // Desafio 9
 function encode() {
-  // seu código aqui
 }
 function decode() {
-  // seu código aqui
 }
 
 module.exports = {
@@ -105,4 +102,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
