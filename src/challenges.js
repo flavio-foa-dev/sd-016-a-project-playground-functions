@@ -132,6 +132,7 @@ function encode(stringEncode) {
   return stringEncode;*/
 }
 function decode() {
+//  
 /*function decode(arrayDecode) {
   for (let index = 0; index < arrayDecode.length; index += 1) {
     if (arrayDecode[index] === 1) {
