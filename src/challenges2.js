@@ -36,6 +36,7 @@ function generatePhoneNumber(arr) {
 newString.splice(0, 0, '(');
 newString.splice(3, 0, ') ');
 newString.splice(9, 0, '-');
+
   for (let index = 0; index < newString.length; index += 1) {
     if (newString[index] < 0 || newString[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
