@@ -84,6 +84,7 @@ function fizzBuzz(numArray) {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
