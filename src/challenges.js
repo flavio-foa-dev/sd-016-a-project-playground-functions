@@ -67,13 +67,29 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return msg;
 }
-let result = catAndMouse(1, 4, 3);
-console.log(result);
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  let arrayreturn = [];
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    let divisionFor3 = arrayNumbers[i] % 3;
+    let divisionFor5 = arrayNumbers[i] % 5;
+    let word = 'bug!';
+    if (divisionFor5 === 0) {
+      if (divisionFor3 === 0) {
+        word = 'fizzBuzz';
+      } else {
+        word = 'buzz';
+      }
+    } else if (divisionFor3 === 0) {
+      word = 'fizz';
+    }
+    arrayreturn.push(word);
+  }
+  return arrayreturn;
 }
+let result = fizzBuzz([2, 15, 7, 9, 45]);
+console.log(result);
 
 // Desafio 9
 function encode() {
