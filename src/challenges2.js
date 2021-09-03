@@ -17,32 +17,31 @@ function techList(array, name) {
 function repeatCount(array) {
   let unique = Array.from(new Set(array));
   let lastResult = 0;
-  for (let elem of unique) {
+  unique.forEach((uni) => {
     let result = 0;
-    for (let num of array) {
-      if (elem === num) {
+    array.forEach((num) => {
+      if (num === uni) {
         result += 1;
       }
-    }
+    });
     if (result > lastResult) {
       lastResult = result;
     }
-  }
+  });
   return lastResult;
 }
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  const Numb = array;
-  if (Numb.length !== 11) {
+  if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   let result = '(';
-  for (let i = 0; i < Numb.length; i += 1) {
-    if (Numb[i] > 9 || Numb[i] < 0 || repeatCount(Numb) >= 3) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] > 9 || array[i] < 0 || repeatCount(array) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    result += Numb[i];
+    result += array[i];
     if (i === 1) {
       result += ') ';
     }
