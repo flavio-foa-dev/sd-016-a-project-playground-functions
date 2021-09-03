@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
-    console.log(true);
-  } else if (param1 === false && param2 === false) {
-    console.log(false);
+    return true;
+  } else  {
+    return false;
   }
 }
 
@@ -13,9 +13,8 @@ function calcArea(base = 10, height = 50) {
 }
 
 // Desafio 3
-function splitSentence() {
-  let stringExemplo = ['foguete', 'não', 'tem', 'ré'];
-  console.log(stringExemplo);
+function splitSentence(stringExemplo = ['foguete', 'não', 'tem', 'ré']) {
+  return stringExemplo;
 }
 
 // Desafio 4
@@ -50,13 +49,13 @@ function catAndMouse(mouse = 0, cat1 = 1, cat2 = 2) {
 
 // Desafio 8
 function fizzBuzz(array = [2, 15, 7, 9, 45]) {
-  if ((array[0] % 3) === 0) {
-    return ("fizzBuzz");
+  if ((array[0] % 3) === 0){
+    return "fizzBuzz";
   }
 }
 
 // Desafio 9
-function encode(cript = ["hi there!"]) {
+function encode(cript = "hi there!") {
   cript[1] = 3;
   cript[5] = 2;
   cript[7] = 2;
