@@ -9,9 +9,22 @@ function generatePhoneNumber(numeros) {
 }
 
 // Desafio 12
-function triangleCheck(lado1,lado2,lado3) {
-  
-} 
+function triangleCheck(lado1, lado2, lado3) {
+  let resposta1 = false;
+     
+  // function check1 (lineA, lineB, lineC) {
+  // let resposta1;
+  if (lineA < lineB + lineC || lineB < lineA + lineC || lineC < lineA + lineB || lineA > Math.abs(lineB - lineC) || lineB > Math.abs(lineA - lineC) || lineC > Math.abs(lineA - lineB)        
+      ) {
+      resposta1 = true;
+  } else {
+      resposta1 = false
+  }
+  return resposta1;
+}
+  console.log(triangleCheck(10, 14, 8));
+  console.log(triangleCheck(2, 3, 4));
+  console.log(triangleCheck(16, 20, 30));
 
 // Desafio 13
 function hydrate(string) {     
