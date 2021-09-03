@@ -49,12 +49,12 @@ function catAndMouse(mouse = 0, cat1 = 1, cat2 = 2) {
 // Desafio 8
 function fizzBuzz(array = [2, 15, 7, 9, 45]) {
   if ((array[0] % 3) === 0) {
-    return "fizzBuzz";
+    return ("fizzBuzz");
   }
 }
 
 // Desafio 9
-function encode(cript = "hi there!") {
+function encode(cript = ["hi there!"]) {
   cript[1] = 3;
   cript[5] = 2;
   cript[7] = 2;
