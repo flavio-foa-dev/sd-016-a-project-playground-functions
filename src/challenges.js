@@ -47,9 +47,17 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  switch(x) {
-    
+function fizzBuzz(input) {
+  for(let index = 0; index <= input.length; index++) {
+    if (index % 15 === 0) {
+      return("FizzBuzz");
+  } else if (index % 5 === 0) {
+      return("Buzz");
+  } else if (index % 3 === 0) {
+      return("Fizz");
+  } else {
+      return("bug!");
+    }
   }
 }
 
