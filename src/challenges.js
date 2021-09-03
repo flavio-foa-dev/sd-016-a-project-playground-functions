@@ -78,6 +78,7 @@ function fizzBuzz(value) {
   return result;
 }
 // Desafio 9
+/// Desafio cumprido com a Ajuda de vídeo no canal da Trybe sobre O que é JavaScript REPLACE? https://youtu.be/UShV_TFxs_A
 function encode(phrase) {
   let phraseEncode = phrase.replace(/a/g, '1');
   let phraseEncode2 = phraseEncode.replace(/e/g, '2');
