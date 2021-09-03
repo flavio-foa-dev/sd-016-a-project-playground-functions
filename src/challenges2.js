@@ -42,9 +42,17 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-
+function triangleCheck(lineA, lineB, lineC) {
+  let array = [lineA, lineB, lineC];
+  for (let index = 0; index < array.length; index++) {
+    let array2 = array.splice(index);
+    if (array[index] > array2.reduce((total, currentElement) => total + currentElement)) {
+      return (false);
+    }
+  }
 }
+
+console.log(triangleCheck(10, 2, 3))
 
 // Desafio 13
 function hydrate() {
