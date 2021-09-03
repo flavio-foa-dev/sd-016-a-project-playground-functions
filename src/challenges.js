@@ -41,10 +41,10 @@ function highestCount(arrayNumbers) {
   let repetitions = 0;
   for (let i = 0; i < arrayNumbers.length; i += 1) {
     if (arrayNumbers[i] > highestNumber) {
-      highestNumber = arrayNumbers[i]
-    }
-    if (arrayNumbers[i] == highestNumber)
-      repetitions += 1
+      highestNumber = arrayNumbers[i];
+      repetitions = 1;
+    } else if (arrayNumbers[i] === highestNumber)
+      repetitions += 1;
   }
   return repetitions;
 }
