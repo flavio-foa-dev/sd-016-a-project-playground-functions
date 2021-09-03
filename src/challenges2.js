@@ -1,8 +1,8 @@
 // Desafio 10
-function techList(arr = ["React", "Jest", "HTML", "CSS", "JavaScript"], name) {
+function techList(arr = ["React", "Jest", "HTML", "CSS", "JavaScript"], name = "Patrick") {
   obj1 = {
-    tech: "",
-    name: ""
+    tech: arr,
+    name: name
   }
 }
 
@@ -30,11 +30,11 @@ function hydrate() {
     agua = 1;
     return agua +':'+ "copo de água";
   }
-  else if (cachaca === 1 | ceveja === 5 | vinho === 1) {
+  else if (cachaca === 1 && ceveja === 5 && vinho === 1) {
     agua = 7;
     return agua +':'+ "copos de água";
   }
-  else if (cachaca === 1 | ceveja === 5 | vinho === 1) {
+  else if (cachaca === 1 && ceveja === 5 && vinho === 1) {
     agua = 7;
     return agua +':'+ "copos de água";
   }
@@ -46,4 +46,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-

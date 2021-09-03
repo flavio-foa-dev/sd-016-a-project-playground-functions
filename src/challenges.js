@@ -2,14 +2,12 @@
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
-  } else {
-    return false;
   }
 }
 
 // Desafio 2
 function calcArea(base = 10, height = 50) {
-  return (base * altura) / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -20,7 +18,7 @@ function splitSentence() {
 
 // Desafio 4
 function concatName(param = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
-  let firstLast = param[param.length -1] + param[0];
+  let firstLast = param[param.length - 1] + param[0];
   return firstLast;
 }
 
@@ -43,14 +41,14 @@ function highestCount(numberGreat = [9, 1, 2, 3, 9, 5, 7]) {
 
 // Desafio 7
 function catAndMouse(mouse = 0, cat1 = 1, cat2 = 2) {
-  if (cat1 < cat2){
+  if (cat1 < cat2 && mouse === 0){
     return cat1;
   }
 }
 
 // Desafio 8
 function fizzBuzz(array = [2, 15, 7, 9, 45]) {
-  if ((array[0] % 3)==0){
+  if ((array[0] % 3) === 0){
     return "fizzBuzz";
   } else {
     return "bug";
@@ -80,4 +78,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
