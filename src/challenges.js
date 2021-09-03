@@ -10,27 +10,32 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
+
 // Desafio 3
 function splitSentence(frase) {
-  return frase.split(" ");
+  return frase.split(" ")
 }
 
 // Desafio 4
 function concatName(palavras) {
   // seu código aqui
   return palavras[palavras.length - 1] + ", " + palavras[0];
-} 
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
 }
+
+// Desafio 5
+function footballPoints(wins, ties) {
+  // seu código aqui
+  return (wins * 3) + ties;
+}
+
+
 
 // Desafio 6
 function highestCount() {
   // seu código aqui
 }
 
-// Desafio 7
+//
 function catAndMouse() {
   // seu código aqui
 }
@@ -60,3 +65,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
