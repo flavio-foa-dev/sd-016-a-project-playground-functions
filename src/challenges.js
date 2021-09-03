@@ -19,8 +19,11 @@ function splitSentence(string) {
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(Array) {
+  for (let i = 0; i < Array.length; i += 1){
+    Array = Array[Array.length - 1] + ', ' + Array[0];
+    return Array
+  }
 }
 
 // Desafio 5
