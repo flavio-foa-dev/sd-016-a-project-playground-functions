@@ -1,15 +1,17 @@
 // Desafio 1
 function compareTrue(um, dois) {
-  let result = false
-if( um === true && dois === true){
-   result = true
-  }
-  return result
-}
-compareTrue(true, true)
+  let result = false;
+  if (um === true && dois === true){
+    result = true
+    }
+  return result;
+};
+
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, altura) {
+  let calculo = base*altura/2;
+
+  return calculo;
 }
 
 // Desafio 3
