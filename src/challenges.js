@@ -38,8 +38,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
+  let biggestNumber = numbers[0];
+  let count = 1;
+  for (let index = 1; index < numbers.length; index += 1) {
+    if (numbers[index] > biggestNumber) {
+      biggestNumber = numbers[index];
+      count = 1;
+    } else if (numbers[index] === biggestNumber) {
+      count += 1;
+    }
+  }
+  return count;
 }
+// A cada repetição do Loop, irá verificar se o número percorrido no array e maior que o maior numero inicializado, se verdadeiro ele armazena na variável count.
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -58,21 +70,20 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let output = [];
-for (let count = 0; count < numbers.length; count += 1) {
-  if (numbers[count] % 3 === 0 && numbers[count] % 5 !== 0) {
-    output.push('fizz');
+  for (let count = 0; count < numbers.length; count += 1) {
+    if (numbers[count] % 3 === 0 && numbers[count] % 5 !== 0) {
+      output.push('fizz');
     } else if (numbers[count] % 5 === 0 && numbers[count] % 3 !== 0) {
       output.push('buzz');
     } else if (numbers[count] % 15 === 0) {
       output.push('fizzBuzz');
     } else {
-      output.push('bug!');
+      output.push('bug!'); 
     }
   }
   return output;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45])); // bug, fizzbuzz, bug, fizz, fizzbuzz
-console.log(15 % 3);
+//console.log(fizzBuzz([2, 15, 7, 9, 45])); // bug, fizzbuzz, bug, fizz, fizzbuzz
 
 // Desafio 9
 function encode() {
@@ -94,3 +105,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
