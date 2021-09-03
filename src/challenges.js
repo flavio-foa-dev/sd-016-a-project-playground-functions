@@ -53,13 +53,26 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return resultado;
 }
-
-console.log(catAndMouse(1, 0, 2));
+// utilizacao do Math.abs para obter o numero absoluto das operacoes dentro do if.(Dica Slack)
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let output = [];
+for (let count = 0; count < numbers.length; count += 1) {
+  if (numbers[count] % 3 === 0 && numbers[count] % 5 !== 0) {
+    output.push('fizz');
+    } else if (numbers[count] % 5 === 0 && numbers[count] % 3 !== 0) {
+      output.push('buzz');
+    } else if (numbers[count] % 15 === 0) {
+      output.push('fizzBuzz');
+    } else {
+      output.push('bug!');
+    }
+  }
+  return output;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45])); // bug, fizzbuzz, bug, fizz, fizzbuzz
+console.log(15 % 3);
 
 // Desafio 9
 function encode() {
