@@ -31,25 +31,25 @@ function repeatCount(array) {
   return lastResult;
 }
 
+function checkNumber(array) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] > 9 || array[i] < 0 || repeatCount(array) >= 3) {
+      return true;
+    }
+  }
+  return false;
+}
+
 // Desafio 11
 function generatePhoneNumber(array) {
+  let string = array.join('');
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  let result = '(';
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] > 9 || array[i] < 0 || repeatCount(array) >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-    result += array[i];
-    if (i === 1) {
-      result += ') ';
-    }
-    if (i === 6) {
-      result += '-';
-    }
+  if (checkNumber(array)) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
-  return result;
+  return `(${string.slice(0, 2)}) ${string.slice(2, 7)}-${string.slice(7, 11)}`;
 }
 
 // Desafio 12
