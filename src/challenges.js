@@ -48,17 +48,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(input) {
-  for(let index = 0; index <= input.length; index++) {
-    if (index % 15 === 0) {
-      return("FizzBuzz");
-  } else if (index % 5 === 0) {
-      return("Buzz");
-  } else if (index % 3 === 0) {
-      return("Fizz");
+  let lista = []
+  for(let index = 0; index < input.length; index++) {
+    if ((input[index] % 15) == 0) {
+      lista.push('fizzBuzz');
+  } else if ((input[index]) % 5 == 0) {
+      lista.push('buzz');
+  } else if ((input[index]) % 3 == 0) {
+      lista.push('fizz');
   } else {
-      return("bug!");
+      lista.push('bug!');
     }
   }
+  return lista
 }
 
 // Desafio 9
