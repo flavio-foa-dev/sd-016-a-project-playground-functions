@@ -44,18 +44,18 @@ function footballPoints(wins,ties) {
 }
 // Desafio 6
 function highestCount(numbersArray) {
-  let higherAtual = numbersArray[0];
+  /* let higherAtual = numbersArray[0];
   let sumHigherNumber = 1;
   for (let index=1; index<numbersArray.length; index+=1){
     if (numbersArray[index] > higherAtual){
       higherAtual = numbersArray[index];
       sumHigherNumber = 1;
-    }else{
+    } else {
       sumHigherNumber = sumHigherNumber + 1;
     }
   }
-   return sumHigherNumber;
- }
+    return sumHigherNumber;
+} */
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let positionCat1 = (mouse - cat1);
@@ -70,7 +70,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   } else if (positionCat1 < positionCat2){
     return 'cat1';
-  }else if (positionCat2 < positionCat1){
+  } else if (positionCat2 < positionCat1){
     return 'cat2';
   }
 }
@@ -80,56 +80,55 @@ function fizzBuzz(fizzBuzzArray) {
   // divisível por 5 "buzz"
   // divisível por 3 e 5 "fizzBuzz"
   // não divisível por 3 nem por 5 "bug!"
-  let resultArray = [];
+  /* let resultArray = [];
   for (let index=0; index<fizzBuzzArray.length; index=+1) {
     if (fizzBuzzArray[index] %3 === 0){
       resultArray.push('fizz');
-    }else if (fizzBuzzArray[index] %5 === 0){
+    } else if (fizzBuzzArray[index] %5 === 0){
       resultArray.push('buzz');
-    }else if ((fizzBuzzArray[index] %5 === 0) && (fizzBuzzArray[index] %3 === 0)){
+    } else if ((fizzBuzzArray[index] %5 === 0) && (fizzBuzzArray[index] %3 === 0)){
       resultArray.push('fizzBuzz');
-    }else {
+    } else {
       resultArray.push('bug!');
     }
   }
   return resultArray;
-}
+} */
 
 // Desafio 9
 function encode(arrayEncode) {
   for (let index=0; index<arrayEncode.length; index=+1) {
     if (arrayEncode[index] === 'a'){
       arrayEncode[index] = 1;
-    }else if(arrayEncode[index] === 'e'){
+    }else if (arrayEncode[index] === 'e'){
       arrayEncode[index] = 2;
-    }else if(arrayEncode[index] === 'i'){
+    }else if (arrayEncode[index] === 'i'){
       arrayEncode[index] = 3;
-    }else if(arrayEncode[index] === 'o'){
+    }else if (arrayEncode[index] === 'o'){
       arrayEncode[index] = 4;
-    }else if(arrayEncode[index] === 'u'){
+    }else if (arrayEncode[index] === 'u'){
       arrayEncode[index] = 5;
     }
   }
-    //console.log(arrayEncode);
-    return arrayEncode;
+  return arrayEncode;
 }
 
 function decode(arrayDecode) {
   for (let index=0; index<arrayDecode.length; index=+1) {
     if (arrayDecode[index] ===  1){
       arrayDecode[index] = 'a';
-    }else if(arrayEncode[index] === 2){
+    }else if (arrayEncode[index] === 2){
       arrayDecode[index] = 'e';
-    }else if(arrayDecode[index] === 3){
+    }else if (arrayDecode[index] === 3){
       arrayDecode[index] = 'i';
-    }else if(arrayDecode[index] === 4){
+    }else if (arrayDecode[index] === 4){
       arrayDecode[index] = 'o';
-    }else if(arrayDecode[index] === 5){
+    }else if (arrayDecode[index] === 5){
       arrayDecode[index] = 'u';
     }
   }
-    //console.log(arrayDecode);
-    return arrayDecode;
+  //console.log(arrayDecode);
+  return arrayDecode;
 }
 
 module.exports = {
