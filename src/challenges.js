@@ -39,7 +39,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(myList) {
-
+  
   let theBiggest = -1;
   let howMany = 0
   
@@ -49,12 +49,19 @@ function highestCount(myList) {
       theBiggest = myList[index];
     }
   }
+  // return theBiggest;
 
   for (let i= 0; i < myList.length; i += 1) {
     if ( theBiggest === myList[i]) howMany += 1;
   }
   return howMany;
+
 }
+
+// let meu = [-2, -2, -1];
+// console.log (highestCount (meu) );
+
+
 
 
 // Desafio 7
