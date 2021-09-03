@@ -47,9 +47,9 @@ function concatName(array) {
 	// último e primeiro item => array.lenght -1 e array[0];  
 	// aplicar o for para percorrer os elementos do array
 	for (let i = 0; i <= array.length; i += 1) {
-	let resultado = array[array.length - 1] + ", " + array[0];  
-return resultado;
+	
 	} 
+	return array[array.length - 1] + ", " + array[0];  
 }
 
 let array1 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
@@ -122,8 +122,8 @@ console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(numeros) {
-	// variavel array fora da function para receber as respostas
-	let resposta = [];
+// variavel array fora da function para receber as respostas
+let resposta = [];
 	for (let i = 0; i < numeros.length; i += 1){
 	if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
 	resposta.push('fizzBuzz');
@@ -134,7 +134,7 @@ function fizzBuzz(numeros) {
 } else {
 	resposta.push('bug!');
 	}
-	}
+}
 	return resposta;
 }
 
@@ -147,8 +147,8 @@ console.log(fizzBuzz(array7));
 
 // Desafio 9
 function encode(string) {
-let palavras = string;
-let separacao = palavras.split('');
+// let palavras = string;
+let separacao = string.split('');
 	for (let i = 0; i < separacao.length; i += 1) {
 		if (separacao[i] === 'a') {
 		separacao[i] = '1';	
@@ -163,16 +163,17 @@ let separacao = palavras.split('');
 	} else {
 		separacao[i] = separacao[i];
 	} 
-	} let palavraNova = separacao.join('');
-	  return palavraNova;
+	} 
+	let palavraNova = separacao.join('');
+	return palavraNova;
 }
 
 let teste = 'hi there!';
 console.log(encode(teste));
 	
 function decode(string) {
-let entrada = string;
-let separacao = entrada.split('');
+
+let separacao = string.split('');
 	for (let i = 0; i < separacao.length; i += 1) {
 		if (separacao[i] === '1'){
 			separacao[i] = 'a';
