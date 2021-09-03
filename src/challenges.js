@@ -12,7 +12,6 @@ function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-
 //console.log( calcArea( 2, 2) );
 
 // Desafio 3
@@ -22,7 +21,7 @@ function splitSentence(oneString) {
   // no caso o espaço vazio (" ");
   return words;
 }
-console.log( splitSentence( "Quero saber o numero de palavras") );
+// console.log( splitSentence( "Quero saber o numero de palavras") );
 
 
 // Desafio 4
@@ -40,19 +39,23 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(myList) {
-  let theBiggest = Math.max.apply(null, myList);
+
+  let theBiggest = -1;
+  let howMany = 0
   
-  // console.log(theBiggest);
-
-
-  for (let index = 0; index < myList.length; index++) {
-    
-    
+  for (let index = 0; index < myList.length; index += 1) {
+    if (myList[index] > theBiggest) { 
+      // se o meu valor nessa posição for maior que zero
+      theBiggest = myList[index];
+    }
   }
-  // seu código aqui
-  
 
+  for (let i= 0; i < myList.length; i += 1) {
+    if ( theBiggest === myList[i]) howMany += 1;
+  }
+  return howMany;
 }
+
 
 // Desafio 7
 function catAndMouse() {
