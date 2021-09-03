@@ -8,7 +8,6 @@ function compareTrue(number1, number2) {
     return false
   }
 }
-
 // Desafio 2
 function calcArea(base, height) {
   // função recebe valor base(base) e altura(height) de um triângulo
@@ -17,7 +16,6 @@ function calcArea(base, height) {
   let areaTriangle = (base * height) / 2;
   return areaTriangle
 }
-
 // Desafio 3
 function splitSentence(stringSplit) {
   // função recebe uma string
@@ -26,7 +24,6 @@ function splitSentence(stringSplit) {
   let arrayString = stringSplit.split(space);
   return arrayString
 }
-
 // Desafio 4
 function concatName(stringArray) {
   // função receber uma array de strings
@@ -37,7 +34,6 @@ function concatName(stringArray) {
   let stringConcat = stringArray[lastIndex] +space+ stringArray[0];
   return stringConcat;
 }
-
 // Desafio 5
 function footballPoints(wins,ties) {
   // função recebe o número de vitórias(chamar `wins`)
@@ -46,12 +42,28 @@ function footballPoints(wins,ties) {
   let spotsTime = (wins * 3) + ties;
   return spotsTime;
 }
-
+/* // Desafio 6 */
+/* // função recebe uma array de números */
+/* // retorna a quantidade de vezes que o maior deles se repete. */
+ //[9, 1, 2, 3, 9, 5, 7] ; //[0, 4, 4, 4, 9, 2, 1] */
+function highestCount(numbersArray) {
+  let higherAtual = numbersArray[0];
+  let sumHigherNumber = 1;
+  for (let index=1; index<numbersArray.length; index+=1){
+    if (numbersArray[index] > higherAtual){
+      higherAtual = numbersArray[index];
+      sumHigherNumber = 1;
+    }else{
+      sumHigherNumber = sumHigherNumber + 1;
+    }
+  }
+   return sumHigherNumber;
+ }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let positionCat1 = (mouse - cat1);
   let positionCat2 = (mouse - cat2);
-  if (mouse < cat1) {
+  if (mouse < cat1){
     positionCat1 = (cat1 - mouse);
   }
   if (mouse < cat2){
@@ -65,7 +77,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   }
 }
-
 // Desafio 8
 function fizzBuzz(fizzBuzzArray) {
   // divisível por 3 "fizz"
@@ -74,14 +85,14 @@ function fizzBuzz(fizzBuzzArray) {
   // não divisível por 3 nem por 5 "bug!"
   let resultArray = [];
   for (let index=0; index<fizzBuzzArray.length+1; index=+1) {
-    if (fizzBuzzArray[index]%3 === 0){
-      resultArray.push("fizz");
-    }else if (fizzBuzzArray[index]%5 === 0){
-      resultArray.push("buzz");
-    }else if ((fizzBuzzArray[index]%5 === 0) && (fizzBuzzArray[index]%3 === 0)){
-      resultArray.push("fizzBuzz");
+    if (fizzBuzzArray[index] %3 === 0){
+      resultArray.push('fizz');
+    }else if (fizzBuzzArray[index] %5 === 0){
+      resultArray.push('buzz');
+    }else if ((fizzBuzzArray[index] %5 === 0) && (fizzBuzzArray[index] %3 === 0)){
+      resultArray.push('fizzBuzz');
     }else {
-      resultArray.push("bug!");
+      resultArray.push('bug!');
     }
   }
   return resultArray;
