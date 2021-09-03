@@ -100,12 +100,25 @@ function fizzBuzz(numbers) {
   
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let novaFrase = frase.replace(/a/gi,'1')
+  .replace(/e/gi,'2')
+  .replace(/i/gi,'3')
+  .replace(/o/gi,'4')
+  .replace(/u/gi,'5');
+  return novaFrase;
+  
 }
-function decode() {
-  // seu código aqui
-}
+function decode(decodific) {
+  let frasedecodifc = decodific.replace(/1/gi,'a')
+  .replace(/2/gi,'e')
+  .replace(/3/gi,'i')
+  .replace(/4/gi,'o')
+  .replace(/5/gi,'u');
+  return frasedecodifc;
+
+
+}  
 
 module.exports = {
   calcArea,
