@@ -5,16 +5,19 @@ function techList(list, names) {
     return 'Vazio!';
   }
 
+  let array =[]; 
   list = list.sort();
   for (let cont = 0; cont < list.length; cont += 1) {
     let object = {
-    }
+    };
 
-    object['tech'] = list[cont];
-    object['name'] = names;
+    object["tech"] = list[cont];
+    object["name"] = names;
 
-    console.log(object);
+    array[cont] = object;
   }
+
+  return array;
 }
 
 
