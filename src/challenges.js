@@ -79,25 +79,23 @@ function fizzBuzz(value) {
 }
 // Desafio 9
 function encode(phrase) {
-  for (let i = 0; i < phrase.length; i += 1) {
-    if (phrase[i] = a) {
-      phrase = 1
-    } else if (phrase[i] = e) {
-      phrase = 2
-    } else if (phrase[i] = i) {
-      phrase = 3
-    } else if (phrase[i] = o) {
-      phrase = 4
-    } else if (phrase[i] = u) {
-      phrase = 5
-    } else {
-      
-    }
-    
-  }
+  let phraseEncode = phrase.replace(/a/g, '1');
+  let phraseEncode2 = phraseEncode.replace(/e/g, '2');
+  let phraseEncode3 = phraseEncode2.replace(/i/g, '3');
+  let phraseEncode4 = phraseEncode3.replace(/o/g, '4');
+  let phraseEncode5 = phraseEncode4.replace(/u/g, '5');
+
+  return phraseEncode5;
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+  let phraseDecode = phrase.replace(/1/g, 'a');
+  let phraseDecode2 = phraseDecode.replace(/2/g, 'e');
+  let phraseDecode3 = phraseDecode2.replace(/3/g, 'i');
+  let phraseDecode4 = phraseDecode3.replace(/4/g, 'o');
+  let phraseDecode5 = phraseDecode4.replace(/5/g, 'u');
+
+  return phraseDecode5;
 }
 
 module.exports = {
