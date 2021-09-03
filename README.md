@@ -101,12 +101,8 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
     * Exemplo: `git status` (devem aparecer listados os novos arquivos em vermelho)
   * Adicione o novo arquivo ao _stage_ do Git
       * Exemplo:
-        * `git add .` (adicionando todas as mudanças - _que estavam em vermelho_ - ao stage do Git)
-        * `git status` (devem aparecer listados os arquivos em verde)
-  * Faça o `commit` inicial
-      * Exemplo:
-        * `git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'` (fazendo o primeiro commit)
-        * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
+        * `git add .` (adicionando todce before opening brace.
+Linha 59: 'higherAtual' uma mensagem tipo _nothing to commit_ )
 
 5. Adicione a sua branch com o novo `commit` ao repositório remoto
   * Usando o exemplo anterior: `git push -u origin joao-silva-playground-functions`
@@ -115,7 +111,8 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
   * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-016-a-project-playground-functions/pulls)
   * Clique no botão verde _"New pull request"_
   * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-  * Adicione uma descrição para o _Pull Request_, um título que o identifique, e clique no botão verde _"Create pull request"_. Crie da seguinte forma: `[JOAO-SILVA] Projeto Playground Functions`  
+  * Adicione uma descrição para o _Pulce before opening brace.
+Linha 59: 'higherAtual' l Request_, um título que o identifique, e clique no botão verde _"Create pull request"_. Crie da seguinte forma: `[JOAO-SILVA] Projeto Playground Functions`  
   * **Não se preocupe em preencher mais nada por enquanto!**
   * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-016-a-project-playground-functions/pulls) e confira que o seu _Pull Request_ está criado. 😀
 
@@ -248,7 +245,8 @@ Escreva uma função com o nome `concatName` que, ao receber uma array de string
 Isso quer dizer que, caso o parâmetro passado para `concatName` seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar `Paolillo, Lucas`.
 
 **O que será verificado:**
-
+ce before opening brace.
+Linha 59: 'higherAtual' 
 - Retorne 'Paolillo, Lucas' quando o parâmetro passado na funcão concatName seja ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 
 - Retorne 'ré, foguete' quando o parâmetro passado na funcão concatName seja ['foguete', 'não', 'tem', 'ré']

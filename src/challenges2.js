@@ -1,6 +1,5 @@
 // Desafio 10
 function techList(techArray, name) {
-  ``
 /* Entradas da função:
 ["React", "Jest", "HTML", "CSS", "JavaScript"]
 "Lucas"
