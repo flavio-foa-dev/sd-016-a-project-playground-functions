@@ -63,7 +63,6 @@ function testValue(element) {
 
 function fizzBuzz(numbers) {
   let text = [];
-
   for (let element of numbers) {
     text.push(testValue(element));
   }
@@ -71,8 +70,33 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+function isVowel(letter) {
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  if (vowels.includes(letter) === true) return true;
+  return false;
+}
+
+function changeVowels(letter) {
+  const dictionary = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+
+  return dictionary[letter];
+}
+
+function encode(text) {
+  for (let i = 0; i < text.length; i += 1) {
+    if (isVowel(text.charAt(i)) === true) {
+      text = text.replace(text.charAt(i), changeVowels(text.charAt(i)));
+    }
+  }
+
+  return text;
 }
 function decode() {
   // seu código aqui
