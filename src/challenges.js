@@ -9,7 +9,7 @@ function calcArea(base, height) {
 }
 // Desafio 3n
 function splitSentence(string) {
- arr = string.split(" ");
+  let arr = string.split(' ');
   return arr;
 }
 
@@ -20,7 +20,6 @@ function concatName(array) {
   let newArr = last + ', ' + first;
   return newArr;
 }
-
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -44,54 +43,50 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Dist = Math.abs(cat1 - mouse);
   let cat2Dist = Math.abs(cat2 - mouse);
-  if(cat1Dist === cat2Dist){
+  if (cat1Dist === cat2Dist) {
     return 'os gatos trombam e o rato foge';
-  } else if (cat1Dist > cat2Dist){
-    return "cat2";
-  } else if (cat1Dist < cat2Dist){
-    return "cat1";
+  } if (cat1Dist > cat2Dist) {
+    return 'cat2';
+  } if (cat1Dist < cat2Dist) {
+    return 'cat1';
   }
 }
 // Desafio 8
-function fizzBuzz(array) {
-  for (index = 0; index < array.length; index += 1){
-    if(array[index]%3 === 0 && array[index]%5 === 0){
-      array[index] = "fizzBuzz"
+function fizzBuzz (array) {
+  for (index = 0; index < array.length; index += 1) {
+    if(array[index]%3 === 0 && array[index]%5 === 0) {
+      array[index] = 'fizzBuzz'
     } else if (array[index]%3 === 0){
-      array[index] = "fizz"
+      array[index] = 'fizz'
     } else if (array[index]%5 === 0){
-      array[index] = "buzz"
+      array[index] = 'buzz'
     } else {
-      array[index] = "bug!"
+      array[index] = 'bug!'
     }
   }
-  return array
+  return array;
 }
-
 
 // Desafio 9
 function encode(str) {
-  let letras = ["a", "e", "i", "o", "u"];
-  for(let strIndex = 0; strIndex < str.length; strIndex +=1){
-    for(let letrasIndex = 0; letrasIndex < letras.length; letrasIndex += 1){
-      str = str.replace(letras[letrasIndex],  letrasIndex + 1)
+  let letras = ['a', 'e', 'i', 'o', 'u'];
+  for (let strIndex = 0; strIndex < str.length; strIndex += 1) {
+    for (let letrasIndex = 0; letrasIndex < letras.length; letrasIndex += 1) {
+      str = str.replace(letras[letrasIndex], letrasIndex + 1);
     }
   }
-  return str
+  return str;
 }
-
-
 
 function decode(str) {
-  let letras = ["a", "e", "i", "o", "u"];
-  for(let strIndex = 0; strIndex < str.length; strIndex +=1){
-    for(let letrasIndex = 0; letrasIndex < letras.length; letrasIndex += 1){
-      str = str.replace(letrasIndex + 1,letras[letrasIndex])
+  let letras = ['a', 'e', 'i', 'o', 'u'];
+  for (let strIndex = 0; strIndex < str.length; strIndex += 1) {
+    for (let letrasIndex = 0; letrasIndex < letras.length; letrasIndex += 1) {
+      str = str.replace(letrasIndex + 1, letras[letrasIndex]);
     }
   }
-  return str
+  return str;
 }
-
 
 module.exports = {
   calcArea,
