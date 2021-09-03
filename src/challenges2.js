@@ -1,28 +1,21 @@
 // Desafio 10
-function techList(arrayNomesTecsLearn, name) {
-  switch (arrayNomesTecsLearn = []) {
-    case 1:
-      return 'Vazio!'
-  }
-  let react = {
-    tech: "CSS",
-    name: "Lucas"
-  }
-  let jest = {
-    tech: "HTML",
-    name: "Lucas"
-  }
-  let html = {
-    tech: "JavaScript",
-    name: "Lucas"
-  }
-  let css = {
-    tech: "Jest",
-    name: "Lucas"
-  }
-  let javascript = {
-    tech: "React",
-    name: "Lucas"
+
+function techList(arrayTechs, name) {
+  let arrayTechsSort = [];
+  let arrayTechsObject = [];
+  let techs;
+  if (arrayTechs == 0) {
+    return "Vazio!"
+  } else {
+    arrayTechsSort = arrayTechs.sort();
+    for (index = 0; index < arrayTechs.length; index += 1){
+      techs = {
+        tech: arrayTechsSort[index],
+        name : name
+        }
+      arrayTechsObject.push(techs);
+    }
+    return arrayTechsObject;
   }
 }
 
