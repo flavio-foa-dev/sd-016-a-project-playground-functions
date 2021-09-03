@@ -2,9 +2,8 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -14,27 +13,38 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(' '); 
+  return string.split(' ');
 }
-
 
 // Desafio 4
 function concatName(Array) {
-  for (let i = 0; i < Array.length; i += 1){
+  for (let i = 0; i < Array.length; i += 1) {
     Array = Array[Array.length - 1] + ', ' + Array[0];
-    return Array
+    return Array;
   }
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let totalPoints = (wins * 3) + ties
-  return totalPoints
+  let totalPoints = (wins * 3) + ties;
+  return totalPoints;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let higherNumber = array[0];
+  let higherNumberTimes = [];
+  for (let i = array[0]; i < array.length; i += 1) {
+    if (array[i] > higherNumber) {
+      higherNumber = array[i];
+    }
+  }
+   for (let i = array[0]; i < array.length; i += 1) {
+      if (array[i] === higherNumber) {
+        higherNumberTimes.push(array[i]);
+      }
+  }
+  return higherNumberTimes.length;
 }
 
 // Desafio 7
@@ -67,3 +77,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+ 
