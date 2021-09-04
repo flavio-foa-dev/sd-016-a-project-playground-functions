@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(b1, b2) {
   if ((b1 && b2) === true) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 }
 
@@ -15,38 +15,39 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(strings){
   let array = []
-  array = strings.split('')
+  array = strings.split(' ')
   return array
 }
 
 // Desafio 4
 function concatName(strings) {
-let value = strings[strings.length - 1] + ', ' + strings[0];
+  let value = strings[strings.length - 1] + ', ' + strings[0];
   return value
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-let won = ((wins * 3) + ties)
+  let won = ((wins * 3) + ties)
   return won
 }
 
 // Desafio 6
 function highestCount(numbers) {
-let higher = numbers
+  let higher = numbers[0]
 
-for(let i=0; i < numbers.length; i += 1){
-  if(numbers[i] > higher)
-  higher = numbers[i]
-}
-value = 0
-for(let a=0; a < numbers.length; a += 1){
-  if(higher === numbers[a]){
-    value = value + 1
-    return value
+  for(let i=0; i < numbers.length; i += 1){
+    if(numbers[i] > higher)
+    higher = numbers[i]
   }
-  
-}
+  let value = 0
+  for(let a=0; a < numbers.length; a += 1){
+    if(higher === numbers[a]){
+      value = value + 1
+    }    
+  }
+  return value
+} 
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -54,10 +55,10 @@ let distance1 = cat1 - mouse
 let distance2 = cat2 - mouse
 
 if(distance1 < distance2){
-  return cat1
+  return 'cat1'
 }
 else if(distance2 < distance1){
-  return cat2
+  return 'cat2'
 } 
 else {
   return "os gatos trombam e o rato foge"
