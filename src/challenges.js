@@ -63,9 +63,26 @@ function catAndMouse(mouse, cat1, cat2) {
   if (dist1 === dist2) return 'os gatos trombam e o rato foge';
 }
 
+function IsDivisible(number) {
+  let word;
+  if (number % 15 === 0) {
+    word = 'fizzBuzz';
+  } else if (number % 5 === 0) {
+    word = 'buzz';
+  } else if (number % 3 === 0) {
+    word = 'fizz';
+  } else word = 'bug!';
+
+  return word;
+}
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let result = [];
+  for (let i = 0; i < array.length; i += 1) {
+    result.push(IsDivisible(array[i]));
+  }
+  return result;
 }
 
 // Desafio 9
