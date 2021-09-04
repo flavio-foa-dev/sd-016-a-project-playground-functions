@@ -29,11 +29,11 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+ // seu código aqui
 }
 
 // Desafio 7
-// Código em parceria com Emerson Moreiro && Filho - Tiago
+// Código em parceria com Emerson Moreira && Filho - Tiago
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = mouse - cat1;
   let distanceCat2 = mouse - cat2;
