@@ -88,8 +88,9 @@ function fizzBuzz(numbers) {
       arrayWords.push('fizz');  
     } else if (numbers[index] % 5 === 0) {
       arrayWords.push('buzz');
-    } else   
-      arrayWords.push('bug!');    
+    } else {
+      arrayWords.push('bug!');
+    }      
   }
   return arrayWords;
 }
