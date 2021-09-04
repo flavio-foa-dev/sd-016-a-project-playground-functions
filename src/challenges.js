@@ -52,14 +52,16 @@ function catAndMouse(mouse, cat1, cat2, ) {
   let discat1 = mouse - cat1 
   let discat2 = mouse - cat2
 
-  if (math.abs (discat1) === math.abs (discat2)){
+  if (Math.abs(discat1) === Math.abs(discat2)){
     return "os gatos trombam e o rato foge"
-   } else if (math.abs (discat1) > math.abs (discat2)){
+   } else if (Math.abs(discat1) < Math.abs(discat2)){
     return "cat1"
-   } else if (math.abs (discat2) > math.abs (discat1)){
+   } else if (Math.abs(discat2) < Math.abs(discat1)){
     return "cat2"
    }
 }
+
+catAndMouse (8, 5, 4)
 
 // Desafio 8
 function fizzBuzz() {
