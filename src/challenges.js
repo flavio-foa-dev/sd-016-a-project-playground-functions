@@ -54,10 +54,9 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// eslint-disable-next-line complexity
 function fizzBuzz(arrNumber) {
   const newArr = [];
-  for (let index = 0; index < arrNumber.length; index += 1) {
+  for (let index = 0; i < arrNumber.length; index += 1) {
     if (arrNumber[index] % 3 === 0 && arrNumber[index] % 5 === 0) {
       newArr.push('fizzBuzz');
     } else if (arrNumber[index] % 5 === 0) {
@@ -72,10 +71,44 @@ function fizzBuzz(arrNumber) {
 }
 
 // Desafio 9
-function encode() {
+function encode(strg) {
+  let srtgSplit = strg.split('');
+  for (let index = 0; index < strg.length; index += 1) {
+    for (let secindex = 0; secindex < strg.length; secindex += 1) {
+      if (srtgSplit[index] === 'a') {
+        srtgSplit[index] = '1';
+      } else if (srtgSplit[index] === 'e') {
+        srtgSplit[index] = '2';
+      } else if (srtgSplit[index] === 'i') {
+        srtgSplit[index] = '3';
+      } else if (srtgSplit[index] === 'o') {
+        srtgSplit[index] = '4';
+      } else if (srtgSplit[index] === 'u') {
+        srtgSplit[index] = '5';
+      }
+    }
+  }
+  return srtgSplit.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(strg) {
+  let srtgSplit = strg.split('');
+  for (let index = 0; index < strg.length; index += 1) {
+    for (let secindex = 0; secindex < strg.length; secindex += 1) {
+      if (srtgSplit[index] === '1') {
+        srtgSplit[index] = 'a';
+      } else if (srtgSplit[index] === '2') {
+        srtgSplit[index] = 'e';
+      } else if (srtgSplit[index] === '3') {
+        srtgSplit[index] = 'i';
+      } else if (srtgSplit[index] === '4') {
+        srtgSplit[index] = 'o';
+      } else if (srtgSplit[index] === '5') {
+        srtgSplit[index] = 'u';
+      }
+    }
+  }
+  return srtgSplit.join('');
 }
 
 module.exports = {
