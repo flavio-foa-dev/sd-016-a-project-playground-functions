@@ -1,5 +1,5 @@
 // Desafio 1
-// let num1 = true 
+// let num1 = true
 // let num2 = false
 function compareTrue(num1, num2) {
   if (num1 && num2 === true) {
@@ -13,7 +13,7 @@ function compareTrue(num1, num2) {
 // Desafio 2
 // let base = 3
 // let height = 4
-function calcArea(base, height) { 
+function calcArea(base, height) {
   let triangleArea = (base * height) / 2;
   return triangleArea;
 }
@@ -22,18 +22,23 @@ function calcArea(base, height) {
 
 // Desafio 3
 
-// let anyString = "Meu nome é Marcello"
+let anyString = "Meu nome é Marcello"
 function splitSentence(anyString) {
   return anyString.split(' ');
 }
-// console.log(splitSentence(anyString));
-// Consulta ao MDN 
-
+console.log(splitSentence(anyString));
+// Consulta ao MDN Referencia
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+
+// let Array = ['Lucas', 'Cassiano', 'Ferraz','Paolillo', 'Angelo']
+function concatName(Array) {
+  // let first = Array[0]
+  // let last = Array[Array.length - 1]
+  let lastFirst = (Array[Array.length - 1] + ', ' +  Array[0])
+  return lastFirst
 }
+// console.log(concatName(Array))
 
 // Desafio 5
 function footballPoints() {
