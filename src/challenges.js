@@ -21,12 +21,11 @@ function calcArea(base, height) {
 // console.log(calcArea(base, height))
 
 // Desafio 3
-
-let anyString = "Meu nome é Marcello"
+// let anyString = "Meu nome é Marcello"
 function splitSentence(anyString) {
   return anyString.split(' ');
 }
-console.log(splitSentence(anyString));
+// console.log(splitSentence(anyString));
 // Consulta ao MDN Referencia
 
 // Desafio 4
