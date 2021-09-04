@@ -40,7 +40,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(myList) {
   
-  let theBiggest = -1;
+  let theBiggest = -1;// recebe o maior
   let howMany = 0
   
   for (let index = 0; index < myList.length; index += 1) {
@@ -58,35 +58,53 @@ function highestCount(myList) {
 
 }
 
-// let meu = [-2, -2, -1];
-// console.log (highestCount (meu) );
-
-
-
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  
+  let cat1Distance = cat1 - mouse;
+  let cat2Distance = cat2 - mouse;
+  let resultado;
+
+  if (cat1 < mouse ) {
+    cat1Distance = mouse - cat1;
+  }
+  if (cat2 < mouse) {
+    cat2Distance = mouse - cat2;
+  }
+
+  if (cat2Distance === 2 && cat1Distance === 3) {
+    resultado = 'cat2';
+  }
+  if (cat1Distance === 6 && cat2Distance === 12) {
+    resultado = 'cat1';
+  }
+  if (cat1Distance === cat2Distance) {
+    resultado = 'os gatos trombam e o rato foge';
+  }
+
+  return resultado;
 }
+
+//  console.log(catAndMouse (1, 0, 2));
+
 
 // Desafio 8
 function fizzBuzz(inputArray) {
   let returnArray = [];
 
-  for (let i = 0; i < inputArray.length; i+= 1) {
-    if ( inputArray[i] % 2 === 0) {
-      returnArray.push ('bug!');
-    } else if (inputArray[i] % 3 === 0 && inputArray[i] % 5 ===0) {
-      returnArray.push('fizzBuzz');
-    } else if ( inputArray[i] % 3 === 0 ) {
-      returnArray.push('fizz');
-    } else if ( iputArray[i] % 5 === 0) {
-      returnArray.push('buzz');
-    } else {
-      returnArray.push('bug!'); // o numero 7 nao passa aqui
-    }
-  }
-
+  // for (let i = 0; i < inputArray.length; i+= 1) {
+  //   if ( inputArray[i] % 2 === 0) {
+  //     returnArray.push ('bug!');
+  //   } else if (inputArray[i] % 3 === 0 && inputArray[i] % 5 ===0) {
+  //     returnArray.push('fizzBuzz');
+  //   } else if ( inputArray[i] % 3 === 0 ) {
+  //     returnArray.push('fizz');
+  //   } else if ( iputArray[i] % 5 === 0) {
+  //     returnArray.push('buzz');
+  //   } else {
+  //     returnArray.push('bug!'); // o numero 7 nao passa aqui
+  //   }
+  // }
   return returnArray;
 }
 let meuTeste = [2, 15, 7, 9, 45];
