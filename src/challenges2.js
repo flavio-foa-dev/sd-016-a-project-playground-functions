@@ -6,10 +6,11 @@ function techList(arrayTechNames, name) {
     return "Vazio!";
   } else {    
     for (let index in arrayTechNames.sort()) {
-      arrayTech.push(technologies) = {
+      let technologies = {
         tech : arrayTech[index],
         name : name,
       }
+      arrayTech.push(technologies);
     }
   }
   return arrayTechNames;
