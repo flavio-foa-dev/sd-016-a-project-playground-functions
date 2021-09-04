@@ -106,59 +106,49 @@ function fizzBuzz(array) {
 
 // Desafio 9
 
-function compareNumberToString(array) {
-  let arrayCoded = [];
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] === '1') {
-      arrayCoded.push('a');
-    } else if (array[i] === '2') {
-      arrayCoded.push('e');
-    } else if (array[i] === '3') {
-      arrayCoded.push('i');
-    } else if (array[i] === '4') {
-      arrayCoded.push('o');
-    } else if (array[i] === '5') {
-      arrayCoded.push('u');
-    } else {
-      arrayCoded.push(array[i]);
-    }
-  }
-  return arrayCoded;
-}
-
-function compareStringToNumber(array) {
-  let arrayCoded = [];
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] === 'a') {
-      arrayCoded.push('1');
-    } else if (array[i] === 'e') {
-      arrayCoded.push('2');
-    } else if (array[i] === 'i') {
-      arrayCoded.push('3');
-    } else if (array[i] === 'o') {
-      arrayCoded.push('4');
-    } else if (array[i] === 'u') {
-      arrayCoded.push('5');
-    } else {
-      arrayCoded.push(array[i]);
-    }
-  }
-  return arrayCoded;
+function compare(word) {
+  const cryptography = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  return cryptography[word];
 }
 
 function encode(string) {
-  //  codifica
-  let array = string.split('');
-  let arrayCoded = compareStringToNumber(array);
-  return arrayCoded.join('');
+  let result = [];
+  string.split('');
+  let vogals = ['a', 'e', 'i', 'o', 'u'];
+  for (let i in string) {
+    if (vogals.includes(string[i])) {
+      result.push(compare(string[i]));
+    } else {
+      result.push(string[i]);
+    }
+  }
+  return result.join('');
+}
+
+function compare2(number) {
+  const cryptography = ['a', 'e', 'i', 'o', 'u'];
+  number = parseInt(number, 10);
+  return cryptography[number - 1];
 }
 
 function decode(string) {
-  //  decodifica
-  let array = string.split('');
-  let arrayCoded = compareNumberToString(array);
-
-  return arrayCoded.join('');
+  let result = [];
+  string.split('');
+  let numbers = ['1', '2', '3', '4', '5'];
+  for (let i in string) {
+    if (numbers.includes(string[i])) {
+      result.push(compare2(string[i]));
+    } else {
+      result.push(string[i]);
+    }
+  }
+  return result.join('');
 }
 
 module.exports = {

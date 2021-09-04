@@ -97,7 +97,7 @@ function hydrate(string) {
   matches = match(string);
 
   for (let i = 0; i < matches.length; i += 1) {
-    sum += parseInt(matches[i]);
+    sum += parseInt(matches[i], 10);
     // passa de string para number -> https://www.alura.com.br/artigos/convertendo-string-para-numero-em-javascript?gclid=Cj0KCQjwpreJBhDvARIsAF1_BU2BKYU6f6ReQl7b1z1TH6HDzqJ7xsHremu8uaTEcvL1hkzuWM9gOjYaAh1DEALw_wcB
   }
   if (sum === 1) {
