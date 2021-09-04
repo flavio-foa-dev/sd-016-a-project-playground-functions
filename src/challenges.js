@@ -3,13 +3,13 @@ function compareTrue(um, dois) {
   let result = false;
   if (um === true && dois === true) {
     result = true;
- }
+  }
   return result;
 }
 
 // Desafio 2
 function calcArea(base, altura) {
-  let calculo = base * altura/2;
+  let calculo = base * altura / 2;
 
   return calculo;
 }
@@ -21,8 +21,9 @@ function splitSentence(text) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) {
+  let nomes2 = nomes[nomes.length - 1] + ", " + nomes[0];
+  return nomes2
 }
 
 // Desafio 5
