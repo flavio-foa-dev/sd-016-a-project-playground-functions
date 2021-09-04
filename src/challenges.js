@@ -63,8 +63,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let myArray = [];
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 !== 0) { 
+      myArray.push("fizz");
+    } else if (array[index] % 5 === 0 && array[index] % 3 !== 0) {
+      myArray.push("buzz");
+    } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      myArray.push("fizzBuzz");
+    } else if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
+      myArray.push("bug!");
+    }
+  }
+  return myArray;
 }
 
 // Desafio 9
@@ -87,29 +99,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-let mouse = 10;
-let cat1 = 3;
-let cat2 = 3;
-
-let cat1distance = cat1 - mouse;
-let cat2distance = cat2 - mouse;
-let winner = ''; 
-console.log
-if (cat1distance < cat2distance) {
-  winner = "cat1";
-} else if (cat1distance > cat2distance) {
-  winner = "cat2";
-} else if (cat1distance === cat2distance) {
-  winner = "os gatos trombam e o rato foge";
-}
-console.log(winner);
-
-let a = 0;
-let b = 3;
-let c = 2;
-
-let x = a - b;
-let y = a - c;
-
-console.log(Math.abs(b))
