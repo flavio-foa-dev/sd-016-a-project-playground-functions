@@ -1,3 +1,4 @@
+/* eslint-disable prefer-template */
 // Desafio 1
 function compareTrue(a, b) {
   return (a === true && b === true);
@@ -27,8 +28,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return array[array.length - 1] + ', ' + array[0];
 }
 
 // Desafio 5
