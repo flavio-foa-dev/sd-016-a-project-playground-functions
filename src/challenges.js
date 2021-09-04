@@ -20,13 +20,15 @@ function splitSentence(stringExemplo) {
 
 // Desafio 4
 function concatName(name) {
-  let firstLast = name[name.length - 1] + name[0];
+  let first = name[0];
+  let last = name[name.length - 1]
+  let firstLast = last +", "+ first;
   return firstLast;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = wins + ties;
+  let points = wins * 3 + ties * 1;
   return points;
 }
 
@@ -80,12 +82,7 @@ function encode(cript) {
   return cript;
 }
 function decode(decrypt) {
-  decrypt = decrypt.replace(/1/g, 'a');
-  decrypt = decrypt.replace(/2/g, 'e');
-  decrypt = decrypt.replace(/3/g, 'i');
-  decrypt = decrypt.replace(/4/g, 'o');
-  decrypt = decrypt.replace(/5/g, 'u');
-  return decrypt;
+
 }
 
 module.exports = {
