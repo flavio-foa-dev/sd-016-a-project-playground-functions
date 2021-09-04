@@ -92,6 +92,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(inputArray) {
   let returnArray = [];
 
+  for (let i = 0; i < inputArray.length; i++) {
+    const element = array[i];
+    
+  }
+
   // for (let i = 0; i < inputArray.length; i+= 1) {
   //   if ( inputArray[i] % 2 === 0) {
   //     returnArray.push ('bug!');
@@ -106,6 +111,7 @@ function fizzBuzz(inputArray) {
   //   }
   // }
   return returnArray;
+  
 }
 let meuTeste = [2, 15, 7, 9, 45];
 console.log(fizzBuzz (meuTeste));
