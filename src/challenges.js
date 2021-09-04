@@ -8,29 +8,30 @@ function compareTrue(param1, param2) {
 }
 
 // Desafio 2
-function calcArea(base = 10, height = 50) {
+function calcArea(base, height) {
   return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence(stringExemplo = ['foguete', 'não', 'tem', 'ré']) {
+function splitSentence(stringExemplo) {
+  stringExemplo = stringExemplo.split(" ");
   return stringExemplo;
 }
 
 // Desafio 4
-function concatName(param = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) {
-  let firstLast = param[param.length - 1] + param[0];
+function concatName(name) {
+  let firstLast = name[name.length - 1] + name[0];
   return firstLast;
 }
 
 // Desafio 5
-function footballPoints(wins = 3, ties = 1) {
+function footballPoints(wins, ties) {
   let points = wins + ties;
   return points;
 }
 
 // Desafio 6
-function highestCount(numberGreat = [9, 1, 2, 3, 9, 5, 7]) {
+function highestCount(numberGreat) {
   let repeat = 0;
   for (let i = 0; i < numberGreat.length; i += 1) {
     if (numberGreat[i] === Math.max(numberGreat)) {
@@ -41,28 +42,50 @@ function highestCount(numberGreat = [9, 1, 2, 3, 9, 5, 7]) {
 }
 
 // Desafio 7
-function catAndMouse(mouse = 0, cat1 = 1, cat2 = 2) {
-  if (cat1 < cat2 && mouse === 0) {
-    return cat1;
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 < cat2 && mouse === mouse[0]) {
+    return 'cat2';
+  } else if (cat2 < cat1) {
+    return 'cat1';
+  } else if (cat1 === cat2) {
+    return 'gatos trombam e o rato foge'
   }
 }
 
 // Desafio 8
-function fizzBuzz(array = [2, 15, 7, 9, 45]) {
-  if ((array[0] % 3) === 0){
-    return "fizzBuzz";
+function fizzBuzz(array) {
+  let number = 0;
+  let result = [];
+  for (let i = 0; i < array.length; i++) {
+    number = array[i];
+    if (number % 3 === 0 && number % 5 === 0) {
+      result[i] = 'fizzBuzz';
+    } else if (number % 5 === 0) {
+      result[i] = 'buzz';
+    } else if (number % 3 === 0) {
+      result[i] = 'fizz';
+    } else {
+      result[i] = 'bug';
+    }
   }
 }
 
 // Desafio 9
-function encode(cript = "hi there!") {
-  cript[1] = 3;
-  cript[5] = 2;
-  cript[7] = 2;
+function encode(cript) {
+  cript = cript.replace(/a/g, '1');
+  cript = cript.replace(/e/g, '2');
+  cript = cript.replace(/i/g, '3');
+  cript = cript.replace(/o/g, '4');
+  cript = cript.replace(/u/g, '5');
   return cript;
 }
-function decode() {
-  // seu código aqui
+function decode(decrypt) {
+  decrypt = decrypt.replace(/1/g, 'a');
+  decrypt = decrypt.replace(/2/g, 'e');
+  decrypt = decrypt.replace(/3/g, 'i');
+  decrypt = decrypt.replace(/4/g, 'o');
+  decrypt = decrypt.replace(/5/g, 'u');
+  return decrypt;
 }
 
 module.exports = {
