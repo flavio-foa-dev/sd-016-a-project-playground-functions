@@ -84,16 +84,12 @@ function fizzBuzz(numbers) {
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       arrayWords.push('fizzBuzz');
-    } else
-    if (numbers[index] % 3 === 0) {
+    } else if (numbers[index] % 3 === 0) {
       arrayWords.push('fizz');  
-    } else
-    if (numbers[index] % 5 === 0) {
+    } else if (numbers[index] % 5 === 0) {
       arrayWords.push('buzz');
-    } else
-    if (numbers[index] % 3 !== 0 && numbers[index] % 5 !== 0) {
-      arrayWords.push('bug!');
-    }
+    } else   
+      arrayWords.push('bug!');    
   }
   return arrayWords;
 }
@@ -103,46 +99,47 @@ function encode(phrase) {
   // seu código aqui
   let arrayPhrase = phrase.split('');
   for (let index in phrase) {
-    if (phrase[index] === 'a'){
-      arrayPhrase[index] = 1;
-    } else
-    if (phrase[index] === 'e'){
-      arrayPhrase[index] = 2;
-    } else
-    if (phrase[index] === 'i'){
-      arrayPhrase[index] = 3;
-    } else
-    if (phrase[index] === 'o'){
-      arrayPhrase[index] = 4;
-    } else
-    if (phrase[index] === 'u'){
-      arrayPhrase[index] = 5;
-    }
+    outputNumbers(phrase, index, arrayPhrase)
   }
   return arrayPhrase.join('');
 }
 
+function outputNumbers(phrase, index, arrayPhrase) {
+  if (phrase[index] === 'a'){
+    arrayPhrase[index] = '1';
+  } else if (phrase[index] === 'e'){
+    arrayPhrase[index] = '2';
+  } else if (phrase[index] === 'i'){
+    arrayPhrase[index] = '3';
+  } else if (phrase[index] === 'o'){
+    arrayPhrase[index] = '4';
+  } else if (phrase[index] === 'u'){
+    arrayPhrase[index] = '5';
+  }
+}
+
+// Desafio 9
 function decode(phraseNumbers) {
   // seu código aqui
   let arrayPhraseNumbers = phraseNumbers.split('');
   for (let index in phraseNumbers) {
-    if (phraseNumbers[index] == 1){
-      arrayPhraseNumbers[index] = 'a';
-    } else
-    if (phraseNumbers[index] == 2){
-      arrayPhraseNumbers[index] = 'e';
-    } else
-    if (phraseNumbers[index] == 3){
-      arrayPhraseNumbers[index] = 'i';
-    } else
-    if (phraseNumbers[index] == 4){
-      arrayPhraseNumbers[index] = 'o';
-    } else
-    if (phraseNumbers[index] == 5){
-      arrayPhraseNumbers[index] = 'u';
-    }
+    outputLetters(phraseNumbers, index, arrayPhraseNumbers)
   }
   return arrayPhraseNumbers.join('');
+}
+
+function outputLetters(phraseNumbers, index, arrayPhraseNumbers) {
+  if (phraseNumbers[index] === '1'){
+    arrayPhraseNumbers[index] = 'a';
+  } else if (phraseNumbers[index] === '2'){
+    arrayPhraseNumbers[index] = 'e';
+  } else if (phraseNumbers[index] === '3'){
+    arrayPhraseNumbers[index] = 'i';
+  } else if (phraseNumbers[index] === '4'){
+    arrayPhraseNumbers[index] = 'o';
+  } else if (phraseNumbers[index] === '5'){
+    arrayPhraseNumbers[index] = 'u';
+  }
 }
 
 module.exports = {
