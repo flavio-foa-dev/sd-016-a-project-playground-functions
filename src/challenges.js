@@ -69,50 +69,44 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 
+function testDiv3(number) {
+  if (number % 3 === 0) {
+    return true;
+  }
+  return false;
+}
+
+function testDiv5(number) {
+  if (number % 5 === 0) {
+    return true;
+  }
+  return false;
+}
+
+function returnValues(arrayNumber) {
+  if (testDiv3(arrayNumber) && testDiv5(arrayNumber)) {
+    return 'fizzBuzz';
+  }
+  if (testDiv3(arrayNumber)) {
+    return 'fizz';
+  }
+  if (testDiv5(arrayNumber)) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
 function fizzBuzz(array) {
   // retorna uma palavra para um determinado caso dentro de uma array
-  let returnArray = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      returnArray.push('fizzBuzz');
-    } else if (array[i] % 3 === 0) {
-      returnArray.push('fizz');
-    } else if (array[i] % 5 === 0) {
-      returnArray.push('buzz');
-    } else {
-      returnArray.push('bug!');
-    }
+    array[i] = returnValues(array[i]);
   }
-  return returnArray;
+  return array;
 }
 
 // Desafio 9
 
-function encode(string) {
-  //codifica
-  let array = string.split('');
-  let arrayCoded = [];
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] === 'a') {
-      arrayCoded.push('1');
-    } else if (array[i] === 'e') {
-      arrayCoded.push('2');
-    } else if (array[i] === 'i') {
-      arrayCoded.push('3');
-    } else if (array[i] === 'o') {
-      arrayCoded.push('4');
-    } else if (array[i] === 'u') {
-      arrayCoded.push('5');
-    } else {
-      arrayCoded.push(array[i]);
-    }
-  }
-  arrayCoded = arrayCoded.join('');
-  return arrayCoded;
-}
-function decode(string) {
-  //decodifica
-  let array = string.split('');
+function compareNumberToString(array) {
   let arrayCoded = [];
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] === '1') {
@@ -129,8 +123,42 @@ function decode(string) {
       arrayCoded.push(array[i]);
     }
   }
-  arrayCoded = arrayCoded.join('');
   return arrayCoded;
+}
+
+function compareStringToNumber(array) {
+  let arrayCoded = [];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === 'a') {
+      arrayCoded.push('1');
+    } else if (array[i] === 'e') {
+      arrayCoded.push('2');
+    } else if (array[i] === 'i') {
+      arrayCoded.push('3');
+    } else if (array[i] === 'o') {
+      arrayCoded.push('4');
+    } else if (array[i] === 'u') {
+      arrayCoded.push('5');
+    } else {
+      arrayCoded.push(array[i]);
+    }
+  }
+  return arrayCoded;
+}
+
+function encode(string) {
+  //  codifica
+  let array = string.split('');
+  let arrayCoded = compareStringToNumber(array);
+  return arrayCoded.join('');
+}
+
+function decode(string) {
+  //  decodifica
+  let array = string.split('');
+  let arrayCoded = compareNumberToString(array);
+
+  return arrayCoded.join('');
 }
 
 module.exports = {
