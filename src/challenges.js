@@ -88,20 +88,62 @@ function fizzBuzz(array) {
     else{
       resultado.push("bug!") 
     }
-  }  
-  console.log(resultado);
+  }
+ 
   return resultado; 
 
 }
 
-fizzBuzz([9, 25])
-
 // Desafio 9
-function encode() {
+function encode(receivestring) {
   // seu código aqui
-}
-function decode() {
+  let resultado = []
+  resultado = receivestring.split("");
+  for(let index = 0; index <resultado.length; index=index+1) {
+      if(resultado[index] == "a"){
+        resultado[index]="1";
+      }
+      if(resultado[index] == "e"){
+        resultado[index]="2";
+      }
+      if(resultado[index] == "i"){
+        resultado[index]="3";
+      }
+      if(resultado[index] == "o"){
+        resultado[index]="4";
+      }
+      if(resultado[index] == "u"){
+        resultado[index]="5";
+      }
+    }
+    return resultado.join("").toString();    
+  }
+
+  encode("hi aathere!")
+
+
+function decode(receivestring) {
   // seu código aqui
+  let resultado = []
+  resultado = receivestring.split("")
+  for(let index = 0; index <resultado.length; index=index+1) {
+    if(resultado[index] == "1"){
+    resultado[index]="a";
+    }
+    if(resultado[index] == "2"){
+      resultado[index]="e";
+    }
+    if(resultado[index] == "3"){
+      resultado[index]="i";
+    }
+    if(resultado[index] == "4"){
+      resultado[index]="o";
+    }
+    if(resultado[index] == "5"){
+      resultado[index]="u";
+    }
+  }
+  return resultado.join("").toString(); 
 }
 
 module.exports = {
