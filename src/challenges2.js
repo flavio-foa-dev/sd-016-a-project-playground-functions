@@ -14,8 +14,6 @@ function techList(arrayTechNames, name) {
   }
   return arrayTech;
 }
-  
-
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -25,15 +23,11 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let compareA = Math.abs(lineB - lineC);
-  let compareB = Math.abs(lineA - lineC);
   let compareC = Math.abs(lineA - lineB);
-  if (lineA < lineB + lineC && lineA > compareA || lineB < lineA + lineC && lineB > compareB || lineC < lineA + lineB && lineC > compareC) {
+  if (lineC < lineA + lineB && lineC > compareC) {
     return true;
   }
-  else {
-    return false;
-  }
+  return false;  
 }
 
 // Desafio 13
