@@ -54,13 +54,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  //  seu códico aqui
+// eslint-disable-next-line complexity
+function fizzBuzz(arrNumber) {
+  const newArr = [];
+  for (let index = 0; index < arrNumber.length; index += 1) {
+    if (arrNumber[index] % 3 === 0 && arrNumber[index] % 5 === 0) {
+      newArr.push('fizzBuzz');
+    } else if (arrNumber[index] % 5 === 0) {
+      newArr.push('buzz');
+    } else if (arrNumber[index] % 3 === 0) {
+      newArr.push('fizz');
+    } else {
+      newArr.push('bug!');
+    }
+  }
+  return newArr;
 }
 
 // Desafio 9
 function encode() {
-  // seu código aqui
 }
 function decode() {
   // seu código aqui
