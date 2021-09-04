@@ -4,9 +4,10 @@
 function compareTrue(num1, num2) {
   if (num1 && num2 === true) {
     return true;
-  } else {
-    return false;
   }
+  // else {
+  return false;
+  // }
 }
 // console.log(compareTrue(num1, num2))
 
@@ -32,12 +33,17 @@ function splitSentence(anyString) {
 
 // let Array = ['Lucas', 'Cassiano', 'Ferraz','Paolillo', 'Angelo']
 function concatName(Array) {
-  // let first = Array[0]
-  // let last = Array[Array.length - 1]
-  let lastFirst = (Array[Array.length - 1] + ', ' +  Array[0])
-  return lastFirst
+  let first = Array[0];
+  let last = Array[Array.length - 1];
+  let lastFirst = `${last}, ${first}`;
+  // let lastFirst = last.concat(', ' + first);
+  // let lastFirst = (last + ', ' + first);
+  // let lastFirst = (Array[Array.length - 1] + ', ' + Array[0]);
+  return lastFirst;
 }
 // console.log(concatName(Array))
+// Referencia Utilizada para resolver Lynt https://palantir.github.io/tslint/rules/prefer-template/
+// Referencia Utilizada para resolver Concat https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
 
 // Desafio 5
 // let wins = 10
@@ -55,12 +61,12 @@ function footballPoints(wins, ties) {
 function highestCount(Array) {
   let highestone = (Math.max(...Array));
   let counter = 0;
-  for ( let index = 0; index < Array.length; index += 1 ) {
-    if (Array[index] === highestone){
-       counter += 1;
+  for (let index = 0; index < Array.length; index += 1) {
+    if (Array[index] === highestone) {
+      counter += 1;
     }
   }
-  return counter;  
+  return counter;
 }
 // console.log(highestCount(Array))
 // Consulta https://backefront.com.br/encontrar-maior-numero-array/
