@@ -51,9 +51,19 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(wins,ties))
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+// let Array = [2,4,6,2,9,8,9,8,7,6]
+function highestCount(Array) {
+  let highestone = (Math.max(...Array));
+  let counter = 0;
+  for ( let index = 0; index < Array.length; index += 1 ) {
+    if (Array[index] === highestone){
+       counter += 1;
+    }
+  }
+  return counter;  
 }
+// console.log(highestCount(Array))
+// Consulta https://backefront.com.br/encontrar-maior-numero-array/
 
 // Desafio 7
 function catAndMouse() {
