@@ -72,8 +72,19 @@ function highestCount(Array) {
 // Consulta https://backefront.com.br/encontrar-maior-numero-array/
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1distance = (cat1 - mouse);
+  let cat2distance = (cat2 - mouse);
+  if ((Math.abs(cat2distance)) < (Math.abs(cat1distance))) {
+    return "cat2";
+  }
+  else if ((Math.abs(cat1distance)) < (Math.abs(cat2distance))) {
+    return "cat1";;
+  }
+  else if ((Math.abs(cat1distance)) === (Math.abs(cat2distance))) {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
