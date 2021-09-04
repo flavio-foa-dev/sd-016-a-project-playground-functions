@@ -68,6 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat1 < mouse ) {
     cat1Distance = mouse - cat1;
   }
+
   if (cat2 < mouse) {
     cat2Distance = mouse - cat2;
   }
@@ -75,9 +76,11 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat2Distance === 2 && cat1Distance === 3) {
     resultado = 'cat2';
   }
+
   if (cat1Distance === 6 && cat2Distance === 12) {
     resultado = 'cat1';
   }
+  
   if (cat1Distance === cat2Distance) {
     resultado = 'os gatos trombam e o rato foge';
   }
@@ -90,29 +93,25 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(inputArray) {
-  let returnArray = [];
 
-  for (let i = 0; i < returnArray.length; i += 1) {
-    const element = array[i];
+  let umTeste = [];
 
-    espera = ''
-
-    if (inputArray[i] % 3 === 0 && iputArray[i] % 5 === 0) {
-      espera += 'fizzbuzz';
-    } else if (inputArray[i] % 3 === 0) {
-      espera += 'fizz';
-    } else if (iputArray[i] % 5 === 0) {
-      espera += 'buzz';
-    }
-    
-    returnArray.push(espera);
+  for (let i = 0; i < inputArray.length; i += 1) {
+    if (inputArray[i] % 5 === 0 && inputArray[i] % 3 === 0 ) {
+      umTeste.push('fizzBuzz');
+      } else if (inputArray[i] % 5 === 0){
+        umTeste.push('buzz');
+        } else if (inputArray[i] % 3 === 0){
+          umTeste.push('fizz');
+          } else {
+            umTeste.push('bug!');
+          } 
   }
 
- return returnArray;
-
+  return umTeste
 }
-let meuTeste = [15, 7, 9, 45];
-console.log(fizzBuzz (meuTeste));
+// let meuTeste = [2, 15, 7, 9, 45];
+// console.log(fizzBuzz (meuTeste));
 
 
 // Desafio 9
