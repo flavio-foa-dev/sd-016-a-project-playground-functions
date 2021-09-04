@@ -3,16 +3,20 @@ function compareTrue(param1, param2) {
   // seu código aqui
   if(param1 === true && param2 === true){
     return true;
-  } else if(param2 === false && param2 === false)
+  } else if(param2 === false && param2 === false){ 
   return false;
+} else {
+  return "não foi possivel verificar"
+}
 }
 
-// Desafio 2
+// Desafio 2 - FEITO
 function calcArea(base, height) {
   let area = (base * height) / 2
   return area;
 }
-//Desafio 3
+
+//Desafio 3 - FEITO
 function splitSentence(word) {
   let string = word
   string = string.split(" ")
@@ -21,9 +25,13 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(listName) {    
+  let firstName = listName[0]
+  let lastName = listName[listName.length - 1]
+  let fullName = lastName + ", " + firstName
+  return fullName;
 }
-
-// Desafio 5
+ 
+// Desafio 5 - FEITO
 function footballPoints(wins,ties) {
   let allWins = 0;  
   let allTies = 0
@@ -35,11 +43,11 @@ function footballPoints(wins,ties) {
   }  
     return allWins + allTies
 }
-     
-console.log(footballPoints(14,8))
+
 // Desafio 6
-function highestCount() {
+function highestCount(numberList) {
   // seu código aqui
+
 }
 
 // Desafio 7
@@ -48,7 +56,7 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
 }
 
