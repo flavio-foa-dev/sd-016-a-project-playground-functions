@@ -101,6 +101,7 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(frase) {
+  // https://www.youtube.com/watch?v=UShV_TFxs_A
   let novaFrase = frase.replace(/a/gi,'1')
   .replace(/e/gi,'2')
   .replace(/i/gi,'3')
