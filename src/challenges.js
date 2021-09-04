@@ -90,29 +90,27 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode(frase) 
-{
-  // seu código aqui
+function encode(frase) {
   let newFrase = "";
-  for (let index = 0; index < frase.length; index += 1)
+  for (let index in string)
   {
-    if (frase[index] == 'a')
+    if (frase[index] === 'a')
     {
       newFrase = newFrase + 1;
     }
-    else if (frase[index] == 'e')
+    else if (frase[index] === 'e')
     {
       newFrase = newFrase + 2;
     }
-    else if (frase[index] == 'i')
+    else if (frase[index] === 'i')
     {
       newFrase = newFrase + 3;
     }
-    else if (frase[index] == 'o')
+    else if (frase[index] === 'o')
     {
       newFrase = newFrase + 4;
     }
-    else if (frase[index] == 'u')
+    else if (frase[index] === 'u')
     {
       newFrase = newFrase + 5;
     }
@@ -124,29 +122,27 @@ function encode(frase)
   return newFrase;
 }
 
-function decode(string) 
-{
-  // seu código aqui
+function decode(string) {
   let newString = "";
-  for (let index = 0; index < string.length; index += 1)
+  for (let index in string)
   {
-    if (string[index] == 1)
+    if (string[index] === 1)
     {
       newString = newString + 'a';
     }
-    else if (string[index] == 2)
+    else if (string[index] === 2)
     {
       newString = newString + 'e';
     }
-    else if (string[index] == 3)
+    else if (string[index] === 3)
     {
       newString = newString + 'i';
     }
-    else if (string[index] == 4)
+    else if (string[index] === 4)
     {
       newString = newString + 'o';
     }
-    else if (string[index] == 5)
+    else if (string[index] === 5)
     {
       newString = newString + 'u';
     }
