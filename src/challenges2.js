@@ -60,13 +60,42 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let values = [lineA, lineB, lineC]
+  let testPass = 0;
+  //check if lineA < (lineB + lineC) && lineA > math.abs(lineB-lineC)
+  if(values[0] < values[1] + values[2] && values[0] > Math.abs(values[1] - values[2])){
+    testPass++;
+  }
+
+  if(values[1] < values[0] + values[2] && values[1] > Math.abs(values[0] - values[2])){
+    testPass++;
+  }
+
+  if(values[2] < values[1] + values[0] && values[2] > Math.abs(values[1] - values[0])){
+    testPass++;
+  }
+  if(testPass === 3){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let dig = /\d+/g;
+  let result = drinks.match(dig); //array de numeros
+  let totalWaterToDrink = 0;
+  let temporary = 0;
+  for(let i = 0; i < result.length; i++){
+    totalWaterToDrink += Number(result[i]);
+  }
+  if(totalWaterToDrink === 1){
+    return "1 copo de água";
+  }else{
+    return totalWaterToDrink + " copos de água";
+  }
 }
 
 module.exports = {
