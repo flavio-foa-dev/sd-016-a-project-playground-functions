@@ -49,8 +49,8 @@ function highestCount(conjunto) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2, ) {
-  let discat1 = mouse - cat1 
-  let discat2 = mouse - cat2
+  let discat1 = math.abs(mouse) - math.abs(cat1)
+  let discat2 = math.abs(mouse) - math.abs(cat2)
 
   if (discat1 === discat2){
     return "os gatos trombam e o rato foge"
