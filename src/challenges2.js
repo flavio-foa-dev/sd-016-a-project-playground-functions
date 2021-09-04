@@ -120,20 +120,17 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   let cont = 0;
   for(let index = 0; index < string.length; index += 1){
-    if(string[index] == 4){
-      cont += 4;
-    }
-    if(string[index] == 8){
-      cont += 8;
+    if(string[index] == 1){
+      cont += 1;
     }
     if(string[index] == 2){
       cont += 2;
     }
-    if(string[index] == 1){
-      cont += 1;
-    }
     if(string[index] == 3){
       cont += 3;
+    }
+    if(string[index] == 4){
+      cont += 4;
     }
     if(string[index] == 5){
       cont += 5;
@@ -144,16 +141,19 @@ function hydrate(string) {
     if(string[index] == 7){
       cont += 7;
     }
+    if(string[index] == 8){
+      cont += 8;
+    }
     if(string[index] == 9){
       cont += 9;
     }
   }
-  if(cont == 1){
+  if(cont === 1){
     return cont + " copo de água";
   }
- if(cont > 1){
- return cont + " copos de água";
-}
+  else {
+    return cont + " copos de água";
+  }
 }
 
 module.exports = {

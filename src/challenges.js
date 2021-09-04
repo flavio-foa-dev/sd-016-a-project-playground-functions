@@ -92,8 +92,7 @@ function fizzBuzz(arrayNumbers) {
 // Desafio 9
 function encode(frase) {
   let newFrase = "";
-  for (let index in string)
-  {
+  for (let index = 0; i < frase.length; i += 1) {
     if (frase[index] === 'a')
     {
       newFrase = newFrase + 1;
@@ -124,8 +123,7 @@ function encode(frase) {
 
 function decode(string) {
   let newString = "";
-  for (let index in string)
-  {
+  for (let index in string) {
     if (string[index] === 1)
     {
       newString = newString + 'a';
