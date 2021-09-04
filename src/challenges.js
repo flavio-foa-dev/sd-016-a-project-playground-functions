@@ -29,7 +29,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount() {
- // seu código aqui
+  // seu código aqui
 }
 
 // Desafio 7
@@ -56,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrNumber) {
   const newArr = [];
-  for (let index = 0; i < arrNumber.length; index += 1) {
+  for (let index = 0; index < arrNumber.length; index += 1) {
     if (arrNumber[index] % 3 === 0 && arrNumber[index] % 5 === 0) {
       newArr.push('fizzBuzz');
     } else if (arrNumber[index] % 5 === 0) {
