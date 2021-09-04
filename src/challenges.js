@@ -56,7 +56,6 @@ function catAndMouse(mouse, cat1, cat2) {
   return all;
 }
 
-// Desafio 8
 function halfFizzBuzz(numArray) {
   for (let index = 0; index < numArray.length; index += 1) {
     if (numArray[index] % 5 === 0) {
@@ -67,7 +66,7 @@ function halfFizzBuzz(numArray) {
   }
   return numArray;
 }
-
+// Desafio 8
 function fizzBuzz(numArray) {
   for (let index = 0; index < numArray.length; index += 1) {
     if (numArray[index] % 3 === 0 && numArray[index] % 5 === 0) {
