@@ -40,9 +40,15 @@ function concatName(Array) {
 // console.log(concatName(Array))
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+// let wins = 10
+// let ties = 5
+function footballPoints(wins, ties) {
+  let winPoints = (wins * 3);
+  let tiePoints = (ties * 1);
+  let totalPoints = (winPoints + tiePoints);
+  return totalPoints;
 }
+// console.log(footballPoints(wins,ties))
 
 // Desafio 6
 function highestCount() {
