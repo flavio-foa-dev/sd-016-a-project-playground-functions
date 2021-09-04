@@ -62,28 +62,32 @@ function catAndMouse(mouse ,cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  let array1 = numbers[0];
-  let result = array2[0]
-  for (i = 0; i < array1.length; i += 1){
-    if (array1[i] % 3 === 0){
-       array2.push('fizz');
-    } else if (array1[i] % 5 === 0){
-      array2.push('buzz');
-    } else if (array1[i] % 3 === 0 && array1[i] % 5 === 0){
-      array2.push('fizzBuzz')
+  let array = [];
+  for (let i = 0; i < numbers.length; i += 1){
+    if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
+      array.push('fizzBuzz');
+    } else if (numbers[i] % 3 == 0) {
+      array.push('fizz');
+    } else if (numbers[i] % 5 == 0) {
+      array.push('buzz');
     } else {
-      array2.push('bug!');
+      array.push('bug!');
     }
-    return result;
   }
+  return array;
 }
 
 // Desafio 9
-function encode() {
+// ref: Desafio concluido com base em pesquisa do método replace no mdn web docs;
+function encode(str) {
   // seu código aqui
+  let newstr = str.replace(/[a]/g, '1').replace(/[e]/g, '2').replace(/[i]/g, '3').replace(/[o]/g, '4').replace(/[u]/g, '5');
+  return newstr;
 }
-function decode() {
+function decode(str) {
   // seu código aqui
+  let newdecode = str.replace(/[1]/g, 'a').replace(/[2]/g, 'e').replace(/[3]/g, 'i').replace(/[4]/g, 'o').replace(/[5]/g, 'u');
+  return newdecode;
 }
 
 module.exports = {
