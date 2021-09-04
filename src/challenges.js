@@ -45,11 +45,11 @@ function highestCount(arrayNumbers) {
       greaterNumber = arrayNumbers[index];
     }
   }
-  for (let secondIndex in arrayNumbers) {      
+  for (let secondIndex in arrayNumbers) {
     if (greaterNumber === arrayNumbers[secondIndex]) {
       countNumber += 1;
-    }   
-  }     
+    }
+  }
   return countNumber;
 }
 
@@ -105,15 +105,15 @@ function encode(phrase) {
 }
 
 function outputNumbers(phrase, index, arrayPhrase) {
-  if (phrase[index] === 'a'){
+  if (phrase[index] === 'a') {
     arrayPhrase[index] = '1';
-  } else if (phrase[index] === 'e'){
+  } else if (phrase[index] === 'e') {
     arrayPhrase[index] = '2';
-  } else if (phrase[index] === 'i'){
+  } else if (phrase[index] === 'i') {
     arrayPhrase[index] = '3';
-  } else if (phrase[index] === 'o'){
+  } else if (phrase[index] === 'o') {
     arrayPhrase[index] = '4';
-  } else if (phrase[index] === 'u'){
+  } else if (phrase[index] === 'u') {
     arrayPhrase[index] = '5';
   }
 }
@@ -123,21 +123,21 @@ function decode(phraseNumbers) {
   // seu código aqui
   let arrayPhraseNumbers = phraseNumbers.split('');
   for (let index in phraseNumbers) {
-    outputLetters(phraseNumbers, index, arrayPhraseNumbers)
+    outputLetters(phraseNumbers, index, arrayPhraseNumbers);
   }
   return arrayPhraseNumbers.join('');
 }
 
 function outputLetters(phraseNumbers, index, arrayPhraseNumbers) {
-  if (phraseNumbers[index] === '1'){
+  if (phraseNumbers[index] === '1') {
     arrayPhraseNumbers[index] = 'a';
-  } else if (phraseNumbers[index] === '2'){
+  } else if (phraseNumbers[index] === '2') {
     arrayPhraseNumbers[index] = 'e';
-  } else if (phraseNumbers[index] === '3'){
+  } else if (phraseNumbers[index] === '3') {
     arrayPhraseNumbers[index] = 'i';
-  } else if (phraseNumbers[index] === '4'){
+  } else if (phraseNumbers[index] === '4') {
     arrayPhraseNumbers[index] = 'o';
-  } else if (phraseNumbers[index] === '5'){
+  } else if (phraseNumbers[index] === '5') {
     arrayPhraseNumbers[index] = 'u';
   }
 }
