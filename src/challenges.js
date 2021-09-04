@@ -9,26 +9,27 @@ function compareTrue(um, dois) {
 
 // Desafio 2
 function calcArea(base, altura) {
-  let calculo = base * altura / 2;
+  let calculo = (base * altura) / 2;
 
   return calculo;
 }
 
 // Desafio 3
 function splitSentence(text) {
-  let palavras = text.split(" ");
+  let palavras = text.split(' ');
   return palavras;
 }
 
 // Desafio 4
 function concatName(nomes) {
-  let nomes2 = nomes[nomes.length - 1] + ", " + nomes[0];
-  return nomes2
+  let nomes2 = nomes[nomes.length - 1] + ', ' + nomes[0];
+  return nomes2;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontuação = (wins * 3) + (ties * 1);
+  return pontuação;
 }
 
 // Desafio 6
