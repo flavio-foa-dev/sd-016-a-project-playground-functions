@@ -3,9 +3,9 @@
 // Retornar false se um ou ambos os parâmetros forem falsos.
 function compareTrue(p1, p2) {
   if (p1 === true && p2 === true) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 }
 
@@ -20,7 +20,7 @@ function calcArea(base, height) {
 // Escreva uma função com o nome splitSentence, a qual receberá uma string
 // e retornará uma array de strings separadas por cada espaço na string original.
 function splitSentence(sentence) {
-  let splittedSentence = sentence.split(" ")
+  let splittedSentence = sentence.split(' ');
   return splittedSentence;
 }
 
@@ -30,7 +30,7 @@ function splitSentence(sentence) {
 function concatName(arrayOfStrings) {
   let firstItem = arrayOfStrings[0];
   let lastItem = arrayOfStrings[arrayOfStrings.length - 1];
-  return lastItem + ", " + firstItem;
+  return lastItem + ', ' + firstItem;
 }
 
 // Desafio 5
@@ -48,7 +48,7 @@ function footballPoints(wins, ties) {
 // retorne a quantidade de vezes que o maior deles se repete.
 
 function highestCount(arrayOfNumbers) {
-  let sortedNumbers = arrayOfNumbers.sort((a,b) => b-a);
+  let sortedNumbers = arrayOfNumbers.sort((a, b) => b - a);
   let theFirst = sortedNumbers[0];
   let count = 1;
 
@@ -56,7 +56,7 @@ function highestCount(arrayOfNumbers) {
     if (theFirst === sortedNumbers[index]) {
       count += 1;
     } else {
-      break
+      break;
     }
   }
   return count;
@@ -74,11 +74,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = Math.abs(mouse - cat2);
 
   if (distanceCat1 === distanceCat2) {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   } else if (distanceCat1 < distanceCat2) {
-    return "cat1";
+    return 'cat1';
   } else {
-    return "cat2";
+    return 'cat2';
   }
 }
 
@@ -95,13 +95,13 @@ function fizzBuzz(arrOfNumbers) {
     let currentNumber = arrOfNumbers[index];
 
     if (currentNumber % 3 !== 0 && currentNumber % 5 !== 0) {
-      result.push("bug!")
+      result.push('bug!');
     } else if (currentNumber % 3 === 0 && currentNumber % 5 === 0) {
-      result.push("fizzBuzz")
+      result.push('fizzBuzz');
     } else if (currentNumber % 3 === 0) {
-      result.push("fizz")
+      result.push('fizz');
     } else if (currentNumber % 5 === 0) {
-      result.push("buzz")
+      result.push('buzz');
     }
   }
   return result;
@@ -120,7 +120,7 @@ function encode(stringToEncode) {
   let E = A.replace(/e/g, 2);
   let I = E.replace(/i/g, 3);
   let O = I.replace(/o/g, 4);
-  let encoded= O.replace(/u/g, 5)
+  let encoded = O.replace(/u/g, 5);
   return encoded;
 }
 
@@ -129,11 +129,11 @@ function encode(stringToEncode) {
 // e retornará uma string com vogais minúsculas no lugar dos números
 // (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
 function decode(stringToDecode) {
-  let s1 = stringToDecode.replace(/1/g, "a");
-  let s2 = s1.replace(/2/g, "e");
-  let s3 = s2.replace(/3/g, "i");
-  let s4 = s3.replace(/4/g, "o");
-  let decoded = s4.replace(/5/g, "u");
+  let s1 = stringToDecode.replace(/1/g, 'a');
+  let s2 = s1.replace(/2/g, 'e');
+  let s3 = s2.replace(/3/g, 'i');
+  let s4 = s3.replace(/4/g, 'o');
+  let decoded = s4.replace(/5/g, 'u');
   return decoded;
 }
 
