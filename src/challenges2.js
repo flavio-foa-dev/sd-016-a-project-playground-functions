@@ -43,13 +43,35 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(consumo) {
+  let separada = consumo.split(" ");
+  let number = 0;
+  
+  for (key in separada){
+    if (separada[key] > 0 && separada[key] <=9){
+       let numero = parseInt(separada[key]);
+      number += numero
+    }
+  }
+  if (number > 1){
+  return number + ' copos de água'
+} else{
+  return number + ' copo de água'
 }
-
+}
 module.exports = {
   generatePhoneNumber,
   techList,
   hydrate,
   triangleCheck,
 };
+let myString = "1 cerveja, 4 cachaça e 1 vinho";
+let sepString = myString.split(" ")
+let number = 0;
+for (key in sepString){
+  if (sepString[key] > 0 && sepString[key] <= 9){
+   let numero = parseInt(sepString[key]);
+   number += numero
+  }
+}
+console.log(number);
