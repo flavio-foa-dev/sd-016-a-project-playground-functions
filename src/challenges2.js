@@ -7,14 +7,17 @@ function techList(arrayTechNames, name) {
   } else {    
     for (let index in arrayTechNames.sort()) {
       let technologies = {
-        tech : arrayTech[index],
+        tech : arrayTechNames[index],
         name : name,
       }
       arrayTech.push(technologies);
     }
   }
-  return arrayTechNames;
+  return arrayTech;
 }
+let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let name = "Lucas";
+console.log(techList(array,name))
 
 // Desafio 11
 function generatePhoneNumber() {
