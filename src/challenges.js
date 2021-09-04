@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     return 'cat2'
   }
-}
+} 
 // Desafio 8
 function fizzBuzz(valory) {
   let result = [];
@@ -81,7 +81,7 @@ function fizzBuzz(valory) {
 
 // Desafio 9
 function encode(string) {
-  let nameNumber = ' ';
+  let nameNumber = '';
   for (i = 0; i < string.length; i += 1) {
     if (string[i] === 'a') {
       nameNumber += 1;
@@ -101,7 +101,7 @@ function encode(string) {
 }
 
 function decode(nameNumber) {
-  let dename = ' ';
+  let dename = '';
   for (i = 0; i < nameNumber.length; i += 1) {
     if (nameNumber[i] === '1') {
       dename += 'a';
