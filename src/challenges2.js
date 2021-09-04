@@ -17,33 +17,31 @@ function techList(array, name1) {
 
 // Desafio 11
 function formatNumber(array) {
-  let phoneNumber = [];
-  for (let i = 0; i < array.length; i += 1) {
-    if (i === 0) {
-      phoneNumber.push('(');
-      phoneNumber.push(array[i]);
-    } else if (i === 2) {
-      phoneNumber.push(') ');
-      phoneNumber.push(array[i]);
-    } else if (i === 7) {
-      phoneNumber.push('-');
-      phoneNumber.push(array[i]);
-    } else {
-      phoneNumber.push(array[i]);
-    }
-  }
+  let phoneNumber = array.slice();
+
+  phoneNumber.splice(0, 0, '(');
+  phoneNumber.splice(3, 0, ') ');
+  phoneNumber.splice(9, 0, '-'); // add na posição 9, 0 para não remover nada, adiciona a string '-'
+
   return phoneNumber;
+}
+
+function testResult(count, number) {
+  if (count >= 3 || (number < 0 || number > 9)) {
+    return false;
+  }
 }
 
 function countAndTest(array) {
   let count = 0;
-  for (let i = 0; i < array.length; i += 1) {
-    for (let j = 0; j < array.length; j += 1) {
-      if (array[i] === array[j]) {
+
+  for (let i of array) {
+    for (let j of array) {
+      if (j === i) {
         count += 1;
       }
     }
-    if (count >= 3 || (array[i] < 0 || array[i] > 9)) {
+    if (testResult(count, array[i]) === false) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     count = 0;
@@ -97,7 +95,7 @@ function hydrate(string) {
   matches = match(string);
 
   for (let i = 0; i < matches.length; i += 1) {
-    sum += parseInt(matches[i], 10);
+    sum += parseInt(matches[i], 10); // -> sem o 10 dá erro no lint, o segundo numero significa a base que nesse caso é 10(decimal)
     // passa de string para number -> https://www.alura.com.br/artigos/convertendo-string-para-numero-em-javascript?gclid=Cj0KCQjwpreJBhDvARIsAF1_BU2BKYU6f6ReQl7b1z1TH6HDzqJ7xsHremu8uaTEcvL1hkzuWM9gOjYaAh1DEALw_wcB
   }
   if (sum === 1) {
