@@ -99,56 +99,45 @@ function fizzBuzz(fizBuzzArray) {
   return fizBuzzArray;
 }
 // Desafio 9
-/* var str1 = 'A manhã está sobre nós', // o tamanho de str1 é 22
-    str2 = str1.slice(3, 10),
-    str3 = str1.slice(2, -2),
-    str4 = str1.slice(13),
-    str5 = str1.slice(22);
-console.log(str2); // retorna 'anhã es'
-console.log(str3); // retorna 'manhã está sobre n'
-console.log(str4); // retorna 'sobre nós'
-console.log(str5); // retorna <empty string> */
-
 function encode(stringEncode) {
- /*  let arrayEncode = 'go trybe'
-  for (let index = 0; index < arrayEncode.length; index += 1) {
-    if (arrayEncode[index] === 'a') {
-      arrayEncode[index] = 1;
-      console.log(arrayEncode[index])
-    } else if (arrayEncode[index] === 'e') {
-      console.log(arrayEncode[index])
-      arrayEncode[index] = 2;
-    } else if (arrayEncode[index] === 'i') {
-      console.log(arrayEncode[index])
-      arrayEncode[index] = 3;
-    } else if (arrayEncode[index] === 'o') {
-      console.log(arrayEncode[index])
-      arrayEncode[index] = 4;
-    } else if (arrayEncode[index] === 'u') {
-      console.log(arrayEncode[index])
-      arrayEncode[index] = 5;
+  //let stringEncode   = "go trybe"
+  let stringResult  = stringEncode;
+  let heightEncode = (stringEncode.length);
+  for (let index = 0; index < stringEncode.length; index += 1) {
+    if (stringEncode[index] === 'a') {
+      stringResult = stringEncode.slice(0,index)+'1'+stringEncode.slice((index+1),heightEncode);
+    } else if (stringEncode[index] === 'e') {
+      stringResult = stringEncode.slice(0,index)+'2'+stringEncode.slice((index+1),heightEncode);
+    } else if (stringEncode[index] === 'i') {
+      stringResult = stringEncode.slice(0,index)+'3'+stringEncode.slice((index+1),heightEncode);
+    } else if (stringEncode[index] === 'o') {
+      stringResult = stringEncode.slice(0,index)+'4'+stringEncode.slice((index+1),heightEncode);
+    } else if (stringEncode[index] === 'u') {
+      stringResult = stringEncode.slice(0,index)+'5'+stringEncode.slice((index+1),heightEncode);
     }
+    stringEncode  = stringResult
   }
-  return stringEncode;*/
+  return stringResult;
 }
-function decode() {
-//  
-/*function decode(arrayDecode) {
-  for (let index = 0; index < arrayDecode.length; index += 1) {
-    if (arrayDecode[index] === 1) {
-      arrayDecode[index] = 'a';
-    } else if (arrayEncode[index] === 2) {
-      arrayDecode[index] = 'e';
-    } else if (arrayDecode[index] === 3) {
-      arrayDecode[index] = 'i';
-    } else if (arrayDecode[index] === 4) {
-      arrayDecode[index] = 'o';
-    } else if (arrayDecode[index] === 5) {
-      arrayDecode[index] = 'u';
+
+function decode(stringDecode) {
+  let stringResult  = stringDecode;
+  let heightDecode = (stringDecode.length);
+  for (let index = 0; index < stringDecode.length; index += 1) {
+    if (stringDecode[index] === '1') {
+      stringResult = stringDecode.slice(0,index)+'a'+stringDecode.slice((index+1),heightDecode);
+    } else if (stringDecode[index] === '2') {
+      stringResult = stringDecode.slice(0,index)+'e'+stringDecode.slice((index+1),heightDecode);
+    } else if (stringDecode[index] === '3') {
+      stringResult = stringDecode.slice(0,index)+'i'+stringDecode.slice((index+1),heightDecode);
+    } else if (stringDecode[index] === '4') {
+      stringResult = stringDecode.slice(0,index)+'o'+stringDecode.slice((index+1),heightDecode);
+    } else if (stringDecode[index] === '5') {
+      stringResult = stringDecode.slice(0,index)+'u'+stringDecode.slice((index+1),heightDecode);
     }
+    stringDecode  = stringResult
   }
-  //console.log(arrayDecode);
-  return arrayDecode;*/
+  return stringResult;
 } 
 
 module.exports = {

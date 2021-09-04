@@ -43,8 +43,8 @@ if (techArray.length = 0){
 }
 
   /* for (let index=0; index<techArray.length; index=+1) {
-    if (arrayDecode[index] ===  1){
-      arrayDecode[index] = 'a';
+    if (stringDecode[index] ===  1){
+      stringDecode[index] = 'a';
   }
   var beatlesTopFour = [
     {
