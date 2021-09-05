@@ -29,11 +29,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
-  let finalArray = [];
-  Math.max(array);
-  finalArray.push(Math.max);
-  return finalArray.length;
+function highestCount() {
 }
 
 // Desafio 7
@@ -52,28 +48,60 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
-  let mensagemFinal = [];
+  let crypto = [];
   for (let key in arrayNumeros) {
-    if ((arrayNumeros[key] % 3 === 0) && (arrayNumeros[key] % 5 === 0)) {
-      mensagemFinal.push("fizzBuzz");
-  } else if (arrayNumeros[key] % 3 === 0){
-      mensagemFinal.push("fizz");
-  } else if (arrayNumeros[key] % 5 === 0){
-      mensagemFinal.push("buzz")
-  } else {
-      mensagemFinal.push("bug!")
+    if (arrayNumeros[key] % 3 && arrayNumeros[key] % 5) {
+      crypto.push('buzz');
+    } else if (arrayNumeros[key] % 3) {
+      crypto.push('fizz');
+    } else if (arrayNumeros[key] % 5) {
+      crypto.push('buzz');
+    } else {
+      crypto.push('bug!');
+    }
   }
-  }
-  return mensagemFinal;
+  return console.log(crypto);
 }
-
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let newString = string.split('');
+  let codigo = [];
+  for (let i in newString) {
+    if (newString[i] === 'a') {
+      newString[i] = 1;
+    } if (newString[i] === 'e') {
+      newString[i] = 2;
+    } if (newString[i] === 'i') {
+      newString[i] = 3;
+    } if (newString[i] === 'o') {
+      newString[i] = 4;
+    } if (newString[i] === 'u') {
+      newString[i] = 5;
+    }
+    codigo = newString.join('');
+  }
+  return codigo;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let oldString = string.split('');
+  let finalString = [];
+  for (let i in oldString) {
+    if (oldString[i] === '1') {
+      oldString[i] = 'a';
+    } if (oldString[i] === '2') {
+      oldString[i] = 'e';
+    } if (oldString[i] === '3') {
+      oldString[i] = 'i';
+    } if (oldString[i] === '4') {
+      oldString[i] = 'o';
+    } if (oldString[i] === '5') {
+      oldString[i] = 'u';
+    }
+    finalString = oldString.join('');
+  }
+  return finalString;
 }
 
 module.exports = {
