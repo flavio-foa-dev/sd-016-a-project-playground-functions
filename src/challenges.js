@@ -76,7 +76,7 @@ function fizzBuzz(arrayNumber) {
   const newCollection = [];
   for (let index = 0; index < arrayNumber.length; index += 1) {
     if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0) {
-      arrayNumber[index] = 'fizzBuzz';
+      newCollection.push('fizzBuzz');
     } else if (arrayNumber[index] % 5 === 0) {
       newCollection.push('buzz');
     } else if (arrayNumber[index] % 3 === 0) {
