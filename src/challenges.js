@@ -31,33 +31,32 @@ function highestCount(arrayBigNumb) {
   let count = 0;
   let big = arrayBigNumb[0];
 
-  for (let i = 0; i < arrayBigNumb.length; i++){
-      if(big === arrayBigNumb[i]){
-        count++;
-      }else if(big < arrayBigNumb[i]){
-        big = arrayBigNumb[i];
-        i = count = 0;
-      }
+  for (let i = 0; i < arrayBigNumb.length; i += 1) {
+    if (big === arrayBigNumb[i]) {
+      count += 1;
+    } else if (big < arrayBigNumb[i]) {
+      big = arrayBigNumb[i];
+      i = count = 0;
+    }
   }
   return count;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if(Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) return 'os gatos trombam e o rato foge';
-  else if(cat1 < cat2) return 'cat1';
+  if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) return 'os gatos trombam e o rato foge';
+  else if (cat1 < cat2) return 'cat1';
   else return 'cat2';
-  
 }
 
 // Desafio 8
 function fizzBuzz(x) {
   let z = [];
-  for(let y of x){
-    if((y % 3 === 0) && (y % 5 === 0)) z.push('fizzBuzz');
+  for (let y of x) {
+    if ((y % 3 === 0) && (y % 5 === 0)) z.push('fizzBuzz');
     else
       if (y % 3 === 0) z.push('fizz');
-      else if(y % 5 === 0) z.push('buzz');
+      else if (y % 5 === 0) z.push('buzz');
       else z.push('bug!');
   }
   return z;
@@ -67,9 +66,9 @@ function fizzBuzz(x) {
 function encode(x) {
   let vowels = 'aeiou'.split('');
   let phrase = x.split('');
-  for(let i = 0; i, i < phrase.length; i++){
-    for(let j = 0; j < vowels.length; j++){
-      if(phrase[i] === vowels[j]){
+  for (let i = 0; i, i < phrase.length; i += 1) {
+    for (let j = 0; j < vowels.length; j += 1) {
+      if (phrase[i] === vowels[j]) {
         phrase[i] = j+1;
       }
     }
@@ -79,9 +78,9 @@ function encode(x) {
 function decode(x) {
   let vowels = 'aeiou'.split('');
   let codified = x.split('');
-  for(let i = 0; i, i < codified.length; i++){
-    for(let j = 0; j < 5; j++){
-      if(codified[i] == j+1){
+  for (let i = 0; i < codified.length; i += 1) {
+    for (let j = 0; j < 5; j += 1) {
+      if (codified[i] == j + 1) {
         codified[i] = vowels[j];
       }
     }
