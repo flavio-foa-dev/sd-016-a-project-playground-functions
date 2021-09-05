@@ -102,6 +102,7 @@ function encode(word) {
 
 function decode(result) {
   let resultTwo = ('');
+  let index = undefined;
   for (index in result) {
     if (result[index] === '1') {
       resultTwo = resultTwo + 'a';
