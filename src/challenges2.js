@@ -7,14 +7,13 @@ function techList(techArray, name) {
     return 'Vazio!';
   }
 
-  for (let key in techArray) {
+  for (let index = 0; index < techArray.length; index += 1) {
     let techs = {
-      tech: techArray[key],
+      tech: techArray[index],
       name: name,
     };
     objectArray.push(techs);
   }
-
   return objectArray;
 }
 // Desafio 11
@@ -23,13 +22,13 @@ function generatePhoneNumber(array) {
     return 'Array com tamanho incorreto.';
   }
   let currentNumberCount = 0;
-  for (let key in array) {
-    if (array[key] < 0 || array[key] > 9) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] < 0 || array[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    let validateNumber = array[key];
-    for (let key2 in array) {
-      if (validateNumber === array[key2]) {
+    let validateNumber = array[index];
+    for (let key in array) {
+      if (validateNumber === array[key]) {
         currentNumberCount += 1;
       }
     }
@@ -59,8 +58,8 @@ function hydrate(string) {
   const last = result.map((i) => Number(i));
 
   let waterQuantity = 0;
-  for (let key in last) {
-    waterQuantity += last[key];
+  for (let index = 0; index < last.length; index += 1) {
+    waterQuantity += last[index];
   }
 
   if (waterQuantity === 1) {
