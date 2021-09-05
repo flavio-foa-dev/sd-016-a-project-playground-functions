@@ -3,6 +3,7 @@ function techList(technology, name) {
   technology = technology.sort();
   let list = [];
   if (technology === 0) return 'Vazio!';
+  if (technology.length === 0) return 'Vazio!';
   for (let index = 0; index < technology.length; index += 1) {
     list[index] = { tech: technology[index], name };
   }
