@@ -35,6 +35,7 @@ function highestCount(numberGreat) {
     if (numberGreat[i] === Math.max(numberGreat)) {
       repeat += 1;
     }
+     return repeat;
   } 
 }
 
