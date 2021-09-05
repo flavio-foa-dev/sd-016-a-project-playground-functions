@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(valueOne, valueTwo) {
-  if (valueOne === true && valueTwo === true) {
+  if (valueOne && valueTwo) {
     return true;
   }
   return false;
@@ -30,17 +30,16 @@ function concatName(arrStr) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let totalPoints = wins * 3 + ties * 1;
-  return totalPoints;
+  return wins * 3 + ties;
 }
 
 // Desafio 6
 
 function returnHigh(arrayNumber) {
   let hightValue = arrayNumber[0];
-  for (let index of arrayNumber) {
-    if (index > hightValue) {
-      hightValue = index;
+  for (let number of arrayNumber) {
+    if (number > hightValue) {
+      hightValue = number;
     }
   }
   return hightValue;
@@ -48,9 +47,8 @@ function returnHigh(arrayNumber) {
 
 function highestCount(arrayNumber) {
   let count = 0;
-  let hightValue = returnHigh(arrayNumber);
-  for (let secIndex of arrayNumber) {
-    if (hightValue === secIndex) {
+  for (let number of arrayNumber) {
+    if (returnHigh(arrayNumber) === number) {
       count += 1;
     }
   }
@@ -73,11 +71,12 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+
 function fizzBuzz(arrayNumber) {
   const newCollection = [];
   for (let index = 0; index < arrayNumber.length; index += 1) {
     if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0) {
-      newCollection.push('fizzBuzz');
+      arrayNumber[index] = 'fizzBuzz';
     } else if (arrayNumber[index] % 5 === 0) {
       newCollection.push('buzz');
     } else if (arrayNumber[index] % 3 === 0) {
@@ -92,18 +91,12 @@ function fizzBuzz(arrayNumber) {
 // Desafio 9
 function encode(str) {
   let strSplit = str.split('');
+  const vogais = ['a', 'e', 'i', 'o', 'u'];
+
   for (let index = 0; index < strSplit.length; index += 1) {
-    for (let secIndex = 0; secIndex < str.length; secIndex += 1) {
-      if (strSplit[index] === 'a') {
-        strSplit[index] = '1';
-      } else if (strSplit[index] === 'e') {
-        strSplit[index] = '2';
-      } else if (strSplit[index] === 'i') {
-        strSplit[index] = '3';
-      } else if (strSplit[index] === 'o') {
-        strSplit[index] = '4';
-      } else if (strSplit[index] === 'u') {
-        strSplit[index] = '5';
+    for (let secIndex = 0; secIndex < vogais.length; secIndex += 1) {
+      if (strSplit[index] === vogais[secIndex]) {
+        strSplit[index] = secIndex + 1;
       }
     }
   }
@@ -112,24 +105,17 @@ function encode(str) {
 
 function decode(str) {
   let strSplit = str.split('');
+  const vogais = ['a', 'e', 'i', 'o', 'u'];
   for (let index = 0; index < strSplit.length; index += 1) {
-    for (let secIndex = 0; secIndex < str.length; secIndex += 1) {
-      if (strSplit[index] === '1') {
-        strSplit[index] = 'a';
-      } else if (strSplit[index] === '2') {
-        strSplit[index] = 'e';
-      } else if (strSplit[index] === '3') {
-        strSplit[index] = 'i';
-      } else if (strSplit[index] === '4') {
-        strSplit[index] = 'o';
-      } else if (strSplit[index] === '5') {
-        strSplit[index] = 'u';
+    for (let secIndex = 0; secIndex < vogais.length; secIndex += 1) {
+      if (strSplit[index] === String(secIndex + 1)) {
+        strSplit[index] = vogais[secIndex];
       }
     }
   }
   return strSplit.join('');
 }
-console.log(decode('h3 th2r2!'));
+
 module.exports = {
   calcArea,
   catAndMouse,
