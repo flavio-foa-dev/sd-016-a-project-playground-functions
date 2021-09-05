@@ -14,12 +14,13 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let separation = string
+  let separation = string;
    return string.split(' ');
   }
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(string) {
+  let concat = string[string.length -1] + ", " + string[0];
+  return concat;   
 }
 
 // Desafio 5
@@ -46,6 +47,8 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
+//Desafio 10
 function decode() {
   // seu código aqui
 }
