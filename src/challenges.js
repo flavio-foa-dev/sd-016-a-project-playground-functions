@@ -52,12 +52,17 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(x) {
+  let z = [];
   for(let y of x){
-    if(y % 3 === 0) return 'fizz';
-    else if(y % 5 === 0) return 'buzz';
+    if((y % 3 === 0) && (y % 5 === 0)) z.push('fizzBuzz');
+    else
+      if (y % 3 === 0) z.push('fizz');
+      else if(y % 5 === 0) z.push('buzz');
+      else z.push('bug!');
   }
+  return z;
 }
-console.log(catAndMouse(1,2,1));
+console.log(fizzBuzz([2,15,7, 9, 45]));
 
 // Desafio 9
 function encode() {
