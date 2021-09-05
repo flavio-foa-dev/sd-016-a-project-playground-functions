@@ -10,7 +10,7 @@ function techList(techArray, name) {
   for (let index = 0; index < techArray.length; index += 1) {
     let techs = {
       tech: techArray[index],
-      name: name,
+      name,
     };
     objectArray.push(techs);
   }
@@ -37,7 +37,7 @@ function generatePhoneNumber(array) {
     }
     currentNumberCount = 0;
   }
-  return '(' + array[0] + array[1] + ') ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
+  return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -63,10 +63,9 @@ function hydrate(string) {
   }
 
   if (waterQuantity === 1) {
-    return waterQuantity + ' copo de água';
-  } else if (waterQuantity > 1) {
-    return waterQuantity + ' copos de água';
+    return `${waterQuantity} copo de água`;
   }
+  return `${waterQuantity} copos de água`;
 }
 
 module.exports = {

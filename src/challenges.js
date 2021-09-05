@@ -22,7 +22,7 @@ function concatName(array) {
       lastName.push(array[index]);
     }
   }
-  return lastName + ', ' + firstName;
+  return `${lastName}, ${firstName}`;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -45,11 +45,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2position = Math.abs(cat2 - mouse);
   if (cat1position > cat2position) {
     return 'cat2';
-  } else if (cat1position < cat2position) {
+  } if (cat1position < cat2position) {
     return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 // Desafio 8
 function fizzBuzz(numbersArray) {
