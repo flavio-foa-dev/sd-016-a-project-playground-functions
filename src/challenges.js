@@ -22,6 +22,7 @@ function splitSentence(frase) {
 function concatName(array) {
   let primeiroItem = array[0];
   let ultimoItem = array[array.length - 1];
+
   return `${ultimoItem}, ${primeiroItem}`;
 }
 
@@ -31,13 +32,23 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  // percorrer o array e pegar a quantidade de vezes que o maior numero se repete
+  let maiorNum = Math.max(...array);
+  let quantidade = 0;
+
+  for (let i = 0; i <= array.length; i += 1) {
+    if (maiorNum === array[i]) {
+      quantidade += 1;
+    }
+  }
+
+  return quantidade;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+
 }
 
 // Desafio 8
