@@ -1,8 +1,21 @@
 // Desafio 10
 function techList(techArray, name) {
-  // seu código aqui
+  let objectArray = [];
+  techArray.sort();
 
+  if (techArray.length === 0) {
+    return "Vazio!";
+  }
+
+  for (let key in techArray) {
+    let techs = {
+      tech: techArray[key],
+      name: name
+    }
+    objectArray.push(techs);
+  }
   
+  return objectArray
 } 
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "João"))
 // Desafio 11
