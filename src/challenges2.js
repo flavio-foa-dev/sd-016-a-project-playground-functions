@@ -1,9 +1,5 @@
 // Desafio 10
-function techList(arr, name) {
-  list = {
-    tech: arr,
-    nome: name
-  }
+function techList() {
 }
 
 // Desafio 11
