@@ -1,9 +1,7 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   // seu código aqui
-  if (value1 === true && value2 === true) { return true; }
-
-  return false;
+  return value1 && value2;
 }
 
 // Desafio 2
@@ -68,8 +66,8 @@ function fizzBuzz(numbers) {
   // seu código aqui
   let listFizzBuzz = [];
 
-  for (let number of numbers) {
-    if (number % 3 === 0 && number % 5 === 0) {
+  numbers.forEach(function (number) {
+    if (number % 15 === 0) {
       listFizzBuzz.push('fizzBuzz');
     } else if (number % 3 === 0) {
       listFizzBuzz.push('fizz');
@@ -78,10 +76,12 @@ function fizzBuzz(numbers) {
     } else {
       listFizzBuzz.push('bug!');
     }
-  }
+  });
 
   return listFizzBuzz;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(phrase) {

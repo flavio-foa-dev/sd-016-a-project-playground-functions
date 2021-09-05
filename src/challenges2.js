@@ -16,8 +16,38 @@ function techList(technology, yourName) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numbers) {
   // seu código aqui
+
+  let finalResult = 'Array com tamanho incorreto.';
+
+  if (numbers.length === 11) {
+    let count = 1;
+    for (let index1 = 0; index1 < numbers.length; index1 += 1) {
+      count = 1;
+      for (let index2 = index1 + 1; index2 <= numbers.length; index2 += 1) {
+        if (numbers[index1] === numbers[index2]) { count += 1; }
+      }
+      if (numbers[index1] >= 0 && numbers[index1] <= 9 && count < 3) {
+        if (index1 === 0) {
+          finalResult = `(${numbers[index1]}`;
+        } else if (index1 === 1) {
+          finalResult += `${numbers[index1]}) `;
+        } else if (index1 >= 2 && index1 <= 5) {
+          finalResult += numbers[index1];
+        } else if (index1 === 6) {
+          finalResult += `${numbers[index1]}-`;
+        } else {
+          finalResult += numbers[index1];
+        }
+      } else {
+        finalResult = 'não é possível gerar um número de telefone com esses valores';
+        break;
+      }
+    }
+  }
+
+  return finalResult;
 }
 
 // Desafio 12
@@ -36,3 +66,4 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
