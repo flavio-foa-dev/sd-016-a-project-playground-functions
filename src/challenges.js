@@ -23,7 +23,8 @@ function splitSentence(string) {
 function concatName(name) {
     let firstName = name[0];
     let lastName = name[name.length - 1];
-    return lastName + ', ' + firstName;
+    let concatenatedNames = lastName + ', ' + firstName;
+    return concatenatedNames;
 }
 
 // Desafio 5
