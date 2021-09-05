@@ -20,7 +20,7 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(words) {
-  let lastFirst = words[words.length - 1] + ', ' + words[0];
+  let lastFirst = `${words[words.length - 1]}, ${words[0]}`;
   return lastFirst;
 }
 
