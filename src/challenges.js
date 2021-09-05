@@ -50,17 +50,17 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayNumeros) {
   let crypto = [];
   for (let key in arrayNumeros) {
-    if (arrayNumeros[key] % 3 && arrayNumeros[key] % 5) {
-      crypto.push('buzz');
-    } else if (arrayNumeros[key] % 3) {
+    if (arrayNumeros[key] % 3 === 0 && arrayNumeros[key] % 5 === 0) {
+      crypto.push('fizzBuzz');
+    } else if (arrayNumeros[key] % 3 === 0) {
       crypto.push('fizz');
-    } else if (arrayNumeros[key] % 5) {
+    } else if (arrayNumeros[key] % 5 === 0) {
       crypto.push('buzz');
     } else {
       crypto.push('bug!');
     }
   }
-  return console.log(crypto);
+  return crypto;
 }
 
 // Desafio 9
