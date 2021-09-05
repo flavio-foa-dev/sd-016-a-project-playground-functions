@@ -62,15 +62,34 @@ function fizzBuzz(x) {
   }
   return z;
 }
-console.log(fizzBuzz([2,15,7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(x) {
+  let vowels = 'aeiou'.split('');
+  let phrase = x.split('');
+  for(let i = 0; i, i < phrase.length; i++){
+    for(let j = 0; j < vowels.length; j++){
+      if(phrase[i] === vowels[j]){
+        phrase[i] = j+1;
+      }
+    }
+  }
+  return phrase.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(x) {
+  let vowels = 'aeiou'.split('');
+  let codified = x.split('');
+  for(let i = 0; i, i < codified.length; i++){
+    for(let j = 0; j < 5; j++){
+      if(codified[i] == j+1){
+        codified[i] = vowels[j];
+      }
+    }
+  }
+  return codified.join('');
 }
+
+// console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
