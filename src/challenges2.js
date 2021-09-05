@@ -46,27 +46,27 @@ function triangleCheck(lineA, lineB, lineC) {
   let b = Math.abs(lineB);
   let c = Math.abs(lineC);
 
-  return a < b + c && b < a + c && c < a + b
+  return a < b + c && b < a + c && c < a + b;
 }
 // Desafio 13
 function hydrate(string) {
   // fui pesquisar sobre regex aqui: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
 
-  let regex = /\d+/g; 
+  let regex = /\d+/g;
   let result = string.match(regex);
- // Pesquisei sobre trasformar um array de strings em números aqui: https://www.codegrepper.com/code-examples/javascript/javascript+Convert+an+array+of+strings+to+numbers
+  // Pesquisei sobre trasformar um array de strings em números aqui: https://www.codegrepper.com/code-examples/javascript/javascript+Convert+an+array+of+strings+to+numbers
 
   const last = result.map((i) => Number(i));
 
   let waterQuantity = 0;
   for (let key in last) {
-    waterQuantity += last[key]
+    waterQuantity += last[key];
   }
-  
+
   if (waterQuantity === 1) {
-    return waterQuantity + " copo de água"
+    return waterQuantity + ' copo de água';
   } else if (waterQuantity > 1) {
-    return waterQuantity + " copos de água"
+    return waterQuantity + ' copos de água';
   }
 }
 

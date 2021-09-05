@@ -104,7 +104,7 @@ function decode(message) {
       decodedArray.push(key);
     }
   }
-  return decodedArray.join('')
+  return decodedArray.join('');
 }
 module.exports = {
   calcArea,
