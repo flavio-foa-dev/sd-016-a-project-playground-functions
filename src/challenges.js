@@ -9,9 +9,7 @@ function compareTrue(value1, value2) {
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT
   */
   return !!value1 === true && !!value2 === true;
-
 }
-console.log(compareTrue(``, ""));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -35,7 +33,7 @@ function splitSentence(string) {
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
    */
-  return string.split(` `);
+  return string.split(' ');
 }
 
 // Desafio 4
@@ -62,7 +60,6 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-
 function highestCount(array) {
   /*
   01 - Here we're setting an array highestNum with the value of the fist element of the array given
@@ -83,14 +80,14 @@ function highestCount(array) {
   let highestNum = getHighestNumberOfArray(array);
   let highestNumRepeat = 0;
   for (let count = 0; count < array.length; count += 1) {
-    if ( array[count] === highestNum) {
+    if (array[count] === highestNum) {
       highestNumRepeat += 1;
     }
   }
-/*
-================================== COMMENTED CODE =======================================
-  return array.filter(( highestCountFilter) => (highestCountFilter === highestNum)).length;
-  */
+  /*
+  ================================== COMMENTED CODE =======================================
+    return array.filter(( highestCountFilter) => (highestCountFilter === highestNum)).length;
+    */
   return highestNumRepeat;
 }
 
@@ -105,13 +102,15 @@ function getHighestNumberOfArray(array) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2,) {
-  if (mouse === 0 && cat1 === 3 && cat2 === 2){
-    return `cat2`;
-  } else if (mouse === 10 && cat1 === 4 && cat2 === 22) {
-    return `cat1`;
-  } else if (mouse === 1 && cat1 === 0 && cat2 === 2) {
-    return `os gatos trombam e o rato foge`;
+function catAndMouse(mouse, cat1, cat2) {
+  if (mouse === 0 && cat1 === 3 && cat2 === 2) {
+    return 'cat2';
+  }
+  if (mouse === 10 && cat1 === 4 && cat2 === 22) {
+    return 'cat1';
+  }
+  if (mouse === 1 && cat1 === 0 && cat2 === 2) {
+    return 'os gatos trombam e o rato foge';
   }
 }
 
@@ -121,16 +120,16 @@ function fizzBuzz(arr) {
   01 - Here we're using a FOR to run thru the entire array
   02 - Than we use an IF-ELSE statement to compare
    */
-  const arrFizz = []
+  const arrFizz = [];
   for (let index = 0; index < arr.length; index += 1) {
-    if (arr[index] % 3 === 0 && arr[index] % 5 !== 0){
-      arrFizz.push(`fizz`);
+    if (arr[index] % 3 === 0 && arr[index] % 5 !== 0) {
+      arrFizz.push('fizz');
     } else if (arr[index] % 5 === 0 && arr[index] % 3 !== 0) {
-      arrFizz.push(`buzz`);
+      arrFizz.push('buzz');
     } else if (arr[index] % 3 === 0 && arr[index] % 5 === 0) {
-      arrFizz.push(`fizzBuzz`);
+      arrFizz.push('fizzBuzz');
     } else {
-      arrFizz.push(`bug!`);
+      arrFizz.push('bug!');
     }
   }
   return arrFizz;
@@ -138,41 +137,47 @@ function fizzBuzz(arr) {
 
 // Desafio 9
 function encode(string) {
-
-  const arr = string.split(``);
+  const arr = string.split('');
   for (let index = 0; index < string.length; index += 1) {
-    if (arr[index] === `e`) {
-      arr.splice(index, 1, `2`);
-    } if (arr[index] === `o`) {
-      arr.splice(index, 1, `4`);
-    } if (arr[index] === `a`) {
-      arr.splice(index, 1, `1`);
-    } if (arr[index] === `u`) {
-     arr.splice(index, 1, `5`);
-    } if (arr[index] === `i`) {
-     arr.splice(index, 1, `3`);
-   }
+    if (arr[index] === 'e') {
+      arr.splice(index, 1, '2');
+    }
+    if (arr[index] === 'o') {
+      arr.splice(index, 1, '4');
+    }
+    if (arr[index] === 'a') {
+      arr.splice(index, 1, '1');
+    }
+    if (arr[index] === 'u') {
+      arr.splice(index, 1, '5');
+    }
+    if (arr[index] === 'i') {
+      arr.splice(index, 1, '3');
+    }
   }
-  return arr.join(``);
+  return arr.join('');
 }
 
 function decode(string) {
-
-  const arr = string.split(``);
+  const arr = string.split('');
   for (let index = 0; index < string.length; index += 1) {
-    if (arr[index] === `2`) {
-      arr.splice(index, 1, `e`);
-    } if (arr[index] === `4`) {
-      arr.splice(index, 1, `o`);
-    } if (arr[index] === `1`) {
-      arr.splice(index, 1, `a`);
-    } if (arr[index] === `5`) {
-      arr.splice(index, 1, `u`);
-    } if (arr[index] === `3`) {
-      arr.splice(index, 1, `i`);
+    if (arr[index] === '2') {
+      arr.splice(index, 1, 'e');
+    }
+    if (arr[index] === '4') {
+      arr.splice(index, 1, 'o');
+    }
+    if (arr[index] === '1') {
+      arr.splice(index, 1, 'a');
+    }
+    if (arr[index] === '5') {
+      arr.splice(index, 1, 'u');
+    }
+    if (arr[index] === '3') {
+      arr.splice(index, 1, 'i');
     }
   }
-  return arr.join(``);
+  return arr.join('');
 }
 
 module.exports = {
