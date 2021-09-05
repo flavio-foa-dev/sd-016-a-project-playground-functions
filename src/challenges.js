@@ -15,26 +15,30 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   let separation = string;
-   return string.split(' ');
-  }
+  return string.split(' ');
+}
 // Desafio 4
 function concatName(string) {
-  let concat = string[string.length -1] + ", " + string[0];
-  return concat;   
+  let concat = string[string.length - 1] + ', ' + string[0];
+  return concat;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = wins * 3 + ties * 1;
-
   return points;
-  // seu código aqui
 }
-
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(numbers) {
+  let maxNumber = numbers[0];
+  let count = 0;
+  for (let index = 0; index < numbers.length; index++) {
+    if(numbers[index] > maxNumber) maxNumber = numbers[index];
+    } for(index = 0; index < numbers.length; index++) {
+      if(maxNumber === numbers[index]) count++;
+    }return count;
+  }
+
 
 // Desafio 7
 function catAndMouse() {
@@ -51,7 +55,7 @@ function encode() {
   // seu código aqui
 }
 
-//Desafio 10
+// Desafio 10
 function decode() {
   // seu código aqui
 }
@@ -67,4 +71,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
