@@ -38,20 +38,41 @@ function generatePhoneNumber(array) {
     }
     currentNumberCount = 0;
   }
-  return "(" + array[0] + array[1] + ") " + array[2] + array[3] + array[4] + array[5] + array[6] + "-" + array[7] + array[8] + array[9] + array[10]
+  return "(" + array[0] + array[1] + ") " + array[2] + array[3] + array[4] + array[5] + array[6] + "-" + array[7] + array[8] + array[9] + array[10];
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
+function triangleCheck(lineA, lineB, lineC) {
+  let a = Math.abs(lineA);
+  let b = Math.abs(lineB);
+  let c = Math.abs(lineC);
 
+  if (a < b + c && b < a + c && c < a + b) {
+    return true
+  } else {
+    return false
+  }
+}
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  // fui pesquisar sobre regex aqui: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+
+  let regex = /\d+/g; 
+  let result = string.match(regex);
+ // Pesquisei sobre trasformar um array de strings em números aqui: https://www.codegrepper.com/code-examples/javascript/javascript+Convert+an+array+of+strings+to+numbers
+ 
+  const last = result.map((i) => Number(i));
+
+  let waterQuantity = 0;
+  for (let key in last) {
+    waterQuantity += last[key]
+  }
+  
+  if (waterQuantity === 1) {
+    return waterQuantity + " copo de água"
+  } else if (waterQuantity > 1) {
+    return waterQuantity + " copos de água"
+  }
 }
-
-
 
 module.exports = {
   generatePhoneNumber,

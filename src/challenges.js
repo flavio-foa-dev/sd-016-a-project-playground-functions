@@ -15,8 +15,8 @@ function splitSentence(phrase) {
 function concatName(array) {
   let firstName = [];
   let lastName = [];
-  for (index = 0; index < array.length; index += 1) {
-    if (index == 0) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (index === 0) {
       firstName.push(array[index])
     } else if(index == (array.length) - 1) {
       lastName.push(array[index])
