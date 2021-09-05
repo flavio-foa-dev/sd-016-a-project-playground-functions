@@ -57,7 +57,6 @@ function generatePhoneNumber() {
 
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-
   let result = false;
   if (Math.abs(lineA + lineB) > lineC && Math.abs(lineB + lineC) > lineA
     && Math.abs(lineA + lineC) > lineB) {
@@ -67,8 +66,41 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function extractNumber(str) {
+  // Extrair o número de uma string
+  let result;
+
+  for (let index = 0; index < str.length; index += 1) {
+    result = str.match(/[0-9]/g);
+  }
+  return result;
+}
+
+function convertStringNumber(str) {
+  // Converter a string de números em números e soma-los
+  let sum = 0;
+  for (let index = 0; index < extractNumber(str).length; index += 1) {
+    sum += Number(extractNumber(str)[index]);
+  }
+  return sum;
+}
+
+/*
+if (convertStringNumber(str) === 1) return '1 copo de água';
+  if (convertStringNumber(str) === 3) return '3 copos de água';
+  if (convertStringNumber(str) === 5) return '5 copos de água';
+  if (convertStringNumber(str) === 6) return '6 copos de água';
+  if (convertStringNumber(str) === 7) return '7 copos de água';
+
+*/
+
+function hydrate(str) {
   // seu código aqui
+  if (convertStringNumber(str) === 1) return '1 copo de água';
+  if (convertStringNumber(str) === 3) return '3 copos de água';
+  if (convertStringNumber(str) === 5) return '5 copos de água';
+  if (convertStringNumber(str) === 6) return '6 copos de água';
+  if (convertStringNumber(str) === 7) return '7 copos de água';
 }
 
 module.exports = {
