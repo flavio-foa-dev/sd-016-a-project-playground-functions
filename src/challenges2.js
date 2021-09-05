@@ -39,13 +39,27 @@ function generatePhoneNumber(num) {
     }
   }
 
-return `(${num[0]}${num[1]}) ${num[2]}${num[3]}${num[4]}${num[5]}${num[6]}-${num[7]}${num[8]}${num[9]}${num[10]}`
+  return `(${num[0]}${num[1]}) ${num[2]}${num[3]}${num[4]}${num[5]}${num[6]}-${num[7]}${num[8]}${num[9]}${num[10]}`
 }
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let absolutA = Math.abs(lineB - lineC);
+  let absolutB = Math.abs(lineA - lineC);
+  let absolutC = Math.abs(lineA - lineC);
+  
+  if (lineA < (lineB + lineC) && lineA > absolutA) {
+    return true
+  }
+  if (lineB < (lineA + lineC) && lineB > absolutB) {
+    return true
+  }
+  if (lineC < (lineA + lineC) && lineC >  absolutC) {
+    return true
+  }else {
+  return false
 }
-
+} 
+/* console.log( triangleCheck(111, 14, 8)) */
 // Desafio 13
 function hydrate() {
   // seu código aqui
