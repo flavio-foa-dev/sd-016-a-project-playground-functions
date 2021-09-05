@@ -2,7 +2,7 @@
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
-  } else  {
+  } else {
     return false;
   }
 }
@@ -14,15 +14,15 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(stringExemplo) {
-  stringExemplo = stringExemplo.split(" ");
-  return stringExemplo;
+  let string = stringExemplo.split(" ");
+  return string;
 }
 
 // Desafio 4
 function concatName(name) {
   let first = name[0];
   let last = name[name.length - 1]
-  let firstLast = last +", "+ first;
+  let firstLast = last+" "+first;
   return firstLast;
 }
 
@@ -45,16 +45,15 @@ function highestCount(numberGreat) {
     if (numberGreat[i] === big) {
       repeat += 1;
     }
-
   }
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let position1 = Math.abs(mouse - cat1);
   let position2 = Math.abs(mouse - cat1);
-  if (position1 > calc2) {
+  if (position1 > position2) {
     return "cat2";
-  } else if (calc2 > calc1) {
+  } else if (position2 > position2) {
     return "cat1";
   } else if (position1 === position2) {
     return "os gatos trombam e o rato foge";
