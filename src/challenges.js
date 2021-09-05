@@ -1,15 +1,10 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a === true && b === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return a && b;
 }
 // Desafio 2
 function calcArea(base, height) {
-  let triangleArea = (base * height) / 2;
-  return triangleArea
+  return (base * height) / 2;
 }
 // Desafio 3
 function splitSentence(phrase) {
@@ -28,7 +23,7 @@ function concatName(array) {
     }
   }
   return lastName +", " +  firstName
-}
+} 
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
@@ -42,7 +37,7 @@ function highestCount(numbersArray) {
       maxNumberCount += 1;
     }
   }
-  return maxNumberCount;
+  return maxNumberCount; 
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
