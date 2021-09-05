@@ -56,12 +56,11 @@ function footballPoints(wins, ties) {
   01 - In this case we simply return the numbers of wins times 3, which is the value of a single win, and sum with the number of ties
   02 - In this case is not necessary to use parentheses, but turns the code more legible and semantic for a human analysis
    */
-  return (wins * 3) + ties;
+  return wins * 3 + ties;
 }
 
 // Desafio 6
-function highestCount(array) {
-  /*
+/*
   01 - Here we're setting an array highestNum with the value of the fist element of the array given
   02 - Than we're passing thru a FOR to go element by element of the array
   03 - In the if statement we're verifying if the array first element is minor than the array next element and store into a variable that holds the greatest number
@@ -77,6 +76,7 @@ function highestCount(array) {
 
   PS.: This was the first method I've encountered to resolve the problem. After few mentorship I've realized that there was an easier and simpler way to achieve the same result. Honorable mentions to Bê Salgueiro
    */
+function highestCount(array) {
   let highestNum = getHighestNumberOfArray(array);
   let highestNumRepeat = 0;
   for (let count = 0; count < array.length; count += 1) {
