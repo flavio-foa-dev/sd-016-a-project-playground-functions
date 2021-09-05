@@ -14,49 +14,40 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(stringExemplo) {
-  let string = stringExemplo.split(" ");
-  return string;
+  stringExemplo = stringExemplo.split(" ");
+  return stringExemplo;
 }
 
 // Desafio 4
 function concatName(name) {
-  let first = name[0];
-  let last = name[name.length - 1]
-  let firstLast = last+" "+first;
+  let firstLast = name[name.length - 1] + name[0];
   return firstLast;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = wins * 3 + ties * 1;
+  let points = wins + ties;
   return points;
 }
 
 // Desafio 6
 function highestCount(numberGreat) {
-  let bigger = numberGreat[0];
   let repeat = 0;
-  for (let i = 0; i < numberGreat.length; i++) {
-    if (numberGreat[i] > bigger) {
-      bigger = numberGreat[i];
+  for (let i = 0; i < numberGreat.length; i += 1) {
+    if (numberGreat[i] === Math.max(numberGreat)) {
+      repeat += 1;
     }
-  }
-  for (let i = 0; i < arr.length; i++) {
-    if (numberGreat[i] === bigger) {
-      repeat++;
-    }
-  }
+  } 
 }
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let position1 = Math.abs(mouse - cat1);
-  let position2 = Math.abs(mouse - cat1);
-  if (position1 > position2) {
-    return "cat2";
-  } else if (position2 > position2) {
-    return "cat1";
-  } else if (position1 === position2) {
-    return "os gatos trombam e o rato foge";
+  if (cat1 < cat2 && mouse === mouse[0]) {
+    return 'cat2';
+  } else if (cat2 < cat1) {
+    return 'cat1';
+  } else if (cat1 === cat2) {
+    return 'gatos trombam e o rato foge'
   }
 }
 
@@ -88,7 +79,12 @@ function encode(cript) {
   return cript;
 }
 function decode(decrypt) {
-
+  decrypt = decrypt.replace(/1/g, 'a');
+  decrypt = decrypt.replace(/2/g, 'e');
+  decrypt = decrypt.replace(/3/g, 'i');
+  decrypt = decrypt.replace(/4/g, 'o');
+  decrypt = decrypt.replace(/5/g, 'u');
+  return decrypt;
 }
 
 module.exports = {

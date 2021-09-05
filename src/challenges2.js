@@ -1,8 +1,8 @@
 // Desafio 10
-function techList(arr = ["React", "Jest", "HTML", "CSS", "JavaScript"], name = "Patrick") {
-  obj1 = {
+function techList(arr, name) {
+  list = {
     tech: arr,
-    name: name
+    nome: name
   }
 }
 
@@ -26,12 +26,10 @@ function hydrate(cerveja, cachaca, vinho, agua) {
   if (cerveja === 1) {
     agua = 1;
     return agua + "copo de água";
-  }
-  else if (cachaca === 1 && cerveja === 5 && vinho === 1) {
+  } else if (cachaca === 1 && cerveja === 5 && vinho === 1) {
     agua = 7;
     return agua + "copos de água";
-  }
-  else if (cachaca === 1 && cerveja === 5 && vinho === 1) {
+  } else if (cachaca === 1 && cerveja === 5 && vinho === 1) {
     agua = 7;
     return agua + "copos de água";
   }
