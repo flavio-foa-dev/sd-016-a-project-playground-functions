@@ -21,8 +21,33 @@ function techList(tech, name) { // Ajuda do Leandro Leão turma 16 tribo A
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  if (numbers.length != 11){
+    return "Array com tamanho incorreto."
+  }
+  let str = numbers.toString();
+  for (key in numbers){
+    if (numbers[key] < 0 || numbers[key] > 9){
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+  }
+    let ddd ="";
+    let primeiraParte="";
+    let segundaParte="";
+
+    for (i = 0; i < 2; i+=1){
+      ddd += str[i];
+    }
+    for (i = 2; i < 7; i+=1){
+      primeiraParte += str[i];
+    }
+    for (i = 7; i <= 11; i+=1){
+      segundaParte += str[i];
+    }
+    
+    return "("+ ddd + ")" + primeiraParte + "-" + segundaParte
+  
+
 }
 
 // Desafio 12
@@ -65,13 +90,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-let myString = "1 cerveja, 4 cachaça e 1 vinho";
-let sepString = myString.split(" ")
-let number = 0;
-for (key in sepString){
-  if (sepString[key] > 0 && sepString[key] <= 9){
-   let numero = parseInt(sepString[key]);
-   number += numero
-  }
-}
-console.log(number);
