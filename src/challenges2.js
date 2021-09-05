@@ -1,10 +1,10 @@
 // Desafio 10
 function criaNewObject(arrayTech, name) {
+  arrayTech = arrayTech.sort();
   const newCollectionArrayObject = [];
   for (let index = 0; index < arrayTech.length; index += 1) {
-    const objectCollection = { tech: '', name: '' };
-    objectCollection.tech = arrayTech[index];
-    objectCollection.name = name;
+    let objectCollection = { tech: '', name: '' };
+    objectCollection = { tech: arrayTech[index], name };
 
     newCollectionArrayObject.push(objectCollection);
   }
@@ -12,7 +12,6 @@ function criaNewObject(arrayTech, name) {
 }
 
 function techList(arrayTech, name) {
-  arrayTech = arrayTech.sort();
   const newCollectionArrayObject = criaNewObject(arrayTech, name);
   if (arrayTech.length === 0) {
     return 'Vazio!';
