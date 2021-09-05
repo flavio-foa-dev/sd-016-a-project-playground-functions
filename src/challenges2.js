@@ -1,73 +1,25 @@
 // Desafio 10
 function techList(techArray, name) {
-/* Entradas da função:
-["React", "Jest", "HTML", "CSS", "JavaScript"]
-"Lucas"
-
-// Saída:
-[
-  {
-    tech: "CSS",
-    name: "Lucas"
-  },
-  {
-    tech: "HTML",
-    name: "Lucas"
-  },
-  {
-    tech: "JavaScript",
-    name: "Lucas"
-  },
-  {
-    tech: "Jest",
-    name: "Lucas"
-  },
-  {
-    tech: "React",
-    name: "Lucas"
-  }
-]
-Caso o array venha vazio sua função deve retornar 'Vazio!'
-
-**O que será verificado:**
-
-- Retorne uma lista de objetos ordenados quando é passada uma lista
-  com 5 tecnologias
-
-- Retorne a mensagem de erro 'Vazio!' quando a lista não tiver tecnologias
-
-**Bônus** */
-if (techArray.length = 0){
-  console.log('Vazio!')
-} else {
-}
-
-  /* for (let index=0; index<techArray.length; index=+1) {
-    if (stringDecode[index] ===  1){
-      stringDecode[index] = 'a';
-  }
-  var beatlesTopFour = [
-    {
-        album: 'Abbey Road',
-        releaseYear: 1969
-    },
-    {
-        album: 'Revolver',
-        releaseYear: 1966
-    },
-    {
-        album: 'The Beatles (White Album)',
-        releaseYear: 1968
-    },
-    {
-        album: 'Rubber Soul',
-        releaseYear: 1965
+  //let techArray = []
+  let arrayTechLearn = [];
+  let techLearn = new Object();
+  //let techArray = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+  //let name = "Lucas"
+  //
+  if (techArray.length === 0) {
+    arrayTechLearn = 'Vazio!';
+  } else {
+    techArray.sort();
+    for (let index = 0; index < techArray.length; index += 1) {
+      let techLearn = {
+        tech: techArray[index],
+        name: name
+      }
+      arrayTechLearn.push(techLearn)
     }
-];
-} */
-/* beatlesTopFour.sort(function(a, b) {
-  return a.releaseYear - b.releaseYear;
-}); */
+  }
+  console.log(arrayTechLearn);
+  return arrayTechLearn
 }
 
 // Desafio 11
