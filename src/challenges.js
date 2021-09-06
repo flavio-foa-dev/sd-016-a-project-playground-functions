@@ -1,4 +1,5 @@
 // Desafio 1
+/* JavaScript possui um operador lógico &&, o qual recebe dois valores e retorna true se ambos os valores são verdadeiros, e retorna false se algum dos valores não o f */
 function compareTrue(valueOne, valueTwo) {
   if (valueOne && valueTwo) {
     return true;
@@ -7,16 +8,19 @@ function compareTrue(valueOne, valueTwo) {
 }
 
 // Desafio 2
+/* Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área. */
 function calcArea(base, height) {
   return (base * height) / 2;
 }
 
 // Desafio 3
+/* Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original. */
 function splitSentence(str) {
   return str.split(' ');
 }
 
 // Desafio 4
+/* Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array. */
 function concatName(arrStr) {
   let firstName = arrStr[0];
   let secondName = '';
@@ -29,12 +33,13 @@ function concatName(arrStr) {
 }
 
 // Desafio 5
+/* Escreva uma função com o nome footballPoints que receba o número de vitórias (esse parâmetro deverá se chamar wins) e o número de empates (esse parâmetro deverá se chamar ties) e retorne a quantidade de pontos que o time marcou em um campeonato. */
 function footballPoints(wins, ties) {
   return wins * 3 + ties;
 }
 
 // Desafio 6
-
+/* Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete. */
 function returnHigh(arrayNumber) {
   let hightValue = arrayNumber[0];
   for (let number of arrayNumber) {
@@ -56,6 +61,7 @@ function highestCount(arrayNumber) {
 }
 
 // Desafio 7
+/* Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão caçando um mesmo rato chamado mouse. Imagine que os animais estão em uma reta, cada um em uma posição representada por um número. */
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = Math.abs(mouse - cat1);
   let distanciaCat2 = Math.abs(mouse - cat2);
@@ -71,6 +77,12 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+/* Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
+
+Para cada número do Array que seja divisível apenas por 3, apresente uma string "fizz";
+Para cada número do Array que seja divisível apenas por 5, apresente uma string "buzz";
+Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
+Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!"; */
 function fizzBuzzTest(arr) {
   if (arr % 3 === 0 && arr % 5 === 0) {
     return 'fizzBuzz';
@@ -91,31 +103,28 @@ function fizzBuzz(arrayNumber) {
 }
 
 // Desafio 9
+/* Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir: */
 function encode(str) {
-  let strSplit = str.split('');
+  let strSplit = str;
   const vogais = ['a', 'e', 'i', 'o', 'u'];
 
-  for (let index = 0; index < strSplit.length; index += 1) {
+  for (let index = 0; index < str.length; index += 1) {
     for (let secIndex = 0; secIndex < vogais.length; secIndex += 1) {
-      if (strSplit[index] === vogais[secIndex]) {
-        strSplit[index] = secIndex + 1;
-      }
+      strSplit = strSplit.replace(vogais[index], index + 1);
     }
   }
-  return strSplit.join('');
+  return strSplit;
 }
 
 function decode(str) {
-  let strSplit = str.split('');
+  let strSplit = str;
   const vogais = ['a', 'e', 'i', 'o', 'u'];
-  for (let index = 0; index < strSplit.length; index += 1) {
+  for (let index = 0; index < str.length; index += 1) {
     for (let secIndex = 0; secIndex < vogais.length; secIndex += 1) {
-      if (strSplit[index] === String(secIndex + 1)) {
-        strSplit[index] = vogais[secIndex];
-      }
+      strSplit = strSplit.replace(index + 1, vogais[index]);
     }
   }
-  return strSplit.join('');
+  return strSplit;
 }
 
 module.exports = {
