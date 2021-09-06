@@ -20,40 +20,35 @@ function techList(arrayTech, name) {
 }
 
 // Desafio 11
-// function verficaValorNegativo(arrayNumber) {
-//   let count2 = 0;
-//   for (let index = 0; index < arrayNumber.length; index += 1) {
-//     if (arrayNumber[index] < 0 || arrayNumber[index] > 9) {
-//       count2 += 1;
-//     }
-//   }
-//   return count2;
-// }
-// function teste(arrayNumber) {
-//   let count = 0;
-//   for (let index = 0; index < arrayNumber.length; index += 1) {
-//     if (arrayNumber[index + 1] === arrayNumber[index]) {
-//       count += 1;
-//     }
-//   }
-//   return count;
-// }
-function generatePhoneNumber() {
-  // arrayNumber = arrayNumber.sort();
-  // let count = teste(arrayNumber);
-  // let count2 = verficaValorNegativo(arrayNumber);
-  // if (arrayNumber.length > 11) {
-  //   return 'Array com tamanho incorreto.';
-  // }
-  // if (count >= 3 || count2 > 0) {
-  //   return 'não é possível gerar um número de telefone com esses valores';
-  // }
-  // return count;
+
+function repiteNumber(arrayNumber, num) {
+  let count = 0;
+  for (let index = 0; index < arrayNumber.length; index += 1) {
+    if (arrayNumber[index] === num) {
+      count += 1;
+    }
+  }
+  return count;
+}
+function lengthArray(arr) {
+  for (let index = 0; index < arr.length; index += 1) {
+    let count = repiteNumber(arr, arr[index]);
+    if (arr[index] < 0 || arr[index] > 9 || count >= 3) {
+      return true;
+    }
+  }
 }
 
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 2]));
-// Desafio 12
+function generatePhoneNumber(a) {
+  if (a.length !== 11) return 'Array com tamanho incorreto.';
 
+  let test = lengthArray(a);
+  if (test === true) return 'não é possível gerar um número de telefone com esses valores';
+
+  return `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`;
+}
+
+// Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let result = false;
