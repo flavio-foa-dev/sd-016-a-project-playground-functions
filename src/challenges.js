@@ -62,9 +62,9 @@ function fizzBuzz(string) {
   for (index = 0; index < string.length; index++) {
     if(string[index] % 3 === 0 && string[index] % 5 === 0 ) {
       newArray.push ('fizzBuzz');
-    }else if(string[index] % 3 === 0) {
+    } else if(string[index] % 3 === 0) {
       newArray.push ('fizz');
-    }else if(string[index] % 5 === 0) {
+    } else if(string[index] % 5 === 0) {
       newArray.push ('buzz');
     }else{
       newArray.push('bug!');
@@ -72,14 +72,40 @@ function fizzBuzz(string) {
   } return newArray;
 }
 
-function encode() {
+function encode(text) {
+  let newText = text.split('');
+  for(index = 0; index < newText.length; index++) {
+    if(newText[index] === 'a') {
+      newText.splice(index, 1, '1');
+    }else if (newText[index] === 'e') {
+      newText.splice(index, 1 ,'2');
+    }else if (newText[index] === 'i') {
+      newText.splice(index, 1 ,'3');
+    }else if (newText[index] === 'o') {
+      newText.splice(index, 1 ,'4');
+    }else if (newText[index] === 'u') {
+      newText.splice(index, 1 ,'5');
+    }
 
-}
+    } return newText.join('');
+  }
+function decode(text) {
+  let newText = text.split('');
+  for(index = 0; index < newText.length; index++) {
+    if(newText[index] === '1') {
+      newText.splice(index, 1, 'a');
+    }else if (newText[index] === '2') {
+      newText.splice(index, 1 ,'e');
+    }else if (newText[index] === '3') {
+      newText.splice(index, 1 ,'i');
+    }else if (newText[index] === '4') {
+      newText.splice(index, 1 ,'o');
+    }else if (newText[index] === '5') {
+      newText.splice(index, 1 ,'u');
+    }
 
-function decode() {
-  // seu código aqui
-}
-
+    } return newText.join('');
+  }
 module.exports = {
   calcArea,
   catAndMouse,
