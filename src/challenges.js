@@ -85,8 +85,8 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(string) {
   let encodeString = "";
-  for(let index in string){
-    switch(string[index]){
+  for (let index in string) {
+    switch (string[index]) {
       case "a":
         encodeString += "1";
         break;
@@ -98,7 +98,7 @@ function encode(string) {
         break;
       case "o":
         encodeString += "4";
-        break; 
+        break;
       case "u":
         encodeString += "5";
         break;
@@ -112,8 +112,8 @@ function encode(string) {
 }
 function decode(string) {
   let decodeString = "";
-  for(let index in string){
-    switch(string[index]){
+  for (let index in string) {
+    switch (string[index]) {
       case "1":
         decodeString += "a";
         break;
@@ -125,7 +125,7 @@ function decode(string) {
         break;
       case "4":
         decodeString += "o";
-        break; 
+        break;
       case "5":
         decodeString += "u";
         break;
