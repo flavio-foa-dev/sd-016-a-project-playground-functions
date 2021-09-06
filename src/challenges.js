@@ -20,9 +20,11 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(words) {
+  let result = '';
   let last = words[(words.length - 1)];
   let first = words[0];
-  return last + ', ' + first;
+  result = last + ', ' + first;
+  return result;
 }
 
 // Desafio 5
@@ -49,13 +51,15 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(mouse - cat1);
   let distCat2 = Math.abs(mouse - cat2);
+  let result = '';
   if (distCat1 < distCat2) {
-    return 'cat1';
+    result = 'cat1';
   } else if (distCat1 > distCat2) {
-    return 'cat2';
+    result = 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge';
+    result = 'os gatos trombam e o rato foge';
   }
+  return result;
 }
 
 // Desafio 8
@@ -79,18 +83,24 @@ function fizzBuzz(numbers) {
 function encode(vogais) {
   let string = '';
   for (let index = 0; index < vogais.length; index += 1) {
-    if (vogais[index] === 'a') {
-      string += '1';
-    } else if (vogais[index] === 'e') {
-      string += '2';
-    } else if (vogais[index] === 'i') {
-      string += '3';
-    } else if (vogais[index] === 'o') {
-      string += '4';
-    } else if (vogais[index] === 'u') {
-      string += '5';
-    } else {
-      string += vogais[index];
+    switch (vogais) {
+      case 'a':
+        string += '1';
+        break;
+      case 'e':
+        string += '2';
+        break;
+      case 'i':
+        string += '3';
+        break;
+      case 'o':
+        string += '4';
+        break;
+      case 'u':
+        string += '5';
+        break;
+      default:
+        string += vogais[index];
     }
   }
   return string;
