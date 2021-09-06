@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(a, b) {
   if (a === true && b === true) {
-		// && = ambos necessariamente são true
-  	return true;
+	// && = ambos necessariamente são true
+	return true;
 		// true e false, false e true, false e false -> outras possibilidades para ser false
-} 
-return false;
+	} 
+	return false;
 }
 const c = true;
 const d = false;
@@ -18,7 +18,7 @@ console.log(compareTrue(c, e));
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
-return area;  
+	return area;
 }
 console.log(calcArea(10, 50));
 console.log(calcArea(5, 2));
@@ -47,12 +47,11 @@ function concatName(array) {
 	// último e primeiro item => array.lenght -1 e array[0];  
 	// aplicar o for para percorrer os elementos do array
 	for (let i = 0; i <= array.length; i += 1) {
-	
 	} 
-	return array[array.length - 1] + ", " + array[0];  
-}
+	return array[array.length - 1] + ', ' + array[0];  
+};
 
-let array1 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+let array1 = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 console.log(concatName(array1));
 let array2 = ['foguete', 'não', 'tem', 'ré'];
 console.log(concatName(array2));
@@ -74,11 +73,11 @@ console.log(footballPoints(0, 0));
 // Desafio 6
 function highestCount(array) {
 let numeroMax = array[0];
-let contador = 0;  
+let contador = 0;
     for (let index = 1; index <= array.length; index += 1) {
         if (array[index] > numeroMax) {
         numeroMax = array[index];
-    } 
+    }
 }	    for (let i = 0; i <= array.length -1; i += 1) {
         if (numeroMax === array[i]) {
 		contador = contador + 1;
@@ -89,9 +88,9 @@ let contador = 0;
     
 let array4 = [9, 1, 2, 3, 9, 5, 7];
 console.log(highestCount(array4));
-let arrayA = [ 0,4,4,4,9,2,1];
+let arrayA = [0, 4, 4, 4, 9, 2, 1];
 console.log(highestCount(arrayA));
-let arrayB = [0,0,0];
+let arrayB = [0, 0, 0];
 console.log(highestCount(arrayB));
 
 // Desafio 7
@@ -100,17 +99,17 @@ let resultado = [''];
 // animais em linha -> pensar num eixo X e distancia de pontos -- movimento (subtração) poderá ser negativa a depender do rato
 let distanciaRatoGato1 = (rato - gato1);
 let distanciaRatoGato2 = (rato - gato2);
-	if (distanciaRatoGato1 < 0){
+	if (distanciaRatoGato1 < 0) {
 		distanciaRatoGato1 = distanciaRatoGato1 * -1;
   } else if (distanciaRatoGato2 < 0);{
     distanciaRatoGato2 = distanciaRatoGato2 * -1;
   }
   if (distanciaRatoGato1 > distanciaRatoGato2) {
-		resultado = 'cat2';
+	  resultado = 'cat2';
 	} else if (distanciaRatoGato2 > distanciaRatoGato1) {
 		resultado = 'cat1';
 	} else if (distanciaRatoGato1 === distanciaRatoGato2) {
-		// se rato esta em 1 e gato em 0 é um espaço de distancia, e se o gato2 esta em 2 tb é um espaço de distancia
+	// se rato esta em 1 e gato em 0 é um espaço de distancia, e se o gato2 esta em 2 tb é um espaço de distancia
 		resultado = 'os gatos trombam e o rato foge';
   }
 	return resultado;
@@ -133,8 +132,8 @@ let resposta = [];
 	resposta.push('buzz');
 } else {
 	resposta.push('bug!');
-	}
 }
+	}
 	return resposta;
 }
 
@@ -151,7 +150,7 @@ function encode(string) {
 let separacao = string.split('');
 	for (let i = 0; i < separacao.length; i += 1) {
 		if (separacao[i] === 'a') {
-		separacao[i] = '1';	
+		separacao[i] = '1';
 	} else if (separacao[i] === 'e') {
 		separacao[i] = '2';
 	} else if (separacao[i] === 'i') {
@@ -172,7 +171,6 @@ let teste = 'hi there!';
 console.log(encode(teste));
 	
 function decode(string) {
-
 let separacao = string.split('');
 	for (let i = 0; i < separacao.length; i += 1) {
 		if (separacao[i] === '1'){
