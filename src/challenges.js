@@ -63,18 +63,18 @@ function catAndMouse(mouse,cat1,cat2) {
 
 // Desafio 8
 function fizzBuzz(conjunto){
-  let teste = []
-  for (let index = 0 ; index > conjunto.length ; index += 1){
+  
+  for (let index = 0 ; index < conjunto.length ; index += 1){
     if (conjunto[index] % 3 === 0 && conjunto[index] % 5 === 0) {
-    teste.push("fizzBuzz");
+      conjunto[index] ="fizzBuzz";
   } else if (conjunto[index] % 3 === 0){
-    teste.push("fizz");
+    conjunto[index] = "fizz";
   }else if (conjunto[index] % 5 === 0){
-    teste.push("buzz");
+    conjunto[index] ="buzz";
   }else if (conjunto[index] % 3 != 0 && conjunto[index] % 5 != 0){
-    teste.push("bug!");
+    conjunto[index] = "bug!";
   }
-  } return teste
+  } return conjunto
 }
 
 // Desafio 9
