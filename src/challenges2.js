@@ -26,7 +26,7 @@ function generatePhoneNumber(phoneNumber) {
   // os unicos numeros possíveis no array *Phone* //
   let possibleNumbers = [0,1,2,3,4,5,6,7,8,9];
   
-  // o formato de numero de celular no final. Ex: (11) 98938-3531 //
+  // o formato de numero de celular no final. Ex: (11) 98948-3530 //
   let numberCel = "(" + phone[0] + phone[1] + ") " + phone[2] + phone[3] + phone[4] + phone[5] + phone[6] + "-" + phone[7] + phone[8] + phone[9] + phone[10];
   
   // Verificar quantas vezes um número se repete no array Phone //
@@ -79,8 +79,12 @@ function generatePhoneNumber(phoneNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(side01, side02, side03) {
+  if (side01 < (side02+side03) && side01 > (Math.abs(side02-side03))) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
