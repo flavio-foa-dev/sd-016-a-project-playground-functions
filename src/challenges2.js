@@ -65,8 +65,14 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numero = string.replace(/\D+/g, '').split(''); // https://pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-De-uma-string-em-javascript
+  let numeroString = 0;
+  for (let posicao = 0; posicao < numero.length; posicao += 1) {
+    numeroString += parseInt(numero[posicao], 10); // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt
+    console.log(numeroString);
+  }
+  return numeroString === 1 ? `${numeroString} copo de água` : `${numeroString} copos de água`;
 }
 
 module.exports = {
