@@ -11,28 +11,26 @@ function techList(list, name) {
   return newArray;
 }
 
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Max'));
-
 // Desafio 11
 function generatePhoneNumber(numero) {
-  let test1=0;
-  let test2=0;
-  let count1=0;
+  let test1 = 0;
+  let test2 = 0;
+  let count1 = 0;
   let num = numero.join('');
   if (numero.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
  for (let i = 0; i < numero.length; i += 1) {
     if (numero[i] > 9 || numero[i] < 0) {
-      test1=1;
+      test1 = 1;
     }
   }
   count1 = 0;
-  for (index = 0; index < numero.length; index += 1) {
-    if (count1>=3) {
+  for (let index = 0; index < numero.length; index += 1) {
+    if (count1 >= 3) {
       break;
     }
-    count1=0;
+    count1 = 0;
     for (let i = 0; i < numero.length; i += 1) {
       if (numero[index] === numero[i]) {
         count1 += 1;
@@ -40,9 +38,8 @@ function generatePhoneNumber(numero) {
     }
   }
   if ( count1 >= 3 ) {
-    test2=1;
+    test2 = 1;
   }
-  // console.log(count1,test2,test1);
   if ( test2 == 1 || test1 == 1 ) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
@@ -50,11 +47,10 @@ function generatePhoneNumber(numero) {
 }
 
 // Desafio 12
-function triangleCheck(lado1,lado2,lado3) {
-
-  if (lado2-lado3 < lado1 && lado1 < lado2+lado3){
-    if (lado1-lado3 < lado2 && lado2 < lado1+lado3){
-      if (lado1-lado2 < lado3 && lado3 < lado1+lado2){
+function triangleCheck(lado1, lado2, lado3) {
+  if (lado2 - lado3 < lado1 && lado1 < lado2 + lado3) {
+    if (lado1 - lado3 < lado2 && lado2 < lado1 + lado3) {
+      if (lado1 - lado2 < lado3 && lado3 < lado1 + lado2) {
         return true
       } 
       else {
@@ -76,13 +72,13 @@ function hydrate(bar) {
   stackoverflow  ref
  */
   let regex = /\d+/g;
-  var matches = bar.match(regex)
+  var matches = bar.match(regex);
   let count = 0;
   let count2 = 0;
   for (i = 0; i < matches.length; i += 1) {
     count += parseInt(matches[i]);
   }
-  if (count == 1) {
+  if (count === 1) {
     return '1 copo de água';
   } else {
     return count + ' ' + 'copos de água';

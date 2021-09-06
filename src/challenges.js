@@ -84,38 +84,34 @@ function encode(palavra) {
   let splitvar = palavra.split('');
   for (let index = 0; index < splitvar.length; index += 1) {
     if (splitvar[index] === 'a') {
-      splitvar[index] = '1';	
+      splitvar[index] = '1';
     } else if (splitvar[index] === 'e') {
       splitvar[index] = '2';
     } else if (splitvar[index] === 'i') {
       splitvar[index] = '3';
-    } else if (splitvar[index] === "o") {
+    } else if (splitvar[index] === 'o') {
       splitvar[index] = '4';
     } else if (splitvar[index] === 'u') {
       splitvar[index] = '5';
-    } else {
-      splitvar[index] = splitvar[index];
     }
-  } 
+  }
   let newword = splitvar.join('');
-  return newword; 
-} 
+  return newword;
+}
 
 function decode(palavra) {
   let splitvar = palavra.split('');
   for (let index = 0; index < splitvar.length; index += 1) {
     if (splitvar[index] === '1') {
-      splitvar[index] = 'a';	
+      splitvar[index] = 'a';
     } else if (splitvar[index] === '2') {
       splitvar[index] = 'e';
     } else if (splitvar[index] === '3') {
       splitvar[index] = 'i';
-    } else if (splitvar[index] === "4") {
+    } else if (splitvar[index] === '4') {
       splitvar[index] = 'o';
     } else if (splitvar[index] === '5') {
       splitvar[index] = 'u';
-    } else {
-      splitvar[index] = splitvar[index];
     }
   }
   let newword = splitvar.join('');
