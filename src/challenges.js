@@ -36,7 +36,7 @@ function highestCount(array) {
   let count = 0;
   for (let numbers of array) {
     if (highest === numbers) {
-      count ++ 
+      count += 1;
     }
   }
   return count;
@@ -58,7 +58,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let array = [];
-  for (let index = 0; index <= numbers.length; index += 1) {
+  for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
       let fizz = 'fizz';
       array.push(fizz);
@@ -71,8 +71,9 @@ function fizzBuzz(numbers) {
       let fizzBuzz = 'fizzBuzz';
       array.push(fizzBuzz);
     }
-    else {
-      array.push('bug!');
+    if (numbers[index] % 3 !== 0 && numbers[index] % 5 !== 0) {
+      let bug = 'bug!';
+      array.push(bug);
     }
   }
     return array;
