@@ -29,7 +29,7 @@ function generatePhoneNumber(array) {
   let ddd ="(" + array[0] + array[1] + ")";
   let firstHalf = " " + array[2] + array[3] + array[4] + array[5] + array[6];
   let secondHalf = '-' + array[7] + array[8] + array[9] + array[10];
-  return firstHalf + '-' + secondHalf;
+  return ddd + firstHalf + secondHalf;
 }
 
 // Desafio 12
