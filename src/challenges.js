@@ -70,13 +70,53 @@ function fizzBuzz(arrayEx8) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringEx9) {
+  let novoAray = stringEx9.split('');
+  for (let posicao = 0; posicao < novoAray.length; posicao += 1) {
+    if (novoAray[posicao] === 'a') {
+      novoAray[posicao] = '1';
+    }
+    if (novoAray[posicao] === 'e') {
+      novoAray[posicao] = '2';
+    }
+    if (novoAray[posicao] === 'i') {
+      novoAray[posicao] = '3';
+    }
+    if (novoAray[posicao] === 'o') {
+      novoAray[posicao] = '4';
+    }
+    if (novoAray[posicao] === 'u') {
+      novoAray[posicao] = '5';
+    }
+  }
+  stringEx9 = novoAray.join(''); // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+  return stringEx9;
 }
 
-function decode() {
-  // seu código aqui
+function decode(stringEx9A) {
+  let novoAray = stringEx9A.split('');
+  for (let posicao = 0; posicao < novoAray.length; posicao += 1) {
+    if (novoAray[posicao] === '1') {
+      novoAray[posicao] = 'a';
+    }
+    else if (novoAray[posicao] === '2') {
+      novoAray[posicao] = 'e';
+    }
+    if (novoAray[posicao] === '3') {
+      novoAray[posicao] = 'i';
+    }
+    if (novoAray[posicao] === '4') {
+      novoAray[posicao] = 'o';
+    }
+    if (novoAray[posicao] === '5') {
+      novoAray[posicao] = 'u';
+    }
+  }
+  stringEx9A = novoAray.join(''); // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+  return stringEx9A;
 }
+
+console.log(decode('h2ll4'));
 
 module.exports = {
   calcArea,
