@@ -97,23 +97,22 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  let fixedSring = string.toLowerCase();
   let newString = '';
   let array = [];
 
-  for (let key in fixedSring) {
-    if (fixedSring[key] === 'a') {
+  for (let key in string) {
+    if (string[key] === 'a') {
       array.push('1');
-    } else if (fixedSring[key] === 'e') {
+    } else if (string[key] === 'e') {
       array.push('2');
-    } else if (fixedSring[key] === 'i') {
+    } else if (string[key] === 'i') {
       array.push('3');
-    } else if (fixedSring[key] === 'o') {
+    } else if (string[key] === 'o') {
       array.push('4');
-    } else if (fixedSring[key] === 'u') {
+    } else if (string[key] === 'u') {
       array.push('5');
     } else {
-      array.push(fixedSring[key]);
+      array.push(string[key]);
     }
   }
 
