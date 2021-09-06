@@ -45,11 +45,20 @@ function generatePhoneNumber(array) {
 
 
 // Desafio 12
-function triangleCheck() {
+// eslint-disable-next-line complexity
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
+    return false;
+  // eslint-disable-next-line max-len
+  } if (lineA < Math.abs(lineB - lineC) || lineB < Math.abs(lineA - lineC) || lineC < Math.abs(lineB - lineA)) {
+    return false;
+  } return true;
   // seu código aqui
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
+
 function hydrate(str) {
   let numbers = str.match(/\d+/g).map(Number);
   let glassOfWater = 0;
