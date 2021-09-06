@@ -33,47 +33,48 @@ function footballPoints(wins,ties) {
 
 
 // Desafio 6
+
 function highestCount(numeros) {
-  let maiorNumero = 0;
-  let repeticoes = 0;
-  for (let index = 0 ; index > numeros.length ; index += 1) {
+  let maiorNumero = numeros[0];
+  let repeticoes = 1;
+  for (let index = 1 ; index < numeros.length ; index += 1) {
     if (numeros[index] > maiorNumero) {
-       maiorNumero = numeros[index]; 
-       repeticoes += 1;
-  }
-} for (let index = 0 ; index > numeros.length ; index += 1) {
-    if (numeros[index] === maiorNumero) {
+       maiorNumero = numeros[index];
+       repeticoes = 1;      
+  }else if (numeros[index] === maiorNumero) {
        repeticoes += 1;
     }
-} return maiorNumero , repeticoes;
+} return repeticoes;
 }
+
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  let posicao1 = mouse - cat1
-  let posicao2 = mouse - cat2
- if (posicao1 > posicao2){
+  let posicao1 = Math.abs(cat1 - mouse);
+  let posicao2 = Math.abs(cat2 -mouse);
+  if (posicao1 < posicao2){
   return "cat1";
-} else if (posicao1 < posicao2){
+  } else if (posicao1 > posicao2){
   return "cat2";
-} else if (posicao1 === posicao2){
+  } else if (posicao1 === posicao2){
   return "os gatos trombam e o rato foge";
 }
 }
 
 // Desafio 8
 function fizzBuzz(conjunto){
+  let teste = []
   for (let index = 0 ; index > conjunto.length ; index += 1){
     if (conjunto[index] % 3 === 0 && conjunto[index] % 5 === 0) {
-    return "fizzBuzz";
+    teste.push("fizzBuzz");
   } else if (conjunto[index] % 3 === 0){
-    return "fizz";
+    teste.push("fizz");
   }else if (conjunto[index] % 5 === 0){
-    return "buzz";
+    teste.push("buzz");
   }else if (conjunto[index] % 3 != 0 && conjunto[index] % 5 != 0){
-    return "bug!";
+    teste.push("bug!");
   }
-  } 
+  } return teste
 }
 
 // Desafio 9
@@ -81,17 +82,17 @@ function encode(palavras){
   let texto = palavras.split("");
   for (let index = 0 ; index > texto.length ; index += 1){
     if (texto[index] === "a") {
-      texto[index] = 1;
+      texto.splice([index],1,1);
   } else if (texto[index] === "e") {
-    texto[index] = 2;
+    texto.splice([index],1,2);
   } else if (texto[index] === "i") {
-    texto[index] = 3;
+    texto.splice([index],1,3);
   } else if (texto[index] === "o") {
-    texto[index] = 4;
+    texto.splice([index],1,4);
   } else if (texto[index] === "u") {
-    texto[index] = 5;
-  }  
-  }return texto
+    texto.splice([index],1,5);
+  }  let final = texto.join("");
+  }return final
 }
 
 function decode(decodificacao){
@@ -108,7 +109,7 @@ function decode(decodificacao){
   } else if (codigo[index] === 5) {
     codigo[index] = "u";
   }  
-} return console.log(codigo)
+} return codigo
 }
 
 module.exports = {
