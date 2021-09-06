@@ -26,7 +26,7 @@ function concatName(Array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let totalPoints = (wins * 3) + ties;
+  let totalPoints = wins * 3 + ties;
   return totalPoints;
 }
 
@@ -53,11 +53,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2distance = mouse - cat2;
   let winner = '';
   if (Math.abs(cat1distance) < Math.abs(cat2distance)) {
-    winner = "cat1";
+    winner = 'cat1';
   } else if (Math.abs(cat1distance) > Math.abs(cat2distance)) {
-    winner = "cat2";
+    winner = 'cat2';
   } else if (Math.abs(cat1distance) === Math.abs(cat2distance)) {
-    winner = "os gatos trombam e o rato foge";
+    winner = 'os gatos trombam e o rato foge';
   }
   return winner;
 }
@@ -67,13 +67,13 @@ function fizzBuzz(array) {
   let myArray = [];
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
-      myArray.push("fizz");
+      myArray.push('fizz');
     } else if (array[index] % 5 === 0 && array[index] % 3 !== 0) {
-      myArray.push("buzz");
+      myArray.push('buzz');
     } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      myArray.push("fizzBuzz");
+      myArray.push('fizzBuzz');
     } else if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
-      myArray.push("bug!");
+      myArray.push('bug!');
     }
   }
   return myArray;
