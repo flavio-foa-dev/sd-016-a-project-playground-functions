@@ -1,31 +1,15 @@
 // Desafio 1
-function compareTrue(a, b) {
-  if (a === true && b === true) {
-    return true;
-  } else {
-    return false;
-  }
-}
+const compareTrue = (a, b) => a === true && b === true;
 // Desafio 2
-function calcArea(base, height) {
-  return (base * height) / 2;
-}
+const calcArea = (base, height) => (base * height) / 2;
 // Desafio 3
-function splitSentence(str) {
-  return (newStr = str.split(' '));
-}
-
+const splitSentence = (str) => str.split(' ');
 // Desafio 4
-function concatName(arr) {
-  let lastLetter = arr.slice(-1);
-  let newLetter = arr.slice(0, 1);
-  let result = lastLetter.concat(newLetter);
-  return result.join(', ');
-}
+const concatName = (arr) => `${arr[arr.length - 1]}, ${arr[0]}`;
 // Desafio 5
-const footballPoints = (wins, ties) => ((wins*3) + (ties*1));
+const footballPoints = (wins, ties) => ((wins * 3) + (ties * 1));
 // Desafio 6
-function highestCount(arr) {
+function highestCount (arr) {
   let maxNumber = 0;
   let counter = 0;
 
@@ -56,11 +40,9 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (distac1 < distac2) {
     return 'cat1';
-  } else if (distac1 > distac2) {
+  } if (distac1 > distac2) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
-  }
+  } return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
