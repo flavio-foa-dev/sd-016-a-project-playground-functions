@@ -1,16 +1,11 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 && value2 === true) {
-    return true;
-  }
-  return false;
-}
+  return (value1 === true && value2 === true);
+}// By ViniciusTnK
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = base * height;
-  let areaParte2 = area / 2;
-  return areaParte2;
+  return base * height * 0.5;
 }
 
 // Desafio 3
@@ -21,17 +16,13 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(array) {
-  let lastName = array[array.length - 1];
-  let firstName = array[0];
   let virgula = ', ';
-  return lastName + virgula + firstName;
-}
+  return array[array.length - 1] + virgula + array[0];
+}// By ViniciusTnK
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winPoints = wins * 3;
-  let tiesPoints = ties * 1;
-  return winPoints + tiesPoints;
+  return wins * 3 + ties * 1;
 }
 
 // Desafio 6
