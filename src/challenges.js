@@ -22,7 +22,7 @@ function splitSentence(sentence) {
 function concatName(words) {
   let last = words[(words.length - 1)];
   let first = words[0];
-  return last + ", " + first;
+  return last + ', ' + first;
 }
 
 // Desafio 5
@@ -99,7 +99,7 @@ function encode(vogais) {
 function decode(numbers) {
   let string2 = '';
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] === '1'){
+    if (numbers[index] === '1') {
       string2 += 'a';
     } else if (numbers[index] === '2') {
       string2 += 'e';
