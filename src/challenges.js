@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(firstValue, secondValue) {
-  //criar função para verificar se ambos os parametros são verdadeiros.
-  if (firstValue === true && secondValue === true){
+  //  criar função para verificar se ambos os parametros são verdadeiros.
+  if (firstValue === true && secondValue === true) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
@@ -18,33 +18,32 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // Função que separa uma string em Array
-  let array = string.split(' ')
+  let array = string.split(' ');
   return array;
 }
 
 // Desafio 4
 function concatName(arrayInvert) {
   // Função que inverte a ordem dos elementos de um array
-  
-  //variavel que inverte a posição dos elementos do array
-  let reverse = arrayInvert.reverse();
-  //variavel que seleciona o primeiro item do array
+  //  variavel que inverte a posição dos elementos do array
+  arrayInvert.reverse();
+  //  variavel que seleciona o primeiro item do array
   let first = arrayInvert[0];
-  //varivel que seleciona o ultimo item do array
+  //  varivel que seleciona o ultimo item do array
   let last = arrayInvert.pop();
-  //variavel que une os dois arrays em uma string
-  let join = first + ', '+ last;
+  //  variavel que une os dois arrays em uma string
+  let join = first + ', ' + last;
   
-  return join;
+return join;
 
 }
 
 // Desafio 5
-function footballPoints(wins=0, ties=0) {
-  // função que calcula a quantidade de pontos no futebol
- winPoints = (wins * 3);
- socrePoints = (winPoints + ties);
- return socrePoints;
+function footballPoints(wins = 0, ties = 0) {
+// função que calcula a quantidade de pontos no futebol
+ let winPoints = (wins * 3);
+ let socrePoints = (winPoints + ties);
+return socrePoints;
 }
 
 // Desafio 6
@@ -52,16 +51,16 @@ function highestCount(numbers) {
   // Função que identifica qual o maior numero e quantas vezes ele se repete
   let higher = -1000;
   let counter = 0;
-   for (let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] > higher){
-       higher = numbers[i];
-       counter = 1;
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > higher) {
+      higher = numbers[i];
+      counter = 1;
     }
-    else if (numbers[i] === higher){
-       counter += 1;
-      }
-   }
-   return counter;
+    else if (numbers[i] === higher) {
+      counter += 1;
+    }
+  }
+return counter;
 }
 
 // Desafio 7
@@ -83,7 +82,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  // Crie uma função chamada `fizzBuzz`
+// Crie uma função chamada fizzBuzz
   let textReturn = [];
 
   for (let mod of numbers) {
@@ -97,8 +96,7 @@ function fizzBuzz(numbers) {
       textReturn.push('bug!');
     }
   }
-
-  return textReturn;
+return textReturn;
 }
 
 // Desafio 9
@@ -122,11 +120,12 @@ function encode(letterNumber) {
         encodeLetters.push(5);
         break;
       default:
-        encodeLetters.push(letterNumber[i])
+        encodeLetters.push(letterNumber[i]);
     }
   }
-  return encodeLetters.join('');
+return encodeLetters.join('');
 }
+
 function decode(letterNumber) {
   let decodeLetters = [];
   for (let i = 0; i < letterNumber.length; i += 1) {
@@ -147,10 +146,10 @@ function decode(letterNumber) {
         decodeLetters.push('u');
         break;
       default:
-        decodeLetters.push(letterNumber[i])
+        decodeLetters.push(letterNumber[i]);
     }
   }
-  return decodeLetters.join('');
+return decodeLetters.join('');
 }
 
 
