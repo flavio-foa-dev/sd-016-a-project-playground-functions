@@ -1,6 +1,6 @@
 // Desafio 10 Alteração pra commit inicial
-function techList() {
-  // seu código aqui
+function techList(techLearn, name) {
+ 
 }
 
 // Desafio 11
