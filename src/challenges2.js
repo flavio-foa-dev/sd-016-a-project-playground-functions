@@ -1,12 +1,11 @@
 // Desafio 10
 function techList(list, name) {
-  let newArray = [];
   let ordlist = list.sort();
   if (list.length === 0) {
     return 'Vazio!';
   }
   for (let index in ordlist) {
-    newArray.push({ tech: ordlist[index], name: name });
+    let newArray.push({ tech: ordlist[index], name: name });
   }
   return newArray;
 }
@@ -20,7 +19,7 @@ function generatePhoneNumber(numero) {
   if (numero.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
- for (let i = 0; i < numero.length; i += 1) {
+  for (let i = 0; i < numero.length; i += 1) {
     if (numero[i] > 9 || numero[i] < 0) {
       test1 = 1;
     }
@@ -37,10 +36,10 @@ function generatePhoneNumber(numero) {
       }
     }
   }
-  if ( count1 >= 3 ) {
+  if (count1 >= 3) {
     test2 = 1;
   }
-  if ( test2 == 1 || test1 == 1 ) {
+  if (test2 === 1 || test1 === 1) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return `(${num.slice(0, 2)}) ${num.slice(2, 7)}-${num.slice(7, 11)}`;
@@ -50,7 +49,7 @@ function generatePhoneNumber(numero) {
 function triangleCheck(lado1, lado2, lado3) {
   if (lado2 - lado3 < lado1 && lado1 < lado2 + lado3) {
     if (lado1 - lado3 < lado2 && lado2 < lado1 + lado3) {
-      if (lado1 - lado2 < lado3 && lado3 < lado1 + lado2) {
+      if (lado1 - lado2 < lado3 && lado3 < lado1 + lado2){
         return true
       } 
       else {
@@ -74,8 +73,7 @@ function hydrate(bar) {
   let regex = /\d+/g;
   var matches = bar.match(regex);
   let count = 0;
-  let count2 = 0;
-  for (i = 0; i < matches.length; i += 1) {
+  for (let i = 0; i < matches.length; i += 1) {
     count += parseInt(matches[i]);
   }
   if (count === 1) {
