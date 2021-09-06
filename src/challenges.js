@@ -80,7 +80,7 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(palavra) {
-  lucas = palavra;
+  let lucas = palavra;
     
   lucas = lucas.replaceAll("a","1");
   lucas = lucas.replaceAll("e","2");
@@ -90,7 +90,7 @@ function encode(palavra) {
   console.log (lucas);
 }
 function decode(palavra) {
-  lucas = palavra;
+  let lucas = palavra;
     
   lucas = lucas.replaceAll("1","a");
   lucas = lucas.replaceAll("2","e");
