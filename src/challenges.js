@@ -10,19 +10,19 @@ function compareTrue(param1, param2) {
 // Desafio 2
 function calcArea(base,height) {
   let area = (base * height) / 2;
-    return console.log(area);
+    return area;
 }  
 
  //Desafio 3
 function splitSentence(string) {
-  let frase = string.split;
-    return console.log(frase);
+  let frase = string.split(' ');
+    return frase;
 }
 
  //Desafio 4
 function concatName(array) {
-  let concatenacao = array[array.length - 1] + array[0];
-  return console.log(concatenacao);
+  let concatenacao = array[array.length - 1] + ", " + array[0];
+  return concatenacao;
 }
 
 // Desafio 5
@@ -35,10 +35,11 @@ function footballPoints(wins,ties) {
 // Desafio 6
 function highestCount(numeros) {
   let maiorNumero = 0;
-  let repeticoes = 1;
+  let repeticoes = 0;
   for (let index = 0 ; index > numeros.length ; index += 1) {
     if (numeros[index] > maiorNumero) {
        maiorNumero = numeros[index]; 
+       repeticoes += 1;
   }
 } for (let index = 0 ; index > numeros.length ; index += 1) {
     if (numeros[index] === maiorNumero) {
@@ -51,31 +52,33 @@ function highestCount(numeros) {
 function catAndMouse(mouse,cat1,cat2) {
   let posicao1 = mouse - cat1
   let posicao2 = mouse - cat2
-} if (posicao1 > posicao2){
-  return cat1;
+ if (posicao1 > posicao2){
+  return "cat1";
 } else if (posicao1 < posicao2){
-  return cat2;
+  return "cat2";
 } else if (posicao1 === posicao2){
-  return console.log ("os gatos trombam e o rato foge");
+  return "os gatos trombam e o rato foge";
+}
 }
 
 // Desafio 8
 function fizzBuzz(conjunto){
   for (let index = 0 ; index > conjunto.length ; index += 1){
     if (conjunto[index] % 3 === 0 && conjunto[index] % 5 === 0) {
-    return console.log("fizzBuzz");
+    return "fizzBuzz";
   } else if (conjunto[index] % 3 === 0){
-    return console.log("fizz");
+    return "fizz";
   }else if (conjunto[index] % 5 === 0){
-    return console.log("buzz");
+    return "buzz";
   }else if (conjunto[index] % 3 != 0 && conjunto[index] % 5 != 0){
-    return console.log("bug!");
+    return "bug!";
   }
   } 
 }
 
 // Desafio 9
-function encode(texto){
+function encode(palavras){
+  let texto = palavras.split("");
   for (let index = 0 ; index > texto.length ; index += 1){
     if (texto[index] === "a") {
       texto[index] = 1;
@@ -88,11 +91,12 @@ function encode(texto){
   } else if (texto[index] === "u") {
     texto[index] = 5;
   }  
-} return console.log(texto)
+  }return texto
 }
 
-function decode(codigo){
-  for (let index = 0 ; index > texto.length ; index += 1){
+function decode(decodificacao){
+  let codigo = decodificacao.split("")
+  for (let index = 0 ; index > codigo.length ; index += 1){
     if (codigo[index] === 1) {
       codigo[index] = "a";
   } else if (codigo[index] === 2) {
