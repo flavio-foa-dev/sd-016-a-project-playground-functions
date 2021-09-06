@@ -24,7 +24,7 @@ function splitSentence(sentence) {
 function concatName(names) {
   // seu código aqui
   let lastIndex = names.length - 1;
-  return (names[lastIndex], ',', names[0]);
+  return `${names[lastIndex]}, ${names[0]}`;
 }
 
 // Desafio 5
