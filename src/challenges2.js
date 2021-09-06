@@ -88,9 +88,24 @@ function triangleCheck(side01, side02, side03) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(mainString) {
+  // Utilizando regular expressions (REGEX), é possível criar uma variável que procure por dígitos numa string. No caso abaixo, a intenção é que dentro da pesquisa >> /   / << , seja procurado todas as ocorrências com pelo menos um dígito >> \d+ << , e que retorne de uma maneira global todos os resultados encontrados >> g << . Referência para criação da variável : https://www.mundojs.com.br/2018/06/14/como-usar-o-regex-no-javascript/ e https://www.codegrepper.com/code-examples/javascript/get+only+numbers+from+string+js //
+  let regex = /\d+/g;
+  let mainArray = mainString.match(regex);
+  let mainsArraySum = 0;
+
+  for (let index = 0; index < mainArray.length; index +=1) {
+    mainsArraySum = mainsArraySum + parseInt(mainArray[index]);
+  }
+  
+  if (mainsArraySum > 1) {
+    return (mainsArraySum + " copos de água")
+  } else { 
+    return (mainsArraySum + " copo de água")
+  }
+
 }
+
 
 module.exports = {
   generatePhoneNumber,
