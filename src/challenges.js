@@ -80,24 +80,24 @@ function fizzBuzz(conjunto){
 // Desafio 9
 function encode(palavras){
   let texto = palavras.split("");
-  for (let index = 0 ; index > texto.length ; index += 1){
+  for (let index = 0 ; index < texto.length ; index += 1){
     if (texto[index] === "a") {
-      texto.splice([index],1,1);
+      texto[index] = 1;
   } else if (texto[index] === "e") {
-    texto.splice([index],1,2);
+    texto[index] = 2;
   } else if (texto[index] === "i") {
-    texto.splice([index],1,3);
+    texto[index] = 3;
   } else if (texto[index] === "o") {
-    texto.splice([index],1,4);
+    texto[index] = 4;
   } else if (texto[index] === "u") {
-    texto.splice([index],1,5);
-  }  let final = texto.join("");
-  }return final
+    texto[index] = 5;
+  }  let texto = texto.join("");
+  }return texto
 }
 
 function decode(decodificacao){
   let codigo = decodificacao.split("")
-  for (let index = 0 ; index > codigo.length ; index += 1){
+  for (let index = 0 ; index < codigo.length ; index += 1){
     if (codigo[index] === 1) {
       codigo[index] = "a";
   } else if (codigo[index] === 2) {
@@ -108,7 +108,7 @@ function decode(decodificacao){
     codigo[index] = "o";
   } else if (codigo[index] === 5) {
     codigo[index] = "u";
-  }  
+  }  let codigo = codigo.join("")
 } return codigo
 }
 
