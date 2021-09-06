@@ -123,23 +123,22 @@ function encode(string) {
 
 function decode(string) {
   // seu código aqui
-  let fixedSring = string.toLowerCase();
   let newString = '';
   let array = [];
 
-  for (let key in fixedSring) {
-    if (fixedSring[key] === '1') {
+  for (let key in string) {
+    if (string[key] === '1') {
       array.push('a');
-    } else if (fixedSring[key] === '2') {
+    } else if (string[key] === '2') {
       array.push('e');
-    } else if (fixedSring[key] === '3') {
+    } else if (string[key] === '3') {
       array.push('i');
-    } else if (fixedSring[key] === '4') {
+    } else if (string[key] === '4') {
       array.push('o');
-    } else if (fixedSring[key] === '5') {
+    } else if (string[key] === '5') {
       array.push('u');
     } else {
-      array.push(fixedSring[key]);
+      array.push(string[key]);
     }
   }
 
