@@ -22,28 +22,28 @@ function generatePhoneNumber(numero) {
   if (numero.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
- for (let i = 0; i < numero.length; i += 1) {
+  for (let i = 0; i < numero.length; i += 1) {
     if (numero[i] > 9 || numero[i] < 0) {
-      test1=1;
+      test1 = 1;
     }
   }
   count1 = 0;
   for (let index = 0; index < numero.length; index += 1) {
-    if (count1>=3) {
+    if (count1 >= 3) {
       break;
     }
-    count1=0;
+    count1 = 0;
     for (let ii = 0; ii < numero.length; ii += 1) {
       if (numero[index] === numero[ii]) {
         count1 += 1;
       }
     }
   }
-  if ( count1 >= 3 ) {
-    test2=1;
+  if (count1 >= 3) {
+    test2 = 1;
   }
   // console.log(count1,test2,test1);
-  if ( test2 == 1 || test1 == 1 ) {
+  if (test2 === 1 || test1 === 1) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
@@ -54,11 +54,10 @@ console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1]));
 console.log(generatePhoneNumber([0, 1, 1, 4, 5, 5, 2, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck(lado1,lado2,lado3) {
-
-  if (lado2 - lado3 < lado1 && lado1 < lado2 + lado3){
-    if (lado1 - lado3 < lado2 && lado2 < lado1 + lado3){
-      if (lado1 - lado2 < lado3 && lado3 < lado1 + lado2){
+function triangleCheck(lado1, lado2, lado3) {
+  if (lado2 - lado3 < lado1 && lado1 < lado2 + lado3) {
+    if (lado1 - lado3 < lado2 && lado2 < lado1 + lado3) {
+      if (lado1 - lado2 < lado3 && lado3 < lado1 + lado2) {
         return true;
       } 
       else {
