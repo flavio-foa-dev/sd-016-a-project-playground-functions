@@ -57,23 +57,25 @@ if(positionCat1 > positionCat2) {
 }
 
 // Desafio 8
-function fizzBuzz([string]) {
+function fizzBuzz(string) {
+  let newArray = [];
   for (index = 0; index < string.length; index++) {
-    if(string[index]/3 = 0) {
-      return 'fizz'
+    if(string[index] % 3 === 0 && string[index] % 5 === 0 ) {
+      newArray.push ('fizzBuzz');
+    }else if(string[index] % 3 === 0) {
+      newArray.push ('fizz');
+    }else if(string[index] % 5 === 0) {
+      newArray.push ('buzz');
+    }else{
+      newArray.push('bug!');
     }
-  }
-
-// Desafio 9
-function encode(string) {
-  for(index = 0; index < string.length; index++) {
-    if(string[index] === a) {
-      string[index] = 1;
-      return string
-    } 
-  }
-  
+  } return newArray;
 }
+
+function encode() {
+
+}
+
 function decode() {
   // seu código aqui
 }
