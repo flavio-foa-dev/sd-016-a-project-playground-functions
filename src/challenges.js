@@ -43,7 +43,7 @@ function highestCount(numbers) {
   let counter = 0;
 
   for (let i = 0; i <= numbers.length - 1; i += 1) {
-    if (highestNumber < numbers[i]) {
+    if (numbers[i] > highestNumber) {
       highestNumber = numbers[i];
     }
   }
@@ -56,8 +56,15 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  if ((cat1 - mouse) < (cat2 - mouse)) {
+    return 'cat1';
+  }
+  if ((cat1 - mouse) > (cat2 - mouse)) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
