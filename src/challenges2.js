@@ -21,7 +21,7 @@ function techList(array, string) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   // seu código aqui
-  if (numbers.length != 11) {
+  if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
@@ -73,8 +73,23 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(drinks) {
   // seu código aqui
+  let waterCups = 0;
+
+  for (let number of drinks) {
+    if (number.match(/\d/) != null) {
+      waterCups += parseInt(number, drinks);
+    }
+  }
+
+  if (waterCups === 1) {
+    waterCups = `${waterCups} copo de água`;
+  } else {
+    waterCups = `${waterCups} copos de água`;
+  }
+
+  return waterCups;
 }
 
 module.exports = {
