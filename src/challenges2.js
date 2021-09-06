@@ -22,13 +22,7 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA + lineB < lineC) {
-    return false;
-  }
-  if (lineB + lineC < lineA) {
-    return false;
-  }
-  if (lineC + lineA < lineB) {
+  if (lineA + lineB < lineC || lineB + lineC < lineA || lineC + lineA < lineB) {
     return false;
   }
   return true;
