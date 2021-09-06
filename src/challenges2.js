@@ -67,8 +67,19 @@ function generatePhoneNumber(numbers) {
   return telephoneNumber;
 }
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > Math.abs(lineB + lineC) || lineA < Math.abs(lineB - lineC)){
+    return false;
+  }
+  else if (lineB > Math.abs(lineA + lineC) || lineB < Math.abs(lineA - lineC)){
+    return false;
+  }
+  else if (lineC > Math.abs(lineB + lineA) || lineC < Math.abs(lineB - lineA)){
+    return false;
+  }
+  else {
+    return true;
+  }
 }
 
 // Desafio 13
