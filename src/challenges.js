@@ -114,6 +114,7 @@ function encode(text) {
 
   return text;
 }
+
 function decode(text) {
   for (let i = 0; i < text.length; i += 1) {
     if (isNumber(text.charAt(i)) === true) {
