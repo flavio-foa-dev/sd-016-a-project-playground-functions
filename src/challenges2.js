@@ -51,9 +51,12 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  return lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
 }
+
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
@@ -66,4 +69,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-
