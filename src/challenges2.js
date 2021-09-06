@@ -68,13 +68,13 @@ function generatePhoneNumber(numbers) {
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA > Math.abs(lineB + lineC) || lineA < Math.abs(lineB - lineC)){
+  if (lineA > Math.abs(lineB + lineC) || lineA < Math.abs(lineB - lineC)) {
     return false;
   }
-  else if (lineB > Math.abs(lineA + lineC) || lineB < Math.abs(lineA - lineC)){
+  else if (lineB > Math.abs(lineA + lineC) || lineB < Math.abs(lineA - lineC)) {
     return false;
   }
-  else if (lineC > Math.abs(lineB + lineA) || lineC < Math.abs(lineB - lineA)){
+  else if (lineC > Math.abs(lineB + lineA) || lineC < Math.abs(lineB - lineA)) {
     return false;
   }
   else {
@@ -83,10 +83,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
-
+function hydrate(drink) {
+  let cupsOfWater = 0;
+  let amounth = drink.match(/\d+/g).map(Number);
+  for(let i in amounth){
+    cupsOfWater += amounth[i];
+  }
+    if (cupsOfWater === 1){
+      return cupsOfWater + " copo de água";
+    }
+    else {
+      return cupsOfWater + " copos de água";
+    }
+  }
 module.exports = {
   generatePhoneNumber,
   techList,
