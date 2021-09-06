@@ -39,10 +39,10 @@ function highestCount(array) {
       higherNumber = array[i];
     }
   }
-   for (let i = array[0]; i < array.length; i += 1) {
-      if (array[i] === higherNumber) {
-        higherNumberTimes.push(array[i]);
-      }
+  for (let i = array[0]; i < array.length; i += 1) {
+    if (array[i] === higherNumber) {
+      higherNumberTimes.push(array[i]);
+    }
   }
   return higherNumberTimes.length;
 }
@@ -51,7 +51,7 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let cat1distance = mouse - cat1;
   let cat2distance = mouse - cat2;
-  let winner = ''; 
+  let winner = '';
   if (Math.abs(cat1distance) < Math.abs(cat2distance)) {
     winner = "cat1";
   } else if (Math.abs(cat1distance) > Math.abs(cat2distance)) {
@@ -66,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let myArray = [];
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 !== 0) { 
+    if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
       myArray.push("fizz");
     } else if (array[index] % 5 === 0 && array[index] % 3 !== 0) {
       myArray.push("buzz");
@@ -78,14 +78,68 @@ function fizzBuzz(array) {
   }
   return myArray;
 }
+/*
+9 - Crie uma função que Codifique e Decodifique
+Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+a -> 1
+e -> 2
+i -> 3
+o -> 4
+u -> 5
+Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!".
+A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
+O que será verificado:
+Retorne uma string codificada quando a função encode for utilizada
+Retorne uma string decodificada quando a função decode for utilizada
+*/
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let newArray = string.split('');
+  let newStr = [];
+  for (let i = 0; i < newArray.length; i += 1) {
+    let currElement = newArray[i];
+    if (currElement === 'a') {
+      newStr.push('1');
+    } else if (currElement === 'e') {
+      newStr.push('2');
+    } else if (currElement === 'i') {
+      newStr.push('3');
+    } else if (currElement === 'o') {
+      newStr.push('4');
+    } else if (currElement === 'u') {
+      newStr.push('5');
+    } else {
+      newStr.push(currElement);
+    }
+  }
+  return newStr.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let newArray = string.split('');
+  let newStr = [];
+  for (let i = 0; i < newArray.length; i += 1) {
+    let currElement = newArray[i];
+    if (currElement === '1') {
+      newStr.push('a');
+    } else if (currElement === '2') {
+      newStr.push('e');
+    } else if (currElement === '3') {
+      newStr.push('i');
+    } else if (currElement === '4') {
+      newStr.push('o');
+    } else if (currElement === '5') {
+      newStr.push('u');
+    } else {
+      newStr.push(currElement);
+    }
+  }
+  return newStr.join('');
 }
+
+
+
 
 module.exports = {
   calcArea,
