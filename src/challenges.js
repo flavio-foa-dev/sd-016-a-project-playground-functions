@@ -72,7 +72,7 @@ function fizzBuzz(parm) {
 // Desafio 9
 function encode(phrase) {
   let phrase2 = phrase.split('');
-  for (let i in phrase2) {
+  for (let i = 0; i < phrase2.length; i += 1) {
     switch (phrase2[i]) {
     case 'a': phrase2[i] = 1;
       break;
@@ -93,7 +93,7 @@ function encode(phrase) {
 
 function decode(phrase) {
   let phrase2 = phrase.split('');
-  for (let j in phrase2) {
+  for (let j = 0; j < phrase2.length; j += 1) {
     switch (phrase2[j]) {
     case '1':
       phrase2[j] = 'a';

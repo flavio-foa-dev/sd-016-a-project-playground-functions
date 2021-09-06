@@ -30,8 +30,6 @@ function generatePhoneNumber(a) {
   let add = a.join('');
   let ddd = `(${add.substring(0, 2)}) `;
   let num1 = `${add.substring(2, 7)}-`;
-  // let ddd = '(' + add.substring(0, 2) + ') ';
-  // let num1 = add.substring(2, 7) + '-';
   let num2 = add.substring(7, 11);
   return ddd + num1 + num2;
 }
@@ -47,8 +45,16 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phrase) {
+  let tmp = phrase.match(/\d+/g).map(Number);
+  let num = 0;
+  for (let i = 0; i < tmp.length; i += 1) {
+    num += tmp[i];
+  }
+  if (num === 1) {
+    return `${num} copo de água`;
+  }
+  return `${num} copos de água`;
 }
 
 module.exports = {
