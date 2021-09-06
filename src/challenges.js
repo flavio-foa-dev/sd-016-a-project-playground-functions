@@ -87,13 +87,12 @@ function fizzBuzz(numbers) {
       array.push('fizz');
     } else if (numbers[i] % 5 === 0) {
       array.push('buzz');
+    } else {
+      array.push('bug!');
     }
-    array.push('bug!');
   }
   return array;
 }
-
-console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
