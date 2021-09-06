@@ -81,11 +81,46 @@ function fizzBuzz(lista) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// eslint-disable-next-line complexity
+function encode(codif) {
+  let newCodif = '';
+  for (let i = 0; i < codif.length; i += 1) {
+    if (codif[i] === 'a') {
+      newCodif += '1';
+    } else if (codif[i] === 'e') {
+      newCodif += '2';
+    } else if (codif[i] === 'i') {
+      newCodif += '3';
+    } else if (codif[i] === 'o') {
+      newCodif += '4';
+    } else if (codif[i] === 'u') {
+      newCodif += '5';
+    } else {
+      newCodif += codif[i];
+    }
+  }
+  return newCodif;
 }
-function decode() {
-  // seu código aqui
+
+// eslint-disable-next-line complexity
+function decode(decodif) {
+  let newDecodif = '';
+  for (let i = 0; i < decodif.length; i += 1) {
+    if (decodif[i] === '1') {
+      newDecodif += 'a';
+    } else if (decodif[i] === '2') {
+      newDecodif += 'e';
+    } else if (decodif[i] === '3') {
+      newDecodif += 'i';
+    } else if (decodif[i] === '4') {
+      newDecodif += 'o';
+    } else if (decodif[i] === '5') {
+      newDecodif += 'u';
+    } else {
+      newDecodif += decodif[i];
+    }
+  }
+  return newDecodif;
 }
 
 module.exports = {
