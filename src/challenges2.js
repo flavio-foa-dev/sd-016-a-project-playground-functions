@@ -29,7 +29,7 @@ function generatePhoneNumber(numero) {
   }
   count1 = 0;
   for (index = 0; index < numero.length; index += 1) {
-    if (count1>3) {
+    if (count1>=3) {
       break;
     }
     count1=0;
@@ -107,26 +107,7 @@ function triangleCheck(lado1,lado2,lado3) {
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
-  function hydrate(str) {
-    //seta expressao regular
-    let regex = /\d+/g;
-    let string = str;
-    let matches = string.match(regex);
-    let soma = 0;
-    let result = 0;
-    //itera sobre os digitos encontrados na string
-    for (let index in matches) {
-      result = parseInt(matches[index]);
-      soma += result;
-    }
-    //condicional para retornar singular ou plural
-    if (soma === 1) {
-      return soma + ' ' + 'copo de água';
-    } else {
-      return soma + ' ' + 'copos de água';
-    }
-  }
+
 }
 
 module.exports = {
