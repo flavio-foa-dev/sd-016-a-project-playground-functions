@@ -2,7 +2,7 @@
 function techList(techListArray, techListNome) {
   let lista = [];
   let novoArray = techListArray.sort();
-  let saidaVazia = "Vazio!";
+  let saidaVazia = 'Vazio!';
   if (techListArray.length > 0) {
     for (let posicao in novoArray) {
       let objeto = {};
@@ -15,11 +15,45 @@ function techList(techListArray, techListNome) {
   return saidaVazia;
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
-
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let telefone = '';
+  let ordem = array.slice().sort();
+  if (array.length != 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let posicao = 0; posicao < array.length; posicao += 1) {
+    if (array[posicao] < 0 || array[posicao] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    letra = posicao;
+    petra = posicao;
+    anterior = letra -= 1;
+    proximo = petra += 1;
+    if (ordem[posicao] === ordem[anterior] && ordem[posicao] === ordem[proximo]) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    else if (posicao === 0) {
+      telefone += '(';
+      telefone += array[posicao];
+    }
+    else if (posicao == 1) {
+      telefone += array[posicao];
+      telefone += ')';
+      telefone += ' ';
+    }
+    else if (posicao > 1 && posicao < 6) {
+      telefone += array[posicao];
+    }
+    else if (posicao === 6) {
+      telefone += array[posicao];
+      telefone += '-';
+    }
+    else if (posicao > 6) {
+      telefone += array[posicao];
+    }
+  }
+  return telefone;
 }
 
 // Desafio 12
