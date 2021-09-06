@@ -121,7 +121,7 @@ function encode(string) {
       encodeArray.push(stringSplit[i]);
     }
   }
-  return encode.join('');
+  return encodeArray.join('');
 }
 function decode(string) {
   // seu código aqui
@@ -142,7 +142,7 @@ function decode(string) {
       decodeString.push(stringSplit[i]);
     }
   }
-  return decode.join('');
+  return decodeString.join('');
 }
 
 module.exports = {
