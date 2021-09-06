@@ -1,7 +1,21 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologia, nome) {
+  // Crie uma função que recebe um array de nomes de tecnologias que você quer aprender
+  if(tecnologia.length === 0){
+    return "Vazio!"
+  }
+  else{
+      student = tecnologia.sort();
+      for (i = 0; i < student.length; i += 1){
+        student[i] = {
+          tech:student[i],
+          name:nome,
+        }
+      }
+        return student
+      }
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
