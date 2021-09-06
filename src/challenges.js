@@ -33,7 +33,6 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  // percorrer o array e pegar a quantidade de vezes que o maior numero se repete
   let maiorNum = Math.max(...array);
   let quantidade = 0;
 
@@ -51,6 +50,8 @@ function catAndMouse(mouse, cat1, cat2) {
   let gato1 = Math.abs(mouse - cat1);
   let gato2 = Math.abs(mouse - cat2);
 
+  console.log(gato1, gato2);
+
   if (gato1 < gato2) {
     return 'cat1';
   } if (gato2 < gato1) {
@@ -59,10 +60,33 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
+console.log(catAndMouse(20, -3, 435));
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzzAppendix(numero) {
+  if (numero % 3 === 0 && numero % 5 === 0) {
+    return 'fizzBuzz';
+  } if (numero % 3 === 0) {
+    return 'fizz';
+  } if (numero % 5 === 0) {
+    return 'buzz';
+  }
 }
+
+function fizzBuzz(array) {
+  let resultado = [];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % 3 === 0 || array[i] % 5 === 0) {
+      resultado.push(fizzBuzzAppendix(array[i]));
+    } else {
+      resultado.push('bug!');
+    }
+  }
+
+  return resultado;
+}
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
