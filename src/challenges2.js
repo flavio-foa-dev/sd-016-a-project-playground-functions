@@ -27,8 +27,12 @@ function formatNumber(array) {
 }
 
 function countInArray(array, number) {
-  return array.filter((elemento) => elemento === number).length;
-  // retorna um array com todos os elementos number e depois pega o length dele
+  function find(elemento) {
+    if (elemento === number) {
+      return elemento;
+    }
+  }
+  return array.filter(find).length;
 }
 
 function countAndTest(array) {
