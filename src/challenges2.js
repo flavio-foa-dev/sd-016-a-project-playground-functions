@@ -18,36 +18,35 @@ function techList(technology, yourName) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   // seu código aqui
-  let finalResult = 'Array com tamanho incorreto.';
+  let result = 'Array com tamanho incorreto.';
 
   if (numbers.length === 11) {
-    let count = 1;
-    for (let index1 = 0; index1 < numbers.length; index1 += 1) {
-      count = 1;
-      for (let index2 = index1 + 1; index2 <= numbers.length; index2 += 1) {
-        if (numbers[index1] === numbers[index2]) { count += 1; }
+    result = '';
+    let count = 0;
+    for (let number of numbers) {
+      count = 0;
+      for (let numberCount of numbers) {
+        if (numberCount === number) {
+          count += 1;
+        }
       }
-      if (numbers[index1] >= 0 && numbers[index1] <= 9 && count < 3) {
-        if (index1 === 0) {
-          finalResult = `(${numbers[index1]}`;
-        } else if (index1 === 1) {
-          finalResult += `${numbers[index1]}) `;
-        } else if (index1 >= 2 && index1 <= 5) {
-          finalResult += numbers[index1];
-        } else if (index1 === 6) {
-          finalResult += `${numbers[index1]}-`;
-        } else {
-          finalResult += numbers[index1];
+      if (number >= 0 && number <= 9 && count < 3) {
+        result += number;
+        if (result.length === 11) {
+          result = `(${result.slice(0, 2)}) ${result.slice(2, 7)}-${result.slice(7)}`;
+          break;
         }
       } else {
-        finalResult = 'não é possível gerar um número de telefone com esses valores';
+        result = 'não é possível gerar um número de telefone com esses valores';
         break;
       }
     }
   }
 
-  return finalResult;
+  return result;
 }
+
+console.log(generatePhoneNumber([1, 1, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -81,3 +80,57 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
+// let result = 'Array com tamanho incorreto.';
+
+// if (numbers.length === 11) {
+//   result = '';
+//   let count = 0;
+//   for (let number of numbers) {
+//     count = 0;
+//     for (let numberCount of numbers) {
+//       if (numberCount === number) {
+//         count += 1;
+//       }
+//     }
+//     if (number >= 0 && number <= 9 && count < 3) {
+//       result += number;
+//       if (result.length === 11) {
+//         result = `(${result.slice(0, 2)}) ${result.slice(2, 7)}-${result.slice(7)}`;
+//         break;
+//       }
+//     } else {
+//       result = 'não é possível gerar um número de telefone com esses valores';
+//       break;
+//     }
+//   }
+// }
+
+// return result;
+
+// let result = 'Array com tamanho incorreto.';
+
+// if (numbers.length === 11) {
+//   result = '';
+//   let count = 0;
+//   numbers.forEach(function (number) {
+//     count = 0;
+//     numbers.forEach(function (numberCount) {
+//       if (numberCount === number) {
+//         count += 1;
+//       }
+//     });
+//     if (number >= 0 && number <= 9 && count < 3) {
+//       result += number;
+//       if (result.length === 11) {
+//         result = `(${result.slice(0, 2)}) ${result.slice(2, 7)}-${result.slice(7)}`;
+//         run = false;
+//       }
+//     } else {
+//       result = 'não é possível gerar um número de telefone com esses valores';
+//       run = false;
+//     }
+//   });
+// }
+
+// return result;
