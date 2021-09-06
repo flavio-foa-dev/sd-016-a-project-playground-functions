@@ -2,7 +2,7 @@
 function compareTrue(valor1, valor2) {
   // seu código aqui
   if (valor1 === true && valor2 === true) {
-    return true
+    return true;
   } 
   return false;
 }
@@ -10,7 +10,7 @@ function compareTrue(valor1, valor2) {
 // Desafio 2
 function calcArea(base, altura) {
   let result = (base * altura) / 2;
-  console.log ('Á Área do Triângulo é: ' + (base * altura)/2);
+  console.log('Á Área do Triângulo é: ' + (base * altura) / 2);
   return result;
 }
 
@@ -23,14 +23,14 @@ function splitSentence(texto) {
 
 // Desafio 4
 function concatName(word) {
- result = word[word.length - 1] + ", " + word [0];
- return result
+  let result = word[word.length - 1] + ", " + word[0];
+  return result;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  result = (wins*3) + (ties)
-  return result
+  let result = (wins * 3) + (ties);
+  return result;
 }
 
 // Desafio 6
@@ -42,8 +42,8 @@ function highestCount(numeros) {
       maiornum = numeros[index];
     }
   }
-  for (index = 0; index < numeros.length; index += 1) {
-    if (numeros[index] === maiornum) {
+  for (let index1 = 0; index1 < numeros.length; index1 += 1) {
+    if (numeros[index1] === maiornum) {
       count2 += 1;
     }
   }
@@ -65,8 +65,8 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(number) {
-  let num=[];
-  for (index = 0; index < number.length; index += 1) {
+  let num = [];
+  for (let index = 0; index < number.length; index += 1) {
     if ((number[index] % 3) === 0 && (number[index] % 5) === 0) {
       num.push('fizzBuzz');
     } else if ((number[index] % 3) === 0) {
@@ -83,7 +83,7 @@ function fizzBuzz(number) {
 function encode(palavra) {
   let splitvar = palavra.split('');
   for (let index = 0; index < splitvar.length; index += 1) {
-      if (splitvar[index] === 'a') {
+    if (splitvar[index] === 'a') {
       splitvar[index] = '1';	
     } else if (splitvar[index] === 'e') {
       splitvar[index] = '2';
@@ -104,7 +104,7 @@ function encode(palavra) {
 function decode(palavra) {
   let splitvar = palavra.split('');
   for (let index = 0; index < splitvar.length; index += 1) {
-      if (splitvar[index] === '1') {
+    if (splitvar[index] === '1') {
       splitvar[index] = 'a';	
     } else if (splitvar[index] === '2') {
       splitvar[index] = 'e';
