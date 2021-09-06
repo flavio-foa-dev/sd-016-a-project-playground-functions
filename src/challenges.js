@@ -128,6 +128,7 @@ return encodeLetters.join('');
 
 function decode(letterNumber) {
   let decodeLetters = [];
+
   for (let i = 0; i < letterNumber.length; i += 1) {
     switch (letterNumber[i]) {
       case '1':
@@ -151,7 +152,6 @@ function decode(letterNumber) {
   }
 return decodeLetters.join('');
 }
-
 
 module.exports = {
   calcArea,
