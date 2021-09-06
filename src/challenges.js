@@ -86,7 +86,6 @@ function encode(palavra) {
   codif = codif.replaceAll('i', '3');
   codif = codif.replaceAll('o', '4');
   codif = codif.replaceAll('u', '5');
-  console.log(codif);
 }
 
 function decode(palavra2) {
@@ -96,7 +95,6 @@ function decode(palavra2) {
   codif2 = codif2.replaceAll('3', 'i');
   codif2 = codif2.replaceAll('4', 'o');
   codif2 = codif2.replaceAll('5', 'u');
-  console.log(codif2);
 }
 
 module.exports = {
