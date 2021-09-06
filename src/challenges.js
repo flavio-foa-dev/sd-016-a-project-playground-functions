@@ -7,27 +7,24 @@ const splitSentence = (str) => str.split(' ');
 // Desafio 4
 const concatName = (arr) => `${arr[arr.length - 1]}, ${arr[0]}`;
 // Desafio 5
-const footballPoints = (wins, ties) => ((wins * 3) + (ties * 1));
+const footballPoints = (wins, ties) => wins * 3 + ties * 1;
 // Desafio 6
-function highestCount (arr) {
-  let maxNumber = 0;
+function highestCount(arr) {
+  let maxNumber = arr[0];
   let counter = 0;
-
-  for (let index in arr) {
-    if (arr[index] > maxNumber) {
-      maxNumber = arr[index];
+  arr.forEach((el) => {
+    if (el > maxNumber) {
+      maxNumber = el;
     }
-    if (arr[index] < 0) {
-      maxNumber = arr[index];
-    }
-  }
-  for (let index in arr) {
-    if (maxNumber === arr[index]) {
+  });
+  arr.forEach((el) => {
+    if (el === maxNumber) {
       counter += 1;
     }
-  }
+  });
   return counter;
 }
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distac1 = mouse - cat1;
@@ -40,26 +37,39 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (distac1 < distac2) {
     return 'cat1';
-  } if (distac1 > distac2) {
+  }
+  if (distac1 > distac2) {
     return 'cat2';
-  } return 'os gatos trombam e o rato foge';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
+const printFizz = (arr, index, newArr) => {
+  if (arr[index] % 3 === 0 && arr[index] % 5 !== 0) {
+    newArr.push('fizz');
+  }
+};
+const printBuzz = (arr, index, newArr) => {
+  if (arr[index] % 5 === 0 && arr[index] % 3 !== 0) {
+    newArr.push('buzz');
+  }
+};
+const printBug = (arr, index, newArr) => {
+  if (arr[index] % 5 !== 0 && arr[index] % 3 !== 0) {
+    newArr.push('bug!');
+  }
+};
+
 function fizzBuzz(arr) {
   let newArr = [];
   for (let index = 0; index < arr.length; index += 1) {
-    if (arr[index] % 3 === 0) {
-      if (arr[index] % 5 === 0) {
-        newArr.push('fizzBuzz');
-      } else {
-        newArr.push('fizz');
-      }
-    } else if (arr[index] % 5 === 0) {
-      newArr.push('buzz');
-    } else {
-      newArr.push('bug!');
+    printFizz(arr, index, newArr);
+    printBuzz(arr, index, newArr);
+    if (arr[index] % 3 === 0 && arr[index] % 5 === 0) {
+      newArr.push('fizzBuzz');
     }
+    printBug(arr, index, newArr);
   }
   return newArr;
 }

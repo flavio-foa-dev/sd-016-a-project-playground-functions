@@ -29,7 +29,6 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-
 function hydrate(str) {
   let newStr = str.split('');
   let counter = 0;
@@ -37,22 +36,29 @@ function hydrate(str) {
   for (let index in newStr) {
     if (newStr[index] === '1') {
       counter += 1;
-    } else if (newStr[index] === '2') {
+    }
+    if (newStr[index] === '2') {
       counter += 2;
-    } else if (newStr[index] === '3') {
+    }
+    if (newStr[index] === '3') {
       counter += 3;
     }
     if (newStr[index] === '4') {
       counter += 4;
-    } else if (newStr[index] === '5') {
+    }
+    if (newStr[index] === '5') {
       counter += 5;
-    } else if (newStr[index] === '6') {
+    }
+    if (newStr[index] === '6') {
       counter += 6;
-    } else if (newStr[index] === '7') {
+    }
+    if (newStr[index] === '7') {
       counter += 7;
-    } else if (newStr[index] === '8') {
+    }
+    if (newStr[index] === '8') {
       counter += 8;
-    } else if (newStr[index] === '9') {
+    }
+    if (newStr[index] === '9') {
       counter += 9;
     }
   }
