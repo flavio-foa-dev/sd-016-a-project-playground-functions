@@ -17,6 +17,7 @@ function splitSentence(string) {
 function concatName(array) {
   let first = array.shift();
   let last = array.pop();
+  // eslint-disable-next-line prefer-template
   let newArr = last + ', ' + first;
   return newArr;
 }
@@ -51,20 +52,19 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   }
 }
-// Desafio 8
-function fizzBuzz (array) {
-  for (index = 0; index < array.length; index += 1) {
-    if(array[index]%3 === 0 && array[index]%5 === 0) {
-      array[index] = 'fizzBuzz'
-    } else if (array[index]%3 === 0){
-      array[index] = 'fizz'
-    } else if (array[index]%5 === 0){
-      array[index] = 'buzz'
+// eslint-disable-next-line complexity
+function fizzBuzz(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      array[index] = 'fizzBuzz';
+    } else if (array[index] % 3 === 0) {
+      array[index] = 'fizz';
+    } else if (array[index] % 5 === 0) {
+      array[index] = 'buzz';
     } else {
-      array[index] = 'bug!'
+      array[index] = 'bug!';
     }
-  }
-  return array;
+  } return array;
 }
 
 // Desafio 9
