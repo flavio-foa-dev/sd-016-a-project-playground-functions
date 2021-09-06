@@ -92,8 +92,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// criar uma função para reduzir a complexidade do lint, com as condições e chamar ela na função fizzBuzz
+function lintHateMe(index) {
+  if (((index % 3) === 0) && ((index % 5) === 0)) {
+    return ('fizzBuzz');
+  } if ((index % 3) === 0) {
+    return ('fizz');
+  } if ((index % 5) === 0) {
+    return ('buzz');
+  } return ('bug!');
+}
+function fizzBuzz(numbers) {
+  // Divisível por 3: se a soma dos algarismos for divisível por 3
+  // Divisível por 5: se o último algarismo for 5 ou 0
+  // primeiramente devo pecorrer o array para aplicar a condição
+  // inicialmente numbers vai ser um array com numeros, devo ter uma VAR que vai armazenar as string para enviar na condição e essa VAR com as string vai se a retornada
+  let string = [];
+  for (const index of numbers) {
+    string.push(lintHateMe(index));
+  }
+  return string;
 }
 
 // Desafio 9
