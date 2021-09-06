@@ -9,14 +9,13 @@ function techList(array, name) {
     for( let i = 0; i < array.length; i += 1 ) {
       let object = {
         tech: array[i],
-        name: "Lucas",
+        name: name,
       }
       arrayResult.push(object);
     }
     return arrayResult;
   }
 }
-console.log(techList([], "Lucas"))
 
 // Desafio 11
 function generatePhoneNumber() {
