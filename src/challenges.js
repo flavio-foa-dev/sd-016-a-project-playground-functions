@@ -11,9 +11,7 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(stringExemplo) {
-  stringExemplo = stringExemplo.split(" ");
-  return stringExemplo;
+function splitSentence() {
 }
 
 // Desafio 4
@@ -29,14 +27,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numberGreat) {
-  let repeat = 0;
-  for (let i = 0; i < numberGreat.length; i += 1) {
-    if (numberGreat[i] === Math.max(numberGreat)) {
-      repeat += 1;
-    }
-    return repeat;
-  }
+function highestCount() {
 }
 
 // Desafio 7
