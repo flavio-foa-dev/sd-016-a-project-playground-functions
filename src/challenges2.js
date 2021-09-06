@@ -73,6 +73,7 @@ let textoAjustado;
     }
 
     telefone.value = textoAjustado;
+    test
 }*/
 
 
