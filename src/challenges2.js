@@ -51,8 +51,19 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let sum = 0;
+  for (let i = 0; i < string.length; i += 1) {
+    let value = string[i];
+    let parsed = parseInt(value, 10);
+    if (Number.isNaN(parsed) === false) {
+      sum += parsed;
+    }
+  }
+  if (sum > 1) {
+    return `${sum} copos de água`;
+  }
+  return `${sum} copo de água`;
 }
 
 module.exports = {
