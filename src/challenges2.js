@@ -26,10 +26,28 @@ function generatePhoneNumber(numbers) {
   }
 
   let isInvalid = false;
-
+  let repeatedCount = 0;
   let mask = '(xx) xxxxx-xxxx';
+
+  for (let number of numbers) {
+    if (number < 0 || number > 9) {
+      isInvalid = true;
+    } else {
+      for (let number2 of numbers) {
+        if (number === number2) {
+          repeatedCount += 1;
+          if (repeatedCount >= 3) {
+            isInvalid = true;
+          }
+        }
+      }
+      repeatedCount = 0;  
+    }
+    
+  }
+  
   numbers.forEach(item => {
-    if (item < 0) {
+    if (item < 0 || item > 9) {
       isInvalid = true;
     }
     mask = mask.replace('x', item);
