@@ -54,14 +54,19 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbersArray) {
   let namesArray = [];
   for (let index = 0; index < numbersArray.length; index += 1) {
-    if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 === 0) {
+    switch (numbersArray[index] !== 0) {
+    case numbersArray[index] % 15 === 0:
       namesArray.push('fizzBuzz');
-    } else if (numbersArray[index] % 5 === 0) {
-      namesArray.push('buzz');
-    } else if (numbersArray[index] % 3 === 0) {
+      break;
+    case numbersArray[index] % 3 === 0:
       namesArray.push('fizz');
-    } else {
+      break;
+    case numbersArray[index] % 5 === 0:
+      namesArray.push('buzz');
+      break;
+    default:
       namesArray.push('bug!');
+      break;
     }
   }
   return namesArray;
