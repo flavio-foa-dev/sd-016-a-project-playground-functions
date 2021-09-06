@@ -106,9 +106,43 @@ function triangleCheck(lado1,lado2,lado3) {
 
 
 // Desafio 13
-function hydrate() {
+function hydrate(bar) {
+  /*
+  var regex = /\d+/g;
+  var string = "you can enter maximum 500 choices";
+  var matches = string.match(regex);  // creates array from matches
 
+  document.write(matches);
+
+  function convertStoI() {
+        var a = "100";
+        var b = parseInt(a);
+        document.write("Integer value is" + b);
+        var d = parseInt("3 11 43");
+        document.write("</br>");
+  
+        document.write('Integer value is ' + d);
+  
+
+  stackoverflow god
+ */
+    let regex = /\d+/g;
+    var matches = bar.match(regex)
+    let count = 0;
+    let count2 = 0;
+
+    for (i = 0; i < matches.length; i += 1) {
+     
+      count += parseInt(matches[i]);
+    }
+
+    if (count == 1) {
+      return '1 copo de água';
+    } else {
+      return count + ' ' + 'copos de água';
+    }
 }
+
 
 module.exports = {
   generatePhoneNumber,
