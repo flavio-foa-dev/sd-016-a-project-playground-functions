@@ -26,25 +26,15 @@ function formatNumber(array) {
   return phoneNumber;
 }
 
-function testResult(count, number) {
-  if (count >= 3 || (number < 0 || number > 9)) {
-    return false;
-  }
+function countInArray(array, number) {
+  return array.filter((item) => item === number).length;
 }
 
 function countAndTest(array) {
-  let count = 0;
-
-  for (let i of array) {
-    for (let j of array) {
-      if (j === i) {
-        count += 1;
-      }
-    }
-    if (testResult(count, array[i]) === false) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (countInArray(array, array[i]) >= 3 || (array[i] < 0 || array[i] > 9)) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    count = 0;
   }
   return true;
 }
