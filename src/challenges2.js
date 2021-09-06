@@ -56,47 +56,44 @@ console.log(generatePhoneNumber([0, 1, 1, 4, 5, 5, 2, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck(lado1,lado2,lado3) {
 
-  if (lado2-lado3 < lado1 && lado1 < lado2+lado3){
-    if (lado1-lado3 < lado2 && lado2 < lado1+lado3){
-      if (lado1-lado2 < lado3 && lado3 < lado1+lado2){
-        return true
+  if (lado2 - lado3 < lado1 && lado1 < lado2 + lado3){
+    if (lado1 - lado3 < lado2 && lado2 < lado1 + lado3){
+      if (lado1 - lado2 < lado3 && lado3 < lado1 + lado2){
+        return true;
       } 
       else {
-        return false
+        return false;
       }
     }
     else {
-      return false
+      return false;
     }
   }
   else {
-    return false
+    return false;
   }
 }
 
-  console.log(triangleCheck(10, 13, 2));
-  console.log(triangleCheck(12, 17, 4));
-  console.log(triangleCheck(5, 10, 3));
-  console.log(triangleCheck(10, 14, 8));
-  console.log(triangleCheck(2, 3, 4));
-  console.log(triangleCheck(16, 20, 30));
+console.log(triangleCheck(10, 13, 2));
+console.log(triangleCheck(12, 17, 4));
+console.log(triangleCheck(5, 10, 3));
+console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(2, 3, 4));
+console.log(triangleCheck(16, 20, 30));
 
 // Desafio 13
 function hydrate(bar) {
-    let regex = /\d+/g;
-    var matches = bar.match(regex)
-    let count = 0;
-
-    for (i = 0; i < matches.length; i += 1) {
-     
-      count += parseInt(matches[i]);
-    }
-
-    if (count === 1) {
-      return '1 copo de água';
-    } else {
-      return count + ' ' + 'copos de água';
-    }
+  let regex = /\d+/g;
+  var matches = bar.match(regex)
+  let count = 0;
+  for (let i = 0; i < matches.length; i += 1) { 
+    count += parseInt(matches[i]);
+  }
+  if (count === 1) {
+    return '1 copo de água';
+  } else {
+    return count + ' ' + 'copos de água';
+  }
 }
 
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
