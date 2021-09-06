@@ -18,7 +18,6 @@ function techList(technology, yourName) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   // seu código aqui
-
   let finalResult = 'Array com tamanho incorreto.';
 
   if (numbers.length === 11) {
@@ -56,11 +55,24 @@ function triangleCheck(lineA, lineB, lineC) {
   return lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
 }
 
-console.log(triangleCheck(10, 14, 8));
-
 // Desafio 13
-function hydrate() {
+function hydrate(drinks) {
   // seu código aqui
+  let water = 0;
+
+  for (let number of drinks) {
+    if (number.match(/\d/) != null) {
+      water += parseInt(number, drinks);
+    }
+  }
+
+  if (water === 1) {
+    water = `${water} copo de água`;
+  } else {
+    water = `${water} copos de água`;
+  }
+
+  return water;
 }
 
 module.exports = {
