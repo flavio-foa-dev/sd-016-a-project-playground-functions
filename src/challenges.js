@@ -33,7 +33,7 @@ function highestCount(numbers) {
   let count = 0;
   for (let index = 0; index < numbers.length; index++) {
     if(numbers[index] > maxNumber) maxNumber = numbers[index];
-    } for(index = 0; index < numbers.length; index++) {
+} for(index = 0; index < numbers.length; index++) {
       if(maxNumber === numbers[index]) count++;
     }return count;
   }
@@ -57,16 +57,23 @@ if(positionCat1 > positionCat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz([string]) {
+  for (index = 0; index < string.length; index++) {
+    if(string[index]/3 = 0) {
+      return 'fizz'
+    }
+  }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  for(index = 0; index < string.length; index++) {
+    if(string[index] === a) {
+      string[index] = 1;
+      return string
+    } 
+  }
+  
 }
-
-// Desafio 10
 function decode() {
   // seu código aqui
 }
