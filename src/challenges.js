@@ -80,23 +80,22 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(palavra) {
-  let lucas = palavra;
-    
-  lucas = lucas.replaceAll("a","1");
-  lucas = lucas.replaceAll("e","2");
-  lucas = lucas.replaceAll("i","3");
-  lucas = lucas.replaceAll("o","4");
-  lucas = lucas.replaceAll("u","5");
+  let lucas = palavra;    
+  lucas = lucas.replaceAll('a', '1');
+  lucas = lucas.replaceAll('e', '2');
+  lucas = lucas.replaceAll('i', '3');
+  lucas = lucas.replaceAll('o', '4');
+  lucas = lucas.replaceAll('u', '5');
   console.log (lucas);
 }
+
 function decode(palavra) {
   let lucas = palavra;
-    
-  lucas = lucas.replaceAll("1","a");
-  lucas = lucas.replaceAll("2","e");
-  lucas = lucas.replaceAll("3","i");
-  lucas = lucas.replaceAll("4","o");
-  lucas = lucas.replaceAll("5","u");
+  lucas = lucas.replaceAll('1', 'a');
+  lucas = lucas.replaceAll('2', 'e');
+  lucas = lucas.replaceAll('3', 'i');
+  lucas = lucas.replaceAll('4', 'o');
+  lucas = lucas.replaceAll('5', 'u');
   console.log (lucas);
 }
 
