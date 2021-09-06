@@ -10,18 +10,37 @@ function generatePhoneNumber(numeros) {
 
 // Desafio 12
 function triangleCheck(lado1, lado2, lado3) {
-  let resposta1 = false;
-
-  if (lado1 < lado2 + lado3 && lado2 < lado1 + lado3 && lado3 < lado1 + lado2 && lado1 > Math.abs(lado2 - lado3) && lado2 > Math.abs(lado1 - lado3) && lado3 > Math.abs(lado1 - lado2)) {
-      resposta1 = true;
+  let mensagemFinal = true;
+  function check1 (lado1, lado2, lado3) {
+      let mensagem1 = true
+      if (lado1 < lado2 + lado3 && lado2 < lado1 + lado3 && lado3 < lado1 + lado2) {
+          mensagem1 === true;
+      } else {
+          mensagem1 === false;
+      }
+      return mensagem1;
+  };
+  function check2 (lado1, lado2, lado3) {
+      let mensagem2 = true;
+      if (lado1 > Math.abs(lado2 - lado3) && lado2 > Math.abs(lado1 - lado3) && lado3 > Math.abs(lado1 - lado2)) {
+          mensagem2 === true;
+      } else {
+          mensagem2 === false;
+      }
+      return mensagem2;
+  };
+  if (check1 === true && check2 === true) {
+      mensagemFinal === true;
   } else {
-      resposta1 = false
+      mensagemFinal === false;
   }
-  return resposta1;
+  return mensagemFinal;
 }
-  console.log(triangleCheck(10, 14, 8));
-  console.log(triangleCheck(2, 3, 4));
-  console.log(triangleCheck(16, 20, 30));
+
+console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(2, 3, 4));
+console.log(triangleCheck(16, 20, 30));
+
 
 // Desafio 13
 function hydrate(string) {     
