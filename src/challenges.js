@@ -52,21 +52,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(arrayEx8) {
-  for (let posicao in arrayEx8) {
-    if (arrayEx8[posicao] % 3 === 0 && arrayEx8[posicao] % 5 === 0) {
-      arrayEx8[posicao] = 'fizzBuzz';
+  let resultado = arrayEx8.map((elemento) => {
+    if (elemento % 3 === 0 && elemento % 5 === 0) {
+      return 'fizzBuzz';
     }
-    else if (arrayEx8[posicao] % 3 === 0) {
-      arrayEx8[posicao] = 'fizz';
+    if (elemento % 3 === 0) {
+      return 'fizz';
     }
-    else if (arrayEx8[posicao] % 5 === 0) {
-      arrayEx8[posicao] = 'buzz';
+    if (elemento % 5 === 0) {
+      return 'buzz';
     }
-    else {
-      arrayEx8[posicao] = 'bug!';
-    }
-  }
-  return arrayEx8;
+    return 'bug!';
+  });
+  return resultado;
 }
 
 // Desafio 9
