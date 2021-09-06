@@ -104,12 +104,55 @@ fizzBuzz([2, 15, 7, 9, 45]);
 fizzBuzz([7, 9]);
 fizzBuzz([9, 25]);
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+let a = '1';
+let e = '2';
+let letraI = '3';
+let o = '4';
+let u = '5';
+let arr = phrase.split("");
+for(let i = 0; i < arr.length; i += 1){
+if(arr[i] === 'i'){
+arr[i]= letraI
+}else if(arr[i] === 'e'){
+  arr[i] = e
+}else if(arr[i] === 'a'){
+  arr[i] = a
+}else if(arr[i] === 'o'){
+  arr[i] = o
+}else if(arr[i] === 'u'){
+  arr[i] = u
 }
-function decode() {
-  // seu código aqui
 }
+return arr.join('');
+}
+
+encode('hi,there!');
+
+function decode(phrase) {
+  let n1 = 'a';
+  let n2 = 'e';
+  let n3 = 'i';
+  let n4 = 'o';
+  let n5 = 'u';
+  let arr = phrase.split("");
+  for(let i = 0; i < arr.length; i += 1){
+  if(arr[i] === '3'){
+  arr[i]= n3
+  }else if(arr[i] === '2'){
+    arr[i] = n2
+  }else if(arr[i] === '1'){
+    arr[i] = n1
+  }else if(arr[i] === '4'){
+    arr[i] = n4
+  }else if(arr[i] === '5'){
+    arr[i] = n5
+  }
+  }
+  return arr.join('');
+  }
+  
+  decode('h3,th2r2!');
 
 module.exports = {
   calcArea,
