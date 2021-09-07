@@ -16,9 +16,38 @@ function techList(tecnol, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+const validNumber = (arr) => {
+  let initial = true;
+  arr.forEach((number) => {
+    let counter = 0;
+    arr.forEach((numbercounter) => {
+      if (numbercounter === number) {
+        counter += 1;
+      }
+    });
+    if (number < 0 || number > 9 || counter >= 3) {
+      initial = false;
+      return initial;
+    }
+  });
+  return initial;
+};
+
+const generatePhoneNumber = (arr) => {
+  let result = 'Array com tamanho incorreto.';
+  if (arr.length === 11) {
+    result = '';
+    if (validNumber(arr)) {
+      arr.forEach(function (number) {
+        result += number;
+      });
+      result = `(${result.slice(0, 2)}) ${result.slice(2, 7)}-${result.slice(7)}`;
+    } else {
+      result = 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return result;
+};
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -29,46 +58,13 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate(str) {
-  let newStr = str.split('');
-  let counter = 0;
-
-  for (let index in newStr) {
-    if (newStr[index] === '1') {
-      counter += 1;
-    }
-    if (newStr[index] === '2') {
-      counter += 2;
-    }
-    if (newStr[index] === '3') {
-      counter += 3;
-    }
-    if (newStr[index] === '4') {
-      counter += 4;
-    }
-    if (newStr[index] === '5') {
-      counter += 5;
-    }
-    if (newStr[index] === '6') {
-      counter += 6;
-    }
-    if (newStr[index] === '7') {
-      counter += 7;
-    }
-    if (newStr[index] === '8') {
-      counter += 8;
-    }
-    if (newStr[index] === '9') {
-      counter += 9;
-    }
-  }
-  if (counter === 1) {
-    counter.toString();
-    return `${counter} copo de água`;
-  } else {
-    counter.toString();
-    return `${counter} copos de água`;
-  }
+// Crédito ao Pedro Mendes - turma 16 A, resolução mais enxuta e simplificada
+function hydrate(phrase) {
+  let numberOfDrinks = phrase
+    .match(/\d+/g)
+    .reduce((acum, cur) => acum + parseInt(cur, 10), 0);
+  let glass = numberOfDrinks > 1 ? 'copos' : 'copo';
+  return `${numberOfDrinks} ${glass} de água`;
 }
 
 module.exports = {
