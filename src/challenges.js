@@ -81,45 +81,25 @@ function fizzBuzz(numArray) {
 
 // Desafio 9
 function encode(word) {
-  let result = ('');
-  let index = 0;
-  for (index in word) {
-    if (word[index] === 'a') {
-      result += '1';
-    } else if (word[index] === 'e') {
-      result += '2';
-    } else if (word[index] === 'i') {
-      result += '3';
-    } else if (word[index] === 'o') {
-      result += '4';
-    } else if (word[index] === 'u') {
-      result += '5';
-    } else {
-      result += word[index];
-    }
+  for (let index = 0; index < word.length; index += 1) {
+    word = word.replace('a', '1');
+    word = word.replace('e', '2');
+    word = word.replace('i', '3');
+    word = word.replace('o', '4');
+    word = word.replace('u', '5');
   }
-  return result;
+  return word;
 }
 
-function decode(result) {
-  let resultTwo = ('');
-  let index = 0;
-  for (index in result) {
-    if (result[index] === '1') {
-      resultTwo += 'a';
-    } else if (result[index] === '2') {
-      resultTwo += 'e';
-    } else if (result[index] === '3') {
-      resultTwo += 'i';
-    } else if (result[index] === '4') {
-      resultTwo += 'o';
-    } else if (result[index] === '5') {
-      resultTwo += 'u';
-    } else {
-      resultTwo += result[index];
-    }
+function decode(word) {
+  for (let index = 0; index < word.length; index += 1) {
+    word = word.replace('1', 'a');
+    word = word.replace('2', 'e');
+    word = word.replace('3', 'i');
+    word = word.replace('4', 'o');
+    word = word.replace('5', 'u');
   }
-  return resultTwo;
+  return word;
 }
 
 module.exports = {
