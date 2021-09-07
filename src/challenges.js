@@ -22,12 +22,12 @@ function splitSentence(phrase) {
 function concatName(arrayStrings) {
   let first = arrayStrings[0];
   let last = arrayStrings[arrayStrings.length -1]
-  return last + ',' + ' ' + first;
+  return (last + ',' + ' ' + first);
 };
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
