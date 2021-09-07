@@ -56,8 +56,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebida) {
+  // algorítimo para encontrar números encontrado em:
+  // https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+  let regex = /\d+/g;  // 'd+' encontra 1 ou mais digitos 
+  let nrDoses = bebida.match(regex);
+  let soma = 0;
+
+  for (let index = 0; index < nrDoses.length; index += 1){
+    soma += parseInt(nrDoses[index]);
+  }
+  if (soma === 1)
+    return (soma + ' copo de água');
+  else return (soma + ' copos de água');
 }
 
 module.exports = {
