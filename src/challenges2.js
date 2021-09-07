@@ -7,7 +7,7 @@ function techList(techArray, yourName) {
   } else {
     for (let i = 0; i < techArray.length; i += 1) {
       let profile = {
-        tech = tech.Array[i],
+        tech = techArray[i],
         name = yourName,
       }
       newTechArray.push(profile);
