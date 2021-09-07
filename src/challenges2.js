@@ -25,15 +25,16 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(drinkqtd) {
-  let find = drinkqtd.match(/(\d+)/g);
-  let all = 0;
   let show = 0;
-  for (let index = 0; index < find.length; index += 1) {
-    all = all + parseInt(find[index]);
-  } if (all === 1) {
-    show = all + ' copo de água';
+  for ( let index of drinkqtd) {
+    if (index.match(/\d/) != null) {
+      show += parseInt(index, drinkqtd);
+    }
+  }
+  if (show === 1) {
+    show = `${show} copo de água`;
   } else {
-    show = all + ' copos de água';
+    show = `${show} copos de água`;
   }
   return show;
 }
