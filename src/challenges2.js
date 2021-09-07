@@ -41,18 +41,19 @@ function generatePhoneNumber(arrayPhoneNumber) {
       if (test1 === 1 || test2 === 1) {
         numberPhone = 'não é possível gerar um número de telefone com esses valores';
         break;
-      } else {
-        numberPhone = '(xx) xxxxx-xxxx';
-        for (i = 0; i < numberPhone.length; i += 1) {
-          numberPhone = numberPhone.replace('x', arrayPhoneNumber[i]);
-        }
+      } 
+    }
+    if (test1 !== 1 && test2 !== 1) {
+      numberPhone = '(xx) xxxxx-xxxx';
+      for (i = 0; i < numberPhone.length; i += 1) {
+      numberPhone = numberPhone.replace('x', arrayPhoneNumber[i]);
       }
     }
   }
   return numberPhone;
 }
 
-let result = generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2]);
+let result = generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]);
 console.log(result);
 
 // Desafio 12
