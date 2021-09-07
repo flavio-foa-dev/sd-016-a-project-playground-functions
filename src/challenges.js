@@ -1,4 +1,5 @@
-// Desafio 1
+// Desafio 1 -
+// Professor Bernardo me auxiliou com essa questão
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
         return true;
@@ -21,30 +22,31 @@ console.log(calcArea(51, 1));
 
 
 // Desafio 3
-function splitSentence(str) {
- let array = str.split(" ");
+function splitSentence(umafrase) {
+ let array = umafrase.split(" ");
  return array;
 }
 
 
 // Desafio 4
-function concatName(names) {
+function concatName(nome) {
 
-  let lastName = names[names.length - 1];
-  let firstName = names[0];
-  return newNames = lastName + ", " + firstName
+  let ultimoNome = nome[nome.length - 1];
+  let primeiroNome = nome[0];
+  return Names = ultimoNome + ", " + primeiroNome
 
-  console.log(lastName);
+  console.log(ultimoNome);
 }
 
-// Desafio 5
+// Desafio 5 - 
 function footballPoints(wins, ties) {
  pontos = (wins * 3) + (ties * 1)
   return pontos;
   
 }
 
-// Desafio 6
+// Desafio 6 - 
+// Cristiane Souza - Turma 16, Tribo A - Me auxiliou com essa questão.
 function highestCount(arr) {
   let highest = arr[0];
   let times = 1;
@@ -60,20 +62,20 @@ function highestCount(arr) {
 }
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  distanciagato1 = mouse - cat1;
-  distanciagato2 = mouse - cat2;
+  gato1 = mouse - cat1;
+  gato2 = mouse - cat2;
   
-  if (distanciagato1 < 0) {
-    distanciagato1 = distanciagato1 * (-1);
-  } else if (distanciagato2 < 0) {
-    distanciagato2 = distanciagato2 * (-1)
+  if (gato1 < 0) {
+    gato1 = gato1 * (-1);
+  } else if (gato2 < 0) {
+    gato2 = gato2 * (-1)
   } 
   
-  if (distanciagato2 < distanciagato1) { 
+  if (gato2 < gato1) { 
   return "cat2"; 
-  }else if (distanciagato1 < distanciagato2) { 
+  }else if (gato1 < gato2) { 
     return "cat1";
-  } else if (distanciagato2 === distanciagato1) {
+  } else if (gato2 === gato1) {
     return "os gatos trombam e o rato foge"
   }
 }
