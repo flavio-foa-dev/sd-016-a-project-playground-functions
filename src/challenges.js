@@ -74,22 +74,53 @@ function fizzBuzz(array) {
       } else if(array[i] % 5 === 0){
           array2.push('buzz');
       }else if(array[i] % 3,5){
-        array2.push('bug!')
+        array2.push('bug!');
       }
   }
     return array2;
 }
-// [2, 15, 7, 9, 45] : ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz']
-//            [7, 9] : ['bug!', 'fizz']
-//           [9, 25] : ['fizz', 'buzz']
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+let str2 = '';
+for (let i=0; i < str.length; i += 1) {
+  if (str[i] === 'a') {
+    str2 += '1';
+  }else if (str[i] === 'e') {
+    str2 += '2';
+  }else if (str[i] === 'i') {
+    str2 += '3';
+  }else if (str[i] === 'o') {
+    str2 += '4';
+  }else if (str[i] === 'u') {
+    str2 += '5';
+  }else {
+    str2 += str[i];
+  }
+ }
+ return str2;
 }
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  let str2 = '';
+for (let i=0; i < str.length; i += 1) {
+  if (str[i] === '1') {
+    str2 += 'a';
+  }else if (str[i] === '2') {
+    str2 += 'e';
+  }else if (str[i] === '3') {
+    str2 += 'i';
+  }else if (str[i] === '4') {
+    str2 += 'o';
+  }else if (str[i] === '5') {
+    str2 += 'u';
+  }else {
+    str2 += str[i];
+  }
+ }
+ return str2;
 }
+
 
 module.exports = {
   calcArea,
