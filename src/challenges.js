@@ -43,8 +43,9 @@ function highestCount(arrayNumbers) {
     if (arrayNumbers[i] > highestNumber) {
       highestNumber = arrayNumbers[i];
       repetitions = 1;
-    } else if (arrayNumbers[i] === highestNumber)
+    } else if (arrayNumbers[i] === highestNumber) {
       repetitions += 1;
+    } 
   }
   return repetitions;
 }
@@ -52,26 +53,26 @@ function highestCount(arrayNumbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    return "cat1";
+    return 'cat1';
   } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
-    return "cat2";
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
-  let newArray= [];
+  let newArray = [];
   for (let i = 0; i < arrayNumbers.length; i += 1) {
     if (arrayNumbers[i] % 3 === 0) {
-      newArray.push("fizz");
+      newArray.push('fizz');
     } else if (arrayNumbers[i] % 5 === 0) {
-      newArray.push("buzz");
+      newArray.push('buzz');
     } else if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0){
-      newArray.push("fizzBuzz");
+      newArray.push('fizzBuzz');
     } else {
-      newArray.push("bug!");
+      newArray.push('bug!');
     }
   }
   return newArray;
@@ -81,16 +82,16 @@ function fizzBuzz(arrayNumbers) {
 function encode(mySentence) {
   let encodedArray = [];
   for (let i = 0; i < mySentence.length; i += 1) {
-    if (mySentence[i] === "a") {
-      encodedArray.push("1");
+    if (mySentence[i] === 'a') {
+      encodedArray.push('1');
     } else if (mySentence[i] === "e") {
-      encodedArray.push("2");
+      encodedArray.push('2');
     } else if (mySentence[i] === "i") {
-      encodedArray.push("3");
+      encodedArray.push('3');
     } else if (mySentence[i] === "o") {
-      encodedArray.push("4");
+      encodedArray.push('4');
     } else if (mySentence[i] === "u") {
-      encodedArray.push("5");
+      encodedArray.push('5');
     } else {
       encodedArray.push(mySentence[i]);
     }
@@ -101,16 +102,16 @@ function encode(mySentence) {
 function decode(encodedSentence) {
   let decodedArray = [];
   for (let i = 0; i < encodedSentence.length; i += 1) {
-    if (encodedSentence[i] === "1") {
-      decodedArray.push("a");
-    } else if (encodedSentence[i] === "2") {
-      decodedArray.push("e");
+    if (encodedSentence[i] === '1') {
+      decodedArray.push('a');
+    } else if (encodedSentence[i] === '2') {
+      decodedArray.push('e');
     } else if (encodedSentence[i] === "3") {
-      decodedArray.push("i");
+      decodedArray.push('i');
     } else if (encodedSentence[i] === "4") {
-      decodedArray.push("o");
+      decodedArray.push('o');
     } else if (encodedSentence[i] === "5") {
-      decodedArray.push("u");
+      decodedArray.push('u');
     } else {
       decodedArray.push(encodedSentence[i]);
     }
