@@ -23,16 +23,18 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
-    if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
-      if (lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) {
-        return true;
-      } else {
-      return false; }
-    } else {
-    return false; }
+  let AB = Math.abs(lineA - lineB);
+  let AC = Math.abs(lineA - lineC);
+  let BA = Math.abs(lineB - lineA);
+  let BC = Math.abs(lineB - lineC);
+  let CA = Math.abs(lineC - lineA);
+  let CB = Math.abs(lineC - lineB);
+
+  if (lineA < (lineB + lineC) && lineA > BC && lineA > CB && lineB < (lineA + lineC) && lineB > AC && lineB > CA && lineC < (lineA + lineB) && lineC > AB && lineC > BA) {
+    return true;
   } else {
-  return false; }
+    return false;
+  }
 }
 
 // Desafio 13
