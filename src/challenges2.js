@@ -17,27 +17,30 @@ function techList(techArray, name) {
   return objectArray;
 }
 // Desafio 11
-function generatePhoneNumber(array) {
-  if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
-  let currentNumberCount = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] < 0 || array[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-    let validateNumber = array[index];
-    for (let key in array) {
-      if (validateNumber === array[key]) {
-        currentNumberCount += 1;
+function checkingNumbers(array) {
+  let allFine = true;
+  array.forEach(function (number) {
+    let count = 0;
+    array.forEach(function (numberCount) {
+      if (numberCount === number) {
+        count += 1;
       }
+    });
+    if (number < 0 || number > 9 || count >= 3) {
+      allFine = false;
+      return allFine;
     }
-    if (currentNumberCount >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
+  });
+  return allFine;
+}
+function generatePhoneNumber(arr) {
+  if (arr.length === 11) {
+    if (checkingNumbers(arr) === true) {
+      return `(${arr.slice(0, 2).join('')}) ${arr.slice(2, 7).join('')}-${arr.slice(7).join('')}`;
     }
-    currentNumberCount = 0;
+    return 'não é possível gerar um número de telefone com esses valores';
   }
-  return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+  return 'Array com tamanho incorreto.';
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
