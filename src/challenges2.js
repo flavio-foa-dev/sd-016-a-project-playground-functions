@@ -1,11 +1,11 @@
 // Desafio 10
 function techList(techArray, yourName) {
-  techArray = techArray.sort();
+  techArray.sort();
   let newTechArray = [];
   if (techArray.length === 0) {
     return 'Vazio!'
   } else {
-    for (i = 0; i < techArray.length; i += 1) {
+    for (let i = 0; i < techArray.length; i += 1) {
       let profile = {
         tech = tech.Array[i],
         name = yourName,
