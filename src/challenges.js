@@ -69,16 +69,60 @@ function fizzBuzz(numbers) {
       words.push('buzz');
     } else {
       words.push('bug!');
-    } 
+    }
   } return words;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let code = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    switch (phrase[index]) {
+    case 'a':
+      code += '1';
+      break;
+    case 'e':
+      code += '2';
+      break;
+    case 'i':
+      code += '3';
+      break;
+    case 'o':
+      code += '4';
+      break;
+    case 'u':
+      code += '5';
+      break;
+    default:
+      code += phrase[index];
+      break;
+    }
+  } return code;
 }
-function decode() {
-  // seu código aqui
+function decode(phrase) {
+  let dcode = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    switch (phrase[index]) {
+    case '1':
+      dcode += 'a';
+      break;
+    case '2':
+      dcode += 'e';
+      break;
+    case '3':
+      dcode += 'i';
+      break;
+    case '4':
+      dcode += 'o';
+      break;
+    case '5':
+      dcode += 'u';
+      break;
+    default:
+      dcode += phrase[index];
+      break;
+    }
+  } return dcode;
 }
 
 module.exports = {
