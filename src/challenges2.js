@@ -1,6 +1,19 @@
 // Desafio 10
-function techList(lessons) {
-  // seu código aqui
+function techList(techArray, yourName) {
+  techArray = techArray.sort();
+  let newTechArray = [];
+  if (techArray.length === 0) {
+    return 'Vazio!'
+  } else {
+    for (i = 0; i < techArray.length; i += 1) {
+      let profile = {
+        tech = tech.Array[i],
+        name = yourName,
+      }
+      newTechArray.push(profile);
+    }
+    return newTechArray;
+  }
 }
 
 // Desafio 11
