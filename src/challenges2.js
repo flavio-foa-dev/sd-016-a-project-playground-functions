@@ -28,8 +28,8 @@ function hydrate(drinkqtd) {
   let find = drinkqtd.match(/(\d+)/g);
   let all = 0;
   let show = 0;
-  for (let index = 0; index <find.length; index += 1) {
-    all += parseInt(find[index]);
+  for (let index = 0; index < find.length; index += 1) {
+    all = all + parseInt(find[index]);
   } if (all === 1) {
     show = all + ' copo de água';
   } else {
