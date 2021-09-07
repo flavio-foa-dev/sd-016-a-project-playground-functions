@@ -18,8 +18,56 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+
+function arraycheck(array) {
+  if (array.length != 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    let count = 0;
+    if (array[index] < 0 || array[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    for (let i = 0; i < array.length; i += 1) {
+      if (index === array[i]) {
+        count += 1;
+      }
+      if (count >= 3) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+    }
+  }
+  return true;
+}
+function generatePhoneNumber(array) {
+  let condition = arraycheck(array);
+  if (condition !== true) {
+    return condition;
+  }
+  let boxNumber = 0;
+  let foneNumber = [];
+  for (let index = 0; index < array.length; index += 1) {
+    if (index === 0) {
+      boxNumber = '(' + array[index];
+      foneNumber.push(boxNumber);
+    } else if (index === 1) {
+      boxNumber = array[index] + ')';
+      foneNumber.push(boxNumber);
+    } else if (index === 2) {
+      boxNumber = ' ' + array[index];
+      foneNumber.push(boxNumber);
+    } else if (index <= 6) {
+      boxNumber = array[index];
+      foneNumber.push(boxNumber);
+    } else if (index === 7) {
+      boxNumber = '-' + array[index];
+      foneNumber.push(boxNumber);
+    } else if (index <= 10) {
+      boxNumber = array[index];
+      foneNumber.push(boxNumber);
+    }
+  }
+  return foneNumber.join('');
 }
 
 // Desafio 12
