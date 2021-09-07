@@ -69,12 +69,26 @@ if(array.length==11) {
 } 
 
 }
-console.log(generatePhoneNumber([1,2,2,3,8,7,3,8,5,6,0]))
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(l1,l2,l3) {
+  // seu código aqui  
+  if(l1>l2+l3||l2>l3+l1||l3>l1+l2) {
+    return false
+  }
+  else if(l1<Math.abs(l2-l3)||l2<Math.abs(l3-l1)||l3<Math.abs(l1-l2)) {
+    return false
+  }
+  else if(l1<l2+l3||l2<l3+l1||l3<l1+l2) {
+    if(l1>Math.abs(l2-l3)||l2>Math.abs(l3-l1)||l3>Math.abs(l1-l2)){
+     
+      return true
+    }
+    
+  }
+
 }
+triangleCheck(10,14,8)
 
 // Desafio 13
 function hydrate() {
