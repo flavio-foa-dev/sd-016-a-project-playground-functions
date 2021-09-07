@@ -88,19 +88,17 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function divisor(number) {
+  if (number % 3 === 0 && number % 5 === 0) return 'fizzBuzz';
+  if (number % 3 === 0) return 'fizz';
+  if (number % 5 === 0) return 'buzz';
+  return 'bug!';
+}
 function fizzBuzz(array) {
   // seu código aqui
   let newArray = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      newArray.push('fizzBuzz');
-    } else if (array[i] % 5 === 0) {
-      newArray.push('buzz');
-    } else if (array[i] % 3 === 0) {
-      newArray.push('fizz');
-    } else {
-      newArray.push('bug!');
-    }
+    newArray[i] = divisor(array[i]);
   }
   return newArray;
 }
