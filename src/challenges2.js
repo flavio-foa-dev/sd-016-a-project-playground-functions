@@ -26,7 +26,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(drinkqtd) {
   let show = 0;
-  for ( let index of drinkqtd) {
+  for (let index of drinkqtd) {
     if (index.match(/\d/) != null) {
       show += parseInt(index, drinkqtd);
     }
