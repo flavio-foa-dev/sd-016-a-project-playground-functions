@@ -25,27 +25,32 @@ function generatePhoneNumber(numbers) {
   if (numbers.length != 11){
     return "Array com tamanho incorreto."
   }
-  let str = numbers.toString();
+  let cont = 0
+for (i in numbers){
+  for (j=1; j < numbers.length; j+=1){
+    if (numbers[j] === numbers[i]){
+      cont += 1
+    }
+    }
+    if (cont >= 3){
+      break;
+      } else {
+        cont = 0
+      }
+}; 
+  
   for (key in numbers){
-    if (numbers[key] < 0 || numbers[key] > 9){
+    if (numbers[key] < 0 || numbers[key] > 9 || cont >= 3){
       return 'não é possível gerar um número de telefone com esses valores'
     }
   }
-    let ddd ="";
-    let primeiraParte="";
-    let segundaParte="";
-
-    for (i = 0; i < 2; i+=1){
-      ddd += str[i];
-    }
-    for (i = 2; i < 7; i+=1){
-      primeiraParte += str[i];
-    }
-    for (i = 7; i <= 11; i+=1){
-      segundaParte += str[i];
-    }
     
-    return "("+ ddd + ")" + primeiraParte + "-" + segundaParte
+    let ddd = numbers.slice(0, 2);
+    let primeiraParte = numbers.slice(2, 7);
+    let segundaParte = numbers.slice(7, numbers.length);
+    
+    
+    return "("+ ddd.join('') + ") " + primeiraParte.join('') + "-" + segundaParte.join('');
   
 
 }
