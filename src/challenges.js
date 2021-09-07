@@ -75,42 +75,16 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode(str) {
-  let newString = str.split('');
-  for (let index = 0; index < newString.length; index++) {
-    if (newString[index] === 'a') {
-      newString[index] = 1;
-    } else if (newString[index] === 'e') {
-      newString[index] = 2;
-    } else if (newString[index] === 'i') {
-      newString[index] = 3;
-    } else if (newString[index] === 'o') {
-      newString[index] = 4;
-    } else if (newString[index] === 'u') {
-      newString[index] = 5;
-    }
-  }
-  return newString.join('');
-}
-
-function decode(newString) {
-  let str = newString.split('');
-
-  for (let index = 0; index < str.length; index++) {
-    if (str[index] === '1') {
-      str[index] = 'a';
-    } else if (str[index] === '2') {
-      str[index] = 'e';
-    } else if (str[index] === '3') {
-      str[index] = 'i';
-    } else if (str[index] === '4') {
-      str[index] = 'o';
-    } else if (str[index] === '5') {
-      str[index] = 'u';
-    }
-  }
-  return str.join('');
-}
+const encode = (str) => {
+  let newStr = str.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4')
+    .replace(/u/g, '5');
+  return newStr;
+};
+const decode = (str) => {
+  let newStr = str.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o')
+    .replace(/5/g, 'u');
+  return newStr;
+};
 
 module.exports = {
   calcArea,

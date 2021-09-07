@@ -58,7 +58,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-// Crédito ao Pedro Mendes - turma 16 A, resolução mais enxuta e simplificada
+// Crédito ao Pedro Mendes - turma 16 A, resolução mais enxuta e simplificada.
 function hydrate(phrase) {
   let numberOfDrinks = phrase
     .match(/\d+/g)
