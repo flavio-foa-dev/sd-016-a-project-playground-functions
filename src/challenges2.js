@@ -24,8 +24,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinkqtd) {
+  let find = drinkqtd.match(/(\d+)/g);
+  let all = 0;
+  let index = 0;
+  for (index in find) {
+    all += parseInt(find[index]);
+  }
+  if (all === 1) {
+    return all + ' ' + 'copo de água';
+  } else {
+    return all + ' ' + 'copos de água';
+  }
 }
 
 module.exports = {
