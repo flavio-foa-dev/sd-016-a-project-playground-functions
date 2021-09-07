@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   return (value1 === true && value2 === true);
-}// By ViniciusTnK
+}// Refactory By ViniciusTnK
 
 // Desafio 2
 function calcArea(base, height) {
@@ -10,19 +10,29 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(word) {
-  let resultadoSplit = word.split(' ');
-  return resultadoSplit;
+  let str = '';
+  let splited = [];
+  for (let i = 0; i < word.length; i += 1) {
+    if (word[i] === ' ') {
+      splited.push(str);
+      str = '';
+    } else {
+      str += word[i];
+    }
+  }
+  splited.push(str);
+  return splited;
 }
 
 // Desafio 4
 function concatName(array) {
   let virgula = ', ';
   return array[array.length - 1] + virgula + array[0];
-}// By ViniciusTnK
+}// Refactory By ViniciusTnK
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties * 1;
+  return wins * 3 + ties;
 }
 
 // Desafio 6
@@ -41,13 +51,21 @@ function highestCount(arrayNum) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 === 0) {
+    return 'os gatos trombam e o rato foge';
+  } if (cat2 === 0) {
+    return 'os gatos trombam e o rato foge';
+  } if (cat1 > cat2) {
+    return 'cat2';
+  } if (cat1 < cat2) {
+    return 'cat1';
+  }
 }
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+
 }
 
 // Desafio 9
