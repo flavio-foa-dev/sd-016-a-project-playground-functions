@@ -82,7 +82,7 @@ function fizzBuzz(numArray) {
 // Desafio 9
 function encode(word) {
   let result = ('');
-  let index = undefined;
+  let index = 0;
   for (index in word) {
     if (word[index] === 'a') {
       result += '1';
@@ -103,7 +103,7 @@ function encode(word) {
 
 function decode(result) {
   let resultTwo = ('');
-  let index = undefined;
+  let index = 0;
   for (index in result) {
     if (result[index] === '1') {
       resultTwo += 'a';
