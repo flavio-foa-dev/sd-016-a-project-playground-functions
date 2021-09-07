@@ -41,24 +41,35 @@ function generatePhoneNumber(arrayPhoneNumber) {
       if (test1 === 1 || test2 === 1) {
         numberPhone = 'não é possível gerar um número de telefone com esses valores';
         break;
-      } 
+      }
     }
     if (test1 !== 1 && test2 !== 1) {
       numberPhone = '(xx) xxxxx-xxxx';
-      for (i = 0; i < numberPhone.length; i += 1) {
-      numberPhone = numberPhone.replace('x', arrayPhoneNumber[i]);
+      for (let i = 0; i < numberPhone.length; i += 1) {
+        numberPhone = numberPhone.replace('x', arrayPhoneNumber[i]);
       }
     }
   }
   return numberPhone;
 }
 
-let result = generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]);
-console.log(result);
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let triangle;
+  let a = lineB + lineC;
+  let b = lineA + lineC;
+  let c = lineA + lineB;
+  if (lineA < a && lineB < b && lineC < c) {
+    a = lineB - lineC;
+    b = lineA - lineC;
+    c = lineA - lineB;
+    if (Math.abs(a) < lineA && Math.abs(b) < lineB && Math.abs(c) < lineC) {
+      triangle = true;
+    }
+  } else {
+    triangle = false;
+  }
+  return triangle;
 }
 
 // Desafio 13
