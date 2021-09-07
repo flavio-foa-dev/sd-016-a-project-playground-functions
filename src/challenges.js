@@ -82,19 +82,20 @@ function fizzBuzz(numArray) {
 // Desafio 9
 function encode(word) {
   let result = ('');
+  let index = undefined;
   for (index in word) {
     if (word[index] === 'a') {
-      result = result + '1';
+      result += '1';
     } else if (word[index] === 'e') {
-      result = result + '2';
+      result += '2';
     } else if (word[index] === 'i') {
-      result = result + '3';
+      result += '3';
     } else if (word[index] === 'o') {
-      result = result + '4';
+      result += '4';
     } else if (word[index] === 'u') {
-      result = result + '5';
+      result += '5';
     } else {
-      result = result + word[index];
+      result += word[index];
     }
   }
   return result;
@@ -105,17 +106,17 @@ function decode(result) {
   let index = undefined;
   for (index in result) {
     if (result[index] === '1') {
-      resultTwo = resultTwo + 'a';
+      resultTwo += 'a';
     } else if (result[index] === '2') {
-      resultTwo = resultTwo + 'e';
+      resultTwo += 'e';
     } else if (result[index] === '3') {
-      resultTwo = resultTwo + 'i';
+      resultTwo += 'i';
     } else if (result[index] === '4') {
-      resultTwo = resultTwo + 'o';
+      resultTwo += 'o';
     } else if (result[index] === '5') {
-      resultTwo = resultTwo + 'u';
+      resultTwo += 'u';
     } else {
-      resultTwo = resultTwo + result[index];
+      resultTwo += result[index];
     }
   }
   return resultTwo;
