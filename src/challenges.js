@@ -3,9 +3,8 @@
 function compareTrue (a , b) {
   if (a === true && b === true) {
   return true;
-  } else {
-  return false;
   }
+  return false;
 };
   
 // Desafio 2
@@ -31,15 +30,27 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumbers) {
+  
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
-
+function catAndMouse (mouse , cat1 , cat2) {
+  
+  let positionCat1 = Math.abs(mouse - cat1);
+  let positionCat2 = Math.abs(mouse - cat2);
+  
+  if (positionCat1 < positionCat2) {
+    return 'cat1';
+  } else if (positionCat2 < positionCat1) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
+  };
+  
+  
+  
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
@@ -64,4 +75,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
