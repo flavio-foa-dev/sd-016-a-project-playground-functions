@@ -46,8 +46,19 @@ newString.splice(9, 0, '-');
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function checkCombination(baseLine, line1, line2) {
+  let sum = line1 + line2;
+  let diff = Math.abs(line1 - line2);
+
+  return baseLine < sum && baseLine > diff;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  return (
+    checkCombination(lineA, lineB, lineC)
+    || checkCombination(lineB, lineA, lineC)
+    || checkCombination(lineC, lineA, lineB)
+  );
 }
 
 // Desafio 13
