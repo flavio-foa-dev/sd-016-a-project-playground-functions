@@ -88,12 +88,28 @@ function triangleCheck(l1,l2,l3) {
   }
 
 }
-triangleCheck(10,14,8)
-
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let arr = string.split(" ")
+  let conta = 0
+  console.log(arr)
+  for (let i = 0; i < arr.length; i=i+1) {
+    console.log(isNaN(arr[i]))
+    if(isNaN(arr[i])==false) {
+      conta = conta + Number(arr[i]);      
+    }
+    else if(i == (arr.length-1)&&conta!=1){
+      return conta + " copos de água"
+    }
+    else if(i == (arr.length-1)&&conta==1){
+      return conta + " copo de água"
+    }
+  }
+  
+
 }
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
 
 module.exports = {
   generatePhoneNumber,
