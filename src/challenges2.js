@@ -96,8 +96,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+let stringDrinks = hydrate("1 cachaça, 5cervejas e 1 copo de vinho");
+function hydrate(stringDrinks) {
+ //Referência pegar apenas números de uma string 
+ //https://www.horadecodar.com.br/2020/10/14/como-obter-apenas-os-numeros-de-uma-string-em-javascript/
+   let numberDrinks = stringDrinks.replace(/[^0-9]/g,'');
+   let sumNumbersWaters = 0
+   for (index = 0; index < numberDrinks.length; index += 1) {
+      sumNumbersWaters = sumNumbersWaters + parseInt(numberDrinks.slice(index,(index+1)));
+   }
+   //console.log(sumNumbersWaters)
+   if (sumNumbersWaters >1) {
+     return sumNumbersWaters + " copos de água"
+   }else{
+    return sumNumbersWaters + " copo de água"
+   }
 }
 
 module.exports = {
