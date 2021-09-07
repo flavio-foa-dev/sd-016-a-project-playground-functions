@@ -47,9 +47,22 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+
+  function intString(str) {
+    let strForInt = '';
+    strForInt = str.match(/\d/g).join('');
+    return strForInt;
+      }
+    function hydrate(string) {
+    let intCalc = intString(string)
+    let totalCopos = 0
+    for (let i=0; i < intCalc.length; i+=1) {
+        totalCopos += parseInt(intCalc[i], 10)
+        }
+        if (totalCopos > 1) {
+          return totalCopos + ' copos de água'
+        }return totalCopos + ' copo de água'
+      }
 
 module.exports = {
   generatePhoneNumber,
