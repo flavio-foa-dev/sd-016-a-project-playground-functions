@@ -58,8 +58,17 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(text) {
+  let regex = /[1-9]/g;
+  let numbers = text.match(regex);
+  let water = 0;
+
+  for (let value of numbers) {
+    water += parseInt(value, 8);
+  }
+
+  if (water === 1) return `${water} copo de água`;
+  return `${water} copos de água`;
 }
 
 module.exports = {
