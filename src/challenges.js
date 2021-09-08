@@ -1,12 +1,18 @@
+/* eslint-disable editorconfig/editorconfig */
+/* eslint-disable semi */
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable prefer-template */
+/* eslint-disable no-else-return */
+/* eslint-disable complexity */
+/* eslint-disable operator-assignment */
+/* eslint-disable no-undef */
+/* eslint-disable no-plusplus */
 // Desafio 1
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
-  } else {
-    return false;
-  }
+  } return false;
 }
-
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
@@ -32,80 +38,84 @@ function highestCount(numbers) {
   let maxNumber = numbers[0];
   let count = 0;
   for (let index = 0; index < numbers.length; index++) {
-    if(numbers[index] > maxNumber) maxNumber = numbers[index];
-} for(index = 0; index < numbers.length; index++) {
-      if(maxNumber === numbers[index]) count++;
-    }return count;
+    if (numbers[index] > maxNumber) maxNumber = numbers[index];
   }
+  for (index = 0; index < numbers.length; index++) {
+    if (maxNumber === numbers[index]) count++;
+  }
+  return count;
+}
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2){
+function catAndMouse(mouse, cat1, cat2) {
   let positionCat1 = mouse - cat1;
   let positionCat2 = mouse - cat2;
-  if(positionCat1 > 0){
+  if (positionCat1 > 0) {
     positionCat1 = -1 * positionCat1;
-  }else if(positionCat2 > 0) {
+  } else if (positionCat2 > 0) {
     positionCat2 = -1 * positionCat2;
   }
-if(positionCat1 > positionCat2) {
-  return 'cat1'
-}else if(positionCat2 > positionCat1) {
-  return 'cat2'
-}else{
-  return "os gatos trombam e o rato foge"
-}
+  if (positionCat1 > positionCat2) {
+    return 'cat1';
+  } else if (positionCat2 > positionCat1) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
 function fizzBuzz(string) {
   let newArray = [];
   for (index = 0; index < string.length; index++) {
-    if(string[index] % 3 === 0 && string[index] % 5 === 0 ) {
-      newArray.push ('fizzBuzz');
-    } else if(string[index] % 3 === 0) {
-      newArray.push ('fizz');
-    } else if(string[index] % 5 === 0) {
-      newArray.push ('buzz');
-    }else{
+    if (string[index] % 3 === 0 && string[index] % 5 === 0) {
+      newArray.push('fizzBuzz');
+    } else if (string[index] % 3 === 0) {
+      newArray.push('fizz');
+    } else if (string[index] % 5 === 0) {
+      newArray.push('buzz');
+    } else {
       newArray.push('bug!');
     }
-  } return newArray;
+  }
+  return newArray;
 }
 
 function encode(text) {
   let newText = text.split('');
-  for(index = 0; index < newText.length; index++) {
-    if(newText[index] === 'a') {
+  for (index = 0; index < newText.length; index++) {
+    if (newText[index] === 'a') {
       newText.splice(index, 1, '1');
-    }else if (newText[index] === 'e') {
-      newText.splice(index, 1 ,'2');
-    }else if (newText[index] === 'i') {
-      newText.splice(index, 1 ,'3');
-    }else if (newText[index] === 'o') {
-      newText.splice(index, 1 ,'4');
-    }else if (newText[index] === 'u') {
-      newText.splice(index, 1 ,'5');
+    } else if (newText[index] === 'e') {
+      newText.splice(index, 1, '2');
+    } else if (newText[index] === 'i') {
+      newText.splice(index, 1, '3');
+    } else if (newText[index] === 'o') {
+      newText.splice(index, 1, '4');
+    } else if (newText[index] === 'u') {
+      newText.splice(index, 1, '5');
     }
-
-    } return newText.join('');
   }
+  return newText.join('');
+}
+
 function decode(text) {
   let newText = text.split('');
-  for(index = 0; index < newText.length; index++) {
-    if(newText[index] === '1') {
+  for (index = 0; index < newText.length; index++) {
+    if (newText[index] === '1') {
       newText.splice(index, 1, 'a');
-    }else if (newText[index] === '2') {
-      newText.splice(index, 1 ,'e');
-    }else if (newText[index] === '3') {
-      newText.splice(index, 1 ,'i');
-    }else if (newText[index] === '4') {
-      newText.splice(index, 1 ,'o');
-    }else if (newText[index] === '5') {
-      newText.splice(index, 1 ,'u');
+    } else if (newText[index] === '2') {
+      newText.splice(index, 1, 'e');
+    } else if (newText[index] === '3') {
+      newText.splice(index, 1, 'i');
+    } else if (newText[index] === '4') {
+      newText.splice(index, 1, 'o');
+    } else if (newText[index] === '5') {
+      newText.splice(index, 1, 'u');
     }
-
-    } return newText.join('');
   }
+  return newText.join('');
+}
 module.exports = {
   calcArea,
   catAndMouse,
@@ -117,4 +127,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
