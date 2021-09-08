@@ -3,18 +3,18 @@ function techList(techs, name) {
   let techsSorted = techs.sort();
   let array = [];
   if (techs.length === 0) {
+   return 'Vazio!'
   } else {
   for (let index = 0; index < techsSorted.length; index += 1) { 
-  let elemento = { 
+  let elemento = {
   tech: techsSorted[index],
   name: name
   }
   techsSorted[index] === elemento.tech;
   array.push(elemento)
   }
-  return array
   }
-  return 'Vazio'
+  return array
   }
   
   let arrayTecnologia2 = ["React", "Jest", "HTML", "CSS", "JavaScript"];
