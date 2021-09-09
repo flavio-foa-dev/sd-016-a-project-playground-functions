@@ -23,7 +23,7 @@ function splitSentence(word) {
   return string;
 }
 
-// Desafio 4
+// Desafio 4 - FEITO
 function concatName(listName) {    
   let firstName = listName[0]
   let lastName = listName[listName.length - 1]
@@ -45,10 +45,18 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount(numberList) {
-  // seu código aqui
-
-}
+function highestCount(numeros) {
+   //seu código aqui
+let maiores = []
+maior = Math.max.apply(Math, numeros)
+  for(let key of numeros){
+    if(key === maior){
+      maiores.push(key)
+    } 
+    }
+    return maiores.length
+     }  
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
@@ -56,7 +64,7 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz(numbers) {
+function fizzBuzz(param) {
   // seu código aqui
 }
 
