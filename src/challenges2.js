@@ -2,15 +2,17 @@
 function techList(nomeTech, name) {
   // seu código aqui
   let nameETech = [];
+  
   for(let key of nomeTech){
    nameETech.push({tech:key,name})
   }
   if(nameETech.length === 0){
     return "Vazio!"
 }
-  return nameETech
+let organized = nameETech
+  return organized
 }
-console.log(techList(["HTML","CSS","Jest","React","JavaScript"],"Victor"))
+console.log(techList(["CSS","HTML","Jest","React","JavaScript"],"Victor"))
 
 // Desafio 11
 function generatePhoneNumber() {
