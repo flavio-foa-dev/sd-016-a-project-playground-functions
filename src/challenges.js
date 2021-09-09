@@ -44,9 +44,8 @@ function footballPoints(wins,ties) {
     return allWins + allTies
 }
 
-// Desafio 6
+// Desafio 6 - FEITO
 function highestCount(numeros) {
-   //seu código aqui
 let maiores = []
 maior = Math.max.apply(Math, numeros)
   for(let key of numeros){
@@ -56,21 +55,38 @@ maior = Math.max.apply(Math, numeros)
     }
     return maiores.length
      }  
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
 
-// Desafio 8
+// Desafio 8 - FEITO
 function fizzBuzz(param) {
-  // seu código aqui
+
+  let auxiliar = [];
+  for(let key of param){
+    if(key % 3 === 0 && key % 5 === 0){
+      auxiliar.push("fizzBuzz")
+    } else if (key % 3 === 0){
+      auxiliar.push("fizz")
+    } else if (key % 5 === 0){
+      auxiliar.push("buzz")
+    } else if (key % 5 !== 0 && key % 3 !== 0){
+      auxiliar.push("bug!")
+    } else {
+      param
+    }
+  }
+  return auxiliar;
 }
 
+
 // Desafio 9
-function encode() {
+function encode(fraseCode) {
   // seu código aqui
+  
+
 }
 function decode() {
   // seu código aqui
