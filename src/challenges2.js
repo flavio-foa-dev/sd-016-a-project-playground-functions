@@ -4,9 +4,11 @@ function techList(nomeTech, name) {
   let nameETech = [];
   for(let key of nomeTech){
    nameETech.push({tech:key,name})
-   
   }
-  return nameETech.sort()
+  if(nameETech.length === 0){
+    return "Vazio!"
+}
+  return nameETech
 }
 console.log(techList(["HTML","CSS","Jest","React","JavaScript"],"Victor"))
 
