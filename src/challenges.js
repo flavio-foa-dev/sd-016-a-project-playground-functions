@@ -102,39 +102,30 @@ function fizzBuzz(array) {
   }
   return newArray;
 }
+
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  string = string.split('');
-  console.log(string);
+  let list = ['a', 'e', 'i', 'o', 'u'];
+  Array.from(string);
   for (let i = 0; i < string.length; i += 1) {
-    switch (string[i]) {
-    case 'a': string[i] = '1'; break;
-    case 'e': string[i] = '2'; break;
-    case 'i': string[i] = '3'; break;
-    case 'o': string[i] = '4'; break;
-    case 'u': string[i] = '5'; break;
-    default:
+    for (let j = 0; j < list.length; j += 1) {
+      string = string.replace(list[j], j + 1);
     }
   }
-  return string.join('');
+  return string;
 }
-
 function decode(string) {
   // seu código aqui
-  string = string.split('');
-  console.log(string);
+  let vowelList = ['a', 'e', 'i', 'o', 'u'];
+  let numberList = ['1', '2', '3', '4', '5'];
+
   for (let i = 0; i < string.length; i += 1) {
-    switch (string[i]) {
-    case '1': string[i] = 'a'; break;
-    case '2': string[i] = 'e'; break;
-    case '3': string[i] = 'i'; break;
-    case '4': string[i] = 'o'; break;
-    case '5': string[i] = 'u'; break;
-    default:
+    for (let j = 0; j < numberList.length; j += 1) {
+      string = string.replace(numberList[j], vowelList[j]);
     }
   }
-  return string.join('');
+  return string;
 }
 
 module.exports = {
