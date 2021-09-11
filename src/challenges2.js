@@ -1,20 +1,6 @@
 // Desafio 10
-function techList(list, name) {
-  let learnList = [];
-  let learn = new Object();
-  if (list.length === 0) {
-    learnList = 'vazio';
-  } else {
-    list.sort();
-    for (let i = 0; i < list.length; i += 1) {
-      let learnlst = {
-        tech: list[i],
-        name: name
-      }
-      learnList.push(learn)
-    }
-  }
-  return learnList;
+function techList() {
+  // seu código aqui
 }
 
 // Desafio 11
