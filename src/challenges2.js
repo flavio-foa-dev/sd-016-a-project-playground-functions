@@ -1,5 +1,9 @@
 // Desafio 10
-function techList() {
+function techList(tech, name) {
+  let list = {
+    tech: ["React", "Jest", "HTML", "CSS", "JavaScript"],
+    name: "Patrick"
+  }
 }
 
 // Desafio 11
