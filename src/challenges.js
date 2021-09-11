@@ -1,8 +1,10 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  param1 = true;
-  param2 = true;
-  param1 === true ? true : false && param1 === true ? true : false; 
+  if (param1 === true && param2 === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
@@ -11,9 +13,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  let string = ['go', 'Trybe'];
-  string = string.split(" ");
+function splitSentence(string) {
+  string = string.split(' ');
   return string;
 }
 
