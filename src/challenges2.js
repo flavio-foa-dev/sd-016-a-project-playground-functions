@@ -7,7 +7,7 @@ function techList(list, name) {
   } else {
     list.sort();
     for (let i = 0; i < list.length; i += 1) {
-      let learn = {
+      let learnlst = {
         tech: list[i],
         name: name
       }
