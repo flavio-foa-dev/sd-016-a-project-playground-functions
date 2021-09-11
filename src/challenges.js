@@ -68,7 +68,6 @@ function fizzBuzz(comp) {
   let resultado = [];
   for (let i = 0; i < comp.length; i += 1) {
     number = comp[i];
-    if (number % 3 === 0 || number % 5 === 0) {
     if (number % 3 === 0 && number % 5 === 0) {
       resultado[i] = 'fizzBuzz';
     } else if (number % 5 === 0) {
