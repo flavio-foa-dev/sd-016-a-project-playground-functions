@@ -1,12 +1,6 @@
 // Desafio 10
-function techList(tech, name) {
-  let list = {
-    tech: ["React", "Jest", "HTML", "CSS", "JavaScript"],
-    name: "Patrick"
-  }
-  if (tech === 0) {
-    return 'vazio'
-  }
+function techList() {
+  // seu código aqui
 }
 
 // Desafio 11
