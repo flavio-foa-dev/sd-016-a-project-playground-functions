@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 === true && param2 === true) {
-    return true;
-  }
+  param1 = true;
+  param2 = true;
+  param1 === true ? true : false && param1 === true ? true : false; 
 }
 
 // Desafio 2
@@ -13,18 +13,21 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence() {
   let string = ['go', 'Trybe'];
+  string = string.split(" ");
   return string;
 }
 
 // Desafio 4
 function concatName(name) {
-  let firstLast = name[name.length - 1] + name[0];
-  return firstLast;
+  let first = name[0];
+  let last = name[name.length - 1];
+  let result = last + ' ' + first;
+  return result;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = wins + ties;
+  let points = wins * 3 + ties * 1;
   return points;
 }
 
