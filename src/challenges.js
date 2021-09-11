@@ -22,7 +22,7 @@ function splitSentence(string) {
 function concatName(name) {
   let first = name[0];
   let last = name[name.length - 1];
-  let result = last + ' ' + first;
+  let result = last + first;
   return result;
 }
 
@@ -38,8 +38,14 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 < cat2 && mouse === mouse[0]) {
+  let position1 = Math.abs(mouse - cat1);
+  let position2 = Math.abs(mouse - cat2);
+  if (position1 > position2) {
     return 'cat2';
+  } else if (position2 > position1) {
+    return 'cat1';
+  } else if (position1 === position2) {
+    return 'os gatos trombam e o rato foge';
   }
 }
 
