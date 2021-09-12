@@ -2,14 +2,11 @@
 function compareTrue(param1, param2) {
   // seu código aqui
   if(param1 === true && param2 === true){
-    return true;
-  } else if(param2 === false && param2 === false){ 
-  return false;
-} else {
-  return "não foi possivel verificar"
+    return true
+  } else {
+    return true
+  }
 }
-}
-
 // Desafio 2 - FEITO
 function calcArea(base, height) {
   let area = (base * height) / 2
