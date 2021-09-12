@@ -57,9 +57,18 @@ maior = Math.max.apply(Math, numeros)
      }  
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  let gatos = "" 
+  if(cat1 !== mouse && cat1 < cat2 ){
+    gatos = "cat1"
+  } else if (cat2 !== mouse && cat2 < cat1 ){
+  gatos = "cat2"
+  } else if(cat1 === cat2){
+    gatos = "os gatos trombam e o rato foge"
+  }
+  return gatos;
 }
+
 
 // Desafio 8 - FEITO
 function fizzBuzz(param) {
@@ -84,13 +93,26 @@ function fizzBuzz(param) {
 
 // Desafio 9
 function encode(fraseCode) {
-  // seu código aqui
-  
+  fraseCode = fraseCode.replace(/a/g, '1');
+  fraseCode = fraseCode.replace(/e/g, '2');
+  fraseCode = fraseCode.replace(/i/g, '3');
+  fraseCode = fraseCode.replace(/o/g, '4');
+  fraseCode = fraseCode.replace(/u/g, '5');
+  return fraseCode
+}
 
-}
-function decode() {
+
+
+function decode(fraseDecode) {
   // seu código aqui
+  fraseDecode = fraseDecode.replace(/1/g, "a")
+  fraseDecode = fraseDecode.replace(/2/g, "e")
+  fraseDecode = fraseDecode.replace(/3/g, "i")
+  fraseDecode = fraseDecode.replace(/4/g, "o")
+  fraseDecode = fraseDecode.replace(/5/g, "u")
+  return fraseDecode;
 }
+
 
 module.exports = {
   calcArea,
