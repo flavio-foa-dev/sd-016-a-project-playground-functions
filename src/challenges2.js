@@ -17,7 +17,7 @@ function techList(arrayTech, name) {
 
 // Desafio 11
 function generatePhoneNumber(number) {
-  let counter = 0;
+  let count = 0;
   let selfFone;
   if(number.length === 11){
     for(i = 0; i < number.length; i += 1){
@@ -26,15 +26,15 @@ function generatePhoneNumber(number) {
       }
       for(l = 0; l < number.length; l += 1){
         if(number[l] === number[l]){
-          counter += 1;
-          if(counter >= 3){
+          count += 1;
+          if(count >= 3){
             return "não é possível gerar um número de telefone com esses valores";
           }
         }
       }
-      counter = 0;
+      count = 0;
     }
-    selfFone = "(" + numbers[0] + number[1] + ")" + " " + number[2] + number[3] + number[4] + number[5] +  number[6] + "-" + number[7]+ number[8] + number[9] + number[10];
+    selfFone = "(" + number[0] + number[1] + ")" + " " + number[2] + number[3] + number[4] + number[5] +  number[6] + "-" + number[7]+ number[8] + number[9] + number[10];
     return selfFone;
   } else{
     return "Array com tamanho incorreto.";
