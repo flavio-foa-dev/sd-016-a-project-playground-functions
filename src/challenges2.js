@@ -17,12 +17,51 @@ function techList(array, nameForTech) {
   }
   return objectList;
 }
-let b = [];
-console.log(techList(b, 'flavio'));
 
 // Desafio 11
-function generatePhoneNumber() {
+function checkPhoneNumberSize(array) {
+  if (array.length !== 11) return 'Array com tamanho incorreto.';
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] > 9 || array[i] < 0) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+}
+
+function verifyPhoneNumberDuplicate(array, count, i) {
+  for (let j = 0; j < array.length; j += 1) {
+    if (array[i] === array[j]) {
+      count += 1;
+    }
+    if (count === 3) {
+      return 'repeated';
+    }
+  }
+}
+
+function checkPhoneNumberDuplicate(array) {
+  for (let i = 0; i < array.length; i += 1) {
+    let count = 0;
+    let check = verifyPhoneNumberDuplicate(array, count, i);
+    if (check === 'repeated') {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+}
+
+function generatePhoneNumber(array) {
   // seu código aqui
+  let check1 = checkPhoneNumberDuplicate(array);
+  let check2 = checkPhoneNumberSize(array);
+  if (check2 === undefined) {
+    if (check1 === undefined) {
+      let a = array;
+      let phon = `(${a.slice(0, 2).join('')}) ${a.slice(2, 7).join('')}-${a.slice(7, 11).join('')}`;
+      return phon;
+    }
+    return check1;
+  }
+  return check2;
 }
 
 // Desafio 12
