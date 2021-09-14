@@ -6,7 +6,7 @@ function techList(array, name) {
   if (array.length === 0) {
     return 'Vazio!';
   }
-  for (let i=0;i < array.length; i+=1) {
+  for (let i = 0; i < array.length; i += 1) {
     let obj = {
       tech: array3[i],
       name: nome
@@ -19,50 +19,54 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   let repeticao = 0
-  if (array.length === 11){
-    for (let i=0; i < array.length; i+=1) {
-      if(array[i]<0 || array[i] > 9){
+  if (array.length === 11) {
+    for (let i = 0; i < array.length; i += 1) {
+      if (array[i] < 0 || array[i] > 9) {
         return 'não é possível gerar um número de telefone com esses valores'
-      }else{
-        for(let i2=0; i2 < array.length; i2+=1){
-        if(array[i]===array[i2]){
-          repeticao +=1
+      } else {
+        for (let i2 = 0; i2 < array.length; i2 += 1) {
+          if (array[i] === array[i2]) {
+            repeticao += 1
           }
-        }""
+        } ""
         if (repeticao >= 3) {
           return 'não é possível gerar um número de telefone com esses valores'
         }
         repeticao = 0
       }
     }
-    return '(' +array[0] + array[1] + ') ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10]
-  }else{
+    return '(' + array[0] + array[1] + ') ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10]
+  } else {
     return 'Array com tamanho incorreto.'
   }
 }
 
 // Desafio 12
-function triangleCheck() {
-  
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < ( lineB + lineC) && lineB < (lineA + lineC) && lineC < (lineA + lineB)){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // Desafio 13
+function intString(str) {
+  let strForInt = '';
+  strForInt = str.match(/\d/g).join('');
+  return strForInt;
+}
 
-  function intString(str) {
-    let strForInt = '';
-    strForInt = str.match(/\d/g).join('');
-    return strForInt;
-      }
-    function hydrate(string) {
-    let intCalc = intString(string)
-    let totalCopos = 0
-    for (let i=0; i < intCalc.length; i+=1) {
-        totalCopos += parseInt(intCalc[i], 10)
-        }
-        if (totalCopos > 1) {
-          return totalCopos + ' copos de água'
-        }return totalCopos + ' copo de água'
-      }
+function hydrate(string) {
+  let intCalc = intString(string)
+  let totalCopos = 0
+  for (let i = 0; i < intCalc.length; i += 1) {
+    totalCopos += parseInt(intCalc[i], 10)
+  }
+  if (totalCopos > 1) {
+    return totalCopos + ' copos de água'
+  } return totalCopos + ' copo de água'
+}
 
 module.exports = {
   generatePhoneNumber,
