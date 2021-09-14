@@ -19,9 +19,7 @@ function techList(arrayTech, name) {
 function generatePhoneNumber(number) {
   let counter = 0;
   let selfFone;
-
-  //checando se tem 11 valores
-  if(numbers.length === 11){
+  if(number.length === 11){
     for(i = 0; i < number.length; i += 1){
       if(number[i] < 0 || number[i] > 9){
         return "não é possível gerar um número de telefone com esses valores";
@@ -36,7 +34,7 @@ function generatePhoneNumber(number) {
       }
       counter = 0;
     }
-    selfFone = "(" + numbers[0] + numbers[1] + ")" + " " + numbers[2] + numbers[3] + numbers[4] + numbers[5] +  numbers[6] + "-" + numbers[7]+ numbers[8] + numbers[9] + numbers[10];
+    selfFone = "(" + numbers[0] + number[1] + ")" + " " + number[2] + number[3] + number[4] + number[5] +  number[6] + "-" + number[7]+ number[8] + number[9] + number[10];
     return selfFone;
   } else{
     return "Array com tamanho incorreto.";
