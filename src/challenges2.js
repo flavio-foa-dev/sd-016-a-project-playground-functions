@@ -58,8 +58,27 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let numbers = str.replace(/\D/g, ' '); // deixa só os numeros, substitui o que não é número por vazio. Alex Weyne no StackOverFlow https://stackoverflow.com/questions/30607419/
+  //   \D corresponde a um caractere que não é um dígito numérico. Portanto, qualquer não dígito é substituído por uma string vazia. O resultado são apenas os dígitos de uma string.
+
+  // O g no final do literal da expressão regular é para "global", o que significa que substitui todas as correspondências, e não apenas a primeira.return-only-numbers-from-string/30607466
+  let number = [];
+  let arrayNumbers = numbers.split("")
+  for (let index = 0; index < arrayNumbers.length; index += 1){
+    if (arrayNumbers[index] !== " "){
+      number.push(parseInt(arrayNumbers[index]))
+    }
+  }
+  let sum = 0;
+  for (let indexN = 0; indexN < number.length; indexN += 1){
+    sum += number[indexN]
+  }
+  if (sum === 1) {
+    return sum + ' copo de água'
+  } else {
+    return sum + ' copos de água'
+  }
 }
 
 module.exports = {
