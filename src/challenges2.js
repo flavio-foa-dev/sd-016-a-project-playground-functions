@@ -72,13 +72,22 @@ function triangleCheck(a, b, c) {
   }
   return true;
 }
-console.log(triangleCheck(4, 1, 1));
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let numbersString = string.replace(/\D+/g, '');
+  numbersString = Array.from(String(numbersString), Number);
+  let amountDrink = 0;
+  for (let i = 0; i < numbersString.length; i += 1) {
+    amountDrink += numbersString[i];
+  }
+  let amountWater = amountDrink;
+  if (amountWater > 1) {
+    return `${amountWater} copos de água`;
+  }
+  return `${amountWater} copo de água`;
 }
-
 module.exports = {
   generatePhoneNumber,
   techList,
