@@ -11,12 +11,10 @@ function techList(nomeTech, name) {
   }
   return list
 }
-// console.log(techList(["CSS","HTML","Jest","React","JavaScript"],"Victor"))
-
 // Desafio 11
 function generatePhoneNumber(numbers) {
     if(numbers.length !== 11){
-      return "Array com tamanho incorreto"
+      return "Array com tamanho incorreto."
     }
     for(let key of numbers){
       if(key < 0 || key > 9){
@@ -30,20 +28,32 @@ function generatePhoneNumber(numbers) {
     let lastNumbers = numbers.slice(7,11)
     lastNumbers = lastNumbers.join("")
     return `(${ddd}) ${firstNumbers}-${lastNumbers}`
-    
 }
-  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
-
-
+//console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]))
+  
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(strParam) {
+  //da Linha 56 a 60 link:https://www.tutorialspoint.com/summing-numbers-from-a-string-javascript :
+  let string = strParam.split("")
+  let glassOfWater = 0;  
+  for (let index = 0; index < strParam.length; index += 1) {
+      if(+string[index]){
+        glassOfWater += +string[index]
+      };    
+  }
+    if(glassOfWater === 1){
+      glassOfWater = `${glassOfWater} copo de água`
+    } else{
+      glassOfWater = `${glassOfWater} copos de água`
+    }
+    return glassOfWater
 }
+
 
 module.exports = {
   generatePhoneNumber,
