@@ -2,33 +2,30 @@
 function compareTrue(param1, param2) {
   // seu código aqui
   if(param1 === true && param2 === true){
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 }
-// Desafio 2 - FEITO
+// Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2
   return area;
 }
-
-//Desafio 3 - FEITO
+//Desafio 3
 function splitSentence(word) {
   let string = word
   string = string.split(" ")
   return string;
 }
-
-// Desafio 4 - FEITO
+// Desafio 4
 function concatName(listName) {    
   let firstName = listName[0]
   let lastName = listName[listName.length - 1]
   let fullName = lastName + ", " + firstName
   return fullName;
 }
- 
-// Desafio 5 - FEITO
+// Desafio 5
 function footballPoints(wins,ties) {
   let allWins = 0;  
   let allTies = 0
@@ -40,8 +37,7 @@ function footballPoints(wins,ties) {
   }  
     return allWins + allTies
 }
-
-// Desafio 6 - FEITO
+// Desafio 6
 function highestCount(numeros) {
 let maiores = []
 maior = Math.max.apply(Math, numeros)
@@ -52,22 +48,21 @@ maior = Math.max.apply(Math, numeros)
     }
     return maiores.length
      }  
-
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  let gatos = "" 
-  if(cat1 !== mouse && cat1 < cat2){
-    gatos = "cat1"
-  } else if (cat2 !== mouse && cat2 < cat1 ){
-  gatos = "cat2"
-  } else if(cat1 === cat2){
-    gatos = "os gatos trombam e o rato foge"
+  let cat1Distance = cat1 - mouse;
+  let cat2Distance = cat2 - mouse;
+
+  if(Math.abs(cat1Distance) < Math.abs(cat2Distance)){
+    return "cat1"
+  } else if (Math.abs(cat2Distance) < Math.abs(cat1Distance)){
+  return "cat2"
+  } else if(Math.abs(cat1Distance) === Math.abs(cat2Distance)){
+    return "os gatos trombam e o rato foge"
   }
   return gatos;
 }
-
-
-// Desafio 8 - FEITO
+// Desafio 8
 function fizzBuzz(param) {
 
   let auxiliar = [];
@@ -86,8 +81,6 @@ function fizzBuzz(param) {
   }
   return auxiliar;
 }
-
-
 // Desafio 9
 function encode(fraseCode) {
   fraseCode = fraseCode.replace(/a/g, '1');
@@ -97,9 +90,6 @@ function encode(fraseCode) {
   fraseCode = fraseCode.replace(/u/g, '5');
   return fraseCode
 }
-
-
-
 function decode(fraseDecode) {
   // seu código aqui
   fraseDecode = fraseDecode.replace(/1/g, "a")
