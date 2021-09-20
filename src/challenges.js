@@ -1,7 +1,11 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(a,b) {
   // seu código aqui
-}
+  if (a === true && b === true){
+    return true};
+    else {return false};
+    }
+
 
 // Desafio 2
 function calcArea(base, height) {
@@ -13,7 +17,7 @@ function calcArea(base, height) {
 function splitSentence(string) {
   string = "go trybo";
   console.log(string.split(" "));
-  return string.split(" ")
+  return string.split(" ");
  
 }
 
@@ -75,12 +79,12 @@ console.log("os gatos trombam e o rato foge");
 function fizzBuzz(array) {
   // seu código aqui
   array = [2, 15, 7, 9, 45];
-  let arrayNovo;
+  let arrayNovo = [];
   for(let i=0; i <= array.length; i++){
-  if (array[i] %3 === 0 && array[i] %6 !== 0){
+  if (array[i] %3 === 0 && array[i] %5 !== 0){
     arrayNovo.push ("fizz");
   }
-  else if (array[i]%3 !== 0  && array[i]%6 === 0){
+  else if (array[i] %3 !== 0  && array[i]%5 === 0){
     arrayNovo.push("buzz");
   }
   else if ( array[i] %3 === 0 &&  array[i] %5 === 0){
@@ -92,11 +96,36 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  string = "hi thereu";
+  let stringNova = string.split('')
+  
+  for (let i=0; i <= stringNova.length; i++){
+    if (stringNova[i]=== "a"){stringNova[i] ="1";} 
+     else if(stringNova[i]==="e") {stringNova[i]="2";}
+     else if(stringNova[i]==="i") {stringNova[i]="3";}
+     else if(stringNova[i]==="o") {stringNova[i]="4";}
+     else if(stringNova[i] ==="u") {stringNova[i]="5";}
+    } 
+    console.log(stringNova.join(''));
+    return stringNova.join('') 
 }
-function decode() {
+function decode(string) {
   // seu código aqui
+string = "h3 th2r2!";
+novaString = string.split('');
+for (let i=0; i <= novaString.length; i++){
+  if (novaString[i]=== "1"){novaString[i] ="a";} 
+   else if(novaString[i]==="2") {novaString[i]="e";}
+   else if(novaString[i]==="3") {novaString[i]="i";}
+   else if(novaString[i]==="4") {novaString[i]="o";}
+   else if(novaString[i] ==="5") {novaString[i]="u";}
+  } 
+  console.log(novaString.join(''));
+  return novaString.join('')
+
+
 }
 
 module.exports = {
