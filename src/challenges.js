@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(a,b) {
+function compareTrue(a, b) {
   // seu código aqui
   if (a === true && b === true){
     return true};
@@ -10,21 +10,19 @@ function compareTrue(a,b) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
- console.log(base*height/2);
+ return base*height/2;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  string = "go trybo";
-  console.log(string.split(" "));
-  return string.split(" ");
- 
-}
+  
+return string.split(" "));
+ }
 
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-array = ["lucas","joao ","carlos "];
+
 console.log(array[array.length-1] +"  " + array[0]);
 return array[array.length-1] + " " + array[0]
 }
@@ -33,10 +31,7 @@ return array[array.length-1] + " " + array[0]
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  wins = 14;
-  ties = 8;
-  console.log(wins*3 + ties);
-  return wins*3 + ties
+   return wins*3 + ties;
 }
 
 // Desafio 6
@@ -66,9 +61,11 @@ let cat2 = 5;
 let mouse = 0;
 if (cat1 < cat2){
   console.log("cat1");
+  return cat1;
 }
  else if (cat2 < cat1){
-console.log("cat2"); 
+console.log("cat2");
+return cat2; 
   }
 else 
 console.log("os gatos trombam e o rato foge");
