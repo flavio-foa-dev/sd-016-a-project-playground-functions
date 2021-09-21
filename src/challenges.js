@@ -3,7 +3,7 @@ function compareTrue(a, b) {
   // seu código aqui
   if (a === true && b === true){
     return true};
-  return false;
+  else {return false;}
     }
 
 
@@ -56,9 +56,9 @@ return contador;
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
   // seu código aqui
-let cat1 = 4;
-let cat2 = 5;
-let mouse = 0;
+
+
+const mouse = 0;
 if (cat1 < cat2){
   console.log("cat1");
   return cat1;
@@ -75,7 +75,7 @@ console.log("os gatos trombam e o rato foge");
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
-  array = [2, 15, 7, 9, 45];
+  
   let arrayNovo = [];
   for(let i=0; i <= array.length; i++){
   if (array[i] %3 === 0 && array[i] %5 !== 0){
@@ -90,6 +90,7 @@ function fizzBuzz(array) {
   else arrayNovo.push("bug!");
 }
   console.log(arrayNovo);
+  return arrayNovo;
 }
 
 // Desafio 9
@@ -106,7 +107,7 @@ function encode(string) {
      else if(stringNova[i] ==="u") {stringNova[i]="5";}
     } 
     console.log(stringNova.join(''));
-    return stringNova.join('') 
+    return stringNova.join(''); 
 }
 function decode(string) {
   // seu código aqui
@@ -120,7 +121,7 @@ for (let i=0; i <= novaString.length; i++){
    else if(novaString[i] ==="5") {novaString[i]="u";}
   } 
   console.log(novaString.join(''));
-  return novaString.join('')
+  return novaString.join('');
 
 
 }
