@@ -1,12 +1,4 @@
-/* eslint-disable editorconfig/editorconfig */
-/* eslint-disable semi */
-/* eslint-disable sonarjs/cognitive-complexity */
-/* eslint-disable prefer-template */
-/* eslint-disable no-else-return */
-/* eslint-disable complexity */
-/* eslint-disable operator-assignment */
-/* eslint-disable no-undef */
-/* eslint-disable no-plusplus */
+
 // Desafio 1
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
