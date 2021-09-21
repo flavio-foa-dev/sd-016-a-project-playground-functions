@@ -1,15 +1,15 @@
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
-  if (a && b === true){
-    return true;
-  } else { return false;
+  if ( a && b === true)
+  { return true;
+  } else {return false;}
   }
-}
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return base*height/2;
 }
 
 // Desafio 3
@@ -49,6 +49,19 @@ function encode() {
 function decode() {
   // seu código aqui
 }
+
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
+};
 
 module.exports = {
   calcArea,
