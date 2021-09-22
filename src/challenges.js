@@ -64,26 +64,24 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   // seu código aqui
   let arrayNovo = [];
-  for(let i=0;i<=array.length;i++){
-    if (array[i] %3 === 0 && array[i] %5 !== 0){
-      arrayNovo.push ("fizz");
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      arrayNovo.push('fizzBuzz');
+    } else if (array[i] % 3 === 0) {
+      arrayNovo.push('fizz');
+    } else if (array[i] % 5 === 0) {
+      arrayNovo.push('buzz');
+    } else {
+      arrayNovo.push('bug!');
     }
-    else if (array[i] %3 !== 0  && array[i]%5 === 0){
-      arrayNovo.push("buzz");
-    }
-    else if ( array[i] %3 === 0 &&  array[i] %5 === 0){
-      arrayNovo.push("fizzBuzz");
-    } 
-    else {arrayNovo.push("bug!");
-  }}
-    return arrayNovo;
   }
-  
+  return arrayNovo;
+}
 
 
 // Desafio 9
 function encode(string) {
-  // seu código aqui
+  //seu codigo aqui
   
   let stringNova = string.split('');
     for (let i=0; i <= stringNova.length; i++){
@@ -108,18 +106,6 @@ for (let i=0; i <= novaString.length; i++){
   return novaString.join('');
 }
 
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  highestCount,
-  splitSentence,
-};
 
 module.exports = {
   calcArea,
