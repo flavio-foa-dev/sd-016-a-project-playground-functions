@@ -37,9 +37,22 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
+// Desafio 13. Código do Humberto Castro
+function hydrate(txt) {
+  let fraseDeNumeros = txt.match(/\d/g);
+  let total = 0;
+  let frase = '';
+  for (let i = 0; i < fraseDeNumeros.length; i += 1) {
+    total += parseInt(fraseDeNumeros[i]);
+  }
+  if (total === 1) {
+    frase = total;
+    frase += ' copo de água';
+  } else {
+    frase = total;
+    frase += ' copos de água';
+  }
+  return frase;
 }
 
 module.exports = {
