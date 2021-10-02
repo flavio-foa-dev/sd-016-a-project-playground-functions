@@ -1,21 +1,26 @@
 // Desafio 10
-function techList(tecnologias, name) {
- /*  let lista = {
-    tech: '',
-    name: ''
-  }; 
+function techList(array, name) {
+  if (array.length === 0) {
+    return 'Vazio!'; 
+  }
 
-  for (let i = 0; i < tecnologias.length; i += 1) {
-    let lista.tech = tecnologias[i];
+  const sortedArray = array.sort();
+  const tecnologiasList = [];
 
-  } */
-}
- 
-/* console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas')); */
+  for (let i = 0; i < sortedArray.length; i += 1) {
+    tecnologiasList.push({
+      tech: sortedArray[i],
+      name,
+    });
+  }
+  return tecnologiasList;
+};
+
+console.log(techList(['react, pyton, js'], 'gabi'))
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  
+
   let telefone = [];
   if (array.length != 11) {
     return "Array com tamanho incorreto.";
@@ -65,9 +70,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let procuraNumero = /\d+/g;
+  let resposta = (string.match(procuraNumero));
+  let soma = 0;
+   for (let i in resposta){ 
+    soma += i;
+   }
+   if (soma === 1){
+     return soma + ' copo de água';
+   } else if (soma > 1){
+     return soma + ' copos de água';
+   }
+  return soma;
 }
+console.log(hydrate("2 cervejas, 3 vinhos"));
 
 module.exports = {
   generatePhoneNumber,
@@ -75,3 +92,4 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
