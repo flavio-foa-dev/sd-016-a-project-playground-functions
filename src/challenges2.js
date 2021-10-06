@@ -37,8 +37,12 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(linhaA, linhaB, linhaC) {
+  let resultado = true;
+  if (linhaA > linhaB + linhaC || linhaB > linhaA + linhaC || linhaC > linhaA + linhaB) {
+    resultado = false;
+  }
+  return resultado;
 }
 
 // Desafio 13
