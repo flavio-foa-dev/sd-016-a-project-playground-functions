@@ -1,20 +1,10 @@
-function generatePhoneNumber(number) {
-  let count = 0;
-  let array = [];
-  if (number.length !== 11){
-    return "Array com tamanho incorreto."
+function techList(array, nome) {
+  let resultado = [];
+  array.sort();
+  for (let i = 0; i < array.length; i += 1) {
+    resultado.push({ tech: array[i], name: nome });
   }
-  for (let i = 0; i < 11; i += 1){
-    // for (let a = 0; a < 11; a += 1){
-      // if (number[a] === number[i]){
-        // count += 1;
-      // }
-      // if (count === 3){
-        // return "não é possível gerar um número de telefone com esses valores";
-      // }
-    // }
-    array[i] = number[i];
-  }
-  return console.log(array[0 & 1]);
+  return resultado;
 }
-generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+let a = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
+console.log(techList(a, 'lucas'));
