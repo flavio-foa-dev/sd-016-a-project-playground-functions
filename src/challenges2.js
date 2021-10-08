@@ -40,11 +40,18 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-console.log(triangleCheck(10, 14, 8));
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  numbers = ['1','2','3','4','5','6','7','8','9'];
+  let numbersFromString = []; 
+  for (let index = 0; index < string.length; index += 1) {
+    if(numbers.includes(string[index])) {
+      numbersFromString.push(Number(string[index]));
+    }
+  }
+  const addedNumbers = numbersFromString.reduce((acc, currentNumber) => acc + currentNumber);
+  if (addedNumbers > 1) return `${addedNumbers} copos de água`;
+  return `${addedNumbers} copo de água`;
 }
 
 module.exports = {
