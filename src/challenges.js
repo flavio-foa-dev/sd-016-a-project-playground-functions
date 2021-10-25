@@ -55,17 +55,17 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   // seu código aqui
   let arrayWords = [];
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+  numbers.forEach((value) => {
+    if (value % 3 === 0 && value % 5 === 0) {
       arrayWords.push('fizzBuzz');
-    } else if (numbers[index] % 3 === 0) {
-      arrayWords.push('fizz');  
-    } else if (numbers[index] % 5 === 0) {
+    } else if (value % 3 === 0) {
+      arrayWords.push('fizz');
+    } else if (value % 5 === 0) {
       arrayWords.push('buzz');
     } else {
       arrayWords.push('bug!');
-    }      
-  }
+    }
+  });
   return arrayWords;
 }
 
