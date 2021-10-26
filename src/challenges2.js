@@ -4,12 +4,12 @@ function techList(arrayTechNames, name) {
   let arrayTech = [];
   if (arrayTechNames.length === 0) {
     return 'Vazio!';
-  } 
+  }
   for (let index in arrayTechNames.sort()) {
     let technologies = {
       tech: arrayTechNames[index],
       name: name,
-    }
+    };
       arrayTech.push(technologies);
   }
   return arrayTech;
@@ -34,19 +34,19 @@ function generatePhoneNumber(arrayNumbers) {
       }
     }
     if (count >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';  
-    }    
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
     if (index === 0) {
       let aux = '(';
-      arrayPhone.push(aux);  
+      arrayPhone.push(aux);
     }
     if (index === 2) {
       let aux = ')' + ' ';
-      arrayPhone.push(aux);  
+      arrayPhone.push(aux);
     }
     if (index === 7) {
       let aux = '-';
-      arrayPhone.push(aux);  
+      arrayPhone.push(aux);
     }
     arrayPhone.push(arrayNumbers[index]);
   }
@@ -60,7 +60,7 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineC < lineA + lineB && lineC > compareC) {
     return true;
   }
-  return false;  
+  return false;
 }
 
 // Desafio 13

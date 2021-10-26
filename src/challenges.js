@@ -72,49 +72,26 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(phrase) {
   // seu código aqui
-  let arrayPhrase = phrase.split('');
-  for (let index in phrase) {
-    outputNumbers(phrase, index, arrayPhrase)
+  let phraseWithNumbers = phrase;
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  for (let index = 0; index < phraseWithNumbers.length; index += 1) {
+    for (let secondIndex = 0; secondIndex < vowels.length; secondIndex += 1) {
+      phraseWithNumbers = phraseWithNumbers.replace(vowels[secondIndex], secondIndex + 1);
+    }
   }
-  return arrayPhrase.join('');
+  return phraseWithNumbers;
 }
 
-function outputNumbers(phrase, index, arrayPhrase) {
-  if (phrase[index] === 'a') {
-    arrayPhrase[index] = '1';
-  } else if (phrase[index] === 'e') {
-    arrayPhrase[index] = '2';
-  } else if (phrase[index] === 'i') {
-    arrayPhrase[index] = '3';
-  } else if (phrase[index] === 'o') {
-    arrayPhrase[index] = '4';
-  } else if (phrase[index] === 'u') {
-    arrayPhrase[index] = '5';
-  }
-}
-
-// Desafio 9
 function decode(phraseNumbers) {
   // seu código aqui
-  let arrayPhraseNumbers = phraseNumbers.split('');
-  for (let index in phraseNumbers) {
-    outputLetters(phraseNumbers, index, arrayPhraseNumbers);
+  let phraseWithoutNumbers = phraseNumbers;
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  for (let index = 0; index < phraseWithoutNumbers.length; index += 1) {
+    for (let secondIndex = 0; secondIndex < vowels.length; secondIndex += 1) {
+      phraseWithoutNumbers = phraseWithoutNumbers.replace(secondIndex + 1, vowels[secondIndex]);
+    }
   }
-  return arrayPhraseNumbers.join('');
-}
-
-function outputLetters(phraseNumbers, index, arrayPhraseNumbers) {
-  if (phraseNumbers[index] === '1') {
-    arrayPhraseNumbers[index] = 'a';
-  } else if (phraseNumbers[index] === '2') {
-    arrayPhraseNumbers[index] = 'e';
-  } else if (phraseNumbers[index] === '3') {
-    arrayPhraseNumbers[index] = 'i';
-  } else if (phraseNumbers[index] === '4') {
-    arrayPhraseNumbers[index] = 'o';
-  } else if (phraseNumbers[index] === '5') {
-    arrayPhraseNumbers[index] = 'u';
-  }
+  return phraseWithoutNumbers;
 }
 
 module.exports = {
