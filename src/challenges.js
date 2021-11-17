@@ -9,9 +9,8 @@ const compareTrue = (param1, param2) => {
 const calcArea = (base, height) => (base * height) / 2;
 
 // Desafio 3
-function splitSentence(string) {
-  return string.split(' ');
-}
+const splitSentence = (string) => string.split(' '); /* Utilizo .split para quebrar strings, nesse caso ele é quebrada a cada espaço */
+
 // Desafio 4
 function concatName(string) {
   let concat = `${string[string.length - 1]}, ${string[0]}`;
