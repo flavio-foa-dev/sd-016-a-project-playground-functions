@@ -23,17 +23,17 @@ const footballPoints = (wins, ties) => {
   return points;
 };
 // Desafio 6
-function highestCount(numbers) {
-  let maxNumber = numbers[0];
+const highestCount = (numbers) => {
   let count = 0;
+  numbers.sort((a, b) => a - b);
+  numbers.reverse();
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] > maxNumber) maxNumber = numbers[index];
-  }
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (maxNumber === numbers[index]) count += 1;
+    if (numbers[0] === numbers[index]) {
+      count += 1;
+    }
   }
   return count;
-}
+};
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -55,7 +55,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(string) {
   let newArray = [];
-  for (index = 0; index < string.length; index++) {
+  for (let index = 0; index < string.length; index += 1) {
     if (string[index] % 3 === 0 && string[index] % 5 === 0) {
       newArray.push('fizzBuzz');
     } else if (string[index] % 3 === 0) {
@@ -71,7 +71,7 @@ function fizzBuzz(string) {
 
 function encode(text) {
   let newText = text.split('');
-  for (index = 0; index < newText.length; index++) {
+  for (let index = 0; index < newText.length; index += 1) {
     if (newText[index] === 'a') {
       newText.splice(index, 1, '1');
     } else if (newText[index] === 'e') {
@@ -89,7 +89,7 @@ function encode(text) {
 
 function decode(text) {
   let newText = text.split('');
-  for (let index = 0; index < newText.length; index++) {
+  for (let index = 0; index < newText.length; index += 1) {
     if (newText[index] === '1') {
       newText.splice(index, 1, 'a');
     } else if (newText[index] === '2') {

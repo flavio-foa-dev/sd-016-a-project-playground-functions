@@ -4,10 +4,10 @@ function techList(Array, name) {
   let newArrayObject = [];
   let techs = {};
 
-  if (Array == 0) {
+  if (Array === 0) {
     return 'Vazio!';
   }
-  for (let index = 0; index < Array.length; index++) {
+  for (let index = 0; index < Array.length; index += 1) {
     techs = {
       tech: newArraySort[index],
       name,
