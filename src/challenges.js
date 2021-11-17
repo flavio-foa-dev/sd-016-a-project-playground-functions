@@ -1,10 +1,10 @@
-
 // Desafio 1
-function compareTrue(param1, param2) {
+const compareTrue = (param1, param2) => {
   if (param1 === true && param2 === true) {
     return true;
-  } return false;
-}
+  }
+  return false;
+};
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
@@ -16,7 +16,7 @@ function splitSentence(string) {
 }
 // Desafio 4
 function concatName(string) {
-  let concat = string[string.length - 1] + ', ' + string[0];
+  let concat = `${string[string.length - 1]}, ${string[0]}`;
   return concat;
 }
 
@@ -29,11 +29,11 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let maxNumber = numbers[0];
   let count = 0;
-  for (let index = 0; index < numbers.length; index++) {
+  for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] > maxNumber) maxNumber = numbers[index];
   }
-  for (index = 0; index < numbers.length; index++) {
-    if (maxNumber === numbers[index]) count++;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (maxNumber === numbers[index]) count += 1;
   }
   return count;
 }
@@ -49,11 +49,10 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (positionCat1 > positionCat2) {
     return 'cat1';
-  } else if (positionCat2 > positionCat1) {
+  } if (positionCat2 > positionCat1) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -93,7 +92,7 @@ function encode(text) {
 
 function decode(text) {
   let newText = text.split('');
-  for (index = 0; index < newText.length; index++) {
+  for (let index = 0; index < newText.length; index++) {
     if (newText[index] === '1') {
       newText.splice(index, 1, 'a');
     } else if (newText[index] === '2') {

@@ -1,5 +1,3 @@
-/* eslint-disable eqeqeq */
-/* eslint-disable no-plusplus */
 // Desafio 10
 function techList(Array, name) {
   let newArraySort = Array.sort();
