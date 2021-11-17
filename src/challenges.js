@@ -18,10 +18,10 @@ const concatName = (string) => {
 };
 
 // Desafio 5
-function footballPoints(wins, ties) {
+const footballPoints = (wins, ties) => {
   let points = wins * 3 + ties * 1;
   return points;
-}
+};
 // Desafio 6
 function highestCount(numbers) {
   let maxNumber = numbers[0];
