@@ -12,10 +12,10 @@ const calcArea = (base, height) => (base * height) / 2;
 const splitSentence = (string) => string.split(' '); /* Utilizo .split para quebrar strings, nesse caso ele é quebrada a cada espaço */
 
 // Desafio 4
-function concatName(string) {
+const concatName = (string) => {
   let concat = `${string[string.length - 1]}, ${string[0]}`;
   return concat;
-}
+};
 
 // Desafio 5
 function footballPoints(wins, ties) {
