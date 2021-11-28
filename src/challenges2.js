@@ -60,8 +60,12 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  /* Source: https://www.codegrepper.com/code-examples/javascript/get+only+numbers+from+string+js */
+  const allNumbers = drinks.replace(/[^0-9]/g, '');
+  const total = allNumbers.split('').reduce((acc, number) => (acc + Number(number)), 0);
+  if (total === 1) return `${total} copo de água`;
+  return `${total} copos de água`;
 }
 
 module.exports = {
