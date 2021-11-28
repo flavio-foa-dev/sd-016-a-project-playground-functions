@@ -1,15 +1,15 @@
 // Desafio 10
-function techList(techList, name) {
+function techList(techArray, name) {
   let exitValue = [];
-  if (techList[0] == undefined) {
+  if (techArray[0] === undefined) {
     return 'Vazio!';
   }
-  techList.sort()
-  for (let i = 0; i < techList.length; i += 1) {
+  techArray.sort();
+  for (let i = 0; i < techArray.length; i += 1) {
     exitValue.push({
-      'tech': techList[i],
-      'name': name
-    })
+      tech: techArray[i],
+      name,
+    });
   }
   return exitValue;
 }
