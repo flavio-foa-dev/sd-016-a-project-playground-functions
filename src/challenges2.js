@@ -15,8 +15,40 @@ function techList(techArray, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+const getRepeatedNumbers = (phoneNumber) => (
+  phoneNumber.reduce((numbers, number) => {
+    numbers[number] = numbers[number] ? numbers[number] + 1 : 1;
+    return numbers;
+  }, {})
+);
+
+const phoneNumberLength = (phoneNumber) => {
+  if (phoneNumber.length !== 11) return 'Array com tamanho incorreto.';
+};
+
+function cantGeneratePhoneNumber(phoneNumber) {
+  const errorGenerateNumber = 'não é possível gerar um número de telefone com esses valores';
+  const errorPhoneLength = phoneNumberLength(phoneNumber);
+  if (errorPhoneLength) return errorPhoneLength;
+  if (phoneNumber.some((number) => (number < 0 || number > 9))) {
+    return errorGenerateNumber;
+  }
+  const repeatedNumbers = getRepeatedNumbers(phoneNumber);
+  if (Object.values(repeatedNumbers).some((number) => number >= 3)) {
+    return errorGenerateNumber;
+  }
+  return null;
+}
+
+function generatePhoneNumber(phoneNumber) {
+  const errorPhoneNumber = cantGeneratePhoneNumber(phoneNumber);
+  if (errorPhoneNumber) return errorPhoneNumber;
+  return phoneNumber.reduce((acc, number, index) => {
+    if (index === 2) acc += ') ';
+    if (index === 7) acc += '-';
+    acc += number;
+    return acc;
+  }, '(');
 }
 
 // Desafio 12
