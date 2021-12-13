@@ -2,16 +2,19 @@
 function techList(arrayTechNames, name) {
   // seu código aqui
   let arrayTech = [];
+  let technologies;
   if (arrayTechNames.length === 0) {
     return 'Vazio!';
   }
-  for (let index in arrayTechNames.sort()) {
-    let technologies = {
-      tech: arrayTechNames[index],
-      name: name,
-    };
+  arrayTechNames
+    .sort()
+    .forEach((tech) => {
+      technologies = {
+        tech,
+        name,
+      };
       arrayTech.push(technologies);
-  }
+    });
   return arrayTech;
 }
 
@@ -28,7 +31,7 @@ function generatePhoneNumber(arrayNumbers) {
     if (arrayNumbers[index] < 0 || arrayNumbers[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    for (let secondIndex = 0; secondIndex < arrayNumbers.length; secondIndex += 1 ) {
+    for (let secondIndex = 0; secondIndex < arrayNumbers.length; secondIndex += 1) {
       if (arrayNumbers[index] === arrayNumbers[secondIndex]) {
         count += 1;
       }
