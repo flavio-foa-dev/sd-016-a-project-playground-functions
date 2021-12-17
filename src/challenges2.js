@@ -53,9 +53,14 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
+function checkSide(a, b, c) {
+  if (a < (b + c) && a > Math.abs(b - c)) return true;
+  return false;
+}
+
 function triangleCheck(a, b, c) {
-  if (a > (b + c) || b > (a + c) || c > (a + b)) return false;
-  if (a < Math.abs(b - c) || b < Math.abs(a - c) || c < Math.abs(a - b)) return false;
+  if (checkSide(a, b, c) === false
+    || checkSide(b, a, c) === false || checkSide(c, a, b) === false) return false;
   return true;
 }
 
