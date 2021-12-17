@@ -53,8 +53,10 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+  if (a > (b + c) || b > (a + c) || c > (a + b)) return false;
+  if (a < Math.abs(b - c) || b < Math.abs(a - c) || c < Math.abs(a - b)) return false;
+  return true;
 }
 
 // Desafio 13
