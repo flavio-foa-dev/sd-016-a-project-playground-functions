@@ -50,8 +50,6 @@ function catAndMouse(mouse, cat1, cat2) {
   let gato1 = Math.abs(mouse - cat1);
   let gato2 = Math.abs(mouse - cat2);
 
-  console.log(gato1, gato2);
-
   if (gato1 < gato2) {
     return 'cat1';
   } if (gato2 < gato1) {
@@ -59,8 +57,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
-
-console.log(catAndMouse(20, -3, 435));
 
 // Desafio 8
 function fizzBuzzAppendix(numero) {
@@ -86,15 +82,34 @@ function fizzBuzz(array) {
   return resultado;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let codificado = '';
+  codificado = string
+    .replace(/a/gi, 1)
+    .replace(/e/gi, 2)
+    .replace(/i/gi, 3)
+    .replace(/o/gi, 4)
+    .replace(/u/gi, 5);
+
+  return codificado;
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode('hI there!'));
+
+function decode(string) {
+  let decodificado = '';
+  decodificado = string
+    .replace(/1/gi, 'a')
+    .replace(/2/gi, 'e')
+    .replace(/3/gi, 'i')
+    .replace(/4/gi, 'o')
+    .replace(/5/gi, 'u');
+
+  return decodificado;
 }
+
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
