@@ -85,11 +85,11 @@ function encode(letter) {
 
 function decode(number) {
   for (let i = 0; i < number.length; i += 1) {
-    number = number.replace('a', '1');
-    number = number.replace('e', '2');
-    number = number.replace('i', '3');
-    number = number.replace('o', '4');
-    number = number.replace('u', '5');
+    number = number.replace('1', 'a');
+    number = number.replace('2', 'e');
+    number = number.replace('3', 'i');
+    number = number.replace('4', 'o');
+    number = number.replace('5', 'u');
   }
   return number;
 }
