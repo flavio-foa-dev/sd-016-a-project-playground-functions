@@ -26,8 +26,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let result = /[1-9]/g;
+  let sum = string.match(result);
+  let water = 0;
+
+  for (let value of sum) {
+    water += parseInt(value, 6);
+  }
+
+  if (water === 1) return `${water} copo de água`;
+  return `${water} copos de água`;
 }
 
 module.exports = {
