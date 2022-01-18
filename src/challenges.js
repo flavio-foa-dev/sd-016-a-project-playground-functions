@@ -15,15 +15,36 @@ function splitSentence(string) {
   return splitString;
 }
 
+// Desafio 4
+function concatName(array) {
+  const firstI = array[0];
+  const lastI = array[array.length - 1];
+  return (`${lastI}, ${firstI}`);
+}
+
+// Desafio 5
+function footballPoints(wins, ties) {
+  const win = 3;
+  const tie = 1;
+
+  return ((wins * win) + (ties * tie));
+}
+
+// Desafio 6
+function highestCount(arrayNumbers) {
+  const maxNumber = arrayNumbers.reduce((acc, number) => Math.max(acc, number));
+  return arrayNumbers.filter((number) => maxNumber === number).length;
+}
+
 module.exports = {
   calcArea,
   // catAndMouse,
   compareTrue,
-  // concatName,
+  concatName,
   // decode,
   // encode,
   // fizzBuzz,
-  // footballPoints,
-  // highestCount,
+  footballPoints,
+  highestCount,
   splitSentence,
 };
