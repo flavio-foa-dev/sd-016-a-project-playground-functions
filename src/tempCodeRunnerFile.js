@@ -1,5 +1,11 @@
-function highestCount(arrayNumbers) {
-  const maxNumber = arrayNumbers.reduce((acc, number) => Math.max(acc, number));
-  return arrayNumbers.filter((number) => maxNumber === number).length;
+function fizzBuzz(array) {
+  const answerArray = [];
+  array.forEach((element) => {
+    if (element % 3 === 0 && element % 5 === 0) answerArray.push('fizzBuzz');
+    else if (element % 3 === 0) answerArray.push('fizz');
+    else if (element % 5 === 0) answerArray.push('buzz');
+    else (answerArray.push('bug!'));
+  });
+  return answerArray;
 }
-console.log(highestCount([1, 2, 3, 3, 3, 3]));
+console.log(fizzBuzz([15, 5, 3, 11]));
