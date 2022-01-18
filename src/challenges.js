@@ -61,15 +61,33 @@ function fizzBuzz(array) {
   });
   return answerArray;
 }
-console.log(fizzBuzz([15, 5, 3, 11]));
+
+// Desafio 9
+function encode(string) {
+  const stringReplace1 = string.replace(/a/gi, '1');
+  const stringReplace2 = stringReplace1.replace(/e/gi, '2');
+  const stringReplace3 = stringReplace2.replace(/i/gi, '3');
+  const stringReplace4 = stringReplace3.replace(/o/gi, '4');
+  const stringReplace5 = stringReplace4.replace(/u/gi, '5');
+  return stringReplace5;
+}
+
+function decode(string) {
+  const stringReplaceA = string.replace(/1/gi, 'a');
+  const stringReplaceE = stringReplaceA.replace(/2/gi, 'e');
+  const stringReplaceI = stringReplaceE.replace(/3/gi, 'i');
+  const stringReplaceO = stringReplaceI.replace(/4/gi, 'o');
+  const stringReplaceU = stringReplaceO.replace(/5/gi, 'u');
+  return stringReplaceU;
+}
 
 module.exports = {
   calcArea,
   catAndMouse,
   compareTrue,
   concatName,
-  // decode,
-  // encode,
+  decode,
+  encode,
   fizzBuzz,
   footballPoints,
   highestCount,

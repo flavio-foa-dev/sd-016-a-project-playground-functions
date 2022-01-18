@@ -1,11 +1,9 @@
-function fizzBuzz(array) {
-  const answerArray = [];
-  array.forEach((element) => {
-    if (element % 3 === 0 && element % 5 === 0) answerArray.push('fizzBuzz');
-    else if (element % 3 === 0) answerArray.push('fizz');
-    else if (element % 5 === 0) answerArray.push('buzz');
-    else (answerArray.push('bug!'));
-  });
-  return answerArray;
+function decode(string) {
+  const stringReplaceA = string.replace(/1/gi, 'a');
+  const stringReplaceE = stringReplaceA.replace(/2/gi, 'e');
+  const stringReplaceI = stringReplaceE.replace(/3/gi, 'i');
+  const stringReplaceO = stringReplaceI.replace(/4/gi, 'o');
+  const stringReplaceU = stringReplaceO.replace(/5/gi, 'u');
+  return stringReplaceU;
 }
-console.log(fizzBuzz([15, 5, 3, 11]));
+console.log(decode('1 2 3 45'));
