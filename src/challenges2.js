@@ -1,26 +1,36 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(listArray, name) {
+  if (listArray.length === 0) return 'Vazio!';
+  const newArray = listArray.forEach((element) => {
+    console.log({
+      tech: element,
+      name,
+    });
+  });
+  return newArray;
 }
 
-// Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+console.log(techList(['jest', 'python'], 'Gusvo'));
 
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+// // Desafio 11
+// function generatePhoneNumber() {
+//   // seu código aqui
+// }
+
+// // Desafio 12
+// function triangleCheck() {
+//   // seu código aqui
+// }
+
+// // Desafio 13
+// function hydrate() {
+//   // seu código aqui
+// }
 
 module.exports = {
-  generatePhoneNumber,
+  // generatePhoneNumber,
   techList,
-  hydrate,
-  triangleCheck,
+  // hydrate,
+  // triangleCheck,
 };

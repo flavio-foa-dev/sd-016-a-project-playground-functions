@@ -81,6 +81,19 @@ function decode(string) {
   return stringReplaceU;
 }
 
+function techList(listArray, name) {
+  if (listArray.length === 0) return 'Vazio!';
+  const newArray = listArray.forEach((element) => {
+    console.log({
+      tech: element,
+      name,
+    });
+  });
+  return newArray;
+}
+
+console.log(techList(['jest', 'python'], 'Gusvo'));
+
 module.exports = {
   calcArea,
   catAndMouse,
@@ -92,4 +105,5 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
+  techList,
 };
