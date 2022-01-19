@@ -1,12 +1,11 @@
-function criateArray(listArray, name) {
+function techList(listArray, name) {
+  let newArray;
   if (listArray.length === 0) return 'Vazio!';
-  const newArray = listArray.forEach((element) => {
-    console.log({
-      tech: element,
-      name,
-    });
-  });
-  return newArray;
+  newArray = listArray.map((element) => ({
+    tech: element,
+    name,
+  }));
+  newArray.sort((function (a, b) { return a - b }));
 }
 
-console.log(criateArray(['jest', 'python'], 'Gusvo'));
+console.log(techList(['Python', 'Aqui', 'Mais um', 'mais dois'], 'Gustavo'));
